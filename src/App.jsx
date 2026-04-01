@@ -7,7 +7,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/h2obras-web-new">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
