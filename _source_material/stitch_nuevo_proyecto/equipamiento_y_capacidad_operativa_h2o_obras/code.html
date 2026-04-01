@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#0d2b45",
+              "on-tertiary-fixed": "#2b1700",
+              "inverse-primary": "#aec9ea",
+              "tertiary-container": "#3e2300",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#5b5f61",
+              "on-tertiary-fixed-variant": "#604018",
+              "on-primary-fixed": "#001d35",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#43474d",
+              "primary": "#00162a",
+              "on-primary-fixed-variant": "#2e4964",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "on-background": "#191c1d",
+              "tertiary-fixed": "#ffddba",
+              "secondary-fixed-dim": "#c4c7c9",
+              "inverse-on-surface": "#f0f1f2",
+              "surface-variant": "#e1e3e4",
+              "outline-variant": "#c3c6ce",
+              "on-primary": "#ffffff",
+              "on-surface": "#191c1d",
+              "outline": "#73777e",
+              "on-secondary-fixed-variant": "#434749",
+              "secondary-fixed": "#e0e3e5",
+              "surface-container-low": "#f3f4f5",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "tertiary-fixed-dim": "#edbe8b",
+              "error": "#ba1a1a",
+              "surface-container": "#edeeef",
+              "background": "#f8f9fa",
+              "on-tertiary-container": "#b2885a",
+              "on-secondary-fixed": "#181c1e",
+              "primary-fixed-dim": "#aec9ea",
+              "inverse-surface": "#2e3132",
+              "surface-dim": "#d9dadb",
+              "secondary-container": "#dde0e2",
+              "primary-fixed": "#d0e4ff",
+              "surface": "#f8f9fa",
+              "surface-container-high": "#e7e8e9",
+              "surface-tint": "#46607d",
+              "on-primary-container": "#7893b2",
+              "surface-container-highest": "#e1e3e4",
+              "tertiary": "#221100",
+              "surface-bright": "#f8f9fa",
+              "on-secondary-container": "#5f6365"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .machined-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .industrial-gradient {
+            background: linear-gradient(135deg, #00162a 0%, #0d2b45 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopAppBar -->
+<header class="bg-[#00162a] dark:bg-[#00162a] docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-full">
+<div class="text-2xl font-black tracking-tighter text-[#f8f9fa] font-headline uppercase">H2O OBRAS</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#5b5f61] hover:text-[#f8f9fa] font-headline tracking-tighter uppercase font-bold text-sm transition-all" href="#">Projects</a>
+<a class="text-[#ffddba] border-b-2 border-[#ffddba] pb-1 font-headline tracking-tighter uppercase font-bold text-sm transition-all" href="#">Assets</a>
+<a class="text-[#5b5f61] hover:text-[#f8f9fa] font-headline tracking-tighter uppercase font-bold text-sm transition-all" href="#">Engineering</a>
+<a class="text-[#5b5f61] hover:text-[#f8f9fa] font-headline tracking-tighter uppercase font-bold text-sm transition-all" href="#">Safety</a>
+<a class="text-[#5b5f61] hover:text-[#f8f9fa] font-headline tracking-tighter uppercase font-bold text-sm transition-all" href="#">Logistics</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="text-[#f8f9fa] hover:bg-[#0d2b45] p-2 transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="text-[#f8f9fa] hover:bg-[#0d2b45] p-2 transition-all relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-10 h-10 rounded-sm bg-surface-container-highest overflow-hidden border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="Technical Supervisor Profile Portrait in professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvqEg-DoXdILBO0UKuDDOyEYrFtbjv1vOGXsyQ5tSOqivBpTJo5CvAzCuZKs7CUO62xXTHJUbU7BGWpGJbocRMsGYJv8JSta3JEkz72fuJiWt4Wz9A8xS3y2mHe4l0yrnZkrgLWiJlG_VgxEW88_SLUhxHy_bgOCvKR1w1BN1keqtuH9kWOemXOcF1B6p76vBPeiYWXtWBKTywqWkfBEo9jxNNh8m1IVjlo7uh4e83trF727nVqKtf3vjwVYy4Zb8ETYz9fYQjI6nA"/>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center overflow-hidden industrial-gradient">
+<div class="absolute inset-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="high-angle industrial site with heavy machinery and complex infrastructure pipelines at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB04NzDlpMOGT1xInOSFsdGyfOxllFEr9a8DmvfrqK6gc5UAkU3cTuuNe7zxeq9_VIXJnmneBCIHT1xE-nnqzWtJTYL-lxyfcpF2SRK0L_jVSDU55EIvBd7vk7JCUQEBGSRiiiQUTa2rNGS-IL_7HjdbKOyvFC-qS6t5nk2WIHjqkJvOqgenPQtT9BUi-qPpmJenr9q5CWJXnzd7_6mbV8jj94ycQQg1VZYexTxXPwiiB3Qunuvy7Wmyw40RtOXq8Y1HUSQrzQMEImc"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="max-w-4xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+<span class="material-symbols-outlined text-sm">verified</span> Operational Excellence
+                    </div>
+<h1 class="text-6xl md:text-8xl font-headline font-black text-white leading-none tracking-tighter mb-8">
+                        CAPACIDAD OPERATIVA <br/>
+<span class="text-on-primary-container">Y AUTONOMÍA TOTAL</span>
+</h1>
+<p class="text-xl text-surface-variant max-w-2xl font-light leading-relaxed border-l-4 border-tertiary-fixed pl-6">
+                        Infraestructura técnica de escala federal. Eliminamos la dependencia de terceros mediante una inversión masiva en equipamiento propio de última generación.
+                    </p>
+</div>
+</div>
+<!-- Technical Overlay -->
+<div class="absolute bottom-0 right-0 p-8 hidden lg:block">
+<div class="machined-glass p-6 border-t-2 border-tertiary-fixed flex flex-col gap-4">
+<div class="flex justify-between items-end gap-12">
+<div>
+<span class="block text-[10px] font-bold text-secondary uppercase tracking-widest mb-1">Asset Readiness</span>
+<span class="text-4xl font-headline font-bold text-primary">100%</span>
+</div>
+<div>
+<span class="block text-[10px] font-bold text-secondary uppercase tracking-widest mb-1">Fleet Capacity</span>
+<span class="text-4xl font-headline font-bold text-primary">450T</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Maquinaria Pesada Section -->
+<section class="py-24 bg-surface px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="text-4xl font-headline font-extrabold tracking-tighter text-primary uppercase">Maquinaria Pesada</h2>
+<div class="h-1 w-24 bg-primary mt-4"></div>
+</div>
+<p class="text-secondary max-w-md text-sm font-medium leading-relaxed italic">
+                    Unidades de alta maniobrabilidad para entornos hidráulicos complejos y obras civiles de precisión.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Unit 1 -->
+<div class="bg-surface-container-low group overflow-hidden">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Professional heavy yellow excavator mini loader on construction site, sharp technical focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC8pfgKy8gusNifWqxTOxIjgE0M2UEmZKnkm49bVg1AMs2s-jvbcxi00jwRNXrrptfN7uQMr6nJbPwah7NVt6ZH4oxj8HbGTPkiKz4bgXrJ1IfyMbW3xE6etNOgDHkhrRF4eq9I8B_4PwAuORtNyvuSOXAJZWVnhCw9OpNcfEYDdbJA78DGOj9VPNjtf3GFV1h7JzQ-149rvuAVViyrB3HkeXhrl9dxw73Eoe5qcWX1JikCBwEs8ClsZCYba0LtOdlsRDb2P77KyKv"/>
+<div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 text-[10px] font-bold font-label">ASSET_2015_E26</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-headline font-bold text-primary mb-2">Bobcat E-26</h3>
+<p class="text-sm text-secondary mb-6">Excavadora compacta de giro de voladizo mínimo, ideal para trabajos de precisión hidráulica.</p>
+<div class="space-y-3">
+<div class="flex justify-between items-center text-xs border-b border-outline-variant/30 pb-2">
+<span class="text-secondary font-semibold uppercase">Potencia</span>
+<span class="text-primary font-bold">18.5 kW</span>
+</div>
+<div class="flex justify-between items-center text-xs border-b border-outline-variant/30 pb-2">
+<span class="text-secondary font-semibold uppercase">Profundidad</span>
+<span class="text-primary font-bold">2,582 mm</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Unit 2 -->
+<div class="bg-primary text-white group overflow-hidden">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-80" data-alt="Skid steer loader with various industrial attachments on paved ground, technical daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACrQ1W2dJ5lMGSJr-QQMp13KQvqbbzUR8fPFyU2eU6h8BCgFKjfQBKcb6z2VdolrXEREuSABdcWAtuP5MbOHbaKvmvlenDD1LIj7FWFQNoYBYtvug9ux3QSQG8oFR1R5dLO9i-2nTU_niipXfutenLVtL4cfkiAqWTgJO6r2yqaAYHfBHEcrs6wciTMQO4Ic0Nx_qcIOgZg8uyLQNsIkHICkEBxiv192Xwibz6CTgOkS0y33mWyDvsPd2MtmTQ-u0rAQNvlGSmdN3t"/>
+<div class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 text-[10px] font-bold font-label uppercase">Multi-Purpose</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-headline font-bold mb-2">Bobcat S450 (2017)</h3>
+<p class="text-sm text-on-primary-container mb-6">Cargador versátil equipado con sistema de acople rápido para diversos frentes de obra.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2 py-1 bg-on-primary-fixed-variant text-[9px] font-bold uppercase tracking-wider">Zanjadora</span>
+<span class="px-2 py-1 bg-on-primary-fixed-variant text-[9px] font-bold uppercase tracking-wider">Niveladora</span>
+<span class="px-2 py-1 bg-on-primary-fixed-variant text-[9px] font-bold uppercase tracking-wider">Rodillo</span>
+</div>
+<button class="w-full py-3 bg-tertiary-fixed text-on-tertiary-fixed text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">Technical Sheet</button>
+</div>
+</div>
+<!-- Unit 3 -->
+<div class="bg-surface-container-low group overflow-hidden">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Industrial aerial lift platform extending high into a blue sky, high-tech engineering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNFFbnYccKfL2eFckmCXEDKM_LXlTmHeNCoEqqbah0koDKpJPJpDu3mZjY0rVARFCR1txfqIznCff0zhcUcagh17LSF_sJPX5ycm0wm5exVxmfGhhcC4T3mprMhXRACNpFZBID5_9ZBB_WiaRKKPqNWUY1RO-RRpHrEoEop7fgREc_fWnCRrZ8_XUVMYzC5Ezl10WDMc1PpcZOrPMvnWx7NVLEOPk2qy9DP3uWCS9qTrpPbWhhU16nTNVdb4S1k-mauee1FBBYy4MQ"/>
+<div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 text-[10px] font-bold font-label">ASSET_2018_P16</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-headline font-bold text-primary mb-2">Plataforma Mantall</h3>
+<p class="text-sm text-secondary mb-6">Elevación de 16 metros para montajes de infraestructura y mantenimiento técnico en altura.</p>
+<div class="space-y-3">
+<div class="flex justify-between items-center text-xs border-b border-outline-variant/30 pb-2">
+<span class="text-secondary font-semibold uppercase">Altura Trabajo</span>
+<span class="text-primary font-bold">16.0 m</span>
+</div>
+<div class="flex justify-between items-center text-xs border-b border-outline-variant/30 pb-2">
+<span class="text-secondary font-semibold uppercase">Carga Máx</span>
+<span class="text-primary font-bold">230 kg</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Flota Logística Section -->
+<section class="py-24 bg-surface-container-low px-8 overflow-hidden">
+<div class="container mx-auto">
+<div class="flex items-center gap-4 mb-12">
+<span class="h-[2px] w-12 bg-primary"></span>
+<h2 class="text-4xl font-headline font-extrabold tracking-tighter text-primary uppercase">Flota Logística Propia</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Main Truck -->
+<div class="lg:col-span-7 bg-white p-2 border border-outline-variant/20 relative group">
+<div class="h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Large industrial cargo truck on an asphalt road with heavy-duty design, bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv7Zl9MYQqCNwTGK-kvLWJMonVFTMqU8OAUmvBT1UdOhOmVdxeOs9yUt1ZCIe49SjsQHUX7WJdEnULKwUEJFOnrDBwNWUVyDFfasVUH43EI1B-h5RGOtT65gdTgyO6TDlkHSbsnNySL5MLXKaGGqVXQa_4Fk1NB59CD6u115DYGfZU4rn8nleRnRZGKw27mcZ9TivrPS-zC-m5huHFNZS_fxi1-o2Ix4JVYs45KQD2uNN5zx0ttvV9sqeiQrZSRonaCAV5N7eIb0ft"/>
+</div>
+<div class="absolute bottom-8 left-8 right-8 machined-glass p-8 shadow-xl">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-[10px] font-bold text-secondary uppercase tracking-[0.3em] mb-2">Unidad de Gran Tonelaje</h4>
+<h3 class="text-3xl font-headline font-bold text-primary">Camión DFM 14 Tons</h3>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold text-tertiary-container bg-tertiary-fixed px-3 py-1">MODEL 2023</span>
+</div>
+</div>
+<div class="mt-6 flex gap-12">
+<div>
+<span class="block text-[10px] text-secondary font-bold uppercase mb-1">Capacidad</span>
+<span class="text-lg font-headline font-bold text-primary">14.000 KG</span>
+</div>
+<div>
+<span class="block text-[10px] text-secondary font-bold uppercase mb-1">Motorización</span>
+<span class="text-lg font-headline font-bold text-primary">CUMMINS ISB</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Fleet -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div class="bg-primary p-8 flex justify-between items-center group cursor-pointer hover:bg-on-primary-fixed-variant transition-all">
+<div>
+<h3 class="text-xl font-headline font-bold text-white uppercase tracking-tight">Lifan Foison Truck</h3>
+<p class="text-xs text-on-primary-container mt-1">Logística urbana y materiales ligeros.</p>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl">local_shipping</span>
+</div>
+<div class="bg-white border border-outline-variant/20 p-8 flex justify-between items-center group cursor-pointer hover:border-primary transition-all">
+<div>
+<h3 class="text-xl font-headline font-bold text-primary uppercase tracking-tight">Foton Gratour</h3>
+<p class="text-xs text-secondary mt-1">Doble cabina para transporte de cuadrillas técnicas.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl">groups</span>
+</div>
+<div class="flex-grow bg-surface-container-highest border-l-4 border-tertiary-fixed p-8">
+<p class="text-sm font-medium text-primary italic leading-relaxed">
+                                "Nuestra logística interna garantiza que los plazos de obra no dependan de terceros, asegurando una cadena de suministro ininterrumpida."
+                            </p>
+<div class="mt-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest">Seguimiento GPS 24/7</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tecnología de Precisión Section -->
+<section class="py-24 bg-white px-8">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-5xl font-headline font-black tracking-tighter text-primary uppercase">Tecnología de Precisión</h2>
+<p class="text-secondary mt-4 font-label uppercase tracking-[0.4em] text-[10px]">Industrial Diamond &amp; Fusion Standards</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Drill 1 -->
+<div class="bg-surface-container p-6 flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary text-tertiary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+</div>
+<h4 class="font-headline font-bold text-primary text-lg">Hilti D250</h4>
+<p class="text-[10px] text-secondary uppercase mt-1 mb-4">Diamond Drilling System</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Perforación de alto rendimiento en hormigón armado.</p>
+</div>
+<!-- Drill 2 -->
+<div class="bg-surface-container p-6 flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary text-tertiary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">build</span>
+</div>
+<h4 class="font-headline font-bold text-primary text-lg">Hilti D160</h4>
+<p class="text-[10px] text-secondary uppercase mt-1 mb-4">Core Drill Platform</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Precisión extrema para anclajes químicos y mecánicos.</p>
+</div>
+<!-- Victaulic -->
+<div class="bg-primary text-white p-6 flex flex-col items-center text-center lg:col-span-2 row-span-2 justify-center border-b-4 border-tertiary-fixed">
+<img class="w-32 h-32 object-cover rounded-full mb-8 border-2 border-tertiary-fixed p-1" data-alt="Close up of high-tech industrial pipe fitting and grooving tools, metal textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVcS2E8AJLMICSBPjDdBy99aUPdbj2Qnm1aTvdR8pTStq1-Lg-Dx-D8DE9nEU6GeRtwk1HvLM-5m40Tvr72QbIldzx51LE9Q9jx3gBL4RsuhTLYrOTMSb8BcdS-Er0AFNTE1wyDM5i6aEEUw5XY4Ck-a6ou0v2YYFEUAqbLk78oYIBoZSMauvH9F1pLr44wL2Qcko80S60r7Z7BKYvzT4SVP1UacBrhYoT-v5uUewWG1ss1i1u1_jOY0yjGN_IDL7uzkFVnpTZMX4H"/>
+<h4 class="font-headline font-bold text-2xl">Sistemas Victaulic</h4>
+<p class="text-[10px] text-on-primary-container uppercase tracking-widest mt-2 mb-6">Ranurado de Alta Presión</p>
+<p class="text-sm text-surface-variant max-w-xs leading-relaxed mb-8">Capacidad operativa total para sistemas contraincendios y redes industriales de gran escala.</p>
+<div class="grid grid-cols-2 gap-4 w-full text-left">
+<div class="border-l border-on-primary-fixed-variant pl-3">
+<span class="block text-[9px] font-bold text-tertiary-fixed uppercase">Electrofusion</span>
+<span class="text-xs">Up to 600mm</span>
+</div>
+<div class="border-l border-on-primary-fixed-variant pl-3">
+<span class="block text-[9px] font-bold text-tertiary-fixed uppercase">Corte Inox</span>
+<span class="text-xs">Stainless Cutters</span>
+</div>
+</div>
+</div>
+<!-- Welder -->
+<div class="bg-surface-container p-6 flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary text-tertiary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<h4 class="font-headline font-bold text-primary text-lg">Inversoras TIG</h4>
+<p class="text-[10px] text-secondary uppercase mt-1 mb-4">Precision Welding</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Soldadura de alta calidad para aleaciones especiales.</p>
+</div>
+<!-- Machines -->
+<div class="bg-surface-container p-6 flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary text-tertiary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">settings_input_component</span>
+</div>
+<h4 class="font-headline font-bold text-primary text-lg">Electrofusion 600</h4>
+<p class="text-[10px] text-secondary uppercase mt-1 mb-4">HDPE Redes</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Sistemas de termofusión controlada por microprocesador.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Infraestructura & Diseño Section (Asymmetric Layout) -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="container mx-auto">
+<div class="flex flex-col lg:flex-row gap-16">
+<div class="lg:w-1/3">
+<h2 class="text-4xl font-headline font-black text-primary leading-none uppercase mb-8">Infraestructura <br/> Digital &amp; Diseño</h2>
+<p class="text-secondary text-sm leading-relaxed mb-12">
+                            El cerebro de la operación. Estaciones de trabajo de alto rendimiento para el desarrollo de ingeniería, modelado 3D y administración federal de proyectos.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined">print</span>
+</div>
+<div>
+<h5 class="text-sm font-bold text-primary">Ploteo Industrial</h5>
+<p class="text-xs text-secondary">Salida de planos técnicos de gran formato in-situ.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<div>
+<h5 class="text-sm font-bold text-primary">Estaciones de Trabajo</h5>
+<p class="text-xs text-secondary">Procesamiento I7 para cálculo estructural y renderizado.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-white p-8 border-r-4 border-primary">
+<div class="text-[10px] font-bold text-tertiary-container mb-4">ADMIN &amp; DESIGN CORE</div>
+<ul class="space-y-4">
+<li class="flex justify-between items-center border-b border-outline-variant/20 pb-2">
+<span class="text-xs font-semibold text-secondary">Macbook Pro I7</span>
+<span class="text-xs font-bold text-primary">Design Lead</span>
+</li>
+<li class="flex justify-between items-center border-b border-outline-variant/20 pb-2">
+<span class="text-xs font-semibold text-secondary">Workstations I7 (x3)</span>
+<span class="text-xs font-bold text-primary">Project Mgmt</span>
+</li>
+<li class="flex justify-between items-center border-b border-outline-variant/20 pb-2">
+<span class="text-xs font-semibold text-secondary">HP Notebooks I7</span>
+<span class="text-xs font-bold text-primary">Field Ops</span>
+</li>
+</ul>
+</div>
+<div class="relative h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High-tech engineering office with blueprints on large monitors and technical equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMeQcOQNT-t12iWzN-QFP4tT9D2NjdHJJt_0Cz0ToDkc8SsbsumXYlNSNWe7Ec2t6rb55TZF240e5UHo0i2dPMmu9IeItJ2LqXYZ94VoMujjA_awSdhzRtk3yx_7acRrVHoHFOTrM63ZOJzfMxToAPvfH4dIdpUfALMmmq8QB5lWrH50oRug2xryQdc3WCQebOhfQpP3mcdg0UmISk8hZpg1mGhw72cCHXJRzoi0P4fp9K8QaW8FY8roeJAWY6uxLux295f3enSSvA"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Otros & Complementarios (Bento Grid Style) -->
+<section class="py-24 bg-white px-8">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-low p-12 flex flex-col justify-end relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 grayscale group-hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover" data-alt="Stack of industrial shipping containers in a shipyard, dramatic scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSi8UNQVLcozVCRGowFdiwI6-aTBDnukWicRtJyduxEbmvl64Vg7wHrjW7bSEIT0cjX7YAo4J8f7iXW-7j4bQnSSKpB12cNkdYB6QlhGIdMjbGQmtpFXPHg892ATEvvnGsgQreKcpW5oRAys7vwbb58aOVVQDgHSc0E1nvhV3gqlHomZAepZPnF3aUJPhyOKwNFTYhVBT0ydyNWPMunETf0-85yaaVjtkz8VJAZ774_ibuIA3lPLXyN_8kkGPVfHp6PYJ21OMyPTHq"/>
+</div>
+<div class="relative z-10">
+<h3 class="text-4xl font-headline font-black text-primary uppercase mb-4 leading-none">Containers <br/>&amp; Logística Móvil</h3>
+<p class="text-sm text-secondary max-w-sm">Módulos habitacionales y de almacenamiento para despliegue inmediato en cualquier punto geográfico.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-primary p-8 flex items-center justify-between group overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-2xl font-headline font-bold text-white uppercase mb-2">Andamiaje Metaltech</h3>
+<p class="text-xs text-on-primary-container">Sistemas certificados de alta seguridad.</p>
+</div>
+<span class="material-symbols-outlined text-6xl text-white/10 group-hover:text-tertiary-fixed transition-colors">foundation</span>
+</div>
+<div class="bg-tertiary-fixed p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-3xl">blur_on</span>
+<div>
+<h4 class="font-headline font-bold text-primary">Niveles Láser</h4>
+<p class="text-[10px] text-tertiary-container font-bold uppercase mt-1">Calibración Milimétrica</p>
+</div>
+</div>
+<div class="bg-surface-container-highest p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-3xl">construction</span>
+<div>
+<h4 class="font-headline font-bold text-primary">Herramental</h4>
+<p class="text-[10px] text-secondary font-bold uppercase mt-1">Kit Completo de Obra</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f8f9fa] dark:bg-[#00162a] w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 tonal shift using bg-[#5b5f61]/10 border-t border-outline-variant/10">
+<div class="flex flex-col items-center md:items-start">
+<div class="font-space-grotesk font-bold tracking-widest text-[#00162a] dark:text-[#f8f9fa] text-xl mb-2">H2O OBRAS</div>
+<p class="font-inter text-sm leading-relaxed opacity-70 max-w-md text-center md:text-left">© 2024 H2O OBRAS | Sovereign Infrastructure Engineering. All Rights Reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-sm leading-relaxed opacity-70 hover:opacity-100 hover:text-[#0d2b45] dark:hover:text-[#ffddba] transition-opacity duration-200" href="#">Technical Specs</a>
+<a class="font-inter text-sm leading-relaxed opacity-70 hover:opacity-100 hover:text-[#0d2b45] dark:hover:text-[#ffddba] transition-opacity duration-200" href="#">Maintenance Logs</a>
+<a class="font-inter text-sm leading-relaxed opacity-70 hover:opacity-100 hover:text-[#0d2b45] dark:hover:text-[#ffddba] transition-opacity duration-200" href="#">Federal Compliance</a>
+<a class="font-inter text-sm leading-relaxed opacity-70 hover:opacity-100 hover:text-[#0d2b45] dark:hover:text-[#ffddba] transition-opacity duration-200" href="#">Privacy Protocol</a>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-sm bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">shield</span>
+</div>
+<div class="w-8 h-8 rounded-sm bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+</div>
+</div>
+</footer>
+</body></html>

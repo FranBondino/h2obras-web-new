@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>H2O OBRAS | Portfolio Federal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed-variant": "#434749",
+                        "background": "#f8f9fa",
+                        "surface-container": "#edeeef",
+                        "on-surface-variant": "#43474d",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#3e2300",
+                        "primary-fixed": "#d0e4ff",
+                        "on-tertiary-fixed-variant": "#604018",
+                        "on-secondary-container": "#5f6365",
+                        "surface-container-low": "#f3f4f5",
+                        "primary": "#00162a",
+                        "surface-dim": "#d9dadb",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#181c1e",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-variant": "#e1e3e4",
+                        "outline": "#73777e",
+                        "outline-variant": "#c3c6ce",
+                        "secondary": "#5b5f61",
+                        "primary-fixed-dim": "#aec9ea",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#46607d",
+                        "secondary-fixed-dim": "#c4c7c9",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e0e3e5",
+                        "tertiary-fixed": "#ffddba",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001d35",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#aec9ea",
+                        "on-tertiary-container": "#b2885a",
+                        "surface-container-highest": "#e1e3e4",
+                        "secondary-container": "#dde0e2",
+                        "on-background": "#191c1d",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#2b1700",
+                        "surface": "#f8f9fa",
+                        "primary-container": "#0d2b45",
+                        "on-primary-container": "#7893b2",
+                        "tertiary-fixed-dim": "#edbe8b",
+                        "on-primary-fixed-variant": "#2e4964",
+                        "on-surface": "#191c1d",
+                        "tertiary": "#221100",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9fa"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .technical-grid {
+            background-image: radial-gradient(circle, #5b5f61 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.05;
+        }
+        .machined-overlay {
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopAppBar -->
+<header class="bg-[#00162a]/80 backdrop-blur-md dark:bg-[#00162a]/90 fixed top-0 w-full z-50 flex justify-between items-center px-10 py-6 w-full">
+<div class="text-2xl font-bold tracking-tight text-[#f8f9fa] font-headline uppercase">H2O OBRAS</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-sm text-[#ffddba] border-b-2 border-[#ffddba] pb-1" href="#">Projects</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-sm text-[#f8f9fa]/70 hover:text-[#ffddba] transition-colors duration-200" href="#">Capabilities</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-sm text-[#f8f9fa]/70 hover:text-[#ffddba] transition-colors duration-200" href="#">Infrastructure</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-sm text-[#f8f9fa]/70 hover:text-[#ffddba] transition-colors duration-200" href="#">Institutional</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-sm text-[#f8f9fa]/70 hover:text-[#ffddba] transition-colors duration-200" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-headline uppercase font-bold text-xs tracking-widest rounded-sm hover:bg-on-primary-fixed-variant transition-colors active:scale-95 duration-150">Technical Portal</button>
+</header>
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 top-0 h-full flex flex-col bg-[#f8f9fa] dark:bg-[#00162a] h-screen w-64 pt-28 z-40 hidden lg:flex">
+<div class="px-8 mb-10">
+<h2 class="text-lg font-black text-[#0d2b45] dark:text-f8f9fa font-headline uppercase tracking-tight">Project Registry</h2>
+<p class="text-[10px] tracking-[0.2em] text-secondary font-bold uppercase">Federal Infrastructure</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 py-4 font-['Inter'] font-semibold text-xs tracking-widest uppercase text-[#00162a] dark:text-[#ffddba] border-l-4 border-[#0d2b45] pl-4 hover:bg-[#0d2b45]/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-lg">medical_services</span>
+<span class="group-hover:translate-x-1 transition-transform duration-200">Hospitals</span>
+</a>
+<a class="flex items-center gap-4 py-4 font-['Inter'] font-semibold text-xs tracking-widest uppercase text-[#5b5f61] dark:text-[#5b5f61] pl-4 border-l-4 border-transparent hover:bg-[#0d2b45]/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-lg">flight_takeoff</span>
+<span class="group-hover:translate-x-1 transition-transform duration-200">Airports</span>
+</a>
+<a class="flex items-center gap-4 py-4 font-['Inter'] font-semibold text-xs tracking-widest uppercase text-[#5b5f61] dark:text-[#5b5f61] pl-4 border-l-4 border-transparent hover:bg-[#0d2b45]/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-lg">gavel</span>
+<span class="group-hover:translate-x-1 transition-transform duration-200">Judicial Centers</span>
+</a>
+<a class="flex items-center gap-4 py-4 font-['Inter'] font-semibold text-xs tracking-widest uppercase text-[#5b5f61] dark:text-[#5b5f61] pl-4 border-l-4 border-transparent hover:bg-[#0d2b45]/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-lg">school</span>
+<span class="group-hover:translate-x-1 transition-transform duration-200">Universities</span>
+</a>
+<a class="flex items-center gap-4 py-4 font-['Inter'] font-semibold text-xs tracking-widest uppercase text-[#5b5f61] dark:text-[#5b5f61] pl-4 border-l-4 border-transparent hover:bg-[#0d2b45]/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-lg">energy_savings_leaf</span>
+<span class="group-hover:translate-x-1 transition-transform duration-200">LEED Certified</span>
+</a>
+</nav>
+<div class="mt-auto p-8 opacity-20">
+<div class="h-px bg-on-surface w-full mb-4"></div>
+<div class="text-[8px] uppercase tracking-widest leading-loose">Engineering Division<br/>Log 2024.01</div>
+</div>
+</aside>
+<main class="lg:ml-64 pt-24 min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale brightness-50" data-alt="dramatic wide angle shot of a massive industrial water treatment plant with blue structural steel and heavy machinery at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdg9QL2x2wtwOew5fOwWQzg_Yp-_MfNpjyD9emjResdLy8U6kTqZvp97rHHVsBQaMjzUXiVRlJBGz41XslmuyroPedteQ8sTA_RHA0dk0JU-qYGJ2HP8ZyEN7nxTrY-6n2OtqxR7gOBcEWZOVglr5IlYiOUDlj5CAAkrIve47nPvH2mWwL-vqlOb5b2_ykRNwudCXGD88MkUBQy3iQ6fZyytd1m8uTFNisi1hegUmbi9iDg3J_twFEy3NM0E3ayHIpRmX5Ey-2uicx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-90"></div>
+<div class="absolute inset-0 technical-grid"></div>
+</div>
+<div class="relative z-10 px-12 pb-20 max-w-6xl">
+<div class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 inline-block font-headline text-[10px] font-bold tracking-[0.3em] uppercase mb-6">Strategic Infrastructure Portfolio</div>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold text-white leading-none tracking-tighter uppercase">Portfolio Federal:<br/>Infraestructura de Escala</h1>
+</div>
+</section>
+<!-- Project Grid (Asymmetric Bento Style) -->
+<section class="p-12 space-y-12">
+<!-- Featured Project 1: Jujuy -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-8 group relative overflow-hidden bg-surface-container-low p-1">
+<div class="relative overflow-hidden aspect-[16/9]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="high-tech modern medical facility facade with glass panels and surgical clean white concrete structures at twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkM8M2489RzoW7kDQFzvXrki7vWg1HTG9wNpbWdRyot7-U1UdvkUjvnDbFKa7k61Wj3mwabRXrKKTCl809ED-OFmRkPgEyWtBp6u-NFX55AgHndixsJZSan7ksQGEUanGyEthsf4upr7eD31xAKb5Bzzj81AyCQ7-CktolWnlTr9oZTKhqxLOp_X95I_DVYYcVFUxV_2hNBv_r9PafXKCOLGmMQzoV79CMjKbPXQQhRj3ixAgoSrNtHOYexH1qC-RLYLC-fQjwn1qa"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors"></div>
+</div>
+<div class="absolute top-8 right-8 flex flex-col gap-2 items-end">
+<span class="bg-primary-container text-white px-4 py-1 font-label text-[10px] font-black tracking-widest uppercase">25,000 m2</span>
+<span class="bg-white/90 backdrop-blur-sm text-primary px-4 py-1 font-label text-[10px] font-black tracking-widest uppercase">Health Tech</span>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-3xl font-headline font-bold text-primary uppercase tracking-tight">Hospital Regional Oscar Orias</h3>
+<p class="text-secondary font-body mt-2 text-sm uppercase tracking-widest font-semibold">Libertador Gral. San Martín, Jujuy</p>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl">architecture</span>
+</div>
+<p class="mt-6 text-on-surface-variant leading-relaxed max-w-2xl font-body">Integrated execution of high-complexity technical infrastructure. Focus on specialized fluid management and surgical grade atmospheric control for federal health coverage.</p>
+</div>
+</div>
+<!-- Secondary Projects Stack -->
+<div class="lg:col-span-4 flex flex-col gap-10">
+<!-- Project 2: Rosario Airport -->
+<div class="bg-surface-container-lowest p-8 flex flex-col h-full border-l-4 border-tertiary-fixed">
+<div class="flex justify-between mb-6">
+<span class="material-symbols-outlined text-primary">local_fire_department</span>
+<span class="bg-primary text-[9px] text-white px-2 py-1 font-bold tracking-tighter uppercase">NFPA CERTIFIED</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-primary uppercase">Aeropuerto Internacional Rosario</h4>
+<p class="text-xs text-secondary mt-2 font-bold tracking-widest uppercase">Fire Protection Systems</p>
+<p class="mt-4 text-sm text-on-surface-variant leading-relaxed font-body">Implementation of FM/UL standard suppression networks and specialized hydraulic infrastructure for international aeronautical logistics.</p>
+<div class="mt-auto pt-8 flex items-center gap-4">
+<div class="h-[1px] bg-outline-variant flex-grow"></div>
+<span class="text-[10px] font-black uppercase text-outline">Ref. P-02</span>
+</div>
+</div>
+<!-- Project 3: Judicial Center -->
+<div class="bg-primary p-8 text-white flex flex-col h-full relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'FILL' 1;">gavel</span>
+</div>
+<h4 class="text-xl font-headline font-bold text-tertiary-fixed uppercase">Centro de Justicia Penal</h4>
+<p class="text-xs text-on-primary-container mt-2 font-bold tracking-widest uppercase">Rosario, Santa Fe</p>
+<p class="mt-4 text-sm text-primary-fixed leading-relaxed font-body relative z-10">Maximum security hydraulic installations and technical precision modules for the province's primary judicial hub.</p>
+<div class="mt-auto pt-8">
+<span class="bg-tertiary-fixed text-primary px-3 py-1 text-[9px] font-black tracking-widest uppercase">High Security Infrastructure</span>
+</div>
+</div>
+</div>
+</div>
+<!-- LEED Highlight Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+<div class="bg-surface-container-high p-12 flex flex-col justify-center">
+<div class="bg-white w-20 h-20 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">energy_savings_leaf</span>
+</div>
+<h3 class="text-4xl font-headline font-extrabold text-primary uppercase leading-[0.9] tracking-tighter mb-4">Edificio Núcleo Autopista<br/>Ros-Bs. As.</h3>
+<div class="flex gap-4 mb-8">
+<span class="bg-primary text-white px-4 py-1 text-[10px] font-black tracking-widest uppercase">LEED PLATINUM</span>
+<span class="border border-primary px-4 py-1 text-[10px] font-black tracking-widest uppercase">Sustainability Leader</span>
+</div>
+<ul class="space-y-4 font-body text-sm text-on-surface-variant uppercase tracking-wide font-medium">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Solar Energy Integration</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Water Recovery Systems</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> Biological Treatment Plants</li>
+</ul>
+</div>
+<div class="h-full min-h-[400px]">
+<img class="w-full h-full object-cover" data-alt="ultra-modern glass and steel sustainable office building with integrated solar panels and vertical greenery gardens on the highway side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIc0ZHmJ7zg4zhqsXQXIBcP8TP8w16ODMXUyktQfKzArgfbmrIjN_MHyGvxWlUfCu_entGloLP5kht6xh5mqp0XQYHR_MQBVu7iMKJ5E1Jf8X1k16gFsxsfGutJO1gppJfX4Zu9EiSl6uGXmFWX47n9kRGSXBgtsEq-yT2Ze3US9QbMoykYCnBps3s4fdEiSwf4tRB8g5_CIlm9NP913oG_q93TaSSrPsnxY8IFWlDMEevCKblZ3LUh01od4Cqtj55TJwHCWMJ6A-o"/>
+</div>
+</div>
+<!-- Regional Reach (Universities & Extreme Environments) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Bariloche -->
+<div class="bg-surface-container-low p-10 flex flex-col border-t-8 border-primary">
+<span class="text-[10px] font-black uppercase text-outline mb-6">Cold Climate Engineering</span>
+<h4 class="text-2xl font-headline font-bold text-primary uppercase tracking-tight">Campus UNRN</h4>
+<p class="text-xs text-secondary mt-2 font-bold tracking-widest uppercase">Bariloche, Río Negro</p>
+<p class="mt-6 text-sm text-on-surface-variant leading-relaxed">Federal reach infrastructure designed for sub-zero performance and high-thermal efficiency fluid networks.</p>
+</div>
+<!-- Ushuaia -->
+<div class="bg-surface-container-low p-10 flex flex-col border-t-8 border-primary">
+<span class="text-[10px] font-black uppercase text-outline mb-6">High Complexity Environments</span>
+<h4 class="text-2xl font-headline font-bold text-primary uppercase tracking-tight">Edificio Ewain I</h4>
+<p class="text-xs text-secondary mt-2 font-bold tracking-widest uppercase">Ushuaia, Tierra del Fuego</p>
+<p class="mt-6 text-sm text-on-surface-variant leading-relaxed">Engineering in extreme latitudes. Specialized plumbing and heating systems for the southernmost urban infrastructure projects.</p>
+</div>
+<!-- Specialized Hospitals -->
+<div class="bg-surface-container-low p-10 flex flex-col border-t-8 border-primary">
+<span class="text-[10px] font-black uppercase text-outline mb-6">Technical Health Registry</span>
+<h4 class="text-2xl font-headline font-bold text-primary uppercase tracking-tight">Especialidades Médicas</h4>
+<p class="text-xs text-secondary mt-2 font-bold tracking-widest uppercase">Santa Fe &amp; Regional</p>
+<p class="mt-6 text-sm text-on-surface-variant leading-relaxed">Continuous execution of medical gas systems, sterile water loops, and specialized hospital logistics across the federal territory.</p>
+</div>
+</div>
+</section>
+<!-- Technical Specs Ticker -->
+<div class="bg-primary-container py-12 border-y border-white/10 overflow-hidden">
+<div class="flex whitespace-nowrap gap-16 animate-infinite-scroll">
+<span class="text-primary-fixed/30 font-headline font-black text-4xl uppercase tracking-[0.2em]">NFPA COMPLIANT</span>
+<span class="text-primary-fixed/30 font-headline font-black text-4xl uppercase tracking-[0.2em]">LEED PLATINUM STANDARD</span>
+<span class="text-primary-fixed/30 font-headline font-black text-4xl uppercase tracking-[0.2em]">FEDERAL SCALE LOGISTICS</span>
+<span class="text-primary-fixed/30 font-headline font-black text-4xl uppercase tracking-[0.2em]">FM/UL CERTIFIED SYSTEMS</span>
+<span class="text-primary-fixed/30 font-headline font-black text-4xl uppercase tracking-[0.2em]">PRECISION ENGINEERING</span>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#00162a] dark:bg-[#000b14] w-full px-12 py-16 grid grid-cols-1 md:grid-cols-2 items-end">
+<div>
+<div class="text-xl font-bold text-[#f8f9fa] font-headline mb-6">H2O OBRAS</div>
+<div class="grid grid-cols-2 gap-y-4 max-w-sm">
+<a class="text-[#5b5f61] font-['Inter'] text-[10px] tracking-widest uppercase hover:text-white transition-colors" href="#">Technical Specifications</a>
+<a class="text-[#5b5f61] font-['Inter'] text-[10px] tracking-widest uppercase hover:text-white transition-colors" href="#">Environmental Policy</a>
+<a class="text-[#5b5f61] font-['Inter'] text-[10px] tracking-widest uppercase hover:text-white transition-colors" href="#">Federal Procurement</a>
+<a class="text-[#5b5f61] font-['Inter'] text-[10px] tracking-widest uppercase hover:text-white transition-colors" href="#">Terms of Engineering</a>
+</div>
+</div>
+<div class="mt-12 md:mt-0 text-right">
+<p class="text-[#5b5f61] font-['Inter'] text-[10px] tracking-widest uppercase leading-relaxed">
+                © 2024 H2O OBRAS | Sovereign Infrastructure Group<br/>
+                Technical Operations Division | South American Region
+            </p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-surface-container-high flex justify-around items-center p-4 z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+<span class="text-[8px] font-bold uppercase tracking-widest">Health</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary" href="#">
+<span class="material-symbols-outlined">flight_takeoff</span>
+<span class="text-[8px] font-bold uppercase tracking-widest">Air</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span class="text-[8px] font-bold uppercase tracking-widest">Legal</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary" href="#">
+<span class="material-symbols-outlined">energy_savings_leaf</span>
+<span class="text-[8px] font-bold uppercase tracking-widest">LEED</span>
+</a>
+</nav>
+</body></html>

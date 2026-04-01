@@ -1,0 +1,368 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#c4c7c9",
+              "on-tertiary-container": "#b2885a",
+              "error": "#ba1a1a",
+              "inverse-surface": "#2e3132",
+              "surface-container-highest": "#e1e3e4",
+              "secondary-fixed": "#e0e3e5",
+              "on-error-container": "#93000a",
+              "on-surface": "#191c1d",
+              "primary": "#00162a",
+              "surface": "#f8f9fa",
+              "inverse-on-surface": "#f0f1f2",
+              "on-surface-variant": "#43474d",
+              "tertiary": "#221100",
+              "on-primary-fixed-variant": "#2e4964",
+              "secondary": "#5b5f61",
+              "surface-variant": "#e1e3e4",
+              "on-tertiary-fixed-variant": "#604018",
+              "primary-fixed-dim": "#aec9ea",
+              "outline": "#73777e",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "surface-dim": "#d9dadb",
+              "tertiary-container": "#3e2300",
+              "surface-bright": "#f8f9fa",
+              "tertiary-fixed-dim": "#edbe8b",
+              "on-primary-fixed": "#001d35",
+              "on-secondary-fixed-variant": "#434749",
+              "outline-variant": "#c3c6ce",
+              "surface-container-high": "#e7e8e9",
+              "primary-container": "#0d2b45",
+              "error-container": "#ffdad6",
+              "background": "#f8f9fa",
+              "on-primary-container": "#7893b2",
+              "on-secondary": "#ffffff",
+              "primary-fixed": "#d0e4ff",
+              "on-background": "#191c1d",
+              "on-tertiary-fixed": "#2b1700",
+              "on-primary": "#ffffff",
+              "surface-container": "#edeeef",
+              "on-secondary-container": "#5f6365",
+              "inverse-primary": "#aec9ea",
+              "secondary-container": "#dde0e2",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#ffddba",
+              "surface-tint": "#46607d",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary-fixed": "#181c1e"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+      }
+      .machined-glass {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+      }
+      .dark .machined-glass {
+        background: rgba(0, 22, 42, 0.8);
+      }
+      .technical-gradient {
+        background: linear-gradient(135deg, #00162a 0%, #0d2b45 100%);
+      }
+      .asymmetric-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 max-w-[1920px] mx-auto">
+<div class="text-2xl font-black tracking-tighter text-cyan-950 dark:text-white font-headline" style="">
+                H2O OBRAS
+            </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-sm text-cyan-600 dark:text-cyan-400 border-b-2 border-cyan-600 dark:border-cyan-400 pb-1" href="#" style="">Empresa</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-cyan-950 dark:hover:text-white transition-colors" href="#" style="">Portfolio</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-cyan-950 dark:hover:text-white transition-colors" href="#" style=""><br></a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-cyan-950 dark:hover:text-white transition-colors" href="#" style="">Equipamiento</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-cyan-950 dark:hover:text-white transition-colors" href="#" style="">Contacto</a>
+</nav>
+<button class="bg-primary-container text-white px-6 py-2.5 rounded-sm font-headline font-bold text-xs uppercase tracking-widest scale-[0.98] active:scale-95 transition-transform" style="">
+                Solicitar Factibilidad Técnica
+            </button>
+</div>
+<div class="bg-slate-200/20 dark:bg-slate-800/20 h-[1px] w-full"></div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[921px] min-h-[700px] overflow-hidden technical-gradient flex items-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-40" data-alt="Close-up of high-complexity industrial hydraulic pipes and steel valves in a modern facility with blue technical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3oJNFOqYa2cSROKhW2cYuJZC5hZxXUJ7WlGidwVHoBi381GVyZ7dHj8UYrETkFCwTPBjoovw6sBMx8k_Wi8uhGJGejOmHIIbQ-4XoW3xENA0eYyO84IvNefTbOzNclGFw-0z1cay7i6zAeI2TsTLOsq2qVAAXY64DnftUTeSvJRXcplLFkA0p0obJbVNr2j6o4x-usIvfmAO4HkOWZ7xlWZmHQQTx-KYiDbxrLWTdhAsE-_9xWUYOQYhG0fqO8rrLk9OINa8hEfCi" style="">
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-4xl">
+<span class="inline-block bg-on-primary-fixed-variant text-white px-3 py-1 text-[10px] tracking-[0.2em] font-headline font-bold uppercase mb-6 rounded-sm" style="">Infraestructura Soberana</span>
+<h1 class="text-white font-headline font-black text-6xl md:text-8xl tracking-tighter leading-[0.9] mb-8" style="">
+                        H2O OBRAS: Ingeniería de Alta Complejidad y Autonomía Total
+                    </h1>
+<div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+<button class="bg-primary-fixed text-primary px-10 py-5 rounded-sm font-headline font-black text-sm uppercase tracking-wider hover:bg-white transition-colors" style="">
+                            Solicitar Factibilidad Técnica
+                        </button>
+<div class="flex items-center gap-4 text-white/60">
+<span class="h-[1px] w-12 bg-white/30"></span>
+<span class="font-label text-xs tracking-widest uppercase" style="">Certificación Federal &amp; Normas NFPA</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Data Overlay -->
+<div class="absolute bottom-12 right-12 hidden lg:block text-right">
+<p class="font-headline font-bold text-white text-4xl mb-1 tracking-tighter" style="">450k+</p>
+<p class="font-label text-white/50 text-[10px] uppercase tracking-[0.2em]" style="">Metros Cuadrados Intervenidos</p>
+</div>
+</section>
+<!-- Portfolio Portfolio Grid (Asymmetric) -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline font-black text-5xl text-primary tracking-tighter mb-4" style="">Proyectos de Escala Federal</h2>
+<p class="text-secondary text-lg leading-relaxed" style="">Ejecución de sistemas críticos en entornos de alta exigencia técnica y operativa.</p>
+</div>
+<div class="text-right">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-primary/40 font-bold" style="">Portfolio 2024</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Project 1 -->
+<div class="md:col-span-8 group cursor-pointer overflow-hidden rounded-sm bg-surface-container-low relative aspect-video md:aspect-auto md:h-[600px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="Wide shot of a modern medical hospital complex in a mountain setting with contemporary architecture and glass facades" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2PnYfhFpD83puAvaHA27bKwp4jxlo--DUq4451xmEp0Z3cDe1uOXMIGU3-mENwmDdYPmRGTYYdK2e4SngsA1pULgaYDe4ZMe4QZF5PORzxIFVTSs_dY8MnTZeF0kM8XzSZ7FKywS4uYRzH1-aZjx2QKaye-TzRZuGLSVDaYVBmOgMZ0ONogsG92d-cLeaSSMQvLwLaxCz-An6bfSUt3z8tFpiYwx2HjgU2KWr4mbjgBEbglnOeTeZt1BMbnVeVUQflaZIncYk1FCY" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-12">
+<span class="font-label text-[10px] text-primary-fixed uppercase tracking-widest font-bold mb-2" style="">Sanidad &amp; Infraestructura</span>
+<h3 class="text-white font-headline font-bold text-4xl tracking-tighter leading-none mb-4" style="">Hospital Regional Oscar Orias</h3>
+<p class="text-white/70 max-w-md font-body text-sm" style="">25.000 m2. Ingeniería hidráulica integral y redes de gases medicinales. Libertador Gral. San Martín, Jujuy.</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="md:col-span-4 group cursor-pointer overflow-hidden rounded-sm bg-surface-container-low relative h-[600px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="Interior of a modern airport terminal showing structural steel and engineering complexity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2oUCHxxqAaH0tmb9q3u-kJ-oQOoiFHpgE-RhYHM3ylIYXrtoo2XS_vFtHw_yZ8M5mtR7buWv5HSya1F0UAgtc0oON1vsP9yDrCHCRyAU0hedllhVPylNcioQFCrKhuF3VCosCUkVUMb1RjvC-iR2uG6swaQ0BeZtuHvJLTTzQGKQc_jHbQ4EWdUIrvjOgymT0QKFcmJO26Le5UEznqUiKdIkVBXsqwjQfRDUSUarc3W5VQx0IdT6arRRwjMB4eaeMt7ficd4yqD_g" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<span class="font-label text-[10px] text-primary-fixed uppercase tracking-widest font-bold mb-2" style="">Seguridad Contra Incendios</span>
+<h3 class="text-white font-headline font-bold text-2xl tracking-tighter leading-none mb-4" style="">Aeropuerto Int. Rosario</h3>
+<p class="text-white/70 font-body text-xs" style="">Sistemas FM/UL y normativa NFPA para terminal aérea.</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="md:col-span-4 group cursor-pointer overflow-hidden rounded-sm bg-surface-container-low relative h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="Modern office building with brutalist design elements and structural concrete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVniuuJRZE0bAiEvBbFTxOhKDi6oiVECAZGNBNOZ2L93MGfFmS6rZzAjzIywHhvxEA87z1KcO7WoHjwGu2ahtjShih9Kkz6fNdHB44MWw63WuoK7OvCfLxxgZS-CjxYZw9j_WhMzbej4-eyvlnwsDlxIlq7bVEXoJqBChr2sy7PwxPpe4w3IWb4jJdZY20NB2kZON-tcbIOrJ21vLzgQUN4V1dpiNqmYiQxGQ050voHKtbsZ01nasUiERpWhbqDJXRwrR0e-mY8krM" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<h3 class="text-white font-headline font-bold text-xl tracking-tighter mb-2" style="">Centro de Justicia Penal</h3>
+<p class="text-white/70 font-body text-xs" style="">Instalaciones sanitarias de alta seguridad. Rosario.</p>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="md:col-span-4 group cursor-pointer overflow-hidden rounded-sm bg-surface-container-low relative h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="Educational campus architecture with large windows and industrial materials in a natural setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLkylvMEGY_K3gY76f3xaF_fFJqXSHiVpoK9BlgGQCQx6FbmKWYOr-jFRhBxhmleS8zU-1RSVywTHglZG7rmUcD9fv_V15M2eRHf41Vl_Cmqs3jWpRAvnb7mStwmfVYOBujdVwCewmZSZzQdTXlFTMXWuOrEFmmVOS_8PFc0ZbIOC9JIvHUvafncUhiYtBG5IpADB0sd_MaDZ_7W018zb3F3TlVMZniI6J1EL-x0D-TOHS5LoVld4IHMHIvox5YnzDkkjCAkBne3Zy" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<h3 class="text-white font-headline font-bold text-xl tracking-tighter mb-2" style="">Campus UNRN</h3>
+<p class="text-white/70 font-body text-xs" style="">Infraestructura educativa federal. San Carlos de Bariloche.</p>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="md:col-span-4 group cursor-pointer overflow-hidden rounded-sm bg-surface-container-low relative h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="Ultra-modern residential building in a cold climate setting with high-performance insulation and steel structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWQ9eprGVfub6pa0jbYXXNhzjA6GdmwSx0uDGs7Muiomkm4OIlhNH5o-2UgxGfEvb9ebX7kXrQJvJMMgsaOVPZnEnluJeS62tdMw6vmW37E2Yc7wIOpKfON37LEsd7VLhw_EG62RfGmTjAYx5m_9Xxh-ZaByGX8G24WagcFDGG3s1P2h8f0Vf-IDG16yPJIy2lirlDsPaZwxFNL27Ym_M8DjAphrjOYojzC2hsgI3z5nEvyfcPtii7YzSCfC58Iy1TqaEKkkpyj68O" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<h3 class="text-white font-headline font-bold text-xl tracking-tighter mb-2" style="">Edificio Ewain I</h3>
+<p class="text-white/70 font-body text-xs" style="">Ingeniería en climas extremos. Ushuaia.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sustainability Showcase (LEED PLATINUM) -->
+<section class="py-32 bg-primary text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+<circle cx="100" cy="50" fill="currentColor" r="50"></circle>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="inline-flex items-center gap-2 text-primary-fixed font-headline font-bold uppercase tracking-widest text-xs mb-6" style="">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">eco</span>
+                            Sustentabilidad LEED PLATINUM
+                        </span>
+<h2 class="font-headline font-black text-5xl md:text-6xl tracking-tighter leading-none mb-8" style="">
+                            Edificio Núcleo Autopista Ros-Bs. As.
+                        </h2>
+<p class="text-on-primary-container text-xl leading-relaxed mb-12" style="">
+                            Proyecto insignia de La Segunda Seguros. H2O OBRAS ejecutó los sistemas de gestión hídrica y energía térmica para alcanzar el máximo estándar global de eficiencia.
+                        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="border-l-2 border-primary-fixed pl-6 py-2">
+<h4 class="font-headline font-bold text-lg mb-2" style="">Energía Solar Térmica</h4>
+<p class="text-white/60 text-sm" style="">Integración de sistemas de captación para agua caliente sanitaria a gran escala.</p>
+</div>
+<div class="border-l-2 border-primary-fixed pl-6 py-2">
+<h4 class="font-headline font-bold text-lg mb-2" style="">Recupero de Aguas Grises</h4>
+<p class="text-white/60 text-sm" style="">Circuitos cerrados de tratamiento para reutilización en servicios secundarios.</p>
+</div>
+<div class="border-l-2 border-primary-fixed pl-6 py-2">
+<h4 class="font-headline font-bold text-lg mb-2" style="">Tratamiento Biológico</h4>
+<p class="text-white/60 text-sm" style="">Plantas de tratamiento propias con vertido de residuo nulo al ecosistema.</p>
+</div>
+<div class="border-l-2 border-primary-fixed pl-6 py-2">
+<h4 class="font-headline font-bold text-lg mb-2" style="">Certificación Federal</h4>
+<p class="text-white/60 text-sm" style="">Documentación técnica auditada bajo estándares internacionales.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<img class="rounded-sm w-full shadow-2xl relative z-10 grayscale-[30%]" data-alt="Modern sustainable architecture with vertical gardens and glass panels showing reflection of blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNbDo9JYPxLLNo3Esp97ISEIIbqj4WxqQq6k-JBH2Y2l0x3ujgnlKdAcsqgIDxu5SYDvw1oWg5ObX6McQjTbH28t6fKbdv-F4jHMqL9uEhmDNwevhozWptpsfhb88fE9aX6GykznvQoU1BaszFiVR-u1T8nv7OFQDMht59rTw_Q3_b6hcxiQIUXHLcIksc1qM39vYg4I5jiZTy1wWo4nZ4UOUYkyESxA9SuhdeALis3u_h9gYynx5ET7lxJ_fEr-qYBSSX54oFf8nV" style="">
+<div class="absolute -bottom-8 -left-8 bg-surface text-primary p-8 rounded-sm z-20 shadow-xl max-w-xs">
+<p class="font-headline font-black text-4xl mb-1 tracking-tighter" style="">LEED</p>
+<p class="font-label text-[10px] uppercase tracking-widest font-bold opacity-60" style="">Platinum Certified</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Operational Capacity Section (Machined-Plate style) -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20 text-center max-w-3xl mx-auto">
+<h2 class="font-headline font-black text-5xl text-primary tracking-tighter mb-4" style="">Autonomía Operativa</h2>
+<p class="text-secondary" style="">Contamos con flota propia de maquinaria pesada y tecnología de punta, garantizando independencia total de subcontrataciones.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Machine 1 -->
+<div class="bg-surface p-8 rounded-sm shadow-sm border border-outline-variant/10 group">
+<div class="h-48 mb-8 overflow-hidden rounded-sm bg-surface-container-highest">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0" data-alt="Small white Bobcat excavator working on a technical construction site with precise maneuvers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcg9D1xbBov8FMdw-kqKmzhdM7Z_psxSrHWcJYKfSdhW8gd1UpGL4CS5rO5SDnCR7vOU1dTgFVk-rq0xWfNQI3mek6mkWlNEi7z6d6SuT65F0kcp0L8sQloTKtTZItymcYmhvB5XM3jAuGj6e2m1XGJGf9aNIldj7tOK116TDRJ6zIC_w2s-81BmIRt4J8tBUwYDIqQvHtCfpjl4MweXeBqth09ilWBg1dITy3UX-GXq9aNs2ZO5ix24Fy_JiZK95B9Z2p-hibFA4i" style="">
+</div>
+<span class="font-label text-[10px] text-tertiary-fixed-dim bg-tertiary px-2 py-1 rounded-sm mb-4 inline-block font-bold" style="">Earthmoving</span>
+<h3 class="font-headline font-bold text-xl mb-4" style="">Bobcat E-26 &amp; S450</h3>
+<ul class="space-y-2 text-sm text-secondary">
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-xs" style="">check_circle</span> Mini-excavadora hidráulica</li>
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-xs" style="">check_circle</span> Mini-cargadora compacta</li>
+</ul>
+</div>
+<!-- Machine 2 -->
+<div class="bg-surface p-8 rounded-sm shadow-sm border border-outline-variant/10 group">
+<div class="h-48 mb-8 overflow-hidden rounded-sm bg-surface-container-highest">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0" data-alt="Industrial scissor lift platform extended high against a blue structural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDueXdvmGtNV3nQ27xkQo-h-9d6C5PP0F8DBJ06CpnGE9nJkFqbBHTF2oq-rSx7ueXcIiebvsqJuSrPBZX3I5gbLaadoNE6gov8QD_vORxEvtFpsNILZNkqBkGMcs6Hp2Q7TO6Y7YPcKZw3A5Xy4B5JUkYIno8FQf_FvPBgCCF27YAkLUMUjVdiDG95h3jpGIWtcsofY9m-3GJbS6KVPOhlTbL8b_zCrx15aRNbspvTRrTyKrC4tSq10SCzPHpTVn0h0K6v8xg4eRxq" style="">
+</div>
+<span class="font-label text-[10px] text-tertiary-fixed-dim bg-tertiary px-2 py-1 rounded-sm mb-4 inline-block font-bold" style="">Aerial Works</span>
+<h3 class="font-headline font-bold text-xl mb-4" style="">Plataforma Mantall</h3>
+<ul class="space-y-2 text-sm text-secondary">
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-xs" style="">check_circle</span> Elevación de 16 metros</li>
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-xs" style="">check_circle</span> Motorización eléctrica silenciosa</li>
+</ul>
+</div>
+<!-- Machine 3 -->
+<div class="bg-surface p-8 rounded-sm shadow-sm border border-outline-variant/10 group">
+<div class="h-48 mb-8 overflow-hidden rounded-sm bg-surface-container-highest">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0" data-alt="Technical worker using Hilti diamond drilling equipment on concrete with water cooling system" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf4aEKoqLO6wWNZOdLsU6bJ1ClaXVGEmlCdN7hgGhkeiEdDt0fh3VJVJkZEu-khbD0QoZhQmYYRp74ziNya7Vm_z9vJMvws2Ia4o9TyCCE_JWWYkYTD9dgqaLP3CZmI1j7FvJEJqlAFZ30q0vdxoMwpIHsdFkpa8CameKpsKKJUk6wnTwd1TXng9NtXA01CxLJwQ8QEwvoPkd-U_rFOb4rzUvj67xNISOKNBaU69JLj3zpVlpr36EdhsIv4M-P0K8I8tHevsytnRda" style="">
+</div>
+<span class="font-label text-[10px] text-tertiary-fixed-dim bg-tertiary px-2 py-1 rounded-sm mb-4 inline-block font-bold" style="">Precision Tools</span>
+<h3 class="font-headline font-bold text-xl mb-4" style="">Hilti &amp; Victaulic</h3>
+<ul class="space-y-2 text-sm text-secondary">
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-xs" style="">check_circle</span> Perforación diamante D250</li>
+<li class="flex items-center gap-2" style=""><span class="material-symbols-outlined text-xs" style="">check_circle</span> Soldadura TIG Inverter</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Specialized Services -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-1">
+<div class="lg:col-span-1 p-12 bg-primary text-white">
+<h2 class="font-headline font-black text-4xl tracking-tighter leading-none mb-6" style="">Nuestras Especialidades</h2>
+<p class="text-on-primary-container text-sm leading-relaxed" style="">Sistemas certificados bajo estándares internacionales de seguridad e ingeniería.</p>
+</div>
+<div class="p-12 bg-surface-container-low hover:bg-primary-container hover:text-white transition-colors duration-300 group">
+<span class="material-symbols-outlined text-4xl mb-8 group-hover:text-primary-fixed" style="">plumbing</span>
+<h4 class="font-headline font-bold text-lg mb-4" style="">Instalaciones Sanitarias &amp; Gas</h4>
+<p class="text-secondary group-hover:text-white/70 text-sm" style="">Redes de alta presión y sistemas de distribución de fluidos industriales.</p>
+</div>
+<div class="p-12 bg-surface-container hover:bg-primary-container hover:text-white transition-colors duration-300 group">
+<span class="material-symbols-outlined text-4xl mb-8 group-hover:text-primary-fixed" style="">fire_extinguisher</span>
+<h4 class="font-headline font-bold text-lg mb-4" style="">Protección Contra Incendio</h4>
+<p class="text-secondary group-hover:text-white/70 text-sm" style="">Normativa NFPA, sistemas FM/UL, rociadores y redes de hidrantes.</p>
+</div>
+<div class="p-12 bg-surface-container-high hover:bg-primary-container hover:text-white transition-colors duration-300 group">
+<span class="material-symbols-outlined text-4xl mb-8 group-hover:text-primary-fixed" style="">pool</span>
+<h4 class="font-headline font-bold text-lg mb-4" style="">Piscinas de Alta Gama</h4>
+<p class="text-secondary group-hover:text-white/70 text-sm" style="">Ingeniería hidráulica recreativa y sistemas de filtrado inteligente.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900 w-full border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="font-['Space_Grotesk'] font-black text-2xl text-cyan-950 dark:text-white uppercase tracking-tighter" style="">
+                    H2O OBRAS
+                </div>
+<p class="font-['Inter'] text-xs tracking-wider leading-relaxed text-slate-500 dark:text-slate-400 max-w-xs" style="">
+                    Sovereign Infrastructure Engineering. Proyectos complejos resueltos con precisión técnica y autonomía absoluta en todo el territorio nacional.
+                </p>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<h5 class="font-headline font-bold text-cyan-950 dark:text-white text-sm uppercase tracking-widest mb-2" style="">Oficinas Centrales</h5>
+<div class="space-y-2">
+<p class="text-slate-500 dark:text-slate-400 font-['Inter'] text-xs tracking-wider" style="">
+<span class="font-bold text-cyan-900 dark:text-cyan-100" style="">Rosario:</span> Av. Pellegrini 1260
+                    </p>
+<p class="text-slate-500 dark:text-slate-400 font-['Inter'] text-xs tracking-wider" style="">
+<span class="font-bold text-cyan-900 dark:text-cyan-100" style="">CABA:</span> Austria 1951
+                    </p>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="font-headline font-bold text-cyan-950 dark:text-white text-sm uppercase tracking-widest mb-2" style="">Legal &amp; Técnico</h5>
+<nav class="flex flex-col gap-2">
+<a class="text-slate-500 dark:text-slate-400 font-['Inter'] text-xs tracking-wider hover:text-cyan-600 dark:hover:text-cyan-300 underline underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#" style="">Privacidad</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Inter'] text-xs tracking-wider hover:text-cyan-600 dark:hover:text-cyan-300 underline underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#" style="">Términos Técnicos</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Inter'] text-xs tracking-wider hover:text-cyan-600 dark:hover:text-cyan-300 underline underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#" style="">Certificaciones NFPA</a>
+</nav>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 pb-8 border-t border-slate-200 dark:border-slate-800 pt-8 flex justify-between items-center">
+<p class="font-['Inter'] text-[10px] tracking-widest text-slate-400 uppercase" style="">
+                © 2024 H2O OBRAS - Sovereign Infrastructure Engineering
+            </p>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-sm bg-cyan-950 dark:bg-white flex items-center justify-center">
+<span class="material-symbols-outlined text-white dark:text-cyan-950 text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">settings</span>
+</div>
+<div class="w-8 h-8 rounded-sm bg-cyan-950 dark:bg-white flex items-center justify-center">
+<span class="material-symbols-outlined text-white dark:text-cyan-950 text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">water_drop</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

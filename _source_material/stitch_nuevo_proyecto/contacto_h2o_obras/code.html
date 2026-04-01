@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f8f9fa",
+              "on-secondary-fixed": "#181c1e",
+              "on-primary": "#ffffff",
+              "surface-bright": "#f8f9fa",
+              "primary-container": "#0d2b45",
+              "primary-fixed": "#d0e4ff",
+              "tertiary": "#221100",
+              "primary": "#00162a",
+              "on-secondary-container": "#5f6365",
+              "inverse-surface": "#2e3132",
+              "tertiary-container": "#3e2300",
+              "on-primary-container": "#7893b2",
+              "on-background": "#191c1d",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e1e3e4",
+              "surface-container-low": "#f3f4f5",
+              "outline": "#73777e",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#ffddba",
+              "secondary-fixed": "#e0e3e5",
+              "surface-container": "#edeeef",
+              "surface-tint": "#46607d",
+              "on-surface-variant": "#43474d",
+              "secondary": "#5b5f61",
+              "on-tertiary-fixed": "#2b1700",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#aec9ea",
+              "on-tertiary-container": "#b2885a",
+              "background": "#f8f9fa",
+              "surface-variant": "#e1e3e4",
+              "on-error": "#ffffff",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#604018",
+              "inverse-on-surface": "#f0f1f2",
+              "on-surface": "#191c1d",
+              "outline-variant": "#c3c6ce",
+              "surface-dim": "#d9dadb",
+              "secondary-container": "#dde0e2",
+              "on-secondary-fixed-variant": "#434749",
+              "on-primary-fixed-variant": "#2e4964",
+              "on-primary-fixed": "#001d35",
+              "inverse-primary": "#aec9ea",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#e7e8e9",
+              "tertiary-fixed-dim": "#edbe8b",
+              "secondary-fixed-dim": "#c4c7c9",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .technical-grid {
+            background-size: 40px 40px;
+            background-image: radial-gradient(circle, #c3c6ce 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<nav class="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-xl font-black tracking-tighter text-slate-900 dark:text-slate-50 font-headline">H2O OBRAS</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-slate-50 transition-colors duration-150 font-label text-[0.75rem] uppercase tracking-wider" href="#">Feasibility</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-slate-50 transition-colors duration-150 font-label text-[0.75rem] uppercase tracking-wider" href="#">Offices</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-slate-50 transition-colors duration-150 font-label text-[0.75rem] uppercase tracking-wider" href="#">Warehouses</a>
+<a class="text-slate-900 dark:text-slate-50 border-b-2 border-slate-900 dark:border-slate-50 pb-1 font-label text-[0.75rem] uppercase tracking-wider transition-colors duration-150" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-sm text-[0.75rem] uppercase font-bold tracking-widest active:scale-95 transition-transform duration-150">
+                Technical Inquiry
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[716px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover filter brightness-50" data-alt="Modern industrial facility with massive steel structures and hydraulic systems under a clear blue sky with dramatic low angle perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP1B6NLqKDG2WjiXqHAXsLP4zNGasY2hpMz0URjO9bEc0DYEduaTqvQgOtM9NtqUADnmU-1k8udUmfqo4rnHKI4r1-_ayDlGDmV8OCPPaIO67hnEMPtRLoH-A2jVFJftBALfKY0WQsAxj6px8qsJ3-Rb8ewvSGX_jDOnbBfO9Xq7HCrAj4Tp_qTGoCZZ-mGrr--k3bEazFyTot5ZFi_u1_YvBKP41kru-ouNKobi7CjLggMjv1gJXud91PvuMd103SisNSp5JJTzI3"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-screen-2xl mx-auto px-8">
+<div class="max-w-3xl">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed px-3 py-1 text-[0.6875rem] font-bold uppercase tracking-widest mb-6 rounded-sm">Consultoría de Ingeniería</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tighter">
+                        Consultoría de Ingeniería y Factibilidad Técnica
+                    </h1>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary-fixed text-on-primary-fixed px-8 py-4 rounded-sm font-bold uppercase text-sm flex items-center gap-3 hover:bg-white transition-colors duration-150" href="#technical-form">
+                            INICIAR PROTOCOLO TÉCNICO
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Metadata Divider -->
+<div class="bg-surface-container-low py-4 px-8 overflow-hidden whitespace-nowrap">
+<div class="flex items-center gap-12 text-on-surface-variant/30 text-[0.6875rem] font-mono uppercase tracking-[0.3em]">
+<span>SOVEREIGN INFRASTRUCTURE REGISTRY 2024</span>
+<span class="material-symbols-outlined text-xs">close</span>
+<span>H2O-OP-PROTOCOL-v4.0</span>
+<span class="material-symbols-outlined text-xs">close</span>
+<span>HYDRAULIC ENGINEERING STANDARDS</span>
+<span class="material-symbols-outlined text-xs">close</span>
+<span>FEDERAL SCALE OPERATIONS</span>
+</div>
+</div>
+<!-- Infrastructure Network: Offices & Warehouses -->
+<section class="py-24 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left: Offices & Info -->
+<div class="lg:col-span-5 space-y-20">
+<!-- Offices -->
+<div>
+<div class="flex items-baseline gap-4 mb-10">
+<h2 class="font-headline text-3xl font-bold uppercase tracking-tight text-primary">Oficinas</h2>
+<div class="flex-grow border-b border-outline-variant/30"></div>
+</div>
+<div class="space-y-12">
+<div class="group">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-lg text-primary tracking-tight">ROSARIO</h3>
+<span class="text-[0.65rem] font-bold text-on-primary-container px-2 bg-primary-fixed/50 rounded-sm">HUB PRINCIPAL</span>
+</div>
+<p class="text-on-surface-variant font-light leading-relaxed">Av. Pellegrini 1260 Piso 13 Dto. B<br/>(2000) Rosario, Santa Fe.</p>
+</div>
+<div class="group">
+<h3 class="font-headline font-bold text-lg text-primary tracking-tight mb-2">CABA</h3>
+<p class="text-on-surface-variant font-light leading-relaxed">Austria 1951 Piso 6º C<br/>Ciudad Autónoma de Buenos Aires.</p>
+</div>
+</div>
+</div>
+<!-- Contact Info -->
+<div>
+<div class="flex items-baseline gap-4 mb-10">
+<h2 class="font-headline text-3xl font-bold uppercase tracking-tight text-primary">Contact Info</h2>
+<div class="flex-grow border-b border-outline-variant/30"></div>
+</div>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 flex items-center justify-center bg-primary-container text-white rounded-sm">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<span class="block text-[0.6875rem] font-bold uppercase text-on-surface-variant tracking-widest mb-1">Central Telefónica</span>
+<p class="font-headline font-medium text-xl text-primary tracking-tight">0341- 4480566 / 154-680331</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 flex items-center justify-center bg-primary-container text-white rounded-sm">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<span class="block text-[0.6875rem] font-bold uppercase text-on-surface-variant tracking-widest mb-1">Protocolo Digital</span>
+<p class="font-headline font-medium text-xl text-primary tracking-tight">ricardobondino@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Warehouses -->
+<div class="lg:col-span-7 bg-surface-container-low p-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-8xl text-outline-variant/10 font-thin select-none">warehouse</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-baseline gap-4 mb-10">
+<h2 class="font-headline text-3xl font-bold uppercase tracking-tight text-primary">Depósitos</h2>
+<div class="flex-grow border-b border-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface p-8 border-l-4 border-primary">
+<span class="block text-[0.6875rem] font-bold uppercase text-on-primary-container mb-4">Logística 01</span>
+<h3 class="font-headline font-bold text-xl mb-4 text-primary leading-tight">España 5281</h3>
+<p class="text-on-surface-variant text-sm mb-4">Esq. Regimiento 11<br/>(2000) Rosario</p>
+<div class="h-24 w-full bg-surface-container-highest flex items-center justify-center">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="Top down view of an organized industrial logistics warehouse with high shelves and concrete floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVXvu9erhOKuTQqudcx8jVpqSa-9CpaDW0l9AWZswRtEhxb1X93wY74np5-WLGIxhrEj2Wxe-2irlj6RRj0QAx-fDvGYGo3-tA-L8p06qbKfXHBE-DeKUGG20NjbNLbnoPRzv8OWVrFui_6BNEAHJKafPQLvFqa2YdJ1kYzLHGIL38ZkqUM6uCU5-M15NzDhNmDTCLFUMMyhn-9m1fdsKenEHzzI4LnVws9DSZHqsxUApPXcbNRt4zlZ_BHtwJDT95tYR3SUUV-yIO"/>
+</div>
+</div>
+<div class="bg-surface p-8 border-l-4 border-primary">
+<span class="block text-[0.6875rem] font-bold uppercase text-on-primary-container mb-4">Logística 02</span>
+<h3 class="font-headline font-bold text-xl mb-4 text-primary leading-tight">Güemes 2798</h3>
+<p class="text-on-surface-variant text-sm mb-4">Esq. Ovidio Lagos<br/>(2000) Rosario</p>
+<div class="h-24 w-full bg-surface-container-highest flex items-center justify-center">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="Interior of a large empty concrete industrial warehouse with natural light from high windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-P8TSnN7CiQ4gpm0GUGf_KYItvE7RXj6p5ttLTQbMV70GFgt-iGhRW0hTWnKOPBgJeizfzTTs2AnLJG1XKRWqvfrp9ShWtyIDHgdrQzG7QKXATvReKFj0L7RgmVXmxgYhn-I9EfPNWbM3nEjvGAsaOHXjs-fiKzqES2icy5p8Rl75f8A0rUn5wvmN8Wxu_y5mCQA9fhXgCViiA2cGtawwv6ozlBL9tMI9yre3lFAdwcs6bWT-JHVEZPauOXoVt3PHxNU9ChBPk4Hp"/>
+</div>
+</div>
+</div>
+<div class="mt-12 bg-primary p-8 flex justify-between items-center text-white">
+<div>
+<p class="text-[0.6875rem] uppercase font-bold tracking-[0.2em] mb-1">Technical Map</p>
+<p class="font-headline font-medium text-lg">Rosario Hub Locations</p>
+</div>
+<div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Form Section -->
+<section class="py-24 bg-primary technical-grid" id="technical-form">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="bg-surface p-1 shadow-2xl">
+<div class="border-[0.5rem] border-primary p-8 md:p-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-4">
+<h2 class="font-headline text-4xl font-bold text-primary mb-8 leading-tight uppercase">Protocolo de Factibilidad</h2>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                                    Complete los parámetros técnicos del proyecto para iniciar el análisis de viabilidad técnica y consultoría estructural.
+                                </p>
+<div class="space-y-4 pt-8 border-t border-outline-variant">
+<div class="flex items-center gap-3 text-[0.6875rem] font-bold text-primary uppercase">
+<span class="material-symbols-outlined text-sm">verified</span>
+                                        Ingeniería Industrial Certificada
+                                    </div>
+<div class="flex items-center gap-3 text-[0.6875rem] font-bold text-primary uppercase">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+                                        Rigor Técnico Normativo
+                                    </div>
+</div>
+</div>
+<div class="lg:col-span-8">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="block text-[0.6875rem] font-bold text-primary uppercase tracking-widest">Nombre Completo / Razón Social</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary h-14 px-4 text-primary font-medium" placeholder="Ingrese entidad legal" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[0.6875rem] font-bold text-primary uppercase tracking-widest">Correo Electrónico</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary h-14 px-4 text-primary font-medium" placeholder="ejemplo@entidad.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[0.6875rem] font-bold text-primary uppercase tracking-widest">Tipo de Proyecto</label>
+<select class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary h-14 px-4 text-primary font-medium">
+<option>Factibilidad Hidráulica</option>
+<option>Estructura Industrial</option>
+<option>Consultoría Técnica</option>
+<option>Otro</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block text-[0.6875rem] font-bold text-primary uppercase tracking-widest">Ubicación de Obra</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary h-14 px-4 text-primary font-medium" placeholder="Ciudad / Provincia" type="text"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="block text-[0.6875rem] font-bold text-primary uppercase tracking-widest">Especificaciones Técnicas</label>
+<textarea class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary p-4 text-primary font-medium" placeholder="Describa los alcances del proyecto..." rows="4"></textarea>
+</div>
+<div class="md:col-span-2">
+<button class="w-full md:w-auto bg-primary text-white font-bold uppercase py-5 px-12 text-sm tracking-[0.2em] hover:bg-primary-container transition-all flex items-center justify-center gap-4" type="submit">
+                                            ENVIAR PROTOCOLO
+                                            <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 dark:bg-black text-slate-300 dark:text-slate-500 font-body full-width bottom">
+<div class="w-full px-12 py-16 flex flex-col md:flex-row justify-between items-start gap-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="text-lg font-bold text-white font-headline">H2O OBRAS</div>
+<p class="max-w-sm text-sm text-slate-400 font-light leading-relaxed">
+                    Sovereign Engineering &amp; Industrial Infrastructure. Federal scale consultancy for high-complexity hydraulic and civil operations.
+                </p>
+<div class="text-[0.65rem] font-mono text-slate-600 tracking-tighter">
+                    © 2024 H2O OBRAS INDUSTRIAL ENGINEERING. SOVEREIGN INFRASTRUCTURE REGISTRY.
+                </div>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div class="flex flex-col gap-4">
+<span class="text-white text-[0.7rem] uppercase font-bold tracking-widest font-headline">Operations</span>
+<a class="text-slate-400 hover:text-white transition-all text-sm font-label uppercase" href="#">Technical Specs</a>
+<a class="text-slate-400 hover:text-white transition-all text-sm font-label uppercase" href="#">Regulatory Compliance</a>
+<a class="text-slate-400 hover:text-white transition-all text-sm font-label uppercase" href="#">Privacy Protocol</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white text-[0.7rem] uppercase font-bold tracking-widest font-headline">Network</span>
+<a class="text-white font-bold text-sm font-label uppercase" href="#">Rosario HUB</a>
+<a class="text-slate-400 hover:text-white transition-all text-sm font-label uppercase" href="#">CABA Central</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
