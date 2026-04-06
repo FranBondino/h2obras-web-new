@@ -49,10 +49,10 @@ export default function Equipment() {
                                 <h3 className="text-2xl font-headline font-bold text-primary group-hover:text-surface mb-4 uppercase leading-tight">Movimiento de Suelos y Zanjeo</h3>
                                 <ul className="space-y-4 mb-8">
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Bobcat S450 (Loaders)
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Minicargadoras Bobcat S450
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Bobcat E-26 (Excavators)
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Excavadoras Bobcat E-26
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
                                         <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Niveladora y Rodillo Compactador
@@ -70,13 +70,13 @@ export default function Equipment() {
                                 <h3 className="text-2xl font-headline font-bold text-primary group-hover:text-surface mb-4 uppercase leading-tight">Trabajos en Altura</h3>
                                 <ul className="space-y-4 mb-8">
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Mantall XE160W Platforms
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Plataformas Mantall XE160W
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Vertical reach up to 16 meters
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Alcance vertical de hasta 16 metros
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> All-terrain stabilization systems
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Sistemas de estabilización todo terreno
                                     </li>
                                 </ul>
                                 <div className="pt-6 border-t border-outline-variant/20">
@@ -91,13 +91,13 @@ export default function Equipment() {
                                 <h3 className="text-2xl font-headline font-bold text-primary group-hover:text-surface mb-4 uppercase leading-tight">Perforación y Anclajes</h3>
                                 <ul className="space-y-4 mb-8">
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Hilti D250 Heavy Core Systems
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Hilti D250 Sistemas de Corte Pesado
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Hilti D160 Diamond Precision
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Hilti D160 Precisión de Diamante
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Chemical Anchoring Technology
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Tecnología de Anclaje Químico
                                     </li>
                                 </ul>
                                 <div className="pt-6 border-t border-outline-variant/20">
@@ -162,14 +162,14 @@ export default function Equipment() {
                                             <span className="material-symbols-outlined text-primary mr-4">local_shipping</span>
                                             <div>
                                                 <p className="text-sm font-bold text-primary uppercase">Logística Pesada</p>
-                                                <p className="text-xs text-secondary">DFM 14tn Truck + Foton/Lifan Fleet for rapid site deployment.</p>
+                                                <p className="text-xs text-secondary">Camiones DFM 14tn + Flotas Foton/Lifan para despliegue rápido en obra.</p>
                                             </div>
                                         </div>
                                         <div className="flex items-start">
                                             <span className="material-symbols-outlined text-primary mr-4">monitoring</span>
                                             <div>
                                                 <p className="text-sm font-bold text-primary uppercase">Oficina Técnica i7</p>
-                                                <p className="text-xs text-secondary">Plotters and high-end workstations for real-time BIM engineering.</p>
+                                                <p className="text-xs text-secondary">Plóters y estaciones de trabajo de alto rendimiento para modelado BIM en tiempo real.</p>
                                             </div>
                                         </div>
                                     </div>
