@@ -1,193 +1,339 @@
 export default function Portfolio() {
     return (
-        <div className="relative">
-            {/* Sidebar Navigation */}
-            <aside className="fixed left-0 top-0 h-full flex-col bg-surface w-64 pt-28 z-40 hidden lg:flex border-r border-outline-variant/20">
-                <div className="px-8 mb-10">
-                    <h2 className="text-lg font-black text-primary-container font-headline uppercase tracking-tight">Project Registry</h2>
-                    <p className="text-[10px] tracking-[0.2em] text-secondary font-bold uppercase">Federal Infrastructure</p>
-                </div>
-                <nav className="flex flex-col gap-2">
-                    <a className="flex items-center gap-4 py-4 font-body font-semibold text-xs tracking-widest uppercase text-primary border-l-4 border-primary-container pl-4 hover:bg-primary-container/5 transition-all group" href="#">
-                        <span className="material-symbols-outlined text-lg">medical_services</span>
-                        <span className="group-hover:translate-x-1 transition-transform duration-200">Hospitals</span>
-                    </a>
-                    <a className="flex items-center gap-4 py-4 font-body font-semibold text-xs tracking-widest uppercase text-secondary pl-4 border-l-4 border-transparent hover:bg-primary-container/5 transition-all group" href="#">
-                        <span className="material-symbols-outlined text-lg">flight_takeoff</span>
-                        <span className="group-hover:translate-x-1 transition-transform duration-200">Airports</span>
-                    </a>
-                    <a className="flex items-center gap-4 py-4 font-body font-semibold text-xs tracking-widest uppercase text-secondary pl-4 border-l-4 border-transparent hover:bg-primary-container/5 transition-all group" href="#">
-                        <span className="material-symbols-outlined text-lg">gavel</span>
-                        <span className="group-hover:translate-x-1 transition-transform duration-200">Judicial Centers</span>
-                    </a>
-                    <a className="flex items-center gap-4 py-4 font-body font-semibold text-xs tracking-widest uppercase text-secondary pl-4 border-l-4 border-transparent hover:bg-primary-container/5 transition-all group" href="#">
-                        <span className="material-symbols-outlined text-lg">school</span>
-                        <span className="group-hover:translate-x-1 transition-transform duration-200">Universities</span>
-                    </a>
-                    <a className="flex items-center gap-4 py-4 font-body font-semibold text-xs tracking-widest uppercase text-secondary pl-4 border-l-4 border-transparent hover:bg-primary-container/5 transition-all group" href="#">
-                        <span className="material-symbols-outlined text-lg">energy_savings_leaf</span>
-                        <span className="group-hover:translate-x-1 transition-transform duration-200">LEED Certified</span>
-                    </a>
-                </nav>
-                <div className="mt-auto p-8 opacity-40">
-                    <div className="h-px bg-outline-variant w-full mb-4"></div>
-                    <div className="text-[8px] uppercase tracking-widest leading-loose text-secondary">Engineering Division<br />Log 2024.01</div>
-                </div>
-            </aside>
-
-            {/* Main Content Wrapper */}
-            <div className="lg:ml-64 min-h-screen pb-20 lg:pb-0">
-                {/* Hero Section */}
-                <section className="relative h-[614px] flex items-end overflow-hidden">
-                    <div className="absolute inset-0 z-0 bg-primary">
-                        <img className="w-full h-full object-cover grayscale brightness-50 mix-blend-overlay opacity-80" alt="dramatic wide angle shot of a massive industrial water treatment plant with blue structural steel and heavy machinery at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdg9QL2x2wtwOew5fOwWQzg_Yp-_MfNpjyD9emjResdLy8U6kTqZvp97rHHVsBQaMjzUXiVRlJBGz41XslmuyroPedteQ8sTA_RHA0dk0JU-qYGJ2HP8ZyEN7nxTrY-6n2OtqxR7gOBcEWZOVglr5IlYiOUDlj5CAAkrIve47nPvH2mWwL-vqlOb5b2_ykRNwudCXGD88MkUBQy3iQ6fZyytd1m8uTFNisi1hegUmbi9iDg3J_twFEy3NM0E3ayHIpRmX5Ey-2uicx" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-90"></div>
-                        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle, #5b5f61 1px, transparent 1px)", backgroundSize: "40px 40px" }}></div>
+        <>
+            <button className="bg-primary-container text-white px-6 py-2 font-headline uppercase tracking-widest text-xs font-bold hover:bg-on-primary-fixed-variant transition-all">Portal Técnico</button>
+            <div className="bg-gradient-to-r from-transparent via-[#5b5f61]/10 to-transparent h-[1px]"></div>
+            <div className="flex min-h-screen">
+                {/* Sidebar Navigation */}
+                <aside className="hidden lg:flex flex-col h-screen w-80 left-0 sticky top-[88px] bg-[#f8f9fa] dark:bg-[#0d2b45] py-10 px-4 space-y-2">
+                    <div className="px-4 mb-8">
+                        <h3 className="text-lg font-bold text-[#00162a] dark:text-[#f8f9fa] font-headline uppercase">Categorías de Proyectos</h3>
+                        <p className="text-[10px] text-secondary tracking-[0.2em] uppercase font-label">Infraestructura a Escala Federal</p>
                     </div>
-                    <div className="relative z-10 px-8 md:px-12 pb-20 max-w-6xl">
-                        <div className="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 inline-block font-headline text-[10px] font-bold tracking-[0.3em] uppercase mb-6 rounded-sm">Strategic Infrastructure Portfolio</div>
-                        <h1 className="text-5xl md:text-8xl font-headline font-extrabold text-white leading-[0.9] tracking-tighter uppercase mb-2">
-                            Portfolio Federal:<br />Infraestructura de Escala
-                        </h1>
+                    <nav className="flex flex-col space-y-1">
+                        <a className="flex items-center gap-3 py-3 px-4 bg-[#0d2b45] dark:bg-[#f8f9fa] text-white dark:text-[#00162a] font-bold border-l-4 border-[#ffddba] transition-all duration-300" href="#">
+                            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>engineering</span>
+                            <span className="font-['Inter'] text-sm tracking-wide uppercase">Obras en Ejecución</span>
+                        </a>
+                        <a className="flex items-center gap-3 py-3 px-4 text-[#5b5f61] dark:text-[#f8f9fa]/60 hover:bg-[#5b5f61]/5 hover:pl-6 transition-all duration-300" href="#">
+                            <span className="material-symbols-outlined">medical_services</span>
+                            <span className="font-['Inter'] text-sm tracking-wide uppercase">Salud</span>
+                        </a>
+                        <a className="flex items-center gap-3 py-3 px-4 text-[#5b5f61] dark:text-[#f8f9fa]/60 hover:bg-[#5b5f61]/5 hover:pl-6 transition-all duration-300" href="#">
+                            <span className="material-symbols-outlined">gavel</span>
+                            <span className="font-['Inter'] text-sm tracking-wide uppercase">Centros Judiciales</span>
+                        </a>
+                        <a className="flex items-center gap-3 py-3 px-4 text-[#5b5f61] dark:text-[#f8f9fa]/60 hover:bg-[#5b5f61]/5 hover:pl-6 transition-all duration-300" href="#">
+                            <span className="material-symbols-outlined">flight_takeoff</span>
+                            <span className="font-['Inter'] text-sm tracking-wide uppercase">Aeropuertos</span>
+                        </a>
+                        <a className="flex items-center gap-3 py-3 px-4 text-[#5b5f61] dark:text-[#f8f9fa]/60 hover:bg-[#5b5f61]/5 hover:pl-6 transition-all duration-300" href="#">
+                            <span className="material-symbols-outlined">domain</span>
+                            <span className="font-['Inter'] text-sm tracking-wide uppercase">Residencial de Alta Gama</span>
+                        </a>
+                        <a className="flex items-center gap-3 py-3 px-4 text-[#5b5f61] dark:text-[#f8f9fa]/60 hover:bg-[#5b5f61]/5 hover:pl-6 transition-all duration-300" href="#">
+                            <span className="material-symbols-outlined">factory</span>
+                            <span className="font-['Inter'] text-sm tracking-wide uppercase">Industrial</span>
+                        </a>
+                        <a className="flex items-center gap-3 py-3 px-4 text-[#5b5f61] dark:text-[#f8f9fa]/60 hover:bg-[#5b5f61]/5 hover:pl-6 transition-all duration-300" href="#">
+                            <span className="material-symbols-outlined">potted_plant</span>
+                            <span className="font-['Inter'] text-sm tracking-wide uppercase">Sustentable (LEED)</span>
+                        </a>
+                    </nav>
+                    <div className="mt-auto p-4 bg-surface-container-high rounded-sm">
+                        <button className="w-full py-4 text-xs font-bold text-primary uppercase tracking-tighter border border-outline/20 hover:bg-primary hover:text-white transition-all">Solicitar Ficha Técnica</button>
                     </div>
-                </section>
-
-                {/* Project Grid (Asymmetric Bento Style) */}
-                <section className="p-8 md:p-12 space-y-12 bg-surface">
-                    {/* Featured Project 1: Jujuy */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-                        <div className="lg:col-span-8 group relative overflow-hidden bg-surface-container-low border border-outline-variant/20 rounded-sm">
-                            <div className="relative overflow-hidden aspect-video md:aspect-[16/9]">
-                                <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="high-tech modern medical facility facade with glass panels and surgical clean white concrete structures at twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkM8M2489RzoW7kDQFzvXrki7vWg1HTG9wNpbWdRyot7-U1UdvkUjvnDbFKa7k61Wj3mwabRXrKKTCl809ED-OFmRkPgEyWtBp6u-NFX55AgHndixsJZSan7ksQGEUanGyEthsf4upr7eD31xAKb5Bzzj81AyCQ7-CktolWnlTr9oZTKhqxLOp_X95I_DVYYcVFUxV_2hNBv_r9PafXKCOLGmMQzoV79CMjKbPXQQhRj3ixAgoSrNtHOYexH1qC-RLYLC-fQjwn1qa" />
-                                <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-colors"></div>
+                </aside>
+                {/* Main Content Area */}
+                <main className="flex-1 max-w-full overflow-hidden">
+                    {/* Hero Banner */}
+                    <section className="relative h-[614px] bg-primary flex items-center px-8 md:px-20">
+                        <div className="absolute inset-0 opacity-40 mix-blend-overlay">
+                            <img alt="Industrial construction" className="w-full h-full object-cover" data-alt="dramatic wide angle shot of a large scale civil engineering project site with steel structures and heavy machinery at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVgnCcJOXJbS1CPKSLW2YY7rrCKvOGonDzDLZKh99l1PWKa8CULPPUz0axyy9_XHd6EHNiiqId32pHdTyCNpAZ9aQlIS1cq_BRPUdwlRr7n1cJVdIncH7WmfO_N5-pSB0cihPmC0xrcQaY-gTgwH2ONESYYyekuTUWFlZekTQiSmD9rr_KLnzeynpzQnLIPydQuw6fX4bFXJ3BO3so6vu9E9Er3rUE543iyaiG1FAO7GyR3zamgefvhxL8LQwR5KLwZMsolOr_TehX" />
+                        </div>
+                        <div className="relative z-10 max-w-4xl">
+                            <span className="text-tertiary-fixed text-sm font-bold tracking-[0.3em] uppercase mb-4 block">Registro Institucional 2025</span>
+                            <h1 className="text-white text-6xl md:text-8xl font-black font-headline tracking-tighter leading-none uppercase mb-6">
+                                Infraestructura <br /> Soberana
+                            </h1>
+                            <p className="text-on-primary-container text-lg max-w-2xl font-light leading-relaxed">
+                                Ingeniería de precisión para proyectos hidráulicos y civiles a escala federal. Un registro consolidado de absoluta rigurosidad técnica y autonomía en la infraestructura argentina.
+                            </p>
+                        </div>
+                    </section>
+                    {/* Execution Status Tracker */}
+                    <section className="py-20 px-8 md:px-20 bg-surface">
+                        <div className="flex justify-between items-end mb-16 border-l-4 border-primary pl-6">
+                            <div>
+                                <h2 className="text-4xl font-headline font-black uppercase text-primary tracking-tighter">Antecedentes de Obras</h2>
+                                <p className="text-secondary font-label uppercase tracking-widest text-xs mt-2">Estado de Ejecución Activa: Octubre 2025</p>
                             </div>
-                            <div className="absolute top-8 right-8 flex flex-col gap-2 items-end z-20">
-                                <span className="bg-primary-container text-white px-4 py-1 font-label text-[10px] font-black tracking-widest uppercase rounded-sm">25,000 m2</span>
-                                <span className="bg-white/90 backdrop-blur-sm text-primary px-4 py-1 font-label text-[10px] font-black tracking-widest uppercase rounded-sm shadow-sm">Health Tech</span>
+                            <div className="text-right hidden md:block">
+                                <span className="text-6xl font-headline font-black text-primary-container/10">01</span>
                             </div>
-                            <div className="p-8">
-                                <div className="flex justify-between items-start">
-                                    <div>
-                                        <h3 className="text-3xl md:text-4xl font-headline font-bold text-primary uppercase tracking-tight">Hospital Regional Oscar Orias</h3>
-                                        <p className="text-secondary font-label mt-2 text-xs uppercase tracking-widest font-semibold">Libertador Gral. San Martín, Jujuy</p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {/* Project Card 1 */}
+                            <div className="bg-surface-container-lowest group relative overflow-hidden">
+                                <div className="h-64 overflow-hidden relative">
+                                    <img alt="Hospital project" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Architectural exterior of a massive modern hospital facility with clean white walls and structured glass panels under clear daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEN2yfqxqEQIbxDe0bP-53Db2bDsXSoliagrMaiO2CWUzPEQ00sNHkdtYMutwN57bOjgFrRVeyY5act23MT53ftMGz7hjAYlS7mhj4mWgfk-af1HF3DlFVNYufdMVMCeDSglEFDy2E1OyGCIImty9i6MMmYsTkr4uSbgK6sKh0plvLrR-IfHP-RiZLfixM6TinFbB0YZ121DEn4Cev0ZqT0wnTkKuF10j0imLuHQmfqOk3SMk4F2K32EI0dzw2Z6lGztYN_N7wc8cT" />
+                                    <div className="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">92% Completado</div>
+                                </div>
+                                <div className="p-8">
+                                    <h3 className="text-xl font-headline font-extrabold uppercase text-primary mb-2">Hospital Regional Oscar Orias</h3>
+                                    <p className="text-xs text-secondary font-label uppercase tracking-widest mb-6">Ledesma, Jujuy | 25.000 m2 de Infraestructura</p>
+                                    <div className="space-y-4 border-t border-outline-variant/15 pt-6">
+                                        <div className="flex justify-between items-center text-xs">
+                                            <span className="text-outline uppercase">Progreso Técnico</span>
+                                            <span className="font-black text-primary">92%</span>
+                                        </div>
+                                        <div className="w-full bg-surface-container-high h-1">
+                                            <div className="bg-primary h-full" style={{ width: '92%' }}></div>
+                                        </div>
+                                        <div className="flex flex-wrap gap-2 pt-2"><span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Proyecto Ejecutivo</span>
+                                            <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Sanitary &amp; Gas</span>
+                                            <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Fire &amp; Irrigation</span></div>
                                     </div>
-                                    <span className="material-symbols-outlined text-primary text-4xl hidden sm:block">architecture</span>
-                                </div>
-                                <p className="mt-6 text-on-surface-variant leading-relaxed max-w-2xl font-body">Integrated execution of high-complexity technical infrastructure. Focus on specialized fluid management and surgical grade atmospheric control for federal health coverage.</p>
-                            </div>
-                        </div>
-
-                        {/* Secondary Projects Stack */}
-                        <div className="lg:col-span-4 flex flex-col gap-10">
-                            {/* Project 2: Rosario Airport */}
-                            <div className="bg-surface-container-lowest p-8 flex flex-col h-full border-l-4 border-tertiary-fixed shadow-sm rounded-sm border-t border-r border-b border-outline-variant/20">
-                                <div className="flex justify-between mb-6">
-                                    <span className="material-symbols-outlined text-primary">local_fire_department</span>
-                                    <span className="bg-primary text-[9px] text-white px-2 py-1 font-bold tracking-tighter uppercase rounded-sm">NFPA CERTIFIED</span>
-                                </div>
-                                <h4 className="text-xl font-headline font-bold text-primary uppercase">Aeropuerto Int. Rosario</h4>
-                                <p className="text-[10px] text-secondary mt-2 font-bold tracking-widest uppercase">Fire Protection Systems</p>
-                                <p className="mt-4 text-sm text-on-surface-variant leading-relaxed font-body">Implementation of FM/UL standard suppression networks and specialized hydraulic infrastructure for international aeronautical logistics.</p>
-                                <div className="mt-auto pt-8 flex items-center gap-4">
-                                    <div className="h-[1px] bg-outline-variant flex-grow"></div>
-                                    <span className="text-[10px] font-black uppercase text-outline">Ref. P-02</span>
                                 </div>
                             </div>
-
-                            {/* Project 3: Judicial Center */}
-                            <div className="bg-primary p-8 text-white flex flex-col h-full relative overflow-hidden rounded-sm shadow-lg">
-                                <div className="absolute -right-6 -bottom-6 opacity-10">
-                                    <span className="material-symbols-outlined text-[160px]" style={{ fontVariationSettings: "'FILL' 1" }}>gavel</span>
+                            {/* Project Card 2 */}
+                            <div className="bg-surface-container-lowest group relative overflow-hidden">
+                                <div className="h-64 overflow-hidden relative">
+                                    <img alt="Fisherton Park" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Luxury residential complex with modern balconies and green integration designed by Carlos Ott in sunset lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALdxS61_tfBcV9AIFPC6SGQsGVI663OHqAYwJUtFDFk_hrxZDzmuYqNsJQznJ3wQTW2Uk2QOvIBY2MeyEMskeXCR_eelPKWDumPAUvU6aBqKNCpHCrey8wEPik8-CY6pX4u5oe8Vo9UoVyQ9lgX9eehGrQ3z66ufSbAVwIWgwPSiUdsph1NgvLsN3HLuX55pEo9m1boRQ2VCKOuoSfge2xtokjwGWWZfgqpZCzsNEuMPkNXmfHRQcMCHg8IZzGJlqAa8tlLBf01zOu" />
+                                    <div className="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">94% Completado</div>
                                 </div>
-                                <h4 className="text-2xl font-headline font-bold text-tertiary-fixed uppercase leading-tight">Centro de Justicia Penal</h4>
-                                <p className="text-[10px] text-on-primary-container mt-2 font-bold tracking-widest uppercase mb-4">Rosario, Santa Fe</p>
-                                <p className="mt-2 text-sm text-primary-fixed leading-relaxed font-body relative z-10">Maximum security hydraulic installations and technical precision modules for the province's primary judicial hub.</p>
-                                <div className="mt-auto pt-8 relative z-10">
-                                    <span className="bg-tertiary-fixed text-primary px-3 py-1 text-[9px] font-black tracking-widest uppercase rounded-sm">High Security Infrastructure</span>
+                                <div className="p-8">
+                                    <h3 className="text-xl font-headline font-extrabold uppercase text-primary mb-2">Fisherton Park</h3>
+                                    <p className="text-xs text-secondary font-label uppercase tracking-widest mb-6">Rosario | Arq. Carlos Ott | High-End Living</p>
+                                    <div className="space-y-4 border-t border-outline-variant/15 pt-6">
+                                        <div className="flex justify-between items-center text-xs">
+                                            <span className="text-outline uppercase">Estado Mecánico</span>
+                                            <span className="font-black text-primary">94%</span>
+                                        </div>
+                                        <div className="w-full bg-surface-container-high h-1">
+                                            <div className="bg-primary h-full" style={{ width: '94%' }}></div>
+                                        </div>
+                                        <div className="flex flex-wrap gap-2 pt-2"><span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Thermomechanical</span>
+                                            <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Gas &amp; Sanitary</span>
+                                            <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Turnkey Project</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* Project Card 3 */}
+                            <div className="bg-surface-container-lowest group relative overflow-hidden">
+                                <div className="h-64 overflow-hidden relative">
+                                    <img alt="Rosario Airport" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Interior of a modern airport terminal showing complex steel ceiling structures and industrial design elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_bN1QTT4SJg9ygWthg4My8Xj7neR7hqntf3fThP7OCZ0AwRg7BhqHb4b0s6jsv5jIWf2zuthleCYXaRDbovMzZODlb7sY6eidzClBYYgI77Yywq23BDRtz5xNaRfKm1PNQehfJjOvGSYcYyI8A8fS2E7MnLGINlWZuhPolDfX6AC4onlF3hIiuHRT2Wf7FO6BpiNMkFBT9geU0IaJmsb9YnNOmjXZxOivAAtvn_844RBIlTHCVzQ-GNwk-Qk8nU3cPrz8DSHTYkdx" />
+                                    <div className="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">90% Completado</div>
+                                </div>
+                                <div className="p-8">
+                                    <h3 className="text-xl font-headline font-extrabold uppercase text-primary mb-2">Aeropuerto Int. Rosario</h3>
+                                    <p className="text-xs text-secondary font-label uppercase tracking-widest mb-6">International Terminal | NFPA Compliance</p>
+                                    <div className="space-y-4 border-t border-outline-variant/15 pt-6">
+                                        <div className="flex justify-between items-center text-xs">
+                                            <span className="text-outline uppercase">Integridad del Sistema de Incendio</span>
+                                            <span className="font-black text-primary">90%</span>
+                                        </div>
+                                        <div className="w-full bg-surface-container-high h-1">
+                                            <div className="bg-primary h-full" style={{ width: '90%' }}></div>
+                                        </div>
+                                        <div className="flex flex-wrap gap-2 pt-2"><span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Grundfos Pumps</span>
+                                            <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">FM/UL Motobomb</span>
+                                            <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">NFPA Standards</span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    {/* LEED Highlight Section */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
-                        <div className="bg-surface-container-high p-8 md:p-12 flex flex-col justify-center rounded-sm">
-                            <div className="bg-white w-16 h-16 flex items-center justify-center mb-8 rounded-sm shadow-sm">
-                                <span className="material-symbols-outlined text-primary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>energy_savings_leaf</span>
+                        {/* Secondary Execution List (Bento-style) */}
+                        <div className="mt-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+                            <div className="lg:col-span-2 bg-primary p-10 text-white flex flex-col justify-between">
+                                <div>
+                                    <span className="text-tertiary-fixed text-[10px] tracking-[0.3em] font-bold uppercase mb-4 block">Verticalidad Residencial</span>
+                                    <h4 className="text-3xl font-headline font-black uppercase mb-4">Edificio Ewain I</h4>
+                                    <p className="text-on-primary-container text-sm leading-relaxed mb-8">Montantes de acero inoxidable, bombas presurizadas y colectores de alto rendimiento.</p>
+                                </div>
+                                <div className="flex items-center gap-6">
+                                    <div className="text-4xl font-headline font-black">15%</div>
+                                    <div className="flex-1 bg-white/10 h-2">
+                                        <div className="bg-tertiary-fixed h-full" style={{ width: '15%' }}></div>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 className="text-4xl md:text-5xl font-headline font-extrabold text-primary uppercase leading-[0.9] tracking-tighter mb-6">
-                                Edificio Núcleo Autopista<br />Ros-Bs. As.
-                            </h3>
-                            <div className="flex flex-wrap gap-4 mb-8">
-                                <span className="bg-primary text-white px-4 py-1.5 text-[10px] font-black tracking-widest uppercase rounded-sm">LEED PLATINUM</span>
-                                <span className="border border-primary px-4 py-1.5 text-[10px] font-black tracking-widest uppercase rounded-sm text-primary">Sustainability Leader</span>
+                            <div className="bg-surface-container-high p-10 flex flex-col justify-between">
+                                <h4 className="text-xl font-headline font-black uppercase text-primary">Distrito Puerto Norte</h4>
+                                <div className="space-y-2">
+                                    <p className="text-xs text-secondary uppercase font-bold tracking-widest">Estado: Activo</p>
+                                    <p className="text-sm font-label text-on-surface-variant">Ejecución técnica de tres torres para sistemas de distribución hidráulica y térmica.</p>
+                                </div>
+                                <div className="pt-4 border-t border-outline-variant">
+                                    <span className="text-[10px] font-black uppercase tracking-tighter text-primary">3 Torres Activas</span>
+                                </div>
                             </div>
-                            <ul className="space-y-4 font-body text-xs md:text-sm text-on-surface-variant uppercase tracking-wide font-medium">
-                                <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 bg-primary rounded-full"></span> Solar Energy Integration</li>
-                                <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 bg-primary rounded-full"></span> Water Recovery Systems</li>
-                                <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 bg-primary rounded-full"></span> Biological Treatment Plants</li>
-                            </ul>
+                            <div className="bg-surface-container-lowest p-10 flex flex-col justify-between border-r-4 border-primary-container">
+                                <h4 className="text-xl font-headline font-black uppercase text-primary">Metra Rosario</h4>
+                                <div className="space-y-2">
+                                    <p className="text-xs text-success-container text-green-700 uppercase font-bold tracking-widest">Estado: Entregado 2023</p>
+                                    <p className="text-sm font-label text-on-surface-variant">22 pisos de ingeniería residencial de alta complejidad.</p>
+                                </div>
+                                <div className="pt-4 border-t border-outline-variant">
+                                    <span className="text-[10px] font-black uppercase tracking-tighter text-primary">Ciclo de Vida Completo</span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="h-full min-h-[300px] md:min-h-[400px]">
-                            <img className="w-full h-full object-cover rounded-sm shadow-sm grayscale-[20%]" alt="ultra-modern glass and steel sustainable office building with integrated solar panels and vertical greenery gardens on the highway side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIc0ZHmJ7zg4zhqsXQXIBcP8TP8w16ODMXUyktQfKzArgfbmrIjN_MHyGvxWlUfCu_entGloLP5kht6xh5mqp0XQYHR_MQBVu7iMKJ5E1Jf8X1k16gFsxsfGutJO1gppJfX4Zu9EiSl6uGXmFWX47n9kRGSXBgtsEq-yT2Ze3US9QbMoykYCnBps3s4fdEiSwf4tRB8g5_CIlm9NP913oG_q93TaSSrPsnxY8IFWlDMEevCKblZ3LUh01od4Cqtj55TJwHCWMJ6A-o" />
+                    </section>
+                    {/* Sustainability / LEED Section */}
+                    <section className="py-24 px-8 md:px-20 bg-[#00162a] text-white overflow-hidden relative">
+                        <div className="absolute right-0 top-0 w-1/3 h-full bg-surface-container-highest/5 mask-gradient hidden lg:block"></div>
+                        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <div>
+                                <div className="flex items-center gap-4 mb-8">
+                                    <div className="h-[2px] w-12 bg-tertiary-fixed"></div>
+                                    <span className="text-tertiary-fixed text-sm font-bold tracking-[0.3em] uppercase">Liderazgo Sustentable</span>
+                                </div>
+                                <h2 className="text-5xl font-headline font-black uppercase tracking-tighter mb-8 leading-none">Edificio La Segunda Seguros <br /><span className="text-tertiary-fixed">LEED Platinum</span></h2>
+                                <p className="text-on-primary-container text-lg mb-12 font-light leading-relaxed max-w-xl">La cima de la ingeniería corporativa sustentable en Rosario. Este proyecto con certificación LEED PLATINUM integra sistemas de alta eficiencia para el liderazgo ambiental.</p>
+                                <div className="grid grid-cols-2 gap-8">
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2 text-tertiary-fixed">
+                                            <span className="material-symbols-outlined">wb_sunny</span>
+                                            <span className="text-[10px] font-bold uppercase tracking-widest">Solar Térmico</span>
+                                        </div>
+                                        <p className="text-xs text-on-primary-container font-label">Red de generación solar ACS de alta eficiencia.</p>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2 text-tertiary-fixed">
+                                            <span className="material-symbols-outlined">water_drop</span>
+                                            <span className="text-[10px] font-bold uppercase tracking-widest">Recuperación de Agua</span>
+                                        </div>
+                                        <p className="text-xs text-on-primary-container font-label">Eliminación avanzada de arsénico y recuperación pluvial.</p>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2 text-tertiary-fixed">
+                                            <span className="material-symbols-outlined">biotech</span>
+                                            <span className="text-[10px] font-bold uppercase tracking-widest">Tratamiento Biológico</span>
+                                        </div>
+                                        <p className="text-xs text-on-primary-container font-label">Procesadores séptico-biológicos avanzados in situ.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="relative h-[500px]">
+                                <img alt="Edificio sustentable moderno" className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700" data-alt="Ultra modern glass office building with sustainable design features and green landscaping in early morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEX9ZJE-01Buufgek7gAmXoL1YKgzXGdrM_BJRZ4oSaZOLU08zyLXm8ABsS6nihbSaSF2g1pIwj7jH4b-VQrTYmCMy_b6di3Iq1ml6nZMUgOel3YIhqFuIhvkrWiJzPcGCOe7-iFGwMGbSyIwj7Wyn8cMbLUbeOJKgpZYqCfYiZQCrVeEFNeraVNltVY9PwQsQwd8qbxUPQLgxklrX_9oPzwh4kpIwGgECS_evR-tR65pV4RCgtZgRMPJBsnwq2V7B9BslOFoCjTfm" />
+                            </div>
                         </div>
-                    </div>
-
-                    {/* Regional Reach (Universities & Extreme Environments) */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-                        {/* Bariloche */}
-                        <div className="bg-surface-container-low p-8 md:p-10 flex flex-col border-t-8 border-primary rounded-sm shadow-sm">
-                            <span className="text-[10px] font-black uppercase text-outline mb-6 tracking-widest">Cold Climate Engineering</span>
-                            <h4 className="text-2xl font-headline font-bold text-primary uppercase tracking-tight">Campus UNRN</h4>
-                            <p className="text-[10px] text-secondary mt-2 font-bold tracking-widest uppercase">Bariloche, Río Negro</p>
-                            <p className="mt-6 text-sm text-on-surface-variant leading-relaxed flex-grow">Federal reach infrastructure designed for sub-zero performance and high-thermal efficiency fluid networks.</p>
+                    </section>
+                    {/* Institutional High-Tech Modules */}
+                    <section className="py-20 px-8 md:px-20 bg-surface-container-low">
+                        <div className="mb-16">
+                            <h2 className="text-3xl font-headline font-black uppercase text-primary tracking-tighter">Infraestructura Especializada</h2>
+                            <p className="text-secondary font-label uppercase tracking-widest text-[10px] mt-2">Gestión de Fluidos de Precisión y Seguridad contra Incendios</p>
                         </div>
-                        {/* Ushuaia */}
-                        <div className="bg-surface-container-low p-8 md:p-10 flex flex-col border-t-8 border-primary rounded-sm shadow-sm">
-                            <span className="text-[10px] font-black uppercase text-outline mb-6 tracking-widest">High Complexity Environments</span>
-                            <h4 className="text-2xl font-headline font-bold text-primary uppercase tracking-tight">Edificio Ewain I</h4>
-                            <p className="text-[10px] text-secondary mt-2 font-bold tracking-widest uppercase">Ushuaia, Tierra del Fuego</p>
-                            <p className="mt-6 text-sm text-on-surface-variant leading-relaxed flex-grow">Engineering in extreme latitudes. Specialized plumbing and heating systems for the southernmost urban infrastructure projects.</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                            {/* Tech Item 1 */}
+                            <div className="bg-surface p-6 border-l-2 border-primary">
+                                <h5 className="font-headline font-bold uppercase text-primary mb-4 text-sm">Nuevo Hospital Nodal Venado Tuerto</h5>
+                                <p className="text-xs text-secondary mb-4">Montantes de acero inoxidable, bombas presurizadas y colectores de alto rendimiento.</p>
+                                <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">SANITARIO ELITE</span>
+                            </div>
+                            {/* Tech Item 2 */}
+                            <div className="bg-surface p-6 border-l-2 border-primary">
+                                <h5 className="font-headline font-bold uppercase text-primary mb-4 text-sm">CEMAFE / Iturraspe</h5>
+                                <p className="text-xs text-secondary mb-4">Dinámica de fluidos sanitarios y sistemas de seguridad de alta tecnología.</p>
+                                <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">LOGÍSTICA HOSPITALARIA</span>
+                            </div>
+                            {/* Tech Item 3 */}
+                            <div className="bg-surface p-6 border-l-2 border-primary">
+                                <h5 className="font-headline font-bold uppercase text-primary mb-4 text-sm">Acuario Río Paraná</h5>
+                                <p className="text-xs text-secondary mb-4">Sistemas de soporte vital (LSS), inyección de ozono y protocolos de O2.</p>
+                                <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">TECNOLOGÍA BIOLÓGICA</span>
+                            </div>
+                            {/* Tech Item 4 */}
+                            <div className="bg-surface p-6 border-l-2 border-primary">
+                                <h5 className="font-headline font-bold uppercase text-primary mb-4 text-sm">Centro Justicia Penal</h5>
+                                <p className="text-xs text-secondary mb-4">Infraestructura de agua a escala federal y sistemas institucionales de alta seguridad.</p>
+                                <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">JUDICIAL FEDERAL</span>
+                            </div>
                         </div>
-                        {/* Specialized Hospitals */}
-                        <div className="bg-surface-container-low p-8 md:p-10 flex flex-col border-t-8 border-primary rounded-sm shadow-sm">
-                            <span className="text-[10px] font-black uppercase text-outline mb-6 tracking-widest">Technical Health Registry</span>
-                            <h4 className="text-2xl font-headline font-bold text-primary uppercase tracking-tight">Especialidades Médicas</h4>
-                            <p className="text-[10px] text-secondary mt-2 font-bold tracking-widest uppercase">Santa Fe &amp; Regional</p>
-                            <p className="mt-6 text-sm text-on-surface-variant leading-relaxed flex-grow">Continuous execution of medical gas systems, sterile water loops, and specialized hospital logistics across the federal territory.</p>
+                    </section>
+                    {/* Massive Institutional Registry (The Grid) */}
+                    <section className="py-20 px-8 md:px-20 bg-surface">
+                        <div className="flex justify-between items-center mb-12">
+                            <h2 className="text-2xl font-headline font-black uppercase text-primary">Registro Integral de Proyectos</h2>
+                            <div className="flex gap-4">
+                                <button className="material-symbols-outlined p-2 border border-outline/20 hover:bg-primary hover:text-white transition-all">grid_view</button>
+                                <button className="material-symbols-outlined p-2 border border-outline/20 bg-primary text-white">list</button>
+                            </div>
                         </div>
-                    </div>
-                </section>
-
-                {/* Technical Specs Ticker */}
-                <div className="bg-primary-container py-12 border-y border-white/10 overflow-hidden">
-                    <div className="flex whitespace-nowrap gap-16 animate-pulse">
-                        <span className="text-primary-fixed-dim/30 font-headline font-black text-2xl md:text-4xl uppercase tracking-[0.2em]">NFPA COMPLIANT</span>
-                        <span className="text-primary-fixed-dim/30 font-headline font-black text-2xl md:text-4xl uppercase tracking-[0.2em]">LEED PLATINUM STANDARD</span>
-                        <span className="text-primary-fixed-dim/30 font-headline font-black text-2xl md:text-4xl uppercase tracking-[0.2em]">FEDERAL SCALE LOGISTICS</span>
-                    </div>
-                </div>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr className="border-b-2 border-primary">
+                                        <th className="py-4 font-headline uppercase text-xs font-black tracking-widest text-primary">Nombre del Proyecto</th>
+                                        <th className="py-4 font-headline uppercase text-xs font-black tracking-widest text-primary">Categoría / Arquitectura</th>
+                                        <th className="py-4 font-headline uppercase text-xs font-black tracking-widest text-primary">Ubicación</th>
+                                        <th className="py-4 font-headline uppercase text-xs font-black tracking-widest text-primary">Especificaciones del Sistema</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-sm font-label">
+                                    <tr className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors">
+                                        <td className="py-4 font-bold text-primary">Teatro Argentino La Plata</td>
+                                        <td className="py-4 text-secondary">Institutional / Cultural</td>
+                                        <td className="py-4 text-secondary">La Plata</td>
+                                        <td className="py-4"><span className="text-[10px] font-black text-primary uppercase">Fire Suppression Elite</span></td>
+                                    </tr>
+                                    <tr className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors">
+                                        <td className="py-4 font-bold text-primary">Aeroparque Jorge Newbery</td>
+                                        <td className="py-4 text-secondary">Aviation Infrastructure</td>
+                                        <td className="py-4 text-secondary">CABA</td>
+                                        <td className="py-4"><span className="text-[10px] font-black text-primary uppercase">Hydraulic Safety Compliance</span></td>
+                                    </tr>
+                                    <tr className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors">
+                                        <td className="py-4 font-bold text-primary">Casino Rosario (City Center)</td>
+                                        <td className="py-4 text-secondary">Commercial High-Scale</td>
+                                        <td className="py-4 text-secondary">Rosario</td>
+                                        <td className="py-4"><span className="text-[10px] font-black text-primary uppercase">Complex Sanitary Nodes</span></td>
+                                    </tr>
+                                    <tr className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors">
+                                        <td className="py-4 font-bold text-primary">Hilton Garden Inn</td>
+                                        <td className="py-4 text-secondary">Hospitality / Luxury</td>
+                                        <td className="py-4 text-secondary">Rosario</td>
+                                        <td className="py-4"><span className="text-[10px] font-black text-primary uppercase">NFPA Fire Network</span></td>
+                                    </tr>
+                                    <tr className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors">
+                                        <td className="py-4 font-bold text-primary">Campus UNRN</td>
+                                        <td className="py-4 text-secondary">Educational / Federal</td>
+                                        <td className="py-4 text-secondary">Bariloche</td>
+                                        <td className="py-4"><span className="text-[10px] font-black text-primary uppercase">Fire System Thermal</span></td>
+                                    </tr>
+                                    <tr className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors">
+                                        <td className="py-4 font-bold text-primary">Edificio Bolsa de Comercio</td>
+                                        <td className="py-4 text-secondary">Corporate Heritage</td>
+                                        <td className="py-4 text-secondary">Rosario</td>
+                                        <td className="py-4"><span className="text-[10px] font-black text-primary uppercase">SS Colector Replacement</span></td>
+                                    </tr>
+                                    <tr className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors">
+                                        <td className="py-4 font-bold text-primary">Maui Puerto Norte</td>
+                                        <td className="py-4 text-secondary">Residential Towers</td>
+                                        <td className="py-4 text-secondary">Rosario</td>
+                                        <td className="py-4"><span className="text-[10px] font-black text-primary uppercase">Vertical Fluids</span></td>
+                                    </tr>
+                                    <tr className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors">
+                                        <td className="py-4 font-bold text-primary">Hospital Centenario Dialysis</td>
+                                        <td className="py-4 text-secondary">Healthcare / Specialized</td>
+                                        <td className="py-4 text-secondary">Rosario</td>
+                                        <td className="py-4"><span className="text-[10px] font-black text-primary uppercase">Stainless Steel Loops</span></td>
+                                    </tr>
+                                    {/* More projects would be listed here */}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className="mt-12 flex justify-center">
+                            <button className="px-12 py-4 border border-primary text-primary font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all">
+                                Cargar Archivo Histórico Completo (+42 Proyectos)
+                            </button>
+                        </div>
+                    </section>
+                </main>
             </div>
-
-            {/* BottomNavBar (Mobile Only) */}
-            <nav className="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-surface-container-high flex justify-around items-center p-4 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
-                <a className="flex flex-col items-center gap-1 text-primary" href="#">
-                    <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>medical_services</span>
-                    <span className="text-[8px] font-bold uppercase tracking-widest">Health</span>
-                </a>
-                <a className="flex flex-col items-center gap-1 text-secondary" href="#">
-                    <span className="material-symbols-outlined">flight_takeoff</span>
-                    <span className="text-[8px] font-bold uppercase tracking-widest">Air</span>
-                </a>
-                <a className="flex flex-col items-center gap-1 text-secondary" href="#">
-                    <span className="material-symbols-outlined">gavel</span>
-                    <span className="text-[8px] font-bold uppercase tracking-widest">Legal</span>
-                </a>
-                <a className="flex flex-col items-center gap-1 text-secondary" href="#">
-                    <span className="material-symbols-outlined">energy_savings_leaf</span>
-                    <span className="text-[8px] font-bold uppercase tracking-widest">LEED</span>
-                </a>
-            </nav>
-        </div>
+            {/* Footer Shell */}
+        </>
     );
 }

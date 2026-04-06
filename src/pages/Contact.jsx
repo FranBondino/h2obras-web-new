@@ -26,15 +26,15 @@ export default function Contact() {
             {/* Technical Metadata Divider */}
             <div className="bg-surface-container-low py-4 px-8 overflow-hidden whitespace-nowrap">
                 <div className="flex items-center gap-12 text-on-surface-variant/30 text-[0.6875rem] font-mono uppercase tracking-[0.3em]">
-                    <span>SOVEREIGN INFRASTRUCTURE REGISTRY 2024</span>
+                    <span>REGISTRO DE INFRAESTRUCTURA SOBERANA 2024</span>
                     <span className="material-symbols-outlined text-xs">close</span>
                     <span>H2O-OP-PROTOCOL-v4.0</span>
                     <span className="material-symbols-outlined text-xs">close</span>
-                    <span>HYDRAULIC ENGINEERING STANDARDS</span>
+                    <span>ESTÁNDARES DE INGENIERÍA HIDRÁULICA</span>
                 </div>
             </div>
 
-            {/* Infrastructure Network */}
+            {/* Red de Infraestructura */}
             <section className="py-24 bg-surface">
                 <div className="max-w-screen-2xl mx-auto px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
@@ -62,7 +62,7 @@ export default function Contact() {
 
                             <div>
                                 <div className="flex items-baseline gap-4 mb-10">
-                                    <h2 className="font-headline text-3xl font-bold uppercase tracking-tight text-primary">Contact Info</h2>
+                                    <h2 className="font-headline text-3xl font-bold uppercase tracking-tight text-primary">Información de Contacto</h2>
                                     <div className="flex-grow border-b border-outline-variant/30"></div>
                                 </div>
                                 <div className="space-y-8">
