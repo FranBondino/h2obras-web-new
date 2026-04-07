@@ -3,15 +3,15 @@ export default function Equipment() {
         <>
             <main className="pt-20">
                 {/* Hero Section */}
-                <section className="relative h-[819px] flex items-center overflow-hidden">
+                <section className="relative min-h-[500px] md:h-[819px] flex items-center overflow-hidden py-28 md:py-0">
                     <div className="absolute inset-0 z-0">
                         <img className="w-full h-full object-cover grayscale opacity-40" data-alt="Close-up of a massive industrial excavator at a high-end construction site with cold blue atmospheric lighting and technical details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuEJIyi0KlXHGt7DY0cZJVgJFBYGaxz6t38fueyfnmhRvylXyvyOBlcMGK-9KUGu4dsJ8A2wlHSfXn3-Jrqc0J_XK_nS3zLi2ds0rE9h9VGRU2KCeMczOSAgTGfuCU254aeg44GhEiCslxUgoxxjiSP-Pa5XGhT8cf-t83plKxAgvFq0W3WXQZqlZs2peEelzcaqhWTfqZGXZJFjZ1fehhCXWoOfynLId1t9K4s7JCcxvkuuiF-WQM4ErJjUBJK4vQJ7n_MxVxBT4" />
                         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
                     </div>
-                    <div className="container mx-auto px-10 relative z-10 grid grid-cols-12 gap-6">
+                    <div className="container mx-auto px-6 md:px-10 relative z-10 grid grid-cols-12 gap-6">
                         <div className="col-span-12 lg:col-span-8">
                             <span className="inline-block px-4 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-headline font-bold text-xs uppercase tracking-[0.2em] mb-6">Ingeniería de Infraestructura Soberana</span>
-                            <h1 className="text-6xl md:text-8xl font-headline font-black text-surface leading-[0.9] tracking-tighter mb-8 uppercase">
+                            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-headline font-black text-surface leading-[0.9] tracking-tighter mb-8 uppercase">
                                 Capacidad <br /> Operativa <br /> Autónoma
                             </h1>
                             <div className="bg-surface-container-lowest/10 backdrop-blur-md border-l-4 border-tertiary-fixed p-8 max-w-2xl">

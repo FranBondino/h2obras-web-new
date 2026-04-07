@@ -5,8 +5,12 @@ export default function Footer() {
         <footer className="bg-slate-100 dark:bg-slate-900 w-full border-t border-slate-200 dark:border-slate-800">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-7xl mx-auto">
                 <div className="space-y-6">
-                    <div className="font-['Space_Grotesk'] font-black text-2xl text-cyan-950 dark:text-white uppercase tracking-tighter">
-                        H2O OBRAS
+                    <div>
+                        <img
+                            src="/h2obras-web-new/logoh2o_transparent.png"
+                            alt="H2O Obras"
+                            className="h-10 w-auto object-contain"
+                        />
                     </div>
                     <p className="font-['Inter'] text-xs tracking-wider leading-relaxed text-slate-500 dark:text-slate-400 max-w-xs">
                         Sovereign Infrastructure Engineering. Proyectos complejos resueltos con precisión técnica y autonomía absoluta en todo el territorio nacional.
@@ -50,6 +54,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 }

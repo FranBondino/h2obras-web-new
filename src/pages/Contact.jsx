@@ -2,7 +2,7 @@ export default function Contact() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative h-[716px] flex items-center overflow-hidden">
+            <section className="relative min-h-[500px] md:h-[716px] flex items-center overflow-hidden py-28 md:py-0">
                 <div className="absolute inset-0 z-0">
                     <img className="w-full h-full object-cover filter brightness-50" alt="Modern industrial facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP1B6NLqKDG2WjiXqHAXsLP4zNGasY2hpMz0URjO9bEc0DYEduaTqvQgOtM9NtqUADnmU-1k8udUmfqo4rnHKI4r1-_ayDlGDmV8OCPPaIO67hnEMPtRLoH-A2jVFJftBALfKY0WQsAxj6px8qsJ3-Rb8ewvSGX_jDOnbBfO9Xq7HCrAj4Tp_qTGoCZZ-mGrr--k3bEazFyTot5ZFi_u1_YvBKP41kru-ouNKobi7CjLggMjv1gJXud91PvuMd103SisNSp5JJTzI3" />
                     <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/60 to-transparent"></div>
@@ -10,7 +10,7 @@ export default function Contact() {
                 <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-8">
                     <div className="max-w-3xl">
                         <span className="inline-block bg-primary-fixed text-on-primary-fixed px-3 py-1 text-[0.6875rem] font-bold uppercase tracking-widest mb-6 rounded-sm">Consultoría de Ingeniería</span>
-                        <h1 className="font-headline text-5xl md:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tighter">
+                        <h1 className="font-headline text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tighter">
                             Consultoría de Ingeniería y Factibilidad Técnica
                         </h1>
                         <div className="flex flex-wrap gap-4">

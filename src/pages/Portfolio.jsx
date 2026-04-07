@@ -66,7 +66,7 @@ export default function Portfolio() {
 
     return (
         <>
-            <button className="bg-primary-container text-white px-6 py-2 font-headline uppercase tracking-widest text-xs font-bold hover:bg-on-primary-fixed-variant transition-all">Portal Técnico</button>
+            <button className="bg-primary-container text-white px-4 md:px-6 py-2 font-headline uppercase tracking-widest text-xs font-bold hover:bg-on-primary-fixed-variant transition-all w-full md:w-auto text-left md:text-center">Portal Técnico</button>
             <div className="bg-gradient-to-r from-transparent via-[#5b5f61]/10 to-transparent h-[1px]"></div>
             <div className="flex min-h-screen">
                 {/* Sidebar Navigation */}
@@ -100,13 +100,13 @@ export default function Portfolio() {
                 {/* Main Content Area */}
                 <main className="flex-1 max-w-full overflow-hidden">
                     {/* Hero Banner */}
-                    <section className="relative h-[614px] bg-primary flex items-center px-8 md:px-20">
+                    <section className="relative min-h-[400px] md:h-[614px] bg-primary flex items-center px-6 md:px-20 py-20 md:py-0">
                         <div className="absolute inset-0 opacity-40 mix-blend-overlay">
                             <img alt="Industrial construction" className="w-full h-full object-cover" data-alt="dramatic wide angle shot of a large scale civil engineering project site with steel structures and heavy machinery at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVgnCcJOXJbS1CPKSLW2YY7rrCKvOGonDzDLZKh99l1PWKa8CULPPUz0axyy9_XHd6EHNiiqId32pHdTyCNpAZ9aQlIS1cq_BRPUdwlRr7n1cJVdIncH7WmfO_N5-pSB0cihPmC0xrcQaY-gTgwH2ONESYYyekuTUWFlZekTQiSmD9rr_KLnzeynpzQnLIPydQuw6fX4bFXJ3BO3so6vu9E9Er3rUE543iyaiG1FAO7GyR3zamgefvhxL8LQwR5KLwZMsolOr_TehX" />
                         </div>
                         <div className="relative z-10 max-w-4xl">
                             <span className="text-tertiary-fixed text-sm font-bold tracking-[0.3em] uppercase mb-4 block">Registro Institucional 2025</span>
-                            <h1 className="text-white text-6xl md:text-8xl font-black font-headline tracking-tighter leading-none uppercase mb-6">
+                            <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black font-headline tracking-tighter leading-none uppercase mb-6">
                                 Infraestructura <br /> Soberana
                             </h1>
                             <p className="text-on-primary-container text-lg max-w-2xl font-light leading-relaxed">

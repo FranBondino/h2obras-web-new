@@ -12,7 +12,7 @@ export default function Home() {
                         <div className="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
                             Marco de Infraestructura Soberana
                         </div>
-                        <h1 className="text-white text-5xl md:text-8xl font-black text-federal uppercase mb-8">
+                        <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-federal uppercase mb-8">
                             Ingeniería Hidromecánica <br /> de Alta Complejidad
                         </h1>
                         <p className="text-on-primary-container text-lg md:text-2xl max-w-2xl font-light leading-relaxed mb-10">
