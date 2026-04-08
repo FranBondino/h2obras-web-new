@@ -20,11 +20,13 @@ export default function Header() {
         <header className="fixed top-0 w-full z-50 bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-md">
             <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-[1920px] mx-auto">
                 <Link to="/" className="flex items-center">
-                    <img
-                        src="/h2obras-web-new/logoh2o_transparent.png"
-                        alt="H2O Obras"
-                        className="h-10 w-auto object-contain"
-                    />
+                    <div className="h-16 md:h-24 overflow-hidden flex items-center justify-center">
+                        <img
+                            src="/h2obras-web-new/logoh2o_clean.png"
+                            alt="H2O Obras"
+                            className="h-full w-auto object-contain mix-blend-multiply scale-[3.5] transform origin-center"
+                        />
+                    </div>
                 </Link>
 
                 {/* Desktop Nav */}
