@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 export default function Home() {
     return (
         <>
@@ -19,10 +22,16 @@ export default function Home() {
                             Instalaciones sanitarias, gas, e incendio bajo normativas internacionales para obras a escala federal.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <button className="bg-surface-container-lowest text-primary font-bold px-8 py-4 tracking-tighter uppercase rounded-sm flex items-center gap-3 group">
-                                Ver Obras Críticas
-                                <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                            </button>
+                            <Link to="/portfolio">
+                                <motion.button 
+                                    whileHover={{ y: -2 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    className="bg-surface-container-lowest text-primary font-bold px-8 py-4 tracking-tighter uppercase rounded-sm flex items-center gap-3 group shadow-lg shadow-black/20"
+                                >
+                                    Ver Obras Críticas
+                                    <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </motion.button>
+                            </Link>
                             <button className="border border-white/20 text-white font-bold px-8 py-4 tracking-tighter uppercase rounded-sm hover:bg-white/5 transition-colors">
                                 Especificaciones Técnicas
                             </button>
@@ -118,9 +127,27 @@ export default function Home() {
             </section>
             {/* Featured Projects */}
             <section className="py-32 px-8 md:px-20 bg-surface-container-low">
-                <div className="mb-20">
-                    <h2 className="text-sm font-bold tracking-[0.5em] text-primary uppercase mb-4">Portfolio Federal</h2>
-                    <div className="h-1 w-24 bg-primary"></div>
+                <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div>
+                        <h2 className="text-sm font-bold tracking-[0.5em] text-primary uppercase mb-4">Portfolio Federal</h2>
+                        <div className="h-1 w-24 bg-primary"></div>
+                    </div>
+                    <Link to="/portfolio">
+                        <motion.button 
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center gap-3 bg-primary text-white px-8 py-3 rounded-sm font-bold uppercase tracking-widest text-[10px] group transition-all"
+                        >
+                            Ver Todas las Obras
+                            <motion.span 
+                                animate={{ x: [0, 5, 0] }}
+                                transition={{ repeat: Infinity, duration: 1.5 }}
+                                className="material-symbols-outlined text-sm"
+                            >
+                                arrow_forward
+                            </motion.span>
+                        </motion.button>
+                    </Link>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
                     {/* Project 1 */}

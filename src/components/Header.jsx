@@ -24,7 +24,12 @@ export default function Header() {
                         <img
                             src="/h2obras-web-new/logoh2o_clean.png"
                             alt="H2O Obras"
-                            className="h-full w-auto object-contain mix-blend-multiply scale-[3.5] transform origin-left md:origin-center"
+                            className="h-full w-auto object-contain mix-blend-multiply scale-[3.5] transform origin-left md:origin-center dark:hidden"
+                        />
+                        <img
+                            src="/h2obras-web-new/logoh2o_white.png"
+                            alt="H2O Obras"
+                            className="h-full w-auto object-contain mix-blend-screen scale-[3.5] transform origin-left md:origin-center hidden dark:block"
                         />
                     </div>
                 </Link>

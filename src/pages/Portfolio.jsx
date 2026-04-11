@@ -1,27 +1,203 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const allProjectsData = [
     // Activos
-    { id: 'a1', title: 'Hospital Regional Oscar Orias', category: 'Salud', location: 'Ledesma, Jujuy', specs: 'Progreso Técnico 92%', status: 'En Ejecución' },
-    { id: 'a2', title: 'Fisherton Park', category: 'Residencial de Alta Gama', location: 'Rosario', specs: 'Estado Mecánico 94%', status: 'En Ejecución' },
-    { id: 'a3', title: 'Aeropuerto Int. Rosario', category: 'Aeropuertos', location: 'Rosario', specs: 'Integridad 90%', status: 'En Ejecución' },
-    { id: 'a4', title: 'Edificio Ewain I', category: 'Residencial de Alta Gama', location: 'Rosario', specs: 'Progreso 15%', status: 'En Ejecución' },
-    { id: 'a5', title: 'Distrito Puerto Norte', category: 'Residencial de Alta Gama', location: 'Rosario', specs: '3 Torres Activas', status: 'En Ejecución' },
-    { id: 'a6', title: 'Edificio La Segunda Seguros', category: 'Sustentable (LEED)', location: 'Rosario', specs: 'LEED Platinum', status: 'Entregado' },
-    { id: 'a7', title: 'Nuevo Hospital Nodal Venado Tuerto', category: 'Salud', location: 'Venado Tuerto', specs: 'Sanitario Elite', status: 'Entregado' },
-    { id: 'a8', title: 'CEMAFE / Iturraspe', category: 'Salud', location: 'Santa Fe', specs: 'Logística Hospitalaria', status: 'Entregado' },
-    { id: 'a9', title: 'Acuario Río Paraná', category: 'Institucional', location: 'Rosario', specs: 'Tecnología Biológica', status: 'Entregado' },
-    { id: 'a10', title: 'Centro Justicia Penal', category: 'Centros Judiciales', location: 'Rosario', specs: 'Judicial Federal', status: 'Entregado' },
+    // Activos
+    { 
+        id: 'a1', 
+        title: 'Hospital Regional Oscar Orias', 
+        category: 'Salud', 
+        location: 'Ledesma, Jujuy', 
+        specs: 'Progreso Técnico 92%', 
+        status: 'En Ejecución',
+        fullSpecs: ["Hospital Regional de 25.000 m2", "Proyecto ejecutivo integral (Mayo-Julio 2022)", "Instalaciones sanitarias, gas, riego e incendio", "Certificación técnica al 92%"],
+        client: "RIVA-ERG UT",
+        contact: "Ing. Gustavo Cavolo",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDEN2yfqxqEQIbxDe0bP-53Db2bDsXSoliagrMaiO2CWUzPEQ00sNHkdtYMutwN57bOjgFrRVeyY5act23MT53ftMGz7hjAYlS7mhj4mWgfk-af1HF3DlFVNYufdMVMCeDSglEFDy2E1OyGCIImty9i6MMmYsTkr4uSbgK6sKh0plvLrR-IfHP-RiZLfixM6TinFbB0YZ121DEn4Cev0ZqT0wnTkKuF10j0imLuHQmfqOk3SMk4F2K32EI0dzw2Z6lGztYN_N7wc8cT"
+    },
+    { 
+        id: 'a2', 
+        title: 'Fisherton Park', 
+        category: 'Residencial de Alta Gama', 
+        location: 'Rosario', 
+        specs: 'Estado Mecánico 94%', 
+        status: 'En Ejecución',
+        fullSpecs: ["Condominio de categoría (45 unidades)", "Proyecto Arq. Carlos Ott", "Instalaciones sanitarias, gas, incendio y riego", "Piscina y termomecánica (Equipos Samsung Multisplit)", "Obra llave en mano"],
+        client: "DIX DESARROLLADORA",
+        contact: "Gabriel Pérez",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuALdxS61_tfBcV9AIFPC6SGQsGVI663OHqAYwJUtFDFk_hrxZDzmuYqNsJQznJ3wQTW2Uk2QOvIBY2MeyEMskeXCR_eelPKWDumPAUvU6aBqKNCpHCrey8wEPik8-CY6pX4u5oe8Vo9UoVyQ9lgX9eehGrQ3z66ufSbAVwIWgwPSiUdsph1NgvLsN3HLuX55pEo9m1boRQ2VCKOuoSfge2xtokjwGWWZfgqpZCzsNEuMPkNXmfHRQcMCHg8IZzGJlqAa8tlLBf01zOu"
+    },
+    { 
+        id: 'a3', 
+        title: 'Aeropuerto Int. Rosario', 
+        category: 'Aeropuertos', 
+        location: 'Rosario', 
+        specs: 'Integridad 90%', 
+        status: 'En Ejecución',
+        fullSpecs: ["Proyecto ejecutivo de instalaciones sanitarias", "Red de agua con presurización para tanques de reserva", "Sala de máquinas con equipos Grundfos", "Sistemas de motobombas con sello FM/UL (Normas NFPA - Ruhrpumpen)"],
+        client: "UT EDECA-DINALE-PECAM",
+        contact: "Ing. Carlos Pellegrini",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA_bN1QTT4SJg9ygWthg4My8Xj7neR7hqntf3fThP7OCZ0AwRg7BhqHb4b0s6jsv5jIWf2zuthleCYXaRDbovMzZODlb7sY6eidzClBYYgI77Yywq23BDRtz5xNaRfKm1PNQehfJjOvGSYcYyI8A8fS2E7MnLGINlWZuhPolDfX6AC4onlF3hIiuHRT2Wf7FO6BpiNMkFBT9geU0IaJmsb9YnNOmjXZxOivAAtvn_844RBIlTHCVzQ-GNwk-Qk8nU3cPrz8DSHTYkdx"
+    },
+    { 
+        id: 'a4', 
+        title: 'Edificio Ewain I', 
+        category: 'Residencial de Alta Gama', 
+        location: 'Rosario', 
+        specs: 'Progreso 15%', 
+        status: 'En Ejecución',
+        fullSpecs: ["Proyecto ejecutivo de calefacción y agua caliente central", "Edificio de 75 unidades funcionales", "Sistema central de calderas Santero", "Control por termostatos wifi y cabezales termoeléctricos"],
+        client: "CIMBRA S.R.L. / CLIMA CONFORT",
+        contact: "Arq. Sebastián Dinatale"
+    },
+    { 
+        id: 'a5', 
+        title: 'Distrito Puerto Norte', 
+        category: 'Residencial de Alta Gama', 
+        location: 'Rosario', 
+        specs: '3 Torres Activas', 
+        status: 'En Ejecución',
+        fullSpecs: ["Instalación sanitaria, gas, incendio, piscinas y riego", "Tres torres de 21 plantas", "Sistemas de ionización en piscinas", "Riego por aspersión y goteo automatizado", "Presurización con variadores de velocidad"],
+        client: "GRUPO TRANSATLANTICA S.A.",
+        contact: "Sebastián Rubino"
+    },
+    { 
+        id: 'a6', 
+        title: 'Edificio La Segunda Seguros', 
+        category: 'Sustentable (LEED)', 
+        location: 'Rosario', 
+        specs: 'LEED Platinum', 
+        status: 'Entregado',
+        fullSpecs: ["Certificación LEED PLATINUM", "Energía Solar Termodinámica y colectores Heat Pipe", "Sistema de recupero de aguas pluviales y grises", "Planta de tratamiento de efluentes con oxidación total", "Remoción de arsénico y terrazas verdes (700 m2)"],
+        client: "LA SEGUNDA Coop. Seg. Ltda.",
+        contact: "Arq. Marcelo Ponzellini",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCEX9ZJE-01Buufgek7gAmXoL1YKgzXGdrM_BJRZ4oSaZOLU08zyLXm8ABsS6nihbSaSF2g1pIwj7jH4b-VQrTYmCMy_b6di3Iq1ml6nZMUgOel3YIhqFuIhvkrWiJzPcGCOe7-iFGwMGbSyIwj7Wyn8cMbLUbeOJKgpZYqCfYiZQCrVeEFNeraVNltVY9PwQsQwd8qbxUPQLgxklrX_9oPzwh4kpIwGgECS_evR-tR65pV4RCgtZgRMPJBsnwq2V7B9BslOFoCjTfm"
+    },
+    { 
+        id: 'a7', 
+        title: 'Nuevo Hospital Nodal Venado Tuerto', 
+        category: 'Salud', 
+        location: 'Venado Tuerto', 
+        specs: 'Sanitario Elite', 
+        status: 'Entregado',
+        fullSpecs: ["Instalaciones de agua y servicios contra incendio", "Colectores y montantes ACS en Acero Inoxidable AISI 304", "Soldaduras TIG y sistemas Victaulic", "Montaje de sistemas presurizados y bombas de incendio"],
+        client: "DINALE – EDECA U.T.E.",
+        contact: "Ing. Pedro Del Gerbo"
+    },
+    { 
+        id: 'a8', 
+        title: 'CEMAFE / Iturraspe', 
+        category: 'Salud', 
+        location: 'Santa Fe', 
+        specs: 'Logística Hospitalaria', 
+        status: 'Entregado',
+        fullSpecs: ["Proyecto ejecutivo de instalaciones sanitarias e incendio", "Montantes de incendio y ACS en Acero Inoxidable", "Colectores de sala de máquinas y tanques en AISI 304", "Electrobombas sanitarias de alta performance"],
+        client: "DINALE - PECAM – MUNDO UTE",
+        contact: "Ing. Pedro Del Gerbo"
+    },
+    { 
+        id: 'a9', 
+        title: 'Acuario Río Paraná', 
+        category: 'Institucional', 
+        location: 'Rosario', 
+        specs: 'Tecnología Biológica', 
+        status: 'Entregado',
+        fullSpecs: ["Ejecución de Sistema de Vida (LSS)", "Sistemas de filtrado, caudalímetros, sondas y niveles", "Redes de Aire Comprimido y Actuadores Neumáticos", "Instalación de Ozono y Oxígeno de Emergencia", "Montajes íntegros en AISI 304L"],
+        client: "DINALE S.A.",
+        contact: "Arq. Carolina Francione"
+    },
+    { 
+        id: 'a10', 
+        title: 'Centro Justicia Penal', 
+        category: 'Centros Judiciales', 
+        location: 'Rosario', 
+        specs: 'Judicial Federal', 
+        status: 'Entregado',
+        fullSpecs: ["Instalaciones Sanitarias y de Gas integrales", "Infraestructura para edificio institucional de alta seguridad", "Finalización de obra técnica: Agosto 2017"],
+        client: "RIVA S.A.",
+        contact: "Ing. Raúl Olguín"
+    },
 
     // Históricos
-    { id: 'h1', title: 'Hospital Privado Rosario', category: 'Salud', location: 'Rosario', specs: 'Tendido de Gases Médicos', status: 'Historico' },
-    { id: 'h2', title: 'Ezeiza Terminal C', category: 'Aeropuertos', location: 'CABA', specs: 'Red Anti-Incendio Integral', status: 'Historico' },
-    { id: 'h3', title: 'Planta Industrial Unilever', category: 'Industrial', location: 'Villa Gobernador Gálvez', specs: 'Tratamiento de Efluentes', status: 'Historico' },
-    { id: 'h4', title: 'Laboratorios Roemmers', category: 'Industrial', location: 'Capital Federal', specs: 'Salas Limpias ISO', status: 'Historico' },
-    { id: 'h5', title: 'Foro Misiones', category: 'Centros Judiciales', location: 'Posadas', specs: 'Climatización Central', status: 'Historico' },
-    { id: 'h6', title: 'Sanatorio Parque Nuevo Centro', category: 'Salud', location: 'Rosario', specs: 'Complejo Quirúrgico', status: 'Historico' },
-    { id: 'h7', title: 'Torres Dolfines Guaraní', category: 'Residencial de Alta Gama', location: 'Rosario', specs: 'Presurización 40 Pisos', status: 'Historico' },
-    { id: 'h8', title: 'Planta Arauco', category: 'Industrial', location: 'Puerto Esperanza', specs: 'Industrial Piping', status: 'Historico' },
+    { 
+        id: 'h1', 
+        title: 'Torre Metra (Puerto Norte)', 
+        category: 'Residencial de Alta Gama', 
+        location: 'Rosario', 
+        specs: 'Entregado 2023', 
+        status: 'Historico',
+        fullSpecs: ["Torre de 22 Pisos con 156 unidades funcionales", "Instalaciones sanitarias, de gas e incendio", "Proyecto y ejecución integral", "Obra Entregada en Abril del 2023"],
+        client: "RIVA S.A.",
+        contact: "Ing. Raúl Olguín"
+    },
+    { 
+        id: 'h2', 
+        title: 'Campus UNRN Bariloche', 
+        category: 'Institucional', 
+        location: 'Bariloche, Río Negro', 
+        specs: 'Equipos Grundfos', 
+        status: 'Historico',
+        fullSpecs: ["Proyecto de instalaciones sanitarias y de incendio", "Ejecución de Sala de máquinas completa", "Equipos de presurización Grundfos", "Generación de ACS con equipos Heat Pump"],
+        client: "UT DINALE-PECAM",
+        contact: "Ing. Sebastián Balbi"
+    },
+    { 
+        id: 'h3', 
+        title: 'Fideicomiso Maui Puerto Norte', 
+        category: 'Residencial de Alta Gama', 
+        location: 'Rosario', 
+        specs: 'ACS en AISI304', 
+        status: 'Historico',
+        fullSpecs: ["Ejecución de Piping de calderas e intercambiadores de calor", "Circuitos secundarios de acumuladores de ACS en AISI304", "Provisión y montaje de bombas y tableros contra incendio"],
+        client: "FIDEICOMISO MAUI",
+        contact: "Ing. Diego Bermudez"
+    },
+    { 
+        id: 'h4', 
+        title: 'Hilton Garden Inn', 
+        category: 'Residencial de Alta Gama', 
+        location: 'Santa Fe', 
+        specs: 'Legajo Completo', 
+        status: 'Historico',
+        fullSpecs: ["HILTON GARDEN INN (Dique 2) y VIVIENDAS EN TORRE", "Proyecto de Instalaciones Sanitarias, Incendio, Riego y Piscinas", "Criterios sustentables y estándar de marca Hilton"],
+        client: "DINALE S.A.",
+        contact: "Estudio Costa Valenzuela"
+    },
+    { 
+        id: 'h5', 
+        title: 'Casino Rosario', 
+        category: 'Institucional', 
+        location: 'Rosario', 
+        specs: 'Alta Complejidad', 
+        status: 'Historico',
+        fullSpecs: ["Hotel y Centro de Convenciones Casino Rosario", "Gerenciamiento de Proyecto de Instalaciones Sanitarias", "Instalaciones de alta complejidad en Battle y Ordoñez"],
+        client: "RIVA S.A.",
+        contact: "Ing. Raúl Olguín"
+    },
+    { 
+        id: 'h6', 
+        title: 'Centro Islámico King Fhad', 
+        category: 'Institucional', 
+        location: 'CABA', 
+        specs: 'Soldadura TIG AISI304', 
+        status: 'Historico',
+        fullSpecs: ["Gerenciamiento y Dirección de obra", "Instalaciones Sanitarias, Gas e Incendio", "Riego y Fuentes ornamentales", "Instalaciones especiales en Acero Inoxidable AISI304 con soldaduras TIG"],
+        client: "RIVA S.A.",
+        contact: "Año 1999"
+    },
+    { 
+        id: 'h7', 
+        title: 'Estación Elevadora Aguadas', 
+        category: 'Infraestructura', 
+        location: 'Funes, Santa Fe', 
+        specs: 'Bombas Grundfos', 
+        status: 'Historico',
+        fullSpecs: ["Obra completa de Estación Elevadora", "Electromecánica y Cañería de impulsión", "Instalación de Bombas Grundfos", "Sistema de Izaje y Reja Mecánica"],
+        client: "ASSA S.A.",
+        contact: "Ing. Oscar Benvenuto"
+    },
+    { id: 'h8', title: 'Torres Dolfines Guaraní', category: 'Residencial de Alta Gama', location: 'Rosario', specs: 'Presurización 40 Pisos', status: 'Historico' },
     { id: 'h9', title: 'Edificio Corporativo Sancor', category: 'Sustentable (LEED)', location: 'Sunchales', specs: 'Reutilización Pluvial', status: 'Historico' },
     { id: 'h10', title: 'Hospital de Emergencias (HECA)', category: 'Salud', location: 'Rosario', specs: 'Emergencias Hidrosanitarias', status: 'Historico' },
     { id: 'h11', title: 'Quilmes Cervecería', category: 'Industrial', location: 'Zárate', specs: 'Procesos de Frio', status: 'Historico' },
@@ -52,9 +228,165 @@ const categories = [
     { id: 'Sustentable (LEED)', label: 'Sustentable (LEED)', icon: 'potted_plant' }
 ];
 
+function ProjectCard({ project, onClick }) {
+    const { title, location, progress, label, image, fullSpecs, tags } = project;
+    const imgUrl = image || "https://images.unsplash.com/photo-1541888941259-7b9d9218d0bc?q=80&w=2070&auto=format&fit=crop";
+
+    return (
+        <motion.div 
+            variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 }
+            }}
+            whileHover={{ y: -5 }}
+            onClick={() => onClick(project)}
+            className="bg-surface-container-lowest group relative overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+        >
+            <div className="h-64 overflow-hidden relative">
+                <motion.img 
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.6 }}
+                    alt={title} 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
+                    src={imgUrl} 
+                />
+                <div className="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-tighter z-10">
+                    {label || project.status}
+                </div>
+            </div>
+            <div className="p-8">
+                <h3 className="text-xl font-headline font-extrabold uppercase text-primary mb-2 group-hover:text-cyan-700 transition-colors">
+                    {title}
+                </h3>
+                <p className="text-xs text-secondary font-label uppercase tracking-widest mb-6">
+                    {location}
+                </p>
+                <div className="space-y-4 border-t border-outline-variant/15 pt-6">
+                    <div className="flex justify-between items-center text-xs">
+                        <span className="text-outline uppercase">Referencia Técnica</span>
+                        <span className="font-black text-primary">{progress ? `${progress}%` : "Integrit"}</span>
+                    </div>
+                    <div className="w-full bg-surface-container-high h-1 overflow-hidden">
+                        <motion.div 
+                            initial={{ width: 0 }}
+                            whileInView={{ width: progress ? `${progress}%` : '100%' }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+                            className="bg-primary h-full"
+                        ></motion.div>
+                    </div>
+                    <div className="flex flex-wrap gap-2 pt-2">
+                        {(tags || (fullSpecs ? fullSpecs.slice(0, 2) : [])).map(tag => (
+                            <span key={tag} className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </motion.div>
+    );
+}
+
+function ProjectDetailModal({ project, onClose }) {
+    if (!project) return null;
+
+    return (
+        <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 bg-primary/90 backdrop-blur-sm"
+            onClick={onClose}
+        >
+            <motion.div 
+                initial={{ scale: 0.9, y: 20, opacity: 0 }}
+                animate={{ scale: 1, y: 0, opacity: 1 }}
+                exit={{ scale: 0.9, y: 20, opacity: 0 }}
+                className="bg-surface w-full max-w-5xl max-h-[90vh] overflow-hidden rounded-sm shadow-2xl flex flex-col md:flex-row relative"
+                onClick={e => e.stopPropagation()}
+            >
+                {/* Close Button */}
+                <button 
+                    onClick={onClose}
+                    className="absolute top-4 right-4 z-20 bg-primary text-white p-2 rounded-full hover:bg-cyan-700 transition-colors"
+                >
+                    <span className="material-symbols-outlined">close</span>
+                </button>
+
+                {/* Left Side: Image */}
+                <div className="w-full md:w-1/2 h-64 md:h-auto overflow-hidden bg-primary-container">
+                    <img 
+                        src={project.image || "https://images.unsplash.com/photo-1541888941259-7b9d9218d0bc?q=80&w=2070&auto=format&fit=crop"} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover opacity-80"
+                    />
+                </div>
+
+                {/* Right Side: Info */}
+                <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-cyan-700 mb-2 block">Ficha Técnica de Obra</span>
+                    <h2 className="text-3xl md:text-5xl font-headline font-black uppercase text-primary mb-6 leading-tight">
+                        {project.title}
+                    </h2>
+
+                    <div className="grid grid-cols-2 gap-6 mb-8 border-y border-outline-variant/20 py-6">
+                        <div>
+                            <p className="text-[10px] uppercase font-bold text-secondary tracking-widest mb-1">Ubicación</p>
+                            <p className="text-sm font-label text-primary">{project.location}</p>
+                        </div>
+                        <div>
+                            <p className="text-[10px] uppercase font-bold text-secondary tracking-widest mb-1">Categoría</p>
+                            <p className="text-sm font-label text-primary">{project.category}</p>
+                        </div>
+                        <div>
+                            <p className="text-[10px] uppercase font-bold text-secondary tracking-widest mb-1">Estado</p>
+                            <p className="text-sm font-label text-primary">{project.status}</p>
+                        </div>
+                        <div>
+                            <p className="text-[10px] uppercase font-bold text-secondary tracking-widest mb-1">Cliente</p>
+                            <p className="text-sm font-label text-primary">{project.client || "Consolidado Federal"}</p>
+                        </div>
+                    </div>
+
+                    <h4 className="text-xs font-black uppercase tracking-widest text-primary mb-4">Especificaciones del Sistema</h4>
+                    <ul className="space-y-3 mb-8">
+                        {(project.fullSpecs || [project.specs]).map((spec, i) => (
+                            <li key={i} className="flex gap-3 items-start text-sm text-secondary leading-relaxed">
+                                <span className="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+                                <span>{spec}</span>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {project.contact && (
+                        <div className="bg-surface-container-high p-6 rounded-sm">
+                            <p className="text-[10px] uppercase font-bold text-secondary tracking-widest mb-2">Referencia Técnica del Proyecto</p>
+                            <div className="flex items-center gap-3">
+                                <span className="material-symbols-outlined text-primary">engineering</span>
+                                <span className="text-sm font-bold text-primary">{project.contact}</span>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </motion.div>
+        </motion.div>
+    );
+}
+
 export default function Portfolio() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [showAllHistory, setShowAllHistory] = useState(false);
+    const [activeProject, setActiveProject] = useState(null);
+
+    // Prevent scroll when modal is open
+    useEffect(() => {
+        if (activeProject) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [activeProject]);
 
     const filteredAll = allProjectsData.filter(p =>
         selectedCategory === 'all' ||
@@ -75,18 +407,25 @@ export default function Portfolio() {
                         <h3 className="text-lg font-bold text-[#00162a] dark:text-[#f8f9fa] font-headline uppercase">Categorías de Proyectos</h3>
                         <p className="text-[10px] text-secondary tracking-[0.2em] uppercase font-label">Infraestructura a Escala Federal</p>
                     </div>
-                    <nav className="flex flex-col space-y-1">
+                    <nav className="flex flex-col space-y-1 relative">
                         {categories.map(cat => {
                             const isActive = selectedCategory === cat.id;
                             return (
                                 <button
                                     key={cat.id}
                                     onClick={() => setSelectedCategory(cat.id)}
-                                    className={`flex items-center gap-3 py-3 px-4 w-full text-left transition-all duration-300 ${isActive
-                                        ? 'bg-[#0d2b45] dark:bg-[#f8f9fa] text-white dark:text-[#00162a] font-bold border-l-4 border-[#ffddba]'
-                                        : 'text-[#5b5f61] dark:text-[#f8f9fa]/60 hover:bg-[#5b5f61]/5 hover:pl-6'
+                                    className={`relative flex items-center gap-3 py-3 px-4 w-full text-left transition-all duration-300 z-10 ${isActive
+                                        ? 'text-white dark:text-[#00162a] font-bold'
+                                        : 'text-[#5b5f61] dark:text-[#f8f9fa]/60 hover:bg-[#5b5f61]/5 hover:pl-6 text-sm'
                                         }`}
                                 >
+                                    {isActive && (
+                                        <motion.div 
+                                            layoutId="activeCategory"
+                                            className="absolute inset-0 bg-[#0d2b45] dark:bg-[#f8f9fa] border-l-4 border-[#ffddba] z-[-1]"
+                                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                        />
+                                    )}
                                     <span className="material-symbols-outlined" style={{ fontVariationSettings: isActive ? "'FILL' 1" : "'FILL' 0" }}>{cat.icon}</span>
                                     <span className="font-['Inter'] text-sm tracking-wide uppercase">{cat.label}</span>
                                 </button>
@@ -100,18 +439,40 @@ export default function Portfolio() {
                 {/* Main Content Area */}
                 <main className="flex-1 max-w-full overflow-hidden">
                     {/* Hero Banner */}
-                    <section className="relative min-h-[400px] md:h-[614px] bg-primary flex items-center px-6 md:px-20 py-20 md:py-0">
-                        <div className="absolute inset-0 opacity-40 mix-blend-overlay">
+                    <section className="relative min-h-[400px] md:h-[614px] bg-primary flex items-center px-6 md:px-20 py-20 md:py-0 overflow-hidden">
+                        <motion.div 
+                            initial={{ scale: 1.1, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 0.4 }}
+                            transition={{ duration: 1.5, ease: "easeOut" }}
+                            className="absolute inset-0 mix-blend-overlay"
+                        >
                             <img alt="Industrial construction" className="w-full h-full object-cover" data-alt="dramatic wide angle shot of a large scale civil engineering project site with steel structures and heavy machinery at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVgnCcJOXJbS1CPKSLW2YY7rrCKvOGonDzDLZKh99l1PWKa8CULPPUz0axyy9_XHd6EHNiiqId32pHdTyCNpAZ9aQlIS1cq_BRPUdwlRr7n1cJVdIncH7WmfO_N5-pSB0cihPmC0xrcQaY-gTgwH2ONESYYyekuTUWFlZekTQiSmD9rr_KLnzeynpzQnLIPydQuw6fX4bFXJ3BO3so6vu9E9Er3rUE543iyaiG1FAO7GyR3zamgefvhxL8LQwR5KLwZMsolOr_TehX" />
-                        </div>
+                        </motion.div>
                         <div className="relative z-10 max-w-4xl">
-                            <span className="text-tertiary-fixed text-sm font-bold tracking-[0.3em] uppercase mb-4 block">Registro Institucional 2025</span>
-                            <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black font-headline tracking-tighter leading-none uppercase mb-6">
+                            <motion.span 
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="text-tertiary-fixed text-sm font-bold tracking-[0.3em] uppercase mb-4 block"
+                            >
+                                Registro Institucional 2025
+                            </motion.span>
+                            <motion.h1 
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black font-headline tracking-tighter leading-none uppercase mb-6"
+                            >
                                 Infraestructura <br /> Soberana
-                            </h1>
-                            <p className="text-on-primary-container text-lg max-w-2xl font-light leading-relaxed">
+                            </motion.h1>
+                            <motion.p 
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.5, duration: 1 }}
+                                className="text-on-primary-container text-lg max-w-2xl font-light leading-relaxed"
+                            >
                                 Ingeniería de precisión para proyectos hidráulicos y civiles a escala federal. Un registro consolidado de absoluta rigurosidad técnica y autonomía en la infraestructura argentina.
-                            </p>
+                            </motion.p>
                         </div>
                     </section>
                     {selectedCategory === 'all' && (
@@ -127,104 +488,85 @@ export default function Portfolio() {
                                         <span className="text-6xl font-headline font-black text-primary-container/10">01</span>
                                     </div>
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <motion.div 
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, margin: "-100px" }}
+                                    variants={{
+                                        visible: { transition: { staggerChildren: 0.1 } },
+                                        hidden: {}
+                                    }}
+                                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                                >
                                     {/* Project Card 1 */}
-                                    <div className="bg-surface-container-lowest group relative overflow-hidden">
-                                        <div className="h-64 overflow-hidden relative">
-                                            <img alt="Hospital project" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Architectural exterior of a massive modern hospital facility with clean white walls and structured glass panels under clear daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEN2yfqxqEQIbxDe0bP-53Db2bDsXSoliagrMaiO2CWUzPEQ00sNHkdtYMutwN57bOjgFrRVeyY5act23MT53ftMGz7hjAYlS7mhj4mWgfk-af1HF3DlFVNYufdMVMCeDSglEFDy2E1OyGCIImty9i6MMmYsTkr4uSbgK6sKh0plvLrR-IfHP-RiZLfixM6TinFbB0YZ121DEn4Cev0ZqT0wnTkKuF10j0imLuHQmfqOk3SMk4F2K32EI0dzw2Z6lGztYN_N7wc8cT" />
-                                            <div className="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">92% Completado</div>
-                                        </div>
-                                        <div className="p-8">
-                                            <h3 className="text-xl font-headline font-extrabold uppercase text-primary mb-2">Hospital Regional Oscar Orias</h3>
-                                            <p className="text-xs text-secondary font-label uppercase tracking-widest mb-6">Ledesma, Jujuy | 25.000 m2 de Infraestructura</p>
-                                            <div className="space-y-4 border-t border-outline-variant/15 pt-6">
-                                                <div className="flex justify-between items-center text-xs">
-                                                    <span className="text-outline uppercase">Progreso Técnico</span>
-                                                    <span className="font-black text-primary">92%</span>
-                                                </div>
-                                                <div className="w-full bg-surface-container-high h-1">
-                                                    <div className="bg-primary h-full" style={{ width: '92%' }}></div>
-                                                </div>
-                                                <div className="flex flex-wrap gap-2 pt-2"><span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Proyecto Ejecutivo</span>
-                                                    <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Sanitario y Gas</span>
-                                                    <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Incendio y Riego</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <ProjectCard 
+                                        project={allProjectsData.find(p => p.id === 'a1')}
+                                        onClick={setActiveProject}
+                                    />
                                     {/* Project Card 2 */}
-                                    <div className="bg-surface-container-lowest group relative overflow-hidden">
-                                        <div className="h-64 overflow-hidden relative">
-                                            <img alt="Fisherton Park" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Luxury residential complex with modern balconies and green integration designed by Carlos Ott in sunset lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALdxS61_tfBcV9AIFPC6SGQsGVI663OHqAYwJUtFDFk_hrxZDzmuYqNsJQznJ3wQTW2Uk2QOvIBY2MeyEMskeXCR_eelPKWDumPAUvU6aBqKNCpHCrey8wEPik8-CY6pX4u5oe8Vo9UoVyQ9lgX9eehGrQ3z66ufSbAVwIWgwPSiUdsph1NgvLsN3HLuX55pEo9m1boRQ2VCKOuoSfge2xtokjwGWWZfgqpZCzsNEuMPkNXmfHRQcMCHg8IZzGJlqAa8tlLBf01zOu" />
-                                            <div className="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">94% Completado</div>
-                                        </div>
-                                        <div className="p-8">
-                                            <h3 className="text-xl font-headline font-extrabold uppercase text-primary mb-2">Fisherton Park</h3>
-                                            <p className="text-xs text-secondary font-label uppercase tracking-widest mb-6">Rosario | Arq. Carlos Ott | Residencia Premium</p>
-                                            <div className="space-y-4 border-t border-outline-variant/15 pt-6">
-                                                <div className="flex justify-between items-center text-xs">
-                                                    <span className="text-outline uppercase">Estado Mecánico</span>
-                                                    <span className="font-black text-primary">94%</span>
-                                                </div>
-                                                <div className="w-full bg-surface-container-high h-1">
-                                                    <div className="bg-primary h-full" style={{ width: '94%' }}></div>
-                                                </div>
-                                                <div className="flex flex-wrap gap-2 pt-2"><span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Termomecánico</span>
-                                                    <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Gas y Sistemas Sanitarios</span>
-                                                    <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Proyecto Llave en Mano</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <ProjectCard 
+                                        project={allProjectsData.find(p => p.id === 'a2')}
+                                        onClick={setActiveProject}
+                                    />
                                     {/* Project Card 3 */}
-                                    <div className="bg-surface-container-lowest group relative overflow-hidden">
-                                        <div className="h-64 overflow-hidden relative">
-                                            <img alt="Rosario Airport" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Interior of a modern airport terminal showing complex steel ceiling structures and industrial design elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_bN1QTT4SJg9ygWthg4My8Xj7neR7hqntf3fThP7OCZ0AwRg7BhqHb4b0s6jsv5jIWf2zuthleCYXaRDbovMzZODlb7sY6eidzClBYYgI77Yywq23BDRtz5xNaRfKm1PNQehfJjOvGSYcYyI8A8fS2E7MnLGINlWZuhPolDfX6AC4onlF3hIiuHRT2Wf7FO6BpiNMkFBT9geU0IaJmsb9YnNOmjXZxOivAAtvn_844RBIlTHCVzQ-GNwk-Qk8nU3cPrz8DSHTYkdx" />
-                                            <div className="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">90% Completado</div>
-                                        </div>
-                                        <div className="p-8">
-                                            <h3 className="text-xl font-headline font-extrabold uppercase text-primary mb-2">Aeropuerto Int. Rosario</h3>
-                                            <p className="text-xs text-secondary font-label uppercase tracking-widest mb-6">Terminal Internacional | Normativas NFPA</p>
-                                            <div className="space-y-4 border-t border-outline-variant/15 pt-6">
-                                                <div className="flex justify-between items-center text-xs">
-                                                    <span className="text-outline uppercase">Integridad del Sistema de Incendio</span>
-                                                    <span className="font-black text-primary">90%</span>
-                                                </div>
-                                                <div className="w-full bg-surface-container-high h-1">
-                                                    <div className="bg-primary h-full" style={{ width: '90%' }}></div>
-                                                </div>
-                                                <div className="flex flex-wrap gap-2 pt-2"><span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Bombas Grundfos</span>
-                                                    <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Motobomba FM/UL</span>
-                                                    <span className="bg-surface-container text-[10px] font-bold px-2 py-1 text-primary uppercase">Estándares NFPA</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <ProjectCard 
+                                        project={allProjectsData.find(p => p.id === 'a3')}
+                                        onClick={setActiveProject}
+                                    />
+                                </motion.div>
                                 {/* Secondary Execution List (Bento-style) */}
-                                <div className="mt-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
-                                    <div className="lg:col-span-2 bg-primary p-10 text-white flex flex-col justify-between">
+                                <motion.div 
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    variants={{
+                                        visible: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } }
+                                    }}
+                                    className="mt-8 grid grid-cols-1 lg:grid-cols-4 gap-8"
+                                >
+                                    <motion.div 
+                                        variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                                        onClick={() => setActiveProject(allProjectsData.find(p => p.id === 'a4'))}
+                                        className="lg:col-span-2 bg-primary p-10 text-white flex flex-col justify-between cursor-pointer group"
+                                    >
                                         <div>
                                             <span className="text-tertiary-fixed text-[10px] tracking-[0.3em] font-bold uppercase mb-4 block">Verticalidad Residencial</span>
-                                            <h4 className="text-3xl font-headline font-black uppercase mb-4">Edificio Ewain I</h4>
+                                            <h4 className="text-3xl font-headline font-black uppercase mb-4 group-hover:text-tertiary-fixed transition-colors">Edificio Ewain I</h4>
                                             <p className="text-on-primary-container text-sm leading-relaxed mb-8">Montantes de acero inoxidable, bombas presurizadas y colectores de alto rendimiento.</p>
                                         </div>
                                         <div className="flex items-center gap-6">
                                             <div className="text-4xl font-headline font-black">15%</div>
                                             <div className="flex-1 bg-white/10 h-2">
-                                                <div className="bg-tertiary-fixed h-full" style={{ width: '15%' }}></div>
+                                                <motion.div 
+                                                    initial={{ width: 0 }}
+                                                    whileInView={{ width: '15%' }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 1.2, ease: "easeOut" }}
+                                                    className="bg-tertiary-fixed h-full"
+                                                ></motion.div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="bg-surface-container-high p-10 flex flex-col justify-between">
-                                        <h4 className="text-xl font-headline font-black uppercase text-primary">Distrito Puerto Norte</h4>
+                                    </motion.div>
+                                    <motion.div 
+                                        variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                                        onClick={() => setActiveProject(allProjectsData.find(p => p.id === 'a5'))}
+                                        className="bg-surface-container-high p-10 flex flex-col justify-between cursor-pointer group"
+                                    >
+                                        <h4 className="text-xl font-headline font-black uppercase text-primary group-hover:text-cyan-700 transition-colors">Distrito Puerto Norte</h4>
                                         <div className="space-y-2">
                                             <p className="text-xs text-secondary uppercase font-bold tracking-widest">Estado: Activo</p>
                                             <p className="text-sm font-label text-on-surface-variant">Ejecución técnica de tres torres para sistemas de distribución hidráulica y térmica.</p>
                                         </div>
                                         <div className="pt-4 border-t border-outline-variant">
-                                            <span className="text-[10px] font-black uppercase tracking-tighter text-primary">3 Torres Activas</span>
+                                            <span className="text-[10px] font-black uppercase tracking-tighter text-primary">Detalle Técnico</span>
                                         </div>
-                                    </div>
-                                    <div className="bg-surface-container-lowest p-10 flex flex-col justify-between border-r-4 border-primary-container">
-                                        <h4 className="text-xl font-headline font-black uppercase text-primary">Metra Rosario</h4>
+                                    </motion.div>
+                                    <motion.div 
+                                        variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                                        onClick={() => setActiveProject(allProjectsData.find(p => p.id === 'h1'))}
+                                        className="bg-surface-container-lowest p-10 flex flex-col justify-between border-r-4 border-primary-container cursor-pointer group"
+                                    >
+                                        <h4 className="text-xl font-headline font-black uppercase text-primary group-hover:text-cyan-700 transition-colors">Metra Rosario</h4>
                                         <div className="space-y-2">
                                             <p className="text-xs text-success-container text-green-700 uppercase font-bold tracking-widest">Estado: Entregado 2023</p>
                                             <p className="text-sm font-label text-on-surface-variant">22 pisos de ingeniería residencial de alta complejidad.</p>
@@ -232,8 +574,8 @@ export default function Portfolio() {
                                         <div className="pt-4 border-t border-outline-variant">
                                             <span className="text-[10px] font-black uppercase tracking-tighter text-primary">Ciclo de Vida Completo</span>
                                         </div>
-                                    </div>
-                                </div>
+                                    </motion.div>
+                                </motion.div>
                             </section>
                             {/* Sustainability / LEED Section */}
                             <section className="py-24 px-8 md:px-20 bg-[#00162a] text-white overflow-hidden relative">
@@ -281,32 +623,56 @@ export default function Portfolio() {
                                     <h2 className="text-3xl font-headline font-black uppercase text-primary tracking-tighter">Infraestructura Especializada</h2>
                                     <p className="text-secondary font-label uppercase tracking-widest text-[10px] mt-2">Gestión de Fluidos de Precisión y Seguridad contra Incendios</p>
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                <motion.div 
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    variants={{
+                                        visible: { transition: { staggerChildren: 0.1 } }
+                                    }}
+                                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+                                >
                                     {/* Tech Item 1 */}
-                                    <div className="bg-surface p-6 border-l-2 border-primary">
+                                    <motion.div 
+                                        variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}
+                                        whileHover={{ backgroundColor: "var(--color-surface-container-high)" }}
+                                        className="bg-surface p-6 border-l-2 border-primary transition-colors cursor-pointer"
+                                    >
                                         <h5 className="font-headline font-bold uppercase text-primary mb-4 text-sm">Nuevo Hospital Nodal Venado Tuerto</h5>
                                         <p className="text-xs text-secondary mb-4">Montantes de acero inoxidable, bombas presurizadas y colectores de alto rendimiento.</p>
                                         <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">SANITARIO ELITE</span>
-                                    </div>
+                                    </motion.div>
                                     {/* Tech Item 2 */}
-                                    <div className="bg-surface p-6 border-l-2 border-primary">
+                                    <motion.div 
+                                        variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}
+                                        whileHover={{ backgroundColor: "var(--color-surface-container-high)" }}
+                                        className="bg-surface p-6 border-l-2 border-primary transition-colors cursor-pointer"
+                                    >
                                         <h5 className="font-headline font-bold uppercase text-primary mb-4 text-sm">CEMAFE / Iturraspe</h5>
                                         <p className="text-xs text-secondary mb-4">Dinámica de fluidos sanitarios y sistemas de seguridad de alta tecnología.</p>
                                         <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">LOGÍSTICA HOSPITALARIA</span>
-                                    </div>
+                                    </motion.div>
                                     {/* Tech Item 3 */}
-                                    <div className="bg-surface p-6 border-l-2 border-primary">
+                                    <motion.div 
+                                        variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}
+                                        whileHover={{ backgroundColor: "var(--color-surface-container-high)" }}
+                                        className="bg-surface p-6 border-l-2 border-primary transition-colors cursor-pointer"
+                                    >
                                         <h5 className="font-headline font-bold uppercase text-primary mb-4 text-sm">Acuario Río Paraná</h5>
                                         <p className="text-xs text-secondary mb-4">Sistemas de soporte vital (LSS), inyección de ozono y protocolos de O2.</p>
                                         <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">TECNOLOGÍA BIOLÓGICA</span>
-                                    </div>
+                                    </motion.div>
                                     {/* Tech Item 4 */}
-                                    <div className="bg-surface p-6 border-l-2 border-primary">
+                                    <motion.div 
+                                        variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}
+                                        whileHover={{ backgroundColor: "var(--color-surface-container-high)" }}
+                                        className="bg-surface p-6 border-l-2 border-primary transition-colors cursor-pointer"
+                                    >
                                         <h5 className="font-headline font-bold uppercase text-primary mb-4 text-sm">Centro Justicia Penal</h5>
                                         <p className="text-xs text-secondary mb-4">Infraestructura de agua a escala federal y sistemas institucionales de alta seguridad.</p>
                                         <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">JUDICIAL FEDERAL</span>
-                                    </div>
-                                </div>
+                                    </motion.div>
+                                </motion.div>
                             </section>
                         </>
                     )}
@@ -314,30 +680,40 @@ export default function Portfolio() {
                     {selectedCategory !== 'all' && (
                         <section className="py-20 px-8 md:px-20 bg-surface">
                             <div className="mb-12">
-                                <h2 className="text-4xl font-headline font-black uppercase text-primary tracking-tighter">Proyectos: {selectedCategory}</h2>
+                                <motion.h2 
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    key={`title-${selectedCategory}`}
+                                    className="text-4xl font-headline font-black uppercase text-primary tracking-tighter"
+                                >
+                                    Proyectos: {selectedCategory}
+                                </motion.h2>
                                 <p className="text-secondary font-label uppercase tracking-widest text-xs mt-2">Visión Filtrada del Portfolio</p>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {/* If nothing matches, show a placeholder */}
-                                {filteredAll.length === 0 && (
-                                    <div className="col-span-full py-12 text-center border-2 border-dashed border-outline-variant">
-                                        <p className="text-secondary font-label uppercase">No se encontraron proyectos activos bajo esta categoría.</p>
-                                    </div>
-                                )}
-                                {filteredAll.map(p => (
-                                    <div key={p.id} className="bg-surface-container-lowest p-8 border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="flex justify-between items-start mb-4">
-                                            <span className="text-[10px] font-bold uppercase tracking-widest bg-primary-container text-on-primary-container px-2 py-1">{p.category}</span>
-                                            <span className="text-[10px] font-bold uppercase tracking-widest text-outline">{p.status}</span>
-                                        </div>
-                                        <h3 className="text-lg font-headline font-extrabold uppercase text-primary mb-2">{p.title}</h3>
-                                        <p className="text-xs text-secondary font-label uppercase tracking-widest mb-4">{p.location}</p>
-                                        <div className="pt-4 border-t border-outline-variant/30 flex justify-between">
-                                            <span className="text-[10px] font-black uppercase tracking-tighter text-secondary">{p.specs}</span>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+                            <motion.div 
+                                layout
+                                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                            >
+                                <AnimatePresence mode="popLayout">
+                                    {filteredAll.length === 0 && (
+                                        <motion.div 
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            className="col-span-full py-12 text-center border-2 border-dashed border-outline-variant"
+                                        >
+                                            <p className="text-secondary font-label uppercase">No se encontraron proyectos activos bajo esta categoría.</p>
+                                        </motion.div>
+                                    )}
+                                            {filteredAll.map((p, index) => (
+                                                <ProjectCard 
+                                                    key={p.id}
+                                                    project={p}
+                                                    onClick={setActiveProject}
+                                                />
+                                            ))}
+                                </AnimatePresence>
+                            </motion.div>
                         </section>
                     )}
 
@@ -371,11 +747,18 @@ export default function Portfolio() {
                                             return p.category === selectedCategory || (selectedCategory === 'Obras en Ejecución' && p.status === 'En Ejecución');
                                         })
                                         .map(p => (
-                                            <tr key={p.id} className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors">
-                                                <td className="py-4 font-bold text-primary">{p.title}</td>
+                                            <tr 
+                                                key={p.id} 
+                                                onClick={() => setActiveProject(p)}
+                                                className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors cursor-pointer group"
+                                            >
+                                                <td className="py-4 font-bold text-primary group-hover:text-cyan-700">{p.title}</td>
                                                 <td className="py-4 text-secondary">{p.category}</td>
                                                 <td className="py-4 text-secondary">{p.location}</td>
-                                                <td className="py-4"><span className="text-[10px] font-black text-primary uppercase">{p.specs}</span></td>
+                                                <td className="py-4 md:flex items-center justify-between">
+                                                    <span className="text-[10px] font-black text-primary uppercase">{p.specs}</span>
+                                                    <span className="material-symbols-outlined text-xs text-outline opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                                                </td>
                                             </tr>
                                         ))
                                     }
@@ -401,6 +784,15 @@ export default function Portfolio() {
                     </section>
                 </main>
             </div>
+            
+            <AnimatePresence>
+                {activeProject && (
+                    <ProjectDetailModal 
+                        project={activeProject} 
+                        onClose={() => setActiveProject(null)} 
+                    />
+                )}
+            </AnimatePresence>
             {/* Footer Shell */}
         </>
     );
