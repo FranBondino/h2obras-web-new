@@ -26,11 +26,11 @@ export default function Header() {
         >
             <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-[1920px] mx-auto">
                 <Link to="/" className="flex items-center -ml-4 md:ml-0">
-                    <div className="h-12 md:h-16 w-48 md:w-64 overflow-hidden flex items-center justify-start">
+                    <div className="h-16 md:h-24 w-64 md:w-96 overflow-hidden flex items-center justify-start md:justify-center">
                         <img
                             src="/h2obras-web-new/logoh2o_new.png"
                             alt="H2O Obras"
-                            className="h-full w-auto object-contain dark:brightness-0 dark:invert transition-all"
+                            className="h-full w-auto object-contain dark:brightness-0 dark:invert transition-all scale-[3.5] transform origin-left md:origin-center"
                         />
                     </div>
                 </Link>
