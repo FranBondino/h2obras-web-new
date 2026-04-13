@@ -1,118 +1,160 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const categoryHeroData = {
+    all: {
+        title: "Infraestructura <br /> Soberana",
+        subtitle: "Ingeniería de precisión para proyectos hidráulicos y civiles a escala federal. Un registro consolidado de absoluta rigurosidad técnica y autonomía en la infraestructura argentina.",
+        tag: "Registro Institucional 2026"
+    },
+    "Obras en Ejecución": {
+        title: "Ejecución <br /> Federal",
+        subtitle: "Monitoreo técnico en tiempo real de obras de alta complejidad. Garantía de continuidad operativa y precisión en cada etapa del desarrollo infraestructural.",
+        tag: "Estado de Obra Activo"
+    },
+    Salud: {
+        title: "Ingeniería <br /> Sanitaria",
+        subtitle: "Sistemas críticos para entornos hospitalarios de alta complejidad. Gases medicinales, redes de fluidos y climatización con estándares internacionales de bioseguridad.",
+        tag: "Especialidad: Salud"
+    },
+    "Centros Judiciales": {
+        title: "Centros de <br /> Justicia",
+        subtitle: "Sistemas integrales para edificios institucionales de máxima seguridad. Ingeniería hidráulica y civil para el soporte de la operatividad judicial.",
+        tag: "Infraestructura Institucional"
+    },
+    Aeropuertos: {
+        title: "Logística <br /> Aeroportuaria",
+        subtitle: "Instalaciones especializadas para terminales aéreas bajo normas NFPA. Redes contra incendio, bombeo de alta presión y sistemas de soporte logístico.",
+        tag: "Estándares Aeronáuticos"
+    },
+    "Residencial de Alta Gama": {
+        title: "Hábitat <br /> de Alta Gama",
+        subtitle: "Desarrollo de infraestructura vertical premium. Ingeniería térmica, sanitaria y hidráulica para los proyectos arquitectónicos más ambiciosos del país.",
+        tag: "Arquitectura Vertical"
+    },
+    Industrial: {
+        title: "Procesos <br /> Industriales",
+        subtitle: "Soluciones de ingeniería para plantas de producción y procesamiento. Piping industrial, tratamiento de efluentes y sistemas de presión para alta exigencia.",
+        tag: "Potencia Industrial"
+    },
+    "Sustentable (LEED)": {
+        title: "Eficiencia <br /> Sustentable",
+        subtitle: "Liderazgo en certificaciones internacionales. Sistemas solares térmicos, recuperación pluvial y optimización de recursos para el futuro sostenible.",
+        tag: "Certificación LEED"
+    }
+};
 const allProjectsData = [
     // Activos
     // Activos
-    { 
-        id: 'a1', 
-        title: 'Hospital Regional Oscar Orias', 
-        category: 'Salud', 
-        location: 'Ledesma, Jujuy', 
-        specs: 'Progreso Técnico 92%', 
+    {
+        id: 'a1',
+        title: 'Hospital Regional Oscar Orias',
+        category: 'Salud',
+        location: 'Ledesma, Jujuy',
+        specs: 'Progreso Técnico 92%',
         status: 'En Ejecución',
         fullSpecs: ["Hospital Regional de 25.000 m2", "Proyecto ejecutivo integral (Mayo-Julio 2022)", "Instalaciones sanitarias, gas, riego e incendio", "Certificación técnica al 92%"],
         client: "RIVA-ERG UT",
         contact: "Ing. Gustavo Cavolo",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDEN2yfqxqEQIbxDe0bP-53Db2bDsXSoliagrMaiO2CWUzPEQ00sNHkdtYMutwN57bOjgFrRVeyY5act23MT53ftMGz7hjAYlS7mhj4mWgfk-af1HF3DlFVNYufdMVMCeDSglEFDy2E1OyGCIImty9i6MMmYsTkr4uSbgK6sKh0plvLrR-IfHP-RiZLfixM6TinFbB0YZ121DEn4Cev0ZqT0wnTkKuF10j0imLuHQmfqOk3SMk4F2K32EI0dzw2Z6lGztYN_N7wc8cT"
     },
-    { 
-        id: 'a2', 
-        title: 'Fisherton Park', 
-        category: 'Residencial de Alta Gama', 
-        location: 'Rosario', 
-        specs: 'Estado Mecánico 94%', 
+    {
+        id: 'a2',
+        title: 'Fisherton Park',
+        category: 'Residencial de Alta Gama',
+        location: 'Rosario',
+        specs: 'Estado Mecánico 94%',
         status: 'En Ejecución',
         fullSpecs: ["Condominio de categoría (45 unidades)", "Proyecto Arq. Carlos Ott", "Instalaciones sanitarias, gas, incendio y riego", "Piscina y termomecánica (Equipos Samsung Multisplit)", "Obra llave en mano"],
         client: "DIX DESARROLLADORA",
         contact: "Gabriel Pérez",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuALdxS61_tfBcV9AIFPC6SGQsGVI663OHqAYwJUtFDFk_hrxZDzmuYqNsJQznJ3wQTW2Uk2QOvIBY2MeyEMskeXCR_eelPKWDumPAUvU6aBqKNCpHCrey8wEPik8-CY6pX4u5oe8Vo9UoVyQ9lgX9eehGrQ3z66ufSbAVwIWgwPSiUdsph1NgvLsN3HLuX55pEo9m1boRQ2VCKOuoSfge2xtokjwGWWZfgqpZCzsNEuMPkNXmfHRQcMCHg8IZzGJlqAa8tlLBf01zOu"
     },
-    { 
-        id: 'a3', 
-        title: 'Aeropuerto Int. Rosario', 
-        category: 'Aeropuertos', 
-        location: 'Rosario', 
-        specs: 'Integridad 90%', 
+    {
+        id: 'a3',
+        title: 'Aeropuerto Int. Rosario',
+        category: 'Aeropuertos',
+        location: 'Rosario',
+        specs: 'Integridad 90%',
         status: 'En Ejecución',
         fullSpecs: ["Proyecto ejecutivo de instalaciones sanitarias", "Red de agua con presurización para tanques de reserva", "Sala de máquinas con equipos Grundfos", "Sistemas de motobombas con sello FM/UL (Normas NFPA - Ruhrpumpen)"],
         client: "UT EDECA-DINALE-PECAM",
         contact: "Ing. Carlos Pellegrini",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA_bN1QTT4SJg9ygWthg4My8Xj7neR7hqntf3fThP7OCZ0AwRg7BhqHb4b0s6jsv5jIWf2zuthleCYXaRDbovMzZODlb7sY6eidzClBYYgI77Yywq23BDRtz5xNaRfKm1PNQehfJjOvGSYcYyI8A8fS2E7MnLGINlWZuhPolDfX6AC4onlF3hIiuHRT2Wf7FO6BpiNMkFBT9geU0IaJmsb9YnNOmjXZxOivAAtvn_844RBIlTHCVzQ-GNwk-Qk8nU3cPrz8DSHTYkdx"
     },
-    { 
-        id: 'a4', 
-        title: 'Edificio Ewain I', 
-        category: 'Residencial de Alta Gama', 
-        location: 'Rosario', 
-        specs: 'Progreso 15%', 
+    {
+        id: 'a4',
+        title: 'Edificio Ewain I',
+        category: 'Residencial de Alta Gama',
+        location: 'Rosario',
+        specs: 'Progreso 15%',
         status: 'En Ejecución',
         fullSpecs: ["Proyecto ejecutivo de calefacción y agua caliente central", "Edificio de 75 unidades funcionales", "Sistema central de calderas Santero", "Control por termostatos wifi y cabezales termoeléctricos"],
         client: "CIMBRA S.R.L. / CLIMA CONFORT",
         contact: "Arq. Sebastián Dinatale"
     },
-    { 
-        id: 'a5', 
-        title: 'Distrito Puerto Norte', 
-        category: 'Residencial de Alta Gama', 
-        location: 'Rosario', 
-        specs: '3 Torres Activas', 
+    {
+        id: 'a5',
+        title: 'Distrito Puerto Norte',
+        category: 'Residencial de Alta Gama',
+        location: 'Rosario',
+        specs: '3 Torres Activas',
         status: 'En Ejecución',
         fullSpecs: ["Instalación sanitaria, gas, incendio, piscinas y riego", "Tres torres de 21 plantas", "Sistemas de ionización en piscinas", "Riego por aspersión y goteo automatizado", "Presurización con variadores de velocidad"],
         client: "GRUPO TRANSATLANTICA S.A.",
         contact: "Sebastián Rubino"
     },
-    { 
-        id: 'a6', 
-        title: 'Edificio La Segunda Seguros', 
-        category: 'Sustentable (LEED)', 
-        location: 'Rosario', 
-        specs: 'LEED Platinum', 
+    {
+        id: 'a6',
+        title: 'Edificio La Segunda Seguros',
+        category: 'Sustentable (LEED)',
+        location: 'Rosario',
+        specs: 'LEED Platinum',
         status: 'Entregado',
         fullSpecs: ["Certificación LEED PLATINUM", "Energía Solar Termodinámica y colectores Heat Pipe", "Sistema de recupero de aguas pluviales y grises", "Planta de tratamiento de efluentes con oxidación total", "Remoción de arsénico y terrazas verdes (700 m2)"],
         client: "LA SEGUNDA Coop. Seg. Ltda.",
         contact: "Arq. Marcelo Ponzellini",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCEX9ZJE-01Buufgek7gAmXoL1YKgzXGdrM_BJRZ4oSaZOLU08zyLXm8ABsS6nihbSaSF2g1pIwj7jH4b-VQrTYmCMy_b6di3Iq1ml6nZMUgOel3YIhqFuIhvkrWiJzPcGCOe7-iFGwMGbSyIwj7Wyn8cMbLUbeOJKgpZYqCfYiZQCrVeEFNeraVNltVY9PwQsQwd8qbxUPQLgxklrX_9oPzwh4kpIwGgECS_evR-tR65pV4RCgtZgRMPJBsnwq2V7B9BslOFoCjTfm"
     },
-    { 
-        id: 'a7', 
-        title: 'Nuevo Hospital Nodal Venado Tuerto', 
-        category: 'Salud', 
-        location: 'Venado Tuerto', 
-        specs: 'Sanitario Elite', 
+    {
+        id: 'a7',
+        title: 'Nuevo Hospital Nodal Venado Tuerto',
+        category: 'Salud',
+        location: 'Venado Tuerto',
+        specs: 'Sanitario Elite',
         status: 'Entregado',
         fullSpecs: ["Instalaciones de agua y servicios contra incendio", "Colectores y montantes ACS en Acero Inoxidable AISI 304", "Soldaduras TIG y sistemas Victaulic", "Montaje de sistemas presurizados y bombas de incendio"],
         client: "DINALE – EDECA U.T.E.",
         contact: "Ing. Pedro Del Gerbo"
     },
-    { 
-        id: 'a8', 
-        title: 'CEMAFE / Iturraspe', 
-        category: 'Salud', 
-        location: 'Santa Fe', 
-        specs: 'Logística Hospitalaria', 
+    {
+        id: 'a8',
+        title: 'CEMAFE / Iturraspe',
+        category: 'Salud',
+        location: 'Santa Fe',
+        specs: 'Logística Hospitalaria',
         status: 'Entregado',
         fullSpecs: ["Proyecto ejecutivo de instalaciones sanitarias e incendio", "Montantes de incendio y ACS en Acero Inoxidable", "Colectores de sala de máquinas y tanques en AISI 304", "Electrobombas sanitarias de alta performance"],
         client: "DINALE - PECAM – MUNDO UTE",
         contact: "Ing. Pedro Del Gerbo"
     },
-    { 
-        id: 'a9', 
-        title: 'Acuario Río Paraná', 
-        category: 'Institucional', 
-        location: 'Rosario', 
-        specs: 'Tecnología Biológica', 
+    {
+        id: 'a9',
+        title: 'Acuario Río Paraná',
+        category: 'Institucional',
+        location: 'Rosario',
+        specs: 'Tecnología Biológica',
         status: 'Entregado',
         fullSpecs: ["Ejecución de Sistema de Vida (LSS)", "Sistemas de filtrado, caudalímetros, sondas y niveles", "Redes de Aire Comprimido y Actuadores Neumáticos", "Instalación de Ozono y Oxígeno de Emergencia", "Montajes íntegros en AISI 304L"],
         client: "DINALE S.A.",
         contact: "Arq. Carolina Francione"
     },
-    { 
-        id: 'a10', 
-        title: 'Centro Justicia Penal', 
-        category: 'Centros Judiciales', 
-        location: 'Rosario', 
-        specs: 'Judicial Federal', 
+    {
+        id: 'a10',
+        title: 'Centro Justicia Penal',
+        category: 'Centros Judiciales',
+        location: 'Rosario',
+        specs: 'Judicial Federal',
         status: 'Entregado',
         fullSpecs: ["Instalaciones Sanitarias y de Gas integrales", "Infraestructura para edificio institucional de alta seguridad", "Finalización de obra técnica: Agosto 2017"],
         client: "RIVA S.A.",
@@ -120,78 +162,78 @@ const allProjectsData = [
     },
 
     // Históricos
-    { 
-        id: 'h1', 
-        title: 'Torre Metra (Puerto Norte)', 
-        category: 'Residencial de Alta Gama', 
-        location: 'Rosario', 
-        specs: 'Entregado 2023', 
+    {
+        id: 'h1',
+        title: 'Torre Metra (Puerto Norte)',
+        category: 'Residencial de Alta Gama',
+        location: 'Rosario',
+        specs: 'Entregado 2023',
         status: 'Historico',
         fullSpecs: ["Torre de 22 Pisos con 156 unidades funcionales", "Instalaciones sanitarias, de gas e incendio", "Proyecto y ejecución integral", "Obra Entregada en Abril del 2023"],
         client: "RIVA S.A.",
         contact: "Ing. Raúl Olguín"
     },
-    { 
-        id: 'h2', 
-        title: 'Campus UNRN Bariloche', 
-        category: 'Institucional', 
-        location: 'Bariloche, Río Negro', 
-        specs: 'Equipos Grundfos', 
+    {
+        id: 'h2',
+        title: 'Campus UNRN Bariloche',
+        category: 'Institucional',
+        location: 'Bariloche, Río Negro',
+        specs: 'Equipos Grundfos',
         status: 'Historico',
         fullSpecs: ["Proyecto de instalaciones sanitarias y de incendio", "Ejecución de Sala de máquinas completa", "Equipos de presurización Grundfos", "Generación de ACS con equipos Heat Pump"],
         client: "UT DINALE-PECAM",
         contact: "Ing. Sebastián Balbi"
     },
-    { 
-        id: 'h3', 
-        title: 'Fideicomiso Maui Puerto Norte', 
-        category: 'Residencial de Alta Gama', 
-        location: 'Rosario', 
-        specs: 'ACS en AISI304', 
+    {
+        id: 'h3',
+        title: 'Fideicomiso Maui Puerto Norte',
+        category: 'Residencial de Alta Gama',
+        location: 'Rosario',
+        specs: 'ACS en AISI304',
         status: 'Historico',
         fullSpecs: ["Ejecución de Piping de calderas e intercambiadores de calor", "Circuitos secundarios de acumuladores de ACS en AISI304", "Provisión y montaje de bombas y tableros contra incendio"],
         client: "FIDEICOMISO MAUI",
         contact: "Ing. Diego Bermudez"
     },
-    { 
-        id: 'h4', 
-        title: 'Hilton Garden Inn', 
-        category: 'Residencial de Alta Gama', 
-        location: 'Santa Fe', 
-        specs: 'Legajo Completo', 
+    {
+        id: 'h4',
+        title: 'Hilton Garden Inn',
+        category: 'Residencial de Alta Gama',
+        location: 'Santa Fe',
+        specs: 'Legajo Completo',
         status: 'Historico',
         fullSpecs: ["HILTON GARDEN INN (Dique 2) y VIVIENDAS EN TORRE", "Proyecto de Instalaciones Sanitarias, Incendio, Riego y Piscinas", "Criterios sustentables y estándar de marca Hilton"],
         client: "DINALE S.A.",
         contact: "Estudio Costa Valenzuela"
     },
-    { 
-        id: 'h5', 
-        title: 'Casino Rosario', 
-        category: 'Institucional', 
-        location: 'Rosario', 
-        specs: 'Alta Complejidad', 
+    {
+        id: 'h5',
+        title: 'Casino Rosario',
+        category: 'Institucional',
+        location: 'Rosario',
+        specs: 'Alta Complejidad',
         status: 'Historico',
         fullSpecs: ["Hotel y Centro de Convenciones Casino Rosario", "Gerenciamiento de Proyecto de Instalaciones Sanitarias", "Instalaciones de alta complejidad en Battle y Ordoñez"],
         client: "RIVA S.A.",
         contact: "Ing. Raúl Olguín"
     },
-    { 
-        id: 'h6', 
-        title: 'Centro Islámico King Fhad', 
-        category: 'Institucional', 
-        location: 'CABA', 
-        specs: 'Soldadura TIG AISI304', 
+    {
+        id: 'h6',
+        title: 'Centro Islámico King Fhad',
+        category: 'Institucional',
+        location: 'CABA',
+        specs: 'Soldadura TIG AISI304',
         status: 'Historico',
         fullSpecs: ["Gerenciamiento y Dirección de obra", "Instalaciones Sanitarias, Gas e Incendio", "Riego y Fuentes ornamentales", "Instalaciones especiales en Acero Inoxidable AISI304 con soldaduras TIG"],
         client: "RIVA S.A.",
         contact: "Año 1999"
     },
-    { 
-        id: 'h7', 
-        title: 'Estación Elevadora Aguadas', 
-        category: 'Infraestructura', 
-        location: 'Funes, Santa Fe', 
-        specs: 'Bombas Grundfos', 
+    {
+        id: 'h7',
+        title: 'Estación Elevadora Aguadas',
+        category: 'Infraestructura',
+        location: 'Funes, Santa Fe',
+        specs: 'Bombas Grundfos',
         status: 'Historico',
         fullSpecs: ["Obra completa de Estación Elevadora", "Electromecánica y Cañería de impulsión", "Instalación de Bombas Grundfos", "Sistema de Izaje y Reja Mecánica"],
         client: "ASSA S.A.",
@@ -233,7 +275,7 @@ function ProjectCard({ project, onClick }) {
     const imgUrl = image || "https://images.unsplash.com/photo-1541888941259-7b9d9218d0bc?q=80&w=2070&auto=format&fit=crop";
 
     return (
-        <motion.div 
+        <motion.div
             variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 }
@@ -243,12 +285,12 @@ function ProjectCard({ project, onClick }) {
             className="bg-surface-container-lowest group relative overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
         >
             <div className="h-64 overflow-hidden relative">
-                <motion.img 
+                <motion.img
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.6 }}
-                    alt={title} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
-                    src={imgUrl} 
+                    alt={title}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    src={imgUrl}
                 />
                 <div className="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-tighter z-10">
                     {label || project.status}
@@ -267,7 +309,7 @@ function ProjectCard({ project, onClick }) {
                         <span className="font-black text-primary">{progress ? `${progress}%` : "Integrit"}</span>
                     </div>
                     <div className="w-full bg-surface-container-high h-1 overflow-hidden">
-                        <motion.div 
+                        <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: progress ? `${progress}%` : '100%' }}
                             viewport={{ once: true }}
@@ -292,14 +334,14 @@ function ProjectDetailModal({ project, onClose }) {
     if (!project) return null;
 
     return (
-        <motion.div 
+        <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 bg-primary/90 backdrop-blur-sm"
             onClick={onClose}
         >
-            <motion.div 
+            <motion.div
                 initial={{ scale: 0.9, y: 20, opacity: 0 }}
                 animate={{ scale: 1, y: 0, opacity: 1 }}
                 exit={{ scale: 0.9, y: 20, opacity: 0 }}
@@ -307,7 +349,7 @@ function ProjectDetailModal({ project, onClose }) {
                 onClick={e => e.stopPropagation()}
             >
                 {/* Close Button */}
-                <button 
+                <button
                     onClick={onClose}
                     className="absolute top-4 right-4 z-20 bg-primary text-white p-2 rounded-full hover:bg-cyan-700 transition-colors"
                 >
@@ -316,9 +358,9 @@ function ProjectDetailModal({ project, onClose }) {
 
                 {/* Left Side: Image */}
                 <div className="w-full md:w-1/2 h-64 md:h-auto overflow-hidden bg-primary-container">
-                    <img 
-                        src={project.image || "https://images.unsplash.com/photo-1541888941259-7b9d9218d0bc?q=80&w=2070&auto=format&fit=crop"} 
-                        alt={project.title} 
+                    <img
+                        src={project.image || "https://images.unsplash.com/photo-1541888941259-7b9d9218d0bc?q=80&w=2070&auto=format&fit=crop"}
+                        alt={project.title}
                         className="w-full h-full object-cover opacity-80"
                     />
                 </div>
@@ -396,6 +438,8 @@ export default function Portfolio() {
 
     const historicalProjects = allProjectsData.filter(p => p.status === 'Historico');
 
+    const currentHero = categoryHeroData[selectedCategory] || categoryHeroData.all;
+
     return (
         <>
             <button className="bg-primary-container text-white px-4 md:px-6 py-2 font-headline uppercase tracking-widest text-xs font-bold hover:bg-on-primary-fixed-variant transition-all w-full md:w-auto text-left md:text-center">Portal Técnico</button>
@@ -420,7 +464,7 @@ export default function Portfolio() {
                                         }`}
                                 >
                                     {isActive && (
-                                        <motion.div 
+                                        <motion.div
                                             layoutId="activeCategory"
                                             className="absolute inset-0 bg-[#0d2b45] dark:bg-[#f8f9fa] border-l-4 border-[#ffddba] z-[-1]"
                                             transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
@@ -440,7 +484,7 @@ export default function Portfolio() {
                 <main className="flex-1 max-w-full overflow-hidden">
                     {/* Hero Banner */}
                     <section className="relative min-h-[400px] md:h-[614px] bg-primary flex items-center px-6 md:px-20 py-20 md:py-0 overflow-hidden">
-                        <motion.div 
+                        <motion.div
                             initial={{ scale: 1.1, opacity: 0 }}
                             animate={{ scale: 1, opacity: 0.4 }}
                             transition={{ duration: 1.5, ease: "easeOut" }}
@@ -449,30 +493,24 @@ export default function Portfolio() {
                             <img alt="Industrial construction" className="w-full h-full object-cover" data-alt="dramatic wide angle shot of a large scale civil engineering project site with steel structures and heavy machinery at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVgnCcJOXJbS1CPKSLW2YY7rrCKvOGonDzDLZKh99l1PWKa8CULPPUz0axyy9_XHd6EHNiiqId32pHdTyCNpAZ9aQlIS1cq_BRPUdwlRr7n1cJVdIncH7WmfO_N5-pSB0cihPmC0xrcQaY-gTgwH2ONESYYyekuTUWFlZekTQiSmD9rr_KLnzeynpzQnLIPydQuw6fX4bFXJ3BO3so6vu9E9Er3rUE543iyaiG1FAO7GyR3zamgefvhxL8LQwR5KLwZMsolOr_TehX" />
                         </motion.div>
                         <div className="relative z-10 max-w-4xl">
-                            <motion.span 
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: 0.2 }}
-                                className="text-tertiary-fixed text-sm font-bold tracking-[0.3em] uppercase mb-4 block"
-                            >
-                                Registro Institucional 2025
-                            </motion.span>
-                            <motion.h1 
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black font-headline tracking-tighter leading-none uppercase mb-6"
-                            >
-                                Infraestructura <br /> Soberana
-                            </motion.h1>
-                            <motion.p 
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: 0.5, duration: 1 }}
-                                className="text-on-primary-container text-lg max-w-2xl font-light leading-relaxed"
-                            >
-                                Ingeniería de precisión para proyectos hidráulicos y civiles a escala federal. Un registro consolidado de absoluta rigurosidad técnica y autonomía en la infraestructura argentina.
-                            </motion.p>
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={selectedCategory}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: 20 }}
+                                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                                >
+                                    <span className="text-tertiary-fixed text-sm font-bold tracking-[0.3em] uppercase mb-4 block">{currentHero.tag}</span>
+                                    <h1
+                                        className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black font-headline tracking-tighter leading-none uppercase mb-6"
+                                        dangerouslySetInnerHTML={{ __html: currentHero.title }}
+                                    />
+                                    <p className="text-on-primary-container text-lg max-w-2xl font-light leading-relaxed">
+                                        {currentHero.subtitle}
+                                    </p>
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
                     </section>
                     {selectedCategory === 'all' && (
@@ -488,7 +526,7 @@ export default function Portfolio() {
                                         <span className="text-6xl font-headline font-black text-primary-container/10">01</span>
                                     </div>
                                 </div>
-                                <motion.div 
+                                <motion.div
                                     initial="hidden"
                                     whileInView="visible"
                                     viewport={{ once: true, margin: "-100px" }}
@@ -499,32 +537,33 @@ export default function Portfolio() {
                                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                                 >
                                     {/* Project Card 1 */}
-                                    <ProjectCard 
+                                    <ProjectCard
                                         project={allProjectsData.find(p => p.id === 'a1')}
                                         onClick={setActiveProject}
                                     />
                                     {/* Project Card 2 */}
-                                    <ProjectCard 
+                                    <ProjectCard
                                         project={allProjectsData.find(p => p.id === 'a2')}
                                         onClick={setActiveProject}
                                     />
                                     {/* Project Card 3 */}
-                                    <ProjectCard 
+                                    <ProjectCard
                                         project={allProjectsData.find(p => p.id === 'a3')}
                                         onClick={setActiveProject}
                                     />
                                 </motion.div>
                                 {/* Secondary Execution List (Bento-style) */}
-                                <motion.div 
+                                <motion.div
                                     initial="hidden"
                                     whileInView="visible"
-                                    viewport={{ once: true }}
+                                    viewport={{ once: true }
+                                    }
                                     variants={{
                                         visible: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } }
                                     }}
                                     className="mt-8 grid grid-cols-1 lg:grid-cols-4 gap-8"
                                 >
-                                    <motion.div 
+                                    <motion.div
                                         variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                                         onClick={() => setActiveProject(allProjectsData.find(p => p.id === 'a4'))}
                                         className="lg:col-span-2 bg-primary p-10 text-white flex flex-col justify-between cursor-pointer group"
@@ -537,7 +576,7 @@ export default function Portfolio() {
                                         <div className="flex items-center gap-6">
                                             <div className="text-4xl font-headline font-black">15%</div>
                                             <div className="flex-1 bg-white/10 h-2">
-                                                <motion.div 
+                                                <motion.div
                                                     initial={{ width: 0 }}
                                                     whileInView={{ width: '15%' }}
                                                     viewport={{ once: true }}
@@ -547,7 +586,7 @@ export default function Portfolio() {
                                             </div>
                                         </div>
                                     </motion.div>
-                                    <motion.div 
+                                    <motion.div
                                         variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                                         onClick={() => setActiveProject(allProjectsData.find(p => p.id === 'a5'))}
                                         className="bg-surface-container-high p-10 flex flex-col justify-between cursor-pointer group"
@@ -561,7 +600,7 @@ export default function Portfolio() {
                                             <span className="text-[10px] font-black uppercase tracking-tighter text-primary">Detalle Técnico</span>
                                         </div>
                                     </motion.div>
-                                    <motion.div 
+                                    <motion.div
                                         variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                                         onClick={() => setActiveProject(allProjectsData.find(p => p.id === 'h1'))}
                                         className="bg-surface-container-lowest p-10 flex flex-col justify-between border-r-4 border-primary-container cursor-pointer group"
@@ -575,10 +614,10 @@ export default function Portfolio() {
                                             <span className="text-[10px] font-black uppercase tracking-tighter text-primary">Ciclo de Vida Completo</span>
                                         </div>
                                     </motion.div>
-                                </motion.div>
-                            </section>
+                                </motion.div >
+                            </section >
                             {/* Sustainability / LEED Section */}
-                            <section className="py-24 px-8 md:px-20 bg-[#00162a] text-white overflow-hidden relative">
+                            < section className="py-24 px-8 md:px-20 bg-[#00162a] text-white overflow-hidden relative" >
                                 <div className="absolute right-0 top-0 w-1/3 h-full bg-surface-container-highest/5 mask-gradient hidden lg:block"></div>
                                 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                                     <div>
@@ -616,14 +655,14 @@ export default function Portfolio() {
                                         <img alt="Edificio sustentable moderno" className="w-full h-full object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700" data-alt="Ultra modern glass office building with sustainable design features and green landscaping in early morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEX9ZJE-01Buufgek7gAmXoL1YKgzXGdrM_BJRZ4oSaZOLU08zyLXm8ABsS6nihbSaSF2g1pIwj7jH4b-VQrTYmCMy_b6di3Iq1ml6nZMUgOel3YIhqFuIhvkrWiJzPcGCOe7-iFGwMGbSyIwj7Wyn8cMbLUbeOJKgpZYqCfYiZQCrVeEFNeraVNltVY9PwQsQwd8qbxUPQLgxklrX_9oPzwh4kpIwGgECS_evR-tR65pV4RCgtZgRMPJBsnwq2V7B9BslOFoCjTfm" />
                                     </div>
                                 </div>
-                            </section>
+                            </section >
                             {/* Institutional High-Tech Modules */}
-                            <section className="py-20 px-8 md:px-20 bg-surface-container-low">
+                            < section className="py-20 px-8 md:px-20 bg-surface-container-low" >
                                 <div className="mb-16">
                                     <h2 className="text-3xl font-headline font-black uppercase text-primary tracking-tighter">Infraestructura Especializada</h2>
                                     <p className="text-secondary font-label uppercase tracking-widest text-[10px] mt-2">Gestión de Fluidos de Precisión y Seguridad contra Incendios</p>
                                 </div>
-                                <motion.div 
+                                <motion.div
                                     initial="hidden"
                                     whileInView="visible"
                                     viewport={{ once: true }}
@@ -633,7 +672,7 @@ export default function Portfolio() {
                                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
                                 >
                                     {/* Tech Item 1 */}
-                                    <motion.div 
+                                    <motion.div
                                         variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}
                                         whileHover={{ backgroundColor: "var(--color-surface-container-high)" }}
                                         className="bg-surface p-6 border-l-2 border-primary transition-colors cursor-pointer"
@@ -643,7 +682,7 @@ export default function Portfolio() {
                                         <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">SANITARIO ELITE</span>
                                     </motion.div>
                                     {/* Tech Item 2 */}
-                                    <motion.div 
+                                    <motion.div
                                         variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}
                                         whileHover={{ backgroundColor: "var(--color-surface-container-high)" }}
                                         className="bg-surface p-6 border-l-2 border-primary transition-colors cursor-pointer"
@@ -653,7 +692,7 @@ export default function Portfolio() {
                                         <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">LOGÍSTICA HOSPITALARIA</span>
                                     </motion.div>
                                     {/* Tech Item 3 */}
-                                    <motion.div 
+                                    <motion.div
                                         variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}
                                         whileHover={{ backgroundColor: "var(--color-surface-container-high)" }}
                                         className="bg-surface p-6 border-l-2 border-primary transition-colors cursor-pointer"
@@ -663,7 +702,7 @@ export default function Portfolio() {
                                         <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">TECNOLOGÍA BIOLÓGICA</span>
                                     </motion.div>
                                     {/* Tech Item 4 */}
-                                    <motion.div 
+                                    <motion.div
                                         variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}
                                         whileHover={{ backgroundColor: "var(--color-surface-container-high)" }}
                                         className="bg-surface p-6 border-l-2 border-primary transition-colors cursor-pointer"
@@ -673,49 +712,51 @@ export default function Portfolio() {
                                         <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">JUDICIAL FEDERAL</span>
                                     </motion.div>
                                 </motion.div>
-                            </section>
+                            </section >
                         </>
                     )}
 
-                    {selectedCategory !== 'all' && (
-                        <section className="py-20 px-8 md:px-20 bg-surface">
-                            <div className="mb-12">
-                                <motion.h2 
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    key={`title-${selectedCategory}`}
-                                    className="text-4xl font-headline font-black uppercase text-primary tracking-tighter"
+                    {
+                        selectedCategory !== 'all' && (
+                            <section className="py-20 px-8 md:px-20 bg-surface">
+                                <div className="mb-12">
+                                    <motion.h2
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        key={`title-${selectedCategory}`}
+                                        className="text-4xl font-headline font-black uppercase text-primary tracking-tighter"
+                                    >
+                                        Proyectos: {selectedCategory}
+                                    </motion.h2>
+                                    <p className="text-secondary font-label uppercase tracking-widest text-xs mt-2">Visión Filtrada del Portfolio</p>
+                                </div>
+                                <motion.div
+                                    layout
+                                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                                 >
-                                    Proyectos: {selectedCategory}
-                                </motion.h2>
-                                <p className="text-secondary font-label uppercase tracking-widest text-xs mt-2">Visión Filtrada del Portfolio</p>
-                            </div>
-                            <motion.div 
-                                layout
-                                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                            >
-                                <AnimatePresence mode="popLayout">
-                                    {filteredAll.length === 0 && (
-                                        <motion.div 
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            exit={{ opacity: 0 }}
-                                            className="col-span-full py-12 text-center border-2 border-dashed border-outline-variant"
-                                        >
-                                            <p className="text-secondary font-label uppercase">No se encontraron proyectos activos bajo esta categoría.</p>
-                                        </motion.div>
-                                    )}
-                                            {filteredAll.map((p, index) => (
-                                                <ProjectCard 
-                                                    key={p.id}
-                                                    project={p}
-                                                    onClick={setActiveProject}
-                                                />
-                                            ))}
-                                </AnimatePresence>
-                            </motion.div>
-                        </section>
-                    )}
+                                    <AnimatePresence mode="popLayout">
+                                        {filteredAll.length === 0 && (
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                exit={{ opacity: 0 }}
+                                                className="col-span-full py-12 text-center border-2 border-dashed border-outline-variant"
+                                            >
+                                                <p className="text-secondary font-label uppercase">No se encontraron proyectos activos bajo esta categoría.</p>
+                                            </motion.div>
+                                        )}
+                                        {filteredAll.map((p, index) => (
+                                            <ProjectCard
+                                                key={p.id}
+                                                project={p}
+                                                onClick={setActiveProject}
+                                            />
+                                        ))}
+                                    </AnimatePresence>
+                                </motion.div>
+                            </section>
+                        )
+                    }
 
                     {/* Massive Institutional Registry (The Grid) */}
                     <section className="py-20 px-8 md:px-20 bg-surface">
@@ -747,8 +788,8 @@ export default function Portfolio() {
                                             return p.category === selectedCategory || (selectedCategory === 'Obras en Ejecución' && p.status === 'En Ejecución');
                                         })
                                         .map(p => (
-                                            <tr 
-                                                key={p.id} 
+                                            <tr
+                                                key={p.id}
                                                 onClick={() => setActiveProject(p)}
                                                 className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors cursor-pointer group"
                                             >
@@ -784,16 +825,15 @@ export default function Portfolio() {
                     </section>
                 </main>
             </div>
-            
+
             <AnimatePresence>
                 {activeProject && (
-                    <ProjectDetailModal 
-                        project={activeProject} 
-                        onClose={() => setActiveProject(null)} 
+                    <ProjectDetailModal
+                        project={activeProject}
+                        onClose={() => setActiveProject(null)}
                     />
                 )}
             </AnimatePresence>
-            {/* Footer Shell */}
         </>
     );
 }

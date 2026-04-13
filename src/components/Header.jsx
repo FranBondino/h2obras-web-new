@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +18,12 @@ export default function Header() {
         }`;
 
     return (
-        <header className="fixed top-0 w-full z-50 bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-md">
+        <motion.header
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="fixed top-0 w-full z-50 bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-md"
+        >
             <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-[1920px] mx-auto">
                 <Link to="/" className="flex items-center -ml-4 md:ml-0">
                     <div className="h-16 md:h-24 w-64 md:w-96 overflow-hidden flex items-center justify-start md:justify-center">
@@ -80,6 +86,6 @@ export default function Header() {
             </div>
 
             <div className="bg-slate-200/20 dark:bg-slate-800/20 h-[1px] w-full"></div>
-        </header>
+        </motion.header>
     );
 }

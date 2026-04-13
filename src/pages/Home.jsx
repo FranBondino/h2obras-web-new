@@ -1,6 +1,15 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+const fadeUpVariant = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+};
+
+const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+};
 export default function Home() {
     return (
         <>
@@ -11,19 +20,19 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-tr from-primary via-primary/80 to-transparent"></div>
                 </div>
                 <div className="relative z-10 w-full px-8 md:px-20 grid md:grid-cols-12 gap-8 items-end pb-20">
-                    <div className="md:col-span-9">
-                        <div className="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+                    <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="md:col-span-9">
+                        <motion.div variants={fadeUpVariant} className="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
                             Marco de Infraestructura Soberana
-                        </div>
-                        <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-federal uppercase mb-8">
+                        </motion.div>
+                        <motion.h1 variants={fadeUpVariant} className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-federal uppercase mb-8">
                             Ingeniería Hidromecánica <br /> de Alta Complejidad
-                        </h1>
-                        <p className="text-on-primary-container text-lg md:text-2xl max-w-2xl font-light leading-relaxed mb-10">
+                        </motion.h1>
+                        <motion.p variants={fadeUpVariant} className="text-on-primary-container text-lg md:text-2xl max-w-2xl font-light leading-relaxed mb-10">
                             Instalaciones sanitarias, gas, e incendio bajo normativas internacionales para obras a escala federal.
-                        </p>
-                        <div className="flex flex-wrap gap-4">
+                        </motion.p>
+                        <motion.div variants={fadeUpVariant} className="flex flex-wrap gap-4">
                             <Link to="/portfolio">
-                                <motion.button 
+                                <motion.button
                                     whileHover={{ y: -2 }}
                                     whileTap={{ scale: 0.98 }}
                                     className="bg-surface-container-lowest text-primary font-bold px-8 py-4 tracking-tighter uppercase rounded-sm flex items-center gap-3 group shadow-lg shadow-black/20"
@@ -35,49 +44,49 @@ export default function Home() {
                             <button className="border border-white/20 text-white font-bold px-8 py-4 tracking-tighter uppercase rounded-sm hover:bg-white/5 transition-colors">
                                 Especificaciones Técnicas
                             </button>
-                        </div>
-                    </div>
-                    <div className="md:col-span-3 hidden md:block text-right pb-4 border-r-2 border-white/10 pr-6">
+                        </motion.div>
+                    </motion.div>
+                    <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 1 }} className="md:col-span-3 hidden md:block text-right pb-4 border-r-2 border-white/10 pr-6">
                         <span className="text-white/40 text-[10px] tracking-[0.3em] uppercase block mb-2">Núcleo Técnico</span>
                         <span className="text-white text-xs font-mono">LAT: -32.9468 <br /> LON: -60.6393</span>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
             {/* Key Metrics Band */}
             <section className="bg-surface-container-low py-16 px-8 md:px-20">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
-                    <div className="flex flex-col gap-2">
+                <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+                    <motion.div variants={fadeUpVariant} className="flex flex-col gap-2">
                         <span className="text-primary text-4xl font-black tracking-tighter">+25 Años</span>
                         <span className="text-on-surface-variant text-[10px] uppercase tracking-widest font-bold">de Experiencia</span>
-                    </div>
-                    <div className="flex flex-col gap-2">
+                    </motion.div>
+                    <motion.div variants={fadeUpVariant} className="flex flex-col gap-2">
                         <span className="text-primary text-4xl font-black tracking-tighter">LEED</span>
                         <span className="text-on-surface-variant text-[10px] uppercase tracking-widest font-bold">Certificación Platinum</span>
-                    </div>
-                    <div className="flex flex-col gap-2">
+                    </motion.div>
+                    <motion.div variants={fadeUpVariant} className="flex flex-col gap-2">
                         <span className="text-primary text-4xl font-black tracking-tighter">NFPA</span>
                         <span className="text-on-surface-variant text-[10px] uppercase tracking-widest font-bold">Normativas UL-FM</span>
-                    </div>
-                    <div className="flex flex-col gap-2">
+                    </motion.div>
+                    <motion.div variants={fadeUpVariant} className="flex flex-col gap-2">
                         <span className="text-primary text-4xl font-black tracking-tighter">FEDERAL</span>
                         <span className="text-on-surface-variant text-[10px] uppercase tracking-widest font-bold">Oficinas en Rosario y CABA</span>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </section>
             {/* Services Section */}
             <section className="py-32 px-8 md:px-20 bg-surface">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                    <div className="max-w-2xl">
+                <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <motion.div variants={fadeUpVariant} className="max-w-2xl">
                         <h2 className="text-4xl md:text-6xl font-black text-primary uppercase tracking-tighter mb-6">Expertise en <br /> Complejidad Estructural</h2>
                         <p className="text-secondary text-lg leading-relaxed">Operamos en el núcleo de las infraestructuras críticas, integrando Proyecto Ejecutivo, Dirección de Obra y Ejecución bajo un solo mando técnico.</p>
-                    </div>
-                    <div className="text-primary font-mono text-sm tracking-widest uppercase">
+                    </motion.div>
+                    <motion.div variants={fadeUpVariant} className="text-primary font-mono text-sm tracking-widest uppercase">
                         [ Protocolos ISO 9001:2015 ]
-                    </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+                    </motion.div>
+                </motion.div>
+                <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid grid-cols-1 md:grid-cols-12 gap-4">
                     {/* Service Card 1 */}
-                    <div className="md:col-span-7 bg-surface-container-high p-12 min-h-[400px] flex flex-col justify-between group">
+                    <motion.div variants={fadeUpVariant} className="md:col-span-7 bg-surface-container-high p-12 min-h-[400px] flex flex-col justify-between group">
                         <div className="flex justify-between items-start">
                             <span className="material-symbols-outlined text-4xl text-primary" data-weight="fill">fire_extinguisher</span>
                             <span className="text-primary/20 font-black text-6xl">01</span>
@@ -90,9 +99,9 @@ export default function Home() {
                                 <span className="px-3 py-1 bg-primary-container text-white text-[9px] font-bold uppercase tracking-widest">Bombas Listadas</span>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                     {/* Service Card 2 */}
-                    <div className="md:col-span-5 bg-primary p-12 min-h-[400px] flex flex-col justify-between text-white">
+                    <motion.div variants={fadeUpVariant} className="md:col-span-5 bg-primary p-12 min-h-[400px] flex flex-col justify-between text-white">
                         <div className="flex justify-between items-start">
                             <span className="material-symbols-outlined text-4xl text-tertiary-fixed" data-weight="fill">eco</span>
                             <span className="text-white/10 font-black text-6xl">02</span>
@@ -102,9 +111,9 @@ export default function Home() {
                             <p className="text-on-primary-container mb-8">Optimización de recursos hídricos y eficiencia energética para desarrollos de escala federal LEED.</p>
                             <button className="text-xs font-bold tracking-widest uppercase border-b border-white/30 pb-2 hover:border-white transition-colors">Sistemas Inverter</button>
                         </div>
-                    </div>
+                    </motion.div>
                     {/* Service Card 3 */}
-                    <div className="md:col-span-12 bg-surface-container-highest p-12 flex flex-col md:flex-row justify-between items-center group">
+                    <motion.div variants={fadeUpVariant} className="md:col-span-12 bg-surface-container-highest p-12 flex flex-col md:flex-row justify-between items-center group">
                         <div className="max-w-xl">
                             <div className="flex items-center gap-4 mb-6">
                                 <span className="material-symbols-outlined text-4xl text-primary">water_drop</span>
@@ -122,8 +131,8 @@ export default function Home() {
                                 <span className="text-[10px] uppercase font-bold text-secondary">Proyecto Ejecutivo</span>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </section>
             {/* Featured Projects */}
             <section className="py-32 px-8 md:px-20 bg-surface-container-low">
@@ -133,13 +142,13 @@ export default function Home() {
                         <div className="h-1 w-24 bg-primary"></div>
                     </div>
                     <Link to="/portfolio">
-                        <motion.button 
+                        <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="flex items-center gap-3 bg-primary text-white px-8 py-3 rounded-sm font-bold uppercase tracking-widest text-[10px] group transition-all"
                         >
                             Ver Todas las Obras
-                            <motion.span 
+                            <motion.span
                                 animate={{ x: [0, 5, 0] }}
                                 transition={{ repeat: Infinity, duration: 1.5 }}
                                 className="material-symbols-outlined text-sm"
