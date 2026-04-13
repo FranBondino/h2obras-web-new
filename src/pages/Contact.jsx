@@ -26,9 +26,9 @@ export default function Contact() {
             {/* Technical Metadata Divider */}
             <div className="bg-surface-container-low py-4 px-8 overflow-hidden whitespace-nowrap">
                 <div className="flex items-center gap-12 text-on-surface-variant/30 text-[0.6875rem] font-mono uppercase tracking-[0.3em]">
-                    <span>REGISTRO DE INFRAESTRUCTURA SOBERANA 2024</span>
+                    <span>REGISTRO DE INFRAESTRUCTURA SOBERANA</span>
                     <span className="material-symbols-outlined text-xs">close</span>
-                    <span>H2O-OP-PROTOCOL-v4.0</span>
+                    <span>H2O-OP-PROTOCOL</span>
                     <span className="material-symbols-outlined text-xs">close</span>
                     <span>ESTÁNDARES DE INGENIERÍA HIDRÁULICA</span>
                 </div>

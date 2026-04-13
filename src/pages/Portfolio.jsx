@@ -442,7 +442,6 @@ export default function Portfolio() {
 
     return (
         <>
-            <button className="bg-primary-container text-white px-4 md:px-6 py-2 font-headline uppercase tracking-widest text-xs font-bold hover:bg-on-primary-fixed-variant transition-all w-full md:w-auto text-left md:text-center">Portal Técnico</button>
             <div className="bg-gradient-to-r from-transparent via-[#5b5f61]/10 to-transparent h-[1px]"></div>
             <div className="flex min-h-screen">
                 {/* Sidebar Navigation */}

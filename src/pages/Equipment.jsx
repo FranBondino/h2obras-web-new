@@ -23,9 +23,9 @@ export default function Equipment() {
                     </div>
                     {/* Technical Metadata Decoration */}
                     <div className="absolute bottom-12 right-12 hidden lg:block font-headline text-[10px] tracking-widest text-surface-variant/40 space-y-1 text-right uppercase">
-                        <p>LATERAL_CORE_ASSET: ACTIVE</p>
-                        <p>DEPLOYMENT_RADIUS: FEDERAL_UNLIMITED</p>
-                        <p>STRUCTURAL_INTEGRITY: 100%</p>
+                        <p>Infraestructura Activa</p>
+                        <p>Despliegue Federal</p>
+                        <p>Integridad Estructural</p>
                     </div>
                 </section>
                 {/* Featured Fleet (Structural Grid) */}
@@ -80,7 +80,7 @@ export default function Equipment() {
                                     </li>
                                 </ul>
                                 <div className="pt-6 border-t border-outline-variant/20">
-                                    <p className="text-[10px] text-outline tracking-widest uppercase group-hover:text-surface-variant/50">Categoría de Activo: Despliegue Aéreo</p>
+                                    <p className="text-[10px] text-outline tracking-widest uppercase group-hover:text-surface-variant/50">Categoría de Activo: Elevación</p>
                                 </div>
                             </div>
                             {/* Perforación */}
@@ -168,8 +168,8 @@ export default function Equipment() {
                                         <div className="flex items-start">
                                             <span className="material-symbols-outlined text-primary mr-4">monitoring</span>
                                             <div>
-                                                <p className="text-sm font-bold text-primary uppercase">Oficina Técnica i7</p>
-                                                <p className="text-xs text-secondary">Plóters y estaciones de trabajo de alto rendimiento para modelado BIM en tiempo real.</p>
+                                                <p className="text-sm font-bold text-primary uppercase">Oficina Técnica</p>
+                                                <p className="text-xs text-secondary">Estaciones de trabajo de alto rendimiento para modelado BIM en tiempo real.</p>
                                             </div>
                                         </div>
                                     </div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 256px;
+            height: 256px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            /* Favicons usually have a background if they have a border */
+            overflow: hidden;
+        }
+
+        .border-circle {
+            width: 256px;
+            height: 256px;
+            border: 12px solid #083344;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* We will use the h2o_icon.png which is the clean version */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="border-circle">
+        <img src="h2o_icon.png" />
+    </div>
+</body>
+
+</html>

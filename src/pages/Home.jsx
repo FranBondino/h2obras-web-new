@@ -80,9 +80,6 @@ export default function Home() {
                         <h2 className="text-4xl md:text-6xl font-black text-primary uppercase tracking-tighter mb-6">Expertise en <br /> Complejidad Estructural</h2>
                         <p className="text-secondary text-lg leading-relaxed">Operamos en el núcleo de las infraestructuras críticas, integrando Proyecto Ejecutivo, Dirección de Obra y Ejecución bajo un solo mando técnico.</p>
                     </motion.div>
-                    <motion.div variants={fadeUpVariant} className="text-primary font-mono text-sm tracking-widest uppercase">
-                        [ Protocolos ISO 9001:2015 ]
-                    </motion.div>
                 </motion.div>
                 <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid grid-cols-1 md:grid-cols-12 gap-4">
                     {/* Service Card 1 */}
