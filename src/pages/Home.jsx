@@ -230,6 +230,51 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* Clients Section */}
+            <section className="py-24 px-8 md:px-20 bg-surface border-y border-primary/5">
+                <motion.div
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="flex flex-col gap-16"
+                >
+                    <motion.div variants={fadeUpVariant} className="text-center max-w-3xl mx-auto">
+                        <h2 className="text-sm font-bold tracking-[0.5em] text-primary uppercase mb-4">Confían en Nosotros</h2>
+                        <p className="text-secondary text-lg">Alianzas estratégicas con las principales instituciones y empresas del país para el desarrollo de infraestructura crítica.</p>
+                    </motion.div>
+
+                    <motion.div variants={fadeUpVariant} className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
+                        {/* Client Logos / Names */}
+                        <div className="flex flex-col items-center gap-2 group cursor-default">
+                            <span className="text-primary font-black text-xs tracking-tighter uppercase group-hover:opacity-100 transition-opacity">Aeropuertos Argentina 2000</span>
+                            <div className="h-[1px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                        <div className="flex flex-col items-center gap-2 group cursor-default">
+                            <span className="text-primary font-black text-xs tracking-tighter uppercase group-hover:opacity-100 transition-opacity">La Segunda Seguros</span>
+                            <div className="h-[1px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                        <div className="flex flex-col items-center gap-2 group cursor-default">
+                            <span className="text-primary font-black text-xs tracking-tighter uppercase group-hover:opacity-100 transition-opacity">Gobierno de Jujuy</span>
+                            <div className="h-[1px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                        <div className="flex flex-col items-center gap-2 group cursor-default">
+                            <span className="text-primary font-black text-xs tracking-tighter uppercase group-hover:opacity-100 transition-opacity">IRSA Propiedades</span>
+                            <div className="h-[1px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                        <div className="flex flex-col items-center gap-2 group cursor-default">
+                            <span className="text-primary font-black text-xs tracking-tighter uppercase group-hover:opacity-100 transition-opacity">Grupo Coto</span>
+                            <div className="h-[1px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                        <div className="flex flex-col items-center gap-2 group cursor-default">
+                            <span className="text-primary font-black text-xs tracking-tighter uppercase group-hover:opacity-100 transition-opacity">Sanatorio Parque</span>
+                            <div className="h-[1px] w-0 bg-primary group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                    </motion.div>
+                </motion.div>
+            </section>
+
             {/* Operational Muscle Banner */}
             <section className="py-24 px-8 md:px-20 bg-primary-container relative overflow-hidden">
                 <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
