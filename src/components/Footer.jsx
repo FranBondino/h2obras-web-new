@@ -5,16 +5,11 @@ export default function Footer() {
         <footer className="bg-slate-100 dark:bg-slate-900 w-full border-t border-slate-200 dark:border-slate-800">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-7xl mx-auto">
                 <div className="space-y-6">
-                    <div className="h-16 md:h-24 overflow-hidden flex items-center justify-start">
+                    <div className="h-12 md:h-16 overflow-hidden flex items-center justify-start">
                         <img
-                            src="/h2obras-web-new/logoh2o_clean.png"
+                            src="/h2obras-web-new/logoh2o_new.png"
                             alt="H2O Obras"
-                            className="h-full w-auto object-contain mix-blend-multiply scale-[3.5] transform origin-left"
-                        />
-                        <img
-                            src="/h2obras-web-new/logoh2o_white.png"
-                            alt="H2O Obras"
-                            className="h-full w-auto object-contain mix-blend-screen scale-[3.5] transform origin-left hidden dark:block"
+                            className="h-full w-auto object-contain dark:brightness-0 dark:invert transition-all"
                         />
                     </div>
                     <p className="font-['Inter'] text-xs tracking-wider leading-relaxed text-slate-500 dark:text-slate-400 max-w-xs">
