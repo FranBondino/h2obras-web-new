@@ -22,13 +22,13 @@ export default function Home() {
                 <div className="relative z-10 w-full px-8 md:px-20 grid md:grid-cols-12 gap-8 items-end pb-20">
                     <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="md:col-span-9">
                         <motion.div variants={fadeUpVariant} className="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
-                            Marco de Infraestructura Soberana
+                            Proyecto y Ejecución de Instalaciones
                         </motion.div>
                         <motion.h1 variants={fadeUpVariant} className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-federal uppercase mb-8">
                             Ingeniería Hidromecánica <br /> de Alta Complejidad
                         </motion.h1>
                         <motion.p variants={fadeUpVariant} className="text-on-primary-container text-lg md:text-2xl max-w-2xl font-light leading-relaxed mb-10">
-                            Instalaciones sanitarias, gas, e incendio bajo normativas internacionales para obras a escala federal.
+                            Instalaciones sanitarias, gas, e incendio para obras civiles e industriales.
                         </motion.p>
                         <motion.div variants={fadeUpVariant} className="flex flex-wrap gap-4">
                             <Link to="/portfolio">
@@ -78,8 +78,8 @@ export default function Home() {
                 <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="mb-12">
                     <motion.div variants={fadeUpVariant} className="max-w-3xl">
                         <div className="w-full h-px bg-primary/20 mb-8"></div>
-                        <h2 className="text-5xl md:text-6xl font-black text-primary font-headline uppercase tracking-tighter mb-6 leading-none">Expertise en <br /> <span className="text-secondary opacity-60">Complejidad Estructural</span></h2>
-                        <p className="text-secondary text-lg md:text-xl font-body leading-relaxed max-w-2xl">Operamos en el núcleo de las infraestructuras críticas, integrando Proyecto Ejecutivo, Dirección de Obra y Ejecución bajo un solo mando técnico.</p>
+                        <h2 className="text-5xl md:text-6xl font-black text-primary font-headline uppercase tracking-tighter mb-6 leading-none">Expertise en <span className="text-secondary opacity-60">Instalaciones</span></h2>
+                        <p className="text-secondary text-lg md:text-xl font-body leading-relaxed max-w-2xl">Integramos Proyecto Ejecutivo, Dirección de Obra y Ejecución de instalaciones sanitarias, gas, incendio y rubros afines.</p>
                     </motion.div>
                 </motion.div>
                 <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-4">
@@ -196,7 +196,7 @@ export default function Home() {
                     {/* Project 1 */}
                     <div className="flex flex-col gap-6">
                         <div className="aspect-video bg-surface-container-high overflow-hidden">
-                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ imageRendering: '-webkit-optimize-contrast' }} alt="Hospital Regional Oscar Orias" src="hosp.png" />
+                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ imageRendering: '-webkit-optimize-contrast' }} alt="Hospital Regional Oscar Orias" src="/h2obras-web-new/hosp.png" />
                         </div>
                         <div>
                             <div className="flex justify-between items-center mb-2">
@@ -219,7 +219,7 @@ export default function Home() {
                     {/* Project 2 */}
                     <div className="flex flex-col gap-6 mt-12 md:mt-0">
                         <div className="aspect-video bg-surface-container-high overflow-hidden">
-                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ imageRendering: '-webkit-optimize-contrast' }} alt="Aeropuerto Internacional Rosario" src="aerop.png" />
+                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ imageRendering: '-webkit-optimize-contrast' }} alt="Aeropuerto Internacional Rosario" src="/h2obras-web-new/aerop.png" />
                         </div>
                         <div>
                             <div className="flex justify-between items-center mb-2">
@@ -242,7 +242,7 @@ export default function Home() {
                     {/* Project 3 */}
                     <div className="flex flex-col gap-6 mt-24 md:mt-0">
                         <div className="aspect-video bg-surface-container-high overflow-hidden">
-                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ imageRendering: '-webkit-optimize-contrast' }} alt="La Segunda Seguros" src="laseg.png" />
+                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ imageRendering: '-webkit-optimize-contrast' }} alt="La Segunda Seguros" src="/h2obras-web-new/laseg.png" />
                         </div>
                         <div>
                             <div className="flex justify-between items-center mb-2">
@@ -316,7 +316,7 @@ export default function Home() {
                 </div>
                 <div className="relative z-10 grid md:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-8">Músculo Operacional Propio</h2>
+                        <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-8">Infraestructura y Equipamiento Propio</h2>
                         <p className="text-on-primary-container text-xl leading-relaxed mb-10">
                             Flota y Equipamiento Propio. Minicargadoras Bobcat, Plataformas Mantall, Tecnología Hilti.
                             <span className="text-white font-bold">Autonomía total sin tercerización excesiva.</span>

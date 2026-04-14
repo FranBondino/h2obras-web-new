@@ -10,9 +10,9 @@ export default function Equipment() {
                     </div>
                     <div className="container mx-auto px-6 md:px-10 relative z-10 grid grid-cols-12 gap-6">
                         <div className="col-span-12 lg:col-span-8">
-                            <span className="inline-block px-4 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-headline font-bold text-xs uppercase tracking-[0.2em] mb-6">Ingeniería de Infraestructura Soberana</span>
+                            <span className="inline-block px-4 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-headline font-bold text-xs uppercase tracking-[0.2em] mb-6">Proyecto y Ejecución de Instalaciones</span>
                             <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-headline font-black text-surface leading-[0.9] tracking-tighter mb-8 uppercase">
-                                Capacidad <br /> Operativa <br /> Autónoma
+                                Equipamiento e <br /> Infraestructura <br /> Propia
                             </h1>
                             <div className="bg-surface-container-lowest/10 backdrop-blur-md border-l-4 border-tertiary-fixed p-8 max-w-2xl">
                                 <p className="text-lg md:text-xl text-surface-variant font-light leading-relaxed">
@@ -22,22 +22,17 @@ export default function Equipment() {
                         </div>
                     </div>
                     {/* Technical Metadata Decoration */}
-                    <div className="absolute bottom-12 right-12 hidden lg:block font-headline text-[10px] tracking-widest text-surface-variant/40 space-y-1 text-right uppercase">
-                        <p>Infraestructura Activa</p>
-                        <p>Despliegue Federal</p>
-                        <p>Integridad Estructural</p>
-                    </div>
                 </section>
                 {/* Featured Fleet (Structural Grid) */}
                 <section className="bg-surface py-24 technical-grid">
                     <div className="container mx-auto px-10">
                         <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between border-b border-outline-variant/20 pb-8">
                             <div>
-                                <h2 className="text-4xl font-headline font-black text-primary tracking-tighter uppercase mb-2">Flota de Activos Críticos</h2>
-                                <p className="text-secondary font-medium uppercase tracking-widest text-xs">Unidades de Movimiento y Precisión Estructural</p>
+                                <h2 className="text-4xl font-headline font-black text-primary tracking-tighter uppercase mb-2">Detalle de Nuestra Flota</h2>
+                                <p className="text-secondary font-medium uppercase tracking-widest text-xs">Unidades de Movimiento y Herramental Específico</p>
                             </div>
                             <div className="mt-4 md:mt-0 text-right font-headline text-2xl font-bold text-primary tracking-tighter">
-                                FASE_01: MOVIMIENTO PESADO
+                                Capacidad Operativa
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
@@ -49,13 +44,13 @@ export default function Equipment() {
                                 <h3 className="text-2xl font-headline font-bold text-primary group-hover:text-surface mb-4 uppercase leading-tight">Movimiento de Suelos y Zanjeo</h3>
                                 <ul className="space-y-4 mb-8">
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Minicargadoras Bobcat S450
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> MINIRETRO BOBCAT E-26 Modelo 2015
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Excavadoras Bobcat E-26
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> MINIPALA BOBCAT S450 Modelo 2017 + ACCESORIO ZANJADORA BOBCAT Modelo 2017
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Niveladora y Rodillo Compactador
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Accesorios: NIVELADORA y RODILLO VIBROAPISONADOR LISO Y PATA DE CABRA Modelo 2020
                                     </li>
                                 </ul>
                                 <div className="pt-6 border-t border-outline-variant/20">
@@ -70,13 +65,13 @@ export default function Equipment() {
                                 <h3 className="text-2xl font-headline font-bold text-primary group-hover:text-surface mb-4 uppercase leading-tight">Trabajos en Altura</h3>
                                 <ul className="space-y-4 mb-8">
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Plataformas Mantall XE160W
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> PLATAFORMA ELEVADORA MANTALL (16 MTS.)
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Alcance vertical de hasta 16 metros
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> SISTEMA AUTOPROPULSADA (Modelo 2018)
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Sistemas de estabilización todo terreno
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Montajes en altura y posicionamiento vertical
                                     </li>
                                 </ul>
                                 <div className="pt-6 border-t border-outline-variant/20">
@@ -91,13 +86,13 @@ export default function Equipment() {
                                 <h3 className="text-2xl font-headline font-bold text-primary group-hover:text-surface mb-4 uppercase leading-tight">Perforación y Anclajes</h3>
                                 <ul className="space-y-4 mb-8">
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Hilti D250 Sistemas de Corte Pesado
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> HILTI D250: Perforación en Hormigón con Diamante (Hasta Ø 500 mm)
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Hilti D160 Precisión de Diamante
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> HILTI D160: Perforación en Hormigón con Diamante (Hasta Ø 200 mm)
                                     </li>
                                     <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Tecnología de Anclaje Químico
+                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Equipos de Demolición y Anclajes Químicos HILTI
                                     </li>
                                 </ul>
                                 <div className="pt-6 border-t border-outline-variant/20">
@@ -122,11 +117,16 @@ export default function Equipment() {
                             {/* Tech Item 1 */}
                             <div className="bg-primary p-12 hover:bg-primary-container transition-all">
                                 <div className="flex justify-between items-start mb-12">
-                                    <span className="text-tertiary-fixed text-sm font-headline tracking-widest">TECH_MOD.01</span>
+                                    <span className="text-tertiary-fixed text-sm font-headline tracking-widest">MOD_01</span>
                                     <span className="material-symbols-outlined text-tertiary-fixed">settings_input_component</span>
                                 </div>
-                                <h4 className="text-2xl font-headline font-bold mb-4 uppercase">Sistemas Victaulic</h4>
-                                <p className="text-on-primary-container text-sm leading-relaxed mb-6">Large diameter groovers and roll-grooving specialized tools for seismic-ready mechanical joints.</p>
+                                <h4 className="text-2xl font-headline font-bold mb-4 uppercase">Instalación Crítica</h4>
+                                <ul className="text-on-primary-container text-xs leading-relaxed mb-6 space-y-2">
+                                    <li>• 2 RANURADORAS PARA SISTEMA VICTAULIC</li>
+                                    <li>• CORTADORA PARA ACERO INOXIDABLE HASTA Ø 8”</li>
+                                    <li>• AGUJEREADORA PARA COPAS BIMETALICAS (BOCA DE PESCADO)</li>
+                                    <li>• ROSCADORAS DE BANCO Y MANUALES</li>
+                                </ul>
                             </div>
                             {/* Tech Item 2 */}
                             <div className="bg-primary p-12 hover:bg-primary-container transition-all">
@@ -134,17 +134,26 @@ export default function Equipment() {
                                     <span className="text-tertiary-fixed text-sm font-headline tracking-widest">TECH_MOD.02</span>
                                     <span className="material-symbols-outlined text-tertiary-fixed">heat_pump</span>
                                 </div>
-                                <h4 className="text-2xl font-headline font-bold mb-4 uppercase">Soldadura TIG Inverter</h4>
-                                <p className="text-on-primary-container text-sm leading-relaxed mb-6">Stainless Steel high-purity specialists for pharmaceutical and industrial water treatment clusters.</p>
+                                <h4 className="text-2xl font-headline font-bold mb-4 uppercase">Fusión y Soldadura</h4>
+                                <ul className="text-on-primary-container text-xs leading-relaxed mb-6 space-y-2">
+                                    <li>• 5 EQUIPOS TIG INVERTER COMPLETOS - RECTIFICADORA</li>
+                                    <li>• 2 ELECTROFUSIONADORAS HASTA Ø 600 mm</li>
+                                    <li>• CORTADORA DE PAVIMENTO DYNAPACK - VIBROAPISONADORES</li>
+                                </ul>
                             </div>
                             {/* Tech Item 3 */}
                             <div className="bg-primary p-12 hover:bg-primary-container transition-all">
                                 <div className="flex justify-between items-start mb-12">
                                     <span className="text-tertiary-fixed text-sm font-headline tracking-widest">TECH_MOD.03</span>
-                                    <span className="material-symbols-outlined text-tertiary-fixed">bolt</span>
+                                    <span className="material-symbols-outlined text-tertiary-fixed">construction</span>
                                 </div>
-                                <h4 className="text-2xl font-headline font-bold mb-4 uppercase">Electrofusionadoras</h4>
-                                <p className="text-on-primary-container text-sm leading-relaxed mb-6">Advanced fusion control units supporting large-scale HD-PE pipes up to Ø 600 mm.</p>
+                                <h4 className="text-2xl font-headline font-bold mb-4 uppercase">Soporte de Obra</h4>
+                                <ul className="text-on-primary-container text-xs leading-relaxed mb-6 space-y-2">
+                                    <li>• 2 CONTAINERS DE OBRA</li>
+                                    <li>• ACANALADORA 9” CON ASPIRADORA</li>
+                                    <li>• ANDAMIOS METALTECH (EEUU)</li>
+                                    <li>• NIVELES OPTICOS Y LASER</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -162,14 +171,21 @@ export default function Equipment() {
                                             <span className="material-symbols-outlined text-primary mr-4">local_shipping</span>
                                             <div>
                                                 <p className="text-sm font-bold text-primary uppercase">Logística Pesada</p>
-                                                <p className="text-xs text-secondary">Camiones DFM 14tn + Flotas Foton/Lifan para despliegue rápido en obra.</p>
+                                                <ul className="text-[10px] text-secondary leading-tight mt-1">
+                                                    <li>• CAMION DFM 2023 - 14 TN (CAJA 6M)</li>
+                                                    <li>• UTILITARIO LIFAN FOISON TRUCK (2017)</li>
+                                                    <li>• UTILITARIO FOTON GRATOUR (2019)</li>
+                                                </ul>
                                             </div>
                                         </div>
                                         <div className="flex items-start">
                                             <span className="material-symbols-outlined text-primary mr-4">monitoring</span>
                                             <div>
                                                 <p className="text-sm font-bold text-primary uppercase">Oficina Técnica</p>
-                                                <p className="text-xs text-secondary">Estaciones de trabajo de alto rendimiento para modelado BIM en tiempo real.</p>
+                                                <ul className="text-[10px] text-secondary leading-tight mt-1">
+                                                    <li>• PLOTTER / 4 PC DISEÑO I7 / 3 NOTEBOOK I7</li>
+                                                    <li>• FLOTA 12 CELULARES CLARO</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>

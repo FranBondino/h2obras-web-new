@@ -25,7 +25,7 @@ export default function Header() {
             className="fixed top-0 w-full z-50 bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-md"
         >
             <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-[1920px] mx-auto">
-                <Link to="/" className="flex items-center -ml-4 md:ml-0">
+                <Link to="/" className="flex items-center -ml-4 md:-ml-4">
                     <div className="h-16 md:h-24 w-64 md:w-96 overflow-hidden flex items-center justify-start md:justify-center">
                         <img
                             src="/h2obras-web-new/logoh2o_new.png"
@@ -48,7 +48,7 @@ export default function Header() {
                     to="/contact"
                     className="hidden md:block bg-primary-container text-white px-6 py-2.5 rounded-sm font-headline font-bold text-xs uppercase tracking-widest scale-[0.98] active:scale-95 transition-transform"
                 >
-                    Solicitar Factibilidad Técnica
+                    Solicitar Presupuesto
                 </Link>
 
                 {/* Mobile Hamburger */}
@@ -75,7 +75,7 @@ export default function Header() {
                         onClick={() => setMenuOpen(false)}
                         className="block text-center bg-primary-container text-white px-6 py-3 font-headline font-bold text-xs uppercase tracking-widest w-full"
                     >
-                        Solicitar Factibilidad Técnica
+                        Solicitar Presupuesto
                     </Link>
                 </div>
             </div>

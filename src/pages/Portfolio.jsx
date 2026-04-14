@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const categoryHeroData = {
     all: {
-        title: "Infraestructura <br /> Soberana",
-        subtitle: "Ingeniería de precisión para proyectos hidráulicos y civiles a escala federal. Un registro consolidado de absoluta rigurosidad técnica y autonomía en la infraestructura argentina.",
-        tag: "Registro Institucional 2026"
+        title: "Portfolio de <br /> Ingeniería",
+        subtitle: "Un registro consolidado de obras hidráulicas y civiles de alta complejidad. Compromiso con la rigurosidad técnica y la excelencia en la ejecución.",
+        tag: "Obras y Proyectos"
     },
     "Obras en Ejecución": {
-        title: "Ejecución <br /> Federal",
-        subtitle: "Monitoreo técnico en tiempo real de obras de alta complejidad. Garantía de continuidad operativa y precisión en cada etapa del desarrollo infraestructural.",
+        title: "Obras en <br /> Ejecución",
+        subtitle: "Monitoreo técnico de obras activas. Garantía de continuidad operativa y precisión en cada etapa del desarrollo.",
         tag: "Estado de Obra Activo"
     },
     Salud: {
@@ -420,6 +420,14 @@ export default function Portfolio() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [showAllHistory, setShowAllHistory] = useState(false);
     const [activeProject, setActiveProject] = useState(null);
+    const mainContentRef = useRef(null);
+
+    // Scroll content to top when category changes
+    useEffect(() => {
+        if (mainContentRef.current) {
+            mainContentRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }, [selectedCategory]);
 
     // Prevent scroll when modal is open
     useEffect(() => {
@@ -448,7 +456,7 @@ export default function Portfolio() {
                 <aside className="hidden lg:flex flex-col h-screen w-80 left-0 sticky top-[88px] bg-[#f8f9fa] dark:bg-[#0d2b45] py-10 px-4 space-y-2">
                     <div className="px-4 mb-8">
                         <h3 className="text-lg font-bold text-[#00162a] dark:text-[#f8f9fa] font-headline uppercase">Categorías de Proyectos</h3>
-                        <p className="text-[10px] text-secondary tracking-[0.2em] uppercase font-label">Infraestructura a Escala Federal</p>
+                        <p className="text-[10px] text-secondary tracking-[0.2em] uppercase font-label">Ingeniería Hidráulica y Civil</p>
                     </div>
                     <nav className="flex flex-col space-y-1 relative">
                         {categories.map(cat => {
@@ -480,7 +488,7 @@ export default function Portfolio() {
                     </div>
                 </aside>
                 {/* Main Content Area */}
-                <main className="flex-1 max-w-full overflow-hidden">
+                <main ref={mainContentRef} className="flex-1 max-w-full overflow-hidden">
                     {/* Hero Banner */}
                     <section className="relative min-h-[400px] md:h-[614px] bg-primary flex items-center px-6 md:px-20 py-20 md:py-0 overflow-hidden">
                         <motion.div
