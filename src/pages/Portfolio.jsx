@@ -56,7 +56,7 @@ const allProjectsData = [
         fullSpecs: ["Hospital Regional de 25.000 m2", "Proyecto ejecutivo integral (Mayo-Julio 2022)", "Instalaciones sanitarias, gas, riego e incendio", "Certificación técnica al 92%"],
         client: "RIVA-ERG UT",
         contact: "Ing. Gustavo Cavolo",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDEN2yfqxqEQIbxDe0bP-53Db2bDsXSoliagrMaiO2CWUzPEQ00sNHkdtYMutwN57bOjgFrRVeyY5act23MT53ftMGz7hjAYlS7mhj4mWgfk-af1HF3DlFVNYufdMVMCeDSglEFDy2E1OyGCIImty9i6MMmYsTkr4uSbgK6sKh0plvLrR-IfHP-RiZLfixM6TinFbB0YZ121DEn4Cev0ZqT0wnTkKuF10j0imLuHQmfqOk3SMk4F2K32EI0dzw2Z6lGztYN_N7wc8cT"
+        image: "/h2obras-web-new/portfolio_hosp.png"
     },
     {
         id: 'a2',
@@ -68,7 +68,7 @@ const allProjectsData = [
         fullSpecs: ["Condominio de categoría (45 unidades)", "Proyecto Arq. Carlos Ott", "Instalaciones sanitarias, gas, incendio y riego", "Piscina y termomecánica (Equipos Samsung Multisplit)", "Obra llave en mano"],
         client: "DIX DESARROLLADORA",
         contact: "Gabriel Pérez",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuALdxS61_tfBcV9AIFPC6SGQsGVI663OHqAYwJUtFDFk_hrxZDzmuYqNsJQznJ3wQTW2Uk2QOvIBY2MeyEMskeXCR_eelPKWDumPAUvU6aBqKNCpHCrey8wEPik8-CY6pX4u5oe8Vo9UoVyQ9lgX9eehGrQ3z66ufSbAVwIWgwPSiUdsph1NgvLsN3HLuX55pEo9m1boRQ2VCKOuoSfge2xtokjwGWWZfgqpZCzsNEuMPkNXmfHRQcMCHg8IZzGJlqAa8tlLBf01zOu"
+        image: "/h2obras-web-new/portfolio_fish_premium.png"
     },
     {
         id: 'a3',
@@ -289,7 +289,7 @@ function ProjectCard({ project, onClick }) {
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.6 }}
                     alt={title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ${project.id === 'a1' ? 'contrast-125 brightness-95 saturate-[1.2]' : ''}`}
                     src={imgUrl}
                 />
                 <div className="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-tighter z-10">
@@ -361,7 +361,7 @@ function ProjectDetailModal({ project, onClose }) {
                     <img
                         src={project.image || "https://images.unsplash.com/photo-1541888941259-7b9d9218d0bc?q=80&w=2070&auto=format&fit=crop"}
                         alt={project.title}
-                        className="w-full h-full object-cover opacity-80"
+                        className={`w-full h-full object-cover opacity-80 ${project.id === 'a1' ? 'contrast-125 brightness-95 saturate-[1.2]' : ''}`}
                     />
                 </div>
 

@@ -74,58 +74,95 @@ export default function Home() {
                 </motion.div>
             </section>
             {/* Services Section */}
-            <section className="py-32 px-8 md:px-20 bg-surface">
-                <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                    <motion.div variants={fadeUpVariant} className="max-w-2xl">
-                        <h2 className="text-4xl md:text-6xl font-black text-primary uppercase tracking-tighter mb-6">Expertise en <br /> Complejidad Estructural</h2>
-                        <p className="text-secondary text-lg leading-relaxed">Operamos en el núcleo de las infraestructuras críticas, integrando Proyecto Ejecutivo, Dirección de Obra y Ejecución bajo un solo mando técnico.</p>
+            <section className="py-20 md:py-24 px-8 md:px-20 bg-surface">
+                <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="mb-12">
+                    <motion.div variants={fadeUpVariant} className="max-w-3xl">
+                        <div className="w-full h-px bg-primary/20 mb-8"></div>
+                        <h2 className="text-5xl md:text-6xl font-black text-primary font-headline uppercase tracking-tighter mb-6 leading-none">Expertise en <br /> <span className="text-secondary opacity-60">Complejidad Estructural</span></h2>
+                        <p className="text-secondary text-lg md:text-xl font-body leading-relaxed max-w-2xl">Operamos en el núcleo de las infraestructuras críticas, integrando Proyecto Ejecutivo, Dirección de Obra y Ejecución bajo un solo mando técnico.</p>
                     </motion.div>
                 </motion.div>
-                <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid grid-cols-1 md:grid-cols-12 gap-4">
-                    {/* Service Card 1 */}
-                    <motion.div variants={fadeUpVariant} className="md:col-span-7 bg-surface-container-high p-12 min-h-[400px] flex flex-col justify-between group">
-                        <div className="flex justify-between items-start">
-                            <span className="material-symbols-outlined text-4xl text-primary" data-weight="fill">fire_extinguisher</span>
-                            <span className="text-primary/20 font-black text-6xl">01</span>
+                <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-4">
+                    {/* Service Card 1: Sanitarias & Gas (Large, High-Impact) */}
+                    <motion.div variants={fadeUpVariant} className="md:col-span-8 md:row-span-1 bg-surface-container-highest p-8 md:p-10 min-h-[300px] flex flex-col justify-between group relative overflow-hidden">
+                        <div className="relative z-10 flex justify-between items-start mb-6">
+                            {/* Custom Bold SVG: Fluid Drop */}
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
+                                <path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 12 2 12 2C12 2 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M12 18C14.2091 18 16 16.2091 16 14C16 12 12 7 12 7" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" opacity="0.4" />
+                                <circle cx="12" cy="18" r="1.5" fill="currentColor" />
+                            </svg>
+                            <span className="text-primary/10 font-black text-8xl tracking-tighter leading-none -mt-4">01</span>
                         </div>
-                        <div>
-                            <h3 className="text-3xl font-bold text-primary uppercase mb-4">Sistemas Contra Incendio</h3>
-                            <p className="text-on-surface-variant mb-8 max-w-md">Instalaciones certificadas NFPA / UL-FM para aeropuertos, centros logísticos e industrias de alto riesgo.</p>
-                            <div className="flex gap-4">
-                                <span className="px-3 py-1 bg-primary-container text-white text-[9px] font-bold uppercase tracking-widest">Rociadores ESFR</span>
-                                <span className="px-3 py-1 bg-primary-container text-white text-[9px] font-bold uppercase tracking-widest">Bombas Listadas</span>
+                        <div className="relative z-10">
+                            <h3 className="text-3xl md:text-4xl font-black text-primary font-headline uppercase tracking-tighter mb-4">Sanitarias <br /> &amp; Gas</h3>
+                            <p className="text-on-surface-variant text-base md:text-lg max-w-lg mb-8 font-body leading-relaxed">Instalaciones de gran escala, redes de saneamiento y plantas de tratamiento para obras públicas y desarrollos corporativos.</p>
+                            <div className="grid grid-cols-2 gap-px bg-primary/10 w-full md:w-auto mt-8 border border-primary/5">
+                                <div className="px-6 py-4 bg-primary/5 flex flex-col justify-center items-center">
+                                    <span className="block text-primary font-black text-xl md:text-2xl mb-1 tracking-tighter leading-none font-headline uppercase text-center">Plantas de Tratamiento</span>
+                                    <span className="text-[9px] uppercase font-bold text-secondary font-body tracking-widest text-center">Infraestructura</span>
+                                </div>
+                                <div className="px-6 py-4 bg-primary/5 flex flex-col justify-center items-center">
+                                    <span className="block text-primary font-black text-xl md:text-2xl mb-1 tracking-tighter leading-none font-headline uppercase text-center">Redes de Agua y Gas</span>
+                                    <span className="text-[9px] uppercase font-bold text-secondary font-body tracking-widest text-center">Saneamiento</span>
+                                </div>
                             </div>
                         </div>
                     </motion.div>
-                    {/* Service Card 2 */}
-                    <motion.div variants={fadeUpVariant} className="md:col-span-5 bg-primary p-12 min-h-[400px] flex flex-col justify-between text-white">
-                        <div className="flex justify-between items-start">
-                            <span className="material-symbols-outlined text-4xl text-tertiary-fixed" data-weight="fill">eco</span>
-                            <span className="text-white/10 font-black text-6xl">02</span>
+
+                    {/* Service Card 2: Termodinámica & Sustentabilidad (Tall Vertical) */}
+                    <motion.div variants={fadeUpVariant} className="md:col-span-4 md:row-span-2 bg-primary p-8 md:p-10 min-h-[360px] flex flex-col justify-between text-white relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-container z-0"></div>
+
+                        <div className="relative z-10 flex justify-between items-start mb-12">
+                            <span className="text-white/10 font-black text-8xl tracking-tighter leading-none -mt-4">02</span>
+                            {/* Custom Bold SVG: Thermodynamics */}
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-tertiary-fixed">
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2.5" />
+                                <path d="M12 2V5M12 19V22M2 12H5M19 12H22M4.92896 4.92896L7.05028 7.05028M16.9497 16.9497L19.0711 19.0711M4.92896 19.0711L7.05028 16.9497M16.9497 7.05028L19.0711 4.92896" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
                         </div>
-                        <div>
-                            <h3 className="text-3xl font-bold uppercase mb-4">Termodinámica &amp; Sustentabilidad</h3>
-                            <p className="text-on-primary-container mb-8">Optimización de recursos hídricos y eficiencia energética para desarrollos de escala federal LEED.</p>
-                            <button className="text-xs font-bold tracking-widest uppercase border-b border-white/30 pb-2 hover:border-white transition-colors">Sistemas Inverter</button>
+                        <div className="relative z-10 flex-grow flex flex-col justify-end">
+                            <h3 className="text-3xl md:text-4xl font-black font-headline uppercase mb-6 tracking-tighter leading-tight">Termodinámica <br /> &amp; Sustentabilidad</h3>
+                            <p className="text-primary-fixed-dim text-base md:text-lg font-body mb-8 leading-relaxed max-w-sm">
+                                Especialistas en energías renovables y eficiencia hídrica para proyectos con certificación LEED Platinum.
+                            </p>
+                            <div className="grid grid-cols-2 gap-px bg-white/10 w-full md:w-auto mt-auto border border-white/5">
+                                <div className="px-6 py-4 bg-white/5 flex flex-col justify-center items-center h-full">
+                                    <span className="block text-tertiary-fixed font-black text-xl md:text-2xl mb-1 tracking-tighter leading-none font-headline uppercase text-center">Solar Termodinámica</span>
+                                    <span className="text-[9px] uppercase font-bold text-white/50 font-body tracking-widest text-center">Renovables</span>
+                                </div>
+                                <div className="px-6 py-4 bg-white/5 flex flex-col justify-center items-center h-full">
+                                    <span className="block text-tertiary-fixed font-black text-xl md:text-2xl mb-1 tracking-tighter leading-none font-headline uppercase text-center">LEED Platinum</span>
+                                    <span className="text-[9px] uppercase font-bold text-white/50 font-body tracking-widest text-center">Certificación</span>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
-                    {/* Service Card 3 */}
-                    <motion.div variants={fadeUpVariant} className="md:col-span-12 bg-surface-container-highest p-12 flex flex-col md:flex-row justify-between items-center group">
-                        <div className="max-w-xl">
-                            <div className="flex items-center gap-4 mb-6">
-                                <span className="material-symbols-outlined text-4xl text-primary">water_drop</span>
-                                <h3 className="text-3xl font-bold text-primary uppercase">Sanitarias &amp; Gas</h3>
+
+                    {/* Service Card 3: Sistemas Contra Incendio (Large Bottom, Unified Style) */}
+                    <motion.div variants={fadeUpVariant} className="md:col-span-8 md:row-span-1 bg-primary p-8 md:p-10 min-h-[300px] flex flex-col md:flex-row justify-between items-end text-white group relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-container z-0"></div>
+                        <div className="absolute inset-0 z-0 opacity-10" style={{ backgroundImage: 'linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+
+                        <div className="relative z-10 max-w-xl md:pr-8 md:mb-0 mb-6 w-full flex flex-col justify-end h-full">
+                            <div className="flex items-center gap-4 mb-3">
+                                {/* Better Bold SVG: Realistic Flame */}
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-tertiary-fixed">
+                                    <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
+                                </svg>
+                                <h3 className="text-3xl md:text-4xl font-black font-headline uppercase tracking-tighter">Sistemas <br /> Contra Incendio</h3>
                             </div>
-                            <p className="text-on-surface-variant mb-8">Redes de gran diámetro, plantas de tratamiento y estaciones de regulación para obras públicas y corporativas de alta densidad.</p>
+                            <p className="text-primary-fixed-dim text-base md:text-lg font-body leading-relaxed max-w-md">Sistemas de bombas y motobombas con certificación internacional para aeropuertos e industrias de alta complejidad.</p>
                         </div>
-                        <div className="grid grid-cols-2 gap-4 w-full md:w-auto">
-                            <div className="p-6 bg-white shadow-sm">
-                                <span className="block text-primary font-black text-2xl mb-1">D.O.</span>
-                                <span className="text-[10px] uppercase font-bold text-secondary">Dirección de Obra</span>
+                        <div className="relative z-10 grid grid-cols-2 gap-px bg-white/10 w-full md:w-auto shrink-0 border border-white/5">
+                            <div className="px-6 py-4 bg-white/5 flex flex-col justify-center items-center h-full">
+                                <span className="block text-tertiary-fixed font-black text-2xl mb-1 tracking-tighter leading-none font-headline uppercase">Sello FM/UL</span>
+                                <span className="text-[9px] uppercase font-bold text-white/50 font-body tracking-widest text-center">Certificación</span>
                             </div>
-                            <div className="p-6 bg-white shadow-sm">
-                                <span className="block text-primary font-black text-2xl mb-1">P.E.</span>
-                                <span className="text-[10px] uppercase font-bold text-secondary">Proyecto Ejecutivo</span>
+                            <div className="px-6 py-4 bg-white/5 flex flex-col justify-center items-center h-full">
+                                <span className="block text-tertiary-fixed font-black text-2xl mb-1 tracking-tighter leading-none font-headline uppercase">Normas NFPA</span>
+                                <span className="text-[9px] uppercase font-bold text-white/50 font-body tracking-widest text-center">Seguridad</span>
                             </div>
                         </div>
                     </motion.div>
@@ -158,8 +195,8 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
                     {/* Project 1 */}
                     <div className="flex flex-col gap-6">
-                        <div className="aspect-[4/5] bg-surface-container-high overflow-hidden">
-                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="modern brutalist architectural photography of a large regional hospital in Jujuy Argentina with sharp concrete lines and clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmS-J43u4Oer2wqPtAvWY6Gl53q2g64vAhCU3x-Y3EkHBae0VmMyw4PEt2EyAG-p7WaMX4fIxZx95sJM1cFjTztrcBSSerOigPsBEMfAICFQGBZAPOzUo5Oh3ieOGNvNW6Y0dp9jxDT2YfaJBOWFAOScqmv3odVa8NJRfuzmOjZCr9JfyRmR9x9qTLEA8qZ3a2OUNGbkqsRAXaS16T9chDkPEmSXnaSnfw1n8PYnnIouei0hS0YxWPATMkl_-onokm-n6klfIxwsE" />
+                        <div className="aspect-video bg-surface-container-high overflow-hidden">
+                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ imageRendering: '-webkit-optimize-contrast' }} alt="Hospital Regional Oscar Orias" src="hosp.png" />
                         </div>
                         <div>
                             <div className="flex justify-between items-center mb-2">
@@ -181,8 +218,8 @@ export default function Home() {
                     </div>
                     {/* Project 2 */}
                     <div className="flex flex-col gap-6 mt-12 md:mt-0">
-                        <div className="aspect-[4/5] bg-surface-container-high overflow-hidden">
-                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="interior view of a modern airport terminal showing intricate sprinkler and plumbing systems integrated into industrial ceiling architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRWfX4MAoAzvr_qylku0x6HUTgBcbem7x7EyfCZDGvo-hiKa7EgpdJz89_7BVRkbjWkEuuiQ2uZSVAvg7hcUn1orCdvwPznIWmQNuxOzXfEMo6gwa7Q-m8tkN75juKFDERQfOf5Q5S1oIdej6_UOyIBe__3GinTgNdD5AcKvWPC6DHZrf1lb9eHEzAUqShh21iC2YPZY_Ey42Cx7pQsvu3uwjtMzhzTCzc9v5ct93Bu8ZNMrBvflOYFqjBk-kF0W2ZOCgKRmEijZA" />
+                        <div className="aspect-video bg-surface-container-high overflow-hidden">
+                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ imageRendering: '-webkit-optimize-contrast' }} alt="Aeropuerto Internacional Rosario" src="aerop.png" />
                         </div>
                         <div>
                             <div className="flex justify-between items-center mb-2">
@@ -204,8 +241,8 @@ export default function Home() {
                     </div>
                     {/* Project 3 */}
                     <div className="flex flex-col gap-6 mt-24 md:mt-0">
-                        <div className="aspect-[4/5] bg-surface-container-high overflow-hidden">
-                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="sleek glass and steel corporate skyscraper in Rosario with sustainable green elements integrated into the facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRN4QmsE3EvV3lljYTyE07CMI9n5xs7kCKkkFAPbLqojo_2siSJ2Yt7uhzfsMEtB-2BwPfVxtpCnh4Ama_etUOm4bH4XiBT4ieYExe5IvToiKaiFD_tWT45CIhiDIqYNuIFJ4RbUkmd7GGpqh5ZWu5QkWK23FziY2MQA4BnhsUsQdvUBluVR8YSAvgnbPfJJippOTzsjQvyAvJgzl8pr91_aV3a2tTnMmOvvKXYJ58oUq4u6XAz0v3mJezbW-vaMYXqZl9ga-Dsdw" />
+                        <div className="aspect-video bg-surface-container-high overflow-hidden">
+                            <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ imageRendering: '-webkit-optimize-contrast' }} alt="La Segunda Seguros" src="laseg.png" />
                         </div>
                         <div>
                             <div className="flex justify-between items-center mb-2">

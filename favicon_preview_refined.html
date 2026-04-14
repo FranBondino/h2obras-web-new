@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Refinement Preview</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --border-color: #083344;
+            --text-color: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .variant {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .preview-box {
+            width: 160px;
+            height: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+        }
+
+        /* Variant 1: Squircle */
+        .squircle {
+            width: 140px;
+            height: 140px;
+            border: 6px solid var(--border-color);
+            border-radius: 22%;
+            /* Squircle-ish */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Variant 2: Thin Round */
+        .thin-round {
+            width: 140px;
+            height: 140px;
+            border: 3px solid var(--border-color);
+            border-radius: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+
+        /* Variant 3: Subtle Float */
+        .subtle-float {
+            width: 140px;
+            height: 140px;
+            border: 1px solid rgba(8, 51, 68, 0.1);
+            border-radius: 22%;
+            background: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+
+        img {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .label {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Favicon Refinement</h1>
+    <p>Comparing different "subtle" shapes to move away from a sharp square or a plain circle.</p>
+
+    <div class="container">
+        <!-- Variant 1 -->
+        <div class="variant">
+            <div class="preview-box">
+                <div class="squircle">
+                    <img src="public/h2o_icon.png" alt="Icon">
+                </div>
+            </div>
+            <span class="label">1. Squircle (Medium Border)</span>
+        </div>
+
+        <!-- Variant 2 -->
+        <div class="variant">
+            <div class="preview-box">
+                <div class="thin-round">
+                    <img src="public/h2o_icon.png" alt="Icon">
+                </div>
+            </div>
+            <span class="label">2. Thin & More Rounded</span>
+        </div>
+
+        <!-- Variant 3 -->
+        <div class="variant">
+            <div class="preview-box">
+                <div class="subtle-float">
+                    <img src="public/h2o_icon.png" alt="Icon">
+                </div>
+            </div>
+            <span class="label">3. Minimalist (Float)</span>
+        </div>
+    </div>
+</body>
+
+</html>
