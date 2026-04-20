@@ -1,219 +1,317 @@
+import { motion } from 'framer-motion';
+
 export default function Equipment() {
     return (
         <>
-            <main className="pt-20">
+            <main className="pt-20 bg-surface">
                 {/* Hero Section */}
-                <section className="relative min-h-[500px] md:h-[819px] flex items-center overflow-hidden py-28 md:py-0">
+                <section className="relative min-h-[500px] md:h-[700px] flex items-center overflow-hidden py-28 md:py-0 border-b border-outline-variant/10">
                     <div className="absolute inset-0 z-0">
-                        <img className="w-full h-full object-cover grayscale opacity-40" data-alt="Close-up of a massive industrial excavator at a high-end construction site with cold blue atmospheric lighting and technical details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuEJIyi0KlXHGt7DY0cZJVgJFBYGaxz6t38fueyfnmhRvylXyvyOBlcMGK-9KUGu4dsJ8A2wlHSfXn3-Jrqc0J_XK_nS3zLi2ds0rE9h9VGRU2KCeMczOSAgTGfuCU254aeg44GhEiCslxUgoxxjiSP-Pa5XGhT8cf-t83plKxAgvFq0W3WXQZqlZs2peEelzcaqhWTfqZGXZJFjZ1fehhCXWoOfynLId1t9K4s7JCcxvkuuiF-WQM4ErJjUBJK4vQJ7n_MxVxBT4" />
+                        <motion.img 
+                            initial={{ scale: 1.1, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 0.3 }}
+                            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+                            className="w-full h-full object-cover grayscale" 
+                            data-alt="Close-up of a massive industrial excavator at a high-end construction site with cold blue atmospheric lighting and technical details" 
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuEJIyi0KlXHGt7DY0cZJVgJFBYGaxz6t38fueyfnmhRvylXyvyOBlcMGK-9KUGu4dsJ8A2wlHSfXn3-Jrqc0J_XK_nS3zLi2ds0rE9h9VGRU2KCeMczOSAgTGfuCU254aeg44GhEiCslxUgoxxjiSP-Pa5XGhT8cf-t83plKxAgvFq0W3WXQZqlZs2peEelzcaqhWTfqZGXZJFjZ1fehhCXWoOfynLId1t9K4s7JCcxvkuuiF-WQM4ErJjUBJK4vQJ7n_MxVxBT4" 
+                        />
                         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+                        <div className="absolute inset-0 technical-grid opacity-10"></div>
                     </div>
-                    <div className="container mx-auto px-6 md:px-10 relative z-10 grid grid-cols-12 gap-6">
-                        <div className="col-span-12 lg:col-span-8">
-                            <span className="inline-block px-4 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-headline font-bold text-xs uppercase tracking-[0.2em] mb-6">Proyecto y Ejecución de Instalaciones</span>
-                            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-headline font-black text-surface leading-[0.9] tracking-tighter mb-8 uppercase">
-                                Equipamiento e <br /> Infraestructura <br /> Propia
-                            </h1>
-                            <div className="bg-surface-container-lowest/10 backdrop-blur-md border-l-4 border-tertiary-fixed p-8 max-w-2xl">
-                                <p className="text-lg md:text-xl text-surface-variant font-light leading-relaxed">
-                                    Infraestructura, logística y maquinaria pesada propia. Garantizamos ejecución ininterrumpida sin depender de subcontratación de terceros.
+                    <div className="container mx-auto px-8 md:px-24 relative z-10">
+                        <div className="max-w-5xl">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                            >
+                                <div className="flex items-center gap-6 mb-8">
+                                    <div className="w-16 h-1 bg-accent"></div>
+                                    <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">INFRA_ASSETS_V2</span>
+                                </div>
+                                <h1 className="text-5xl md:text-8xl lg:text-9xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase">
+                                    CAPACIDAD <br /> OPERATIVA <br /> <span className="text-white/40">PROPIA</span>
+                                </h1>
+                                <div className="max-w-2xl border-l-4 border-accent pl-10 py-2">
+                                    <p className="text-xl md:text-2xl text-on-primary-container font-body leading-relaxed opacity-80">
+                                        Infraestructura, logística y maquinaria pesada de última generación. Garantizamos autonomía federal y excelencia en la ejecución sin subcontratación.
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
+                    
+                    {/* Floating Tech Label */}
+                    <div className="absolute bottom-12 right-24 hidden lg:block text-right">
+                        <span className="text-white/20 text-[10px] font-technical uppercase tracking-[0.5em] block mb-2">AUTH_SYSTEM_SPEC</span>
+                        <div className="w-32 h-px bg-white/10 ml-auto"></div>
+                    </div>
+                </section>
+
+                {/* Main Fleet Registry */}
+                <section className="bg-surface py-32 relative overflow-hidden">
+                    <div className="container mx-auto px-8 md:px-24 relative z-10">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
+                            <div className="max-w-2xl">
+                                <h2 className="text-4xl md:text-6xl font-headline font-black text-primary tracking-tighter uppercase mb-6 leading-none">Matriz de Activos</h2>
+                                <p className="text-primary/70 font-technical uppercase tracking-[0.3em] text-xs">Unidades de Movimiento y Herramental Específico</p>
+                            </div>
+                            <div className="flex items-center gap-6">
+                                <div className="text-right">
+                                    <p className="text-[10px] font-technical text-primary/60 uppercase tracking-widest mb-1">STATUS_LOG</p>
+                                    <p className="text-2xl font-headline font-black text-primary uppercase">OPERATIVO_100%</p>
+                                </div>
+                                <div className="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center">
+                                    <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {/* Card 1: Heavy Machinery */}
+                            <motion.div 
+                                whileHover={{ y: -10 }}
+                                className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
+                            >
+                                <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent transition-colors">
+                                    <span className="material-symbols-outlined text-white text-3xl">precision_manufacturing</span>
+                                </div>
+                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Movimiento <br/> de Suelos</h3>
+                                <ul className="space-y-6 mb-12">
+                                    <li className="flex gap-4 items-start">
+                                        <span className="text-accent font-technical text-xs mt-1">01</span>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MINIRETRO BOBCAT E-26 <span className="block text-[10px] text-primary/60">S-SERIES V.2015</span></p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <span className="text-accent font-technical text-xs mt-1">02</span>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MINIPALA BOBCAT S450 <span className="block text-[10px] text-primary/60">ACCESSORIES Z.2017</span></p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <span className="text-accent font-technical text-xs mt-1">03</span>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">VIBROAPISONADOR LISO <span className="block text-[10px] text-primary/60">SYSTEM P-CABRA 2020</span></p>
+                                    </li>
+                                </ul>
+                                <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
+                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">ASSET_CLASS: HEAVY_MOBILE</span>
+                                    <span className="material-symbols-outlined text-outline-variant/40 group-hover:text-primary">arrow_forward</span>
+                                </div>
+                            </motion.div>
+
+                            {/* Card 2: Height Works */}
+                            <motion.div 
+                                whileHover={{ y: -10 }}
+                                className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
+                            >
+                                <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent transition-colors">
+                                    <span className="material-symbols-outlined text-white text-3xl">height</span>
+                                </div>
+                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Trabajos <br/> en Altura</h3>
+                                <ul className="space-y-6 mb-12">
+                                    <li className="flex gap-4 items-start">
+                                        <span className="text-accent font-technical text-xs mt-1">01</span>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">PLATAFORMA MANTALL <span className="block text-[10px] text-primary/60">MAX_REACH_16_MTS</span></p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <span className="text-accent font-technical text-xs mt-1">02</span>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">SISTEMA AUTOPROPULSADA <span className="block text-[10px] text-primary/60">V.SERIES 2018</span></p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <span className="text-accent font-technical text-xs mt-1">03</span>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MONTAJES VERTICALES <span className="block text-[10px] text-primary/60">PRECISION_STABILIZED</span></p>
+                                    </li>
+                                </ul>
+                                <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
+                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">ASSET_CLASS: ELEVATION_SYS</span>
+                                    <span className="material-symbols-outlined text-outline-variant/40 group-hover:text-primary">arrow_forward</span>
+                                </div>
+                            </motion.div>
+
+                            {/* Card 3: Precise Drilling */}
+                            <motion.div 
+                                whileHover={{ y: -10 }}
+                                className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
+                            >
+                                <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent transition-colors">
+                                    <span className="material-symbols-outlined text-white text-3xl">architecture</span>
+                                </div>
+                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Perforación <br/> Estratégica</h3>
+                                <ul className="space-y-6 mb-12">
+                                    <li className="flex gap-4 items-start">
+                                        <span className="text-accent font-technical text-xs mt-1">01</span>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">HILTI D250 DIAMANTE <span className="block text-[10px] text-primary/60">REINFORCED_CONCRETE_SYS</span></p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <span className="text-accent font-technical text-xs mt-1">02</span>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">HILTI D160 PRECISION <span className="block text-[10px] text-primary/60">UP_TO_200MM_DIAM</span></p>
+                                    </li>
+                                    <li className="flex gap-4 items-start">
+                                        <span className="text-accent font-technical text-xs mt-1">03</span>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">DEMOLICION Y ANCLAJES <span className="block text-[10px] text-primary/60">CHEMICAL_FASTENING_SYS</span></p>
+                                    </li>
+                                </ul>
+                                <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
+                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">ASSET_CLASS: STRUCTURAL_PREC</span>
+                                    <span className="material-symbols-outlined text-outline-variant/40 group-hover:text-primary">arrow_forward</span>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Specialized Tech Modules */}
+                <section className="py-32 bg-primary text-white relative overflow-hidden">
+                    <div className="absolute inset-0 technical-grid opacity-10"></div>
+                    <div className="container mx-auto px-8 md:px-24 relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-32">
+                            <div>
+                                <h2 className="text-5xl md:text-7xl font-headline font-black uppercase tracking-tighter leading-none mb-10">INGENIERÍA <br /> DE MONTAJE</h2>
+                                <p className="text-on-primary-container text-xl font-body leading-relaxed max-w-xl opacity-80">
+                                    Operamos con estándares internacionales de integridad. Nuestra tecnología de soldadura y termofusión garantiza un rendimiento crítico en sistemas hidráulicos de alta presión.
                                 </p>
                             </div>
-                        </div>
-                    </div>
-                    {/* Technical Metadata Decoration */}
-                </section>
-                {/* Featured Fleet (Structural Grid) */}
-                <section className="bg-surface py-24 technical-grid">
-                    <div className="container mx-auto px-10">
-                        <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between border-b border-outline-variant/20 pb-8">
-                            <div>
-                                <h2 className="text-4xl font-headline font-black text-primary tracking-tighter uppercase mb-2">Detalle de Nuestra Flota</h2>
-                                <p className="text-secondary font-medium uppercase tracking-widest text-xs">Unidades de Movimiento y Herramental Específico</p>
-                            </div>
-                            <div className="mt-4 md:mt-0 text-right font-headline text-2xl font-bold text-primary tracking-tighter">
-                                Capacidad Operativa
+                            <div className="relative">
+                                <div className="aspect-video bg-white/5 border border-white/10 overflow-hidden group">
+                                    <img className="w-full h-full object-cover grayscale opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Technical blueprint and engineering lines overlapping industrial components" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGaxTOMdLB4L9gvFdLSKSDLOn1660Irq_TFWrkGAdAkXLiBwLPf_OJ2O6Xrg-RwKN9k5liWzw7BQXXdgMjA0UHK7dXB8eKq0YFL6N-4kz3I1iHdffvQo3hfmNXEHxT9UWjlPp_-yyiKwLxmfj6qF6IjGvkib9AL32DayVdLqRApPbJ7QKho3Y7b83HtXrDnHw672pfGb6jk4NXKx9AK_J6GJRnj6CroAtYPtmHzD6j-yahJMMp4ctoWYcN9E_EB4F1MN0ub4tmhPo" />
+                                    <div className="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+                                </div>
+                                <div className="absolute -bottom-8 -left-8 bg-accent p-8 hidden md:block">
+                                    <p className="text-on-accent text-3xl font-headline font-black font-technical tracking-tighter">MAX_INT_STD</p>
+                                </div>
                             </div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-                            {/* Movimiento de Suelos */}
-                            <div className="bg-surface-container-lowest p-10 border-r border-outline-variant/10 group hover:bg-primary transition-colors duration-500">
-                                <div className="mb-12">
-                                    <span className="material-symbols-outlined text-4xl text-primary group-hover:text-tertiary-fixed">precision_manufacturing</span>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 border border-white/10">
+                            {[
+                                {
+                                    id: "01",
+                                    label: "Instalación Crítica",
+                                    items: ["2 Ranuradoras Victaulic", "Stainless Steel Cutter Ø 8”", "Bimetallic Cup Drills", "Threaders Bench & Manual"],
+                                    icon: "settings_input_component"
+                                },
+                                {
+                                    id: "02",
+                                    label: "Fusión y Soldadura",
+                                    items: ["5 TIG Inverter Units", "2 Electrofusion (Ø 600 mm)", "Pavement Cutter Dynapack", "Vibratory Rammers"],
+                                    icon: "heat_pump"
+                                },
+                                {
+                                    id: "03",
+                                    label: "Soporte de Obra",
+                                    items: ["Work Containers x2", "Acanaladora 9\" w/ Aspirators", "Andamios Metaltech (USA)", "Optical & Laser Levels"],
+                                    icon: "construction"
+                                }
+                            ].map((module, i) => (
+                                <div key={i} className={`p-12 ${i !== 2 ? 'border-r border-white/10' : ''} hover:bg-white/5 transition-colors group`}>
+                                    <div className="flex justify-between items-start mb-12">
+                                        <span className="text-accent font-technical text-xs tracking-[0.4em]">MOD_{module.id}</span>
+                                        <span className="material-symbols-outlined text-accent/40 group-hover:text-accent transition-colors">{module.icon}</span>
+                                    </div>
+                                    <h4 className="text-2xl font-headline font-black uppercase mb-8 tracking-tighter">{module.label}</h4>
+                                    <ul className="space-y-4">
+                                        {module.items.map((item, j) => (
+                                            <li key={j} className="text-sm font-body text-on-primary-container opacity-60 flex gap-3">
+                                                <span className="text-accent">•</span> {item}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                                <h3 className="text-2xl font-headline font-bold text-primary group-hover:text-surface mb-4 uppercase leading-tight">Movimiento de Suelos y Zanjeo</h3>
-                                <ul className="space-y-4 mb-8">
-                                    <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> MINIRETRO BOBCAT E-26 Modelo 2015
-                                    </li>
-                                    <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> MINIPALA BOBCAT S450 Modelo 2017 + ACCESORIO ZANJADORA BOBCAT Modelo 2017
-                                    </li>
-                                    <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Accesorios: NIVELADORA y RODILLO VIBROAPISONADOR LISO Y PATA DE CABRA Modelo 2020
-                                    </li>
-                                </ul>
-                                <div className="pt-6 border-t border-outline-variant/20">
-                                    <p className="text-[10px] text-outline tracking-widest uppercase group-hover:text-surface-variant/50">Categoría de Activo: Movimiento de Suelos Móvil</p>
-                                </div>
-                            </div>
-                            {/* Trabajos en Altura */}
-                            <div className="bg-surface-container-low p-10 border-r border-outline-variant/10 group hover:bg-primary transition-colors duration-500">
-                                <div className="mb-12">
-                                    <span className="material-symbols-outlined text-4xl text-primary group-hover:text-tertiary-fixed">height</span>
-                                </div>
-                                <h3 className="text-2xl font-headline font-bold text-primary group-hover:text-surface mb-4 uppercase leading-tight">Trabajos en Altura</h3>
-                                <ul className="space-y-4 mb-8">
-                                    <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> PLATAFORMA ELEVADORA MANTALL (16 MTS.)
-                                    </li>
-                                    <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> SISTEMA AUTOPROPULSADA (Modelo 2018)
-                                    </li>
-                                    <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Montajes en altura y posicionamiento vertical
-                                    </li>
-                                </ul>
-                                <div className="pt-6 border-t border-outline-variant/20">
-                                    <p className="text-[10px] text-outline tracking-widest uppercase group-hover:text-surface-variant/50">Categoría de Activo: Elevación</p>
-                                </div>
-                            </div>
-                            {/* Perforación */}
-                            <div className="bg-surface-container p-10 group hover:bg-primary transition-colors duration-500">
-                                <div className="mb-12">
-                                    <span className="material-symbols-outlined text-4xl text-primary group-hover:text-tertiary-fixed">architecture</span>
-                                </div>
-                                <h3 className="text-2xl font-headline font-bold text-primary group-hover:text-surface mb-4 uppercase leading-tight">Perforación y Anclajes</h3>
-                                <ul className="space-y-4 mb-8">
-                                    <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> HILTI D250: Perforación en Hormigón con Diamante (Hasta Ø 500 mm)
-                                    </li>
-                                    <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> HILTI D160: Perforación en Hormigón con Diamante (Hasta Ø 200 mm)
-                                    </li>
-                                    <li className="flex items-center text-secondary group-hover:text-surface-variant text-sm font-medium">
-                                        <span className="material-symbols-outlined mr-3 text-xs">radio_button_checked</span> Equipos de Demolición y Anclajes Químicos HILTI
-                                    </li>
-                                </ul>
-                                <div className="pt-6 border-t border-outline-variant/20">
-                                    <p className="text-[10px] text-outline tracking-widest uppercase group-hover:text-surface-variant/50">Categoría de Activo: Precisión Estructural</p>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </section>
-                {/* Specialized Tech Grid */}
-                <section className="py-24 bg-primary text-surface relative overflow-hidden">
-                    {/* Background Texture */}
-                    <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-                        <img className="w-full h-full object-cover" data-alt="Technical blueprint and engineering lines overlapping industrial components with a cold neon glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGaxTOMdLB4L9gvFdLSKSDLOn1660Irq_TFWrkGAdAkXLiBwLPf_OJ2O6Xrg-RwKN9k5liWzw7BQXXdgMjA0UHK7dXB8eKq0YFL6N-4kz3I1iHdffvQo3hfmNXEHxT9UWjlPp_-yyiKwLxmfj6qF6IjGvkib9AL32DayVdLqRApPbJ7QKho3Y7b83HtXrDnHw672pfGb6jk4NXKx9AK_J6GJRnj6CroAtYPtmHzD6j-yahJMMp4ctoWYcN9E_EB4F1MN0ub4tmhPo" />
-                    </div>
-                    <div className="container mx-auto px-10 relative z-10">
-                        <div className="max-w-3xl mb-20">
-                            <h2 className="text-5xl font-headline font-black mb-6 uppercase tracking-tighter">Tecnología Especializada de Montaje</h2>
-                            <p className="text-on-primary-container text-lg leading-relaxed">Operamos con estándares internacionales de termofusión y soldadura, utilizando herramental de alta gama para asegurar la integridad de sistemas hidráulicos complejos.</p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-on-primary-fixed-variant/30">
-                            {/* Tech Item 1 */}
-                            <div className="bg-primary p-12 hover:bg-primary-container transition-all">
-                                <div className="flex justify-between items-start mb-12">
-                                    <span className="text-tertiary-fixed text-sm font-headline tracking-widest">MOD_01</span>
-                                    <span className="material-symbols-outlined text-tertiary-fixed">settings_input_component</span>
+
+                {/* Tactical Logistics */}
+                <section className="py-32 bg-surface">
+                    <div className="container mx-auto px-8 md:px-24">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+                            <div className="lg:col-span-5 order-2 lg:order-1">
+                                <div className="flex items-center gap-6 mb-12">
+                                    <div className="w-16 h-1 bg-primary"></div>
+                                    <h3 className="text-4xl md:text-5xl font-headline font-black text-primary uppercase tracking-tighter">Poder Logístico <br /> / Office</h3>
                                 </div>
-                                <h4 className="text-2xl font-headline font-bold mb-4 uppercase">Instalación Crítica</h4>
-                                <ul className="text-on-primary-container text-xs leading-relaxed mb-6 space-y-2">
-                                    <li>• 2 RANURADORAS PARA SISTEMA VICTAULIC</li>
-                                    <li>• CORTADORA PARA ACERO INOXIDABLE HASTA Ø 8”</li>
-                                    <li>• AGUJEREADORA PARA COPAS BIMETALICAS (BOCA DE PESCADO)</li>
-                                    <li>• ROSCADORAS DE BANCO Y MANUALES</li>
-                                </ul>
-                            </div>
-                            {/* Tech Item 2 */}
-                            <div className="bg-primary p-12 hover:bg-primary-container transition-all">
-                                <div className="flex justify-between items-start mb-12">
-                                    <span className="text-tertiary-fixed text-sm font-headline tracking-widest">TECH_MOD.02</span>
-                                    <span className="material-symbols-outlined text-tertiary-fixed">heat_pump</span>
-                                </div>
-                                <h4 className="text-2xl font-headline font-bold mb-4 uppercase">Fusión y Soldadura</h4>
-                                <ul className="text-on-primary-container text-xs leading-relaxed mb-6 space-y-2">
-                                    <li>• 5 EQUIPOS TIG INVERTER COMPLETOS - RECTIFICADORA</li>
-                                    <li>• 2 ELECTROFUSIONADORAS HASTA Ø 600 mm</li>
-                                    <li>• CORTADORA DE PAVIMENTO DYNAPACK - VIBROAPISONADORES</li>
-                                </ul>
-                            </div>
-                            {/* Tech Item 3 */}
-                            <div className="bg-primary p-12 hover:bg-primary-container transition-all">
-                                <div className="flex justify-between items-start mb-12">
-                                    <span className="text-tertiary-fixed text-sm font-headline tracking-widest">TECH_MOD.03</span>
-                                    <span className="material-symbols-outlined text-tertiary-fixed">construction</span>
-                                </div>
-                                <h4 className="text-2xl font-headline font-bold mb-4 uppercase">Soporte de Obra</h4>
-                                <ul className="text-on-primary-container text-xs leading-relaxed mb-6 space-y-2">
-                                    <li>• 2 CONTAINERS DE OBRA</li>
-                                    <li>• ACANALADORA 9” CON ASPIRADORA</li>
-                                    <li>• ANDAMIOS METALTECH (EEUU)</li>
-                                    <li>• NIVELES OPTICOS Y LASER</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/* Logistics & Admin Callout */}
-                <section className="py-24 bg-surface-container-low">
-                    <div className="container mx-auto px-10">
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                            <div className="lg:col-span-5">
-                                <div className="bg-surface p-12 shadow-sm border-l-8 border-primary relative overflow-hidden">
-                                    <h3 className="text-3xl font-headline font-black text-primary uppercase mb-6 tracking-tight">Poder Logístico <br /> y Técnico</h3>
-                                    <p className="text-secondary mb-8 font-medium">Nuestra capacidad de respuesta federal se apoya en una flota logística pesada y una oficina técnica de alto rendimiento.</p>
-                                    <div className="space-y-6">
-                                        <div className="flex items-start">
-                                            <span className="material-symbols-outlined text-primary mr-4">local_shipping</span>
-                                            <div>
-                                                <p className="text-sm font-bold text-primary uppercase">Logística Pesada</p>
-                                                <ul className="text-[10px] text-secondary leading-tight mt-1">
-                                                    <li>• CAMION DFM 2023 - 14 TN (CAJA 6M)</li>
-                                                    <li>• UTILITARIO LIFAN FOISON TRUCK (2017)</li>
-                                                    <li>• UTILITARIO FOTON GRATOUR (2019)</li>
-                                                </ul>
-                                            </div>
+                                <div className="space-y-12">
+                                    <div>
+                                        <div className="flex items-center gap-4 mb-6">
+                                            <span className="material-symbols-outlined text-primary">local_shipping</span>
+                                            <p className="text-sm font-black text-primary uppercase tracking-widest">LOGISTICA_PESADA</p>
                                         </div>
-                                        <div className="flex items-start">
-                                            <span className="material-symbols-outlined text-primary mr-4">monitoring</span>
-                                            <div>
-                                                <p className="text-sm font-bold text-primary uppercase">Oficina Técnica</p>
-                                                <ul className="text-[10px] text-secondary leading-tight mt-1">
-                                                    <li>• PLOTTER / 4 PC DISEÑO I7 / 3 NOTEBOOK I7</li>
-                                                    <li>• FLOTA 12 CELULARES CLARO</li>
-                                                </ul>
-                                            </div>
+                                        <div className="grid grid-cols-1 gap-4">
+                                            {[
+                                                "CAMION DFM 2023 - 14 TN (6M BOX)",
+                                                "UTILITARIO LIFAN FOISON TRUCK (2017)",
+                                                "UTILITARIO FOTON GRATOUR (2019)"
+                                            ].map((truck, i) => (
+                                                <div key={i} className="flex justify-between items-center py-4 border-b border-outline-variant/10 group">
+                                                    <span className="text-[10px] font-technical text-primary/60">UNIT_{i+1}</span>
+                                                    <span className="text-xs font-bold text-primary/80 uppercase tracking-tight group-hover:text-primary transition-colors">{truck}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="flex items-center gap-4 mb-6">
+                                            <span className="material-symbols-outlined text-primary">monitoring</span>
+                                            <p className="text-sm font-black text-primary uppercase tracking-widest">OFICINA_TECNICA</p>
+                                        </div>
+                                        <div className="grid grid-cols-1 gap-4">
+                                            {[
+                                                "PLOTTER HIGH-SPEED / 4 x I7 CAD STATIONS",
+                                                "ENTERPRISE MOBILE FLEET CLARO (12 UNITS)",
+                                                "BIM/REVIT INTEGRATION WORKFLOW"
+                                            ].map((office, i) => (
+                                                <div key={i} className="flex justify-between items-center py-4 border-b border-outline-variant/10 group">
+                                                    <span className="text-[10px] font-technical text-primary/60">TECH_{i+1}</span>
+                                                    <span className="text-xs font-bold text-primary/80 uppercase tracking-tight group-hover:text-primary transition-colors">{office}</span>
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="lg:col-span-7 grid grid-cols-2 gap-4 h-full">
-                                <div className="h-80 relative">
-                                    <img className="w-full h-full object-cover grayscale brightness-75" data-alt="Modern high-tech logistics truck in a warehouse environment with dramatic industrial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl-fDbT0YCeajs693i6ABy4tpi6DRwMudTgd4kk7PO60kDNC60YBj8uCxR5V7f7EJz9jo9tCDfhA0XeYOzft1TXpMjQcktAmvIttpV7fdRymVxddpep7z5NEHcZAQkJIFcWF8_2zSsZEdzksL_XOYuTBnB4TqsFrPS8cKzMW5zBgfN4Uw1BHcRmWoiVuLbTjEqgueyQMnDI0bbNLuZZToLjjl-MLmgbj-fUIMxTtY1JFIXuf1UeNCVRDkF5L1JztjnB_gF0w9O-4E" />
-                                </div>
-                                <div className="h-80 relative mt-12">
-                                    <img className="w-full h-full object-cover grayscale brightness-75" data-alt="Technical office interior with high-end computers and engineering blueprints in a professional industrial design office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx8BDL9Ue6VtSStHGKUjpscljbTnLPF2JkruntqlOewH8yBE96SEYwuhmvjEqomvlx8qXimSo75TE2bZUE74ObuUAEs6sndkuTBMKhUYvdNjAX0jjQUrLTXIeYUR8JxAWINgs05nMXWaWhob5qH_fHeTvhkIBxMGrnqXV9P4Hyh6lhrUplrdGv8Q9wAelPsJnT-K3NigyNXLreV-Y1OaaUJnWUaOiGOk6LDbs1kxD2twfHJShBeOfSLOKOK97v1rJqcg1wdy6HvGQ" />
+                            <div className="lg:col-span-7 order-1 lg:order-2">
+                                <div className="grid grid-cols-12 gap-8">
+                                    <div className="col-span-7 aspect-[4/5] overflow-hidden">
+                                        <img className="w-full h-full object-cover grayscale brightness-75 hover:scale-110 transition-transform duration-1000" data-alt="Modern high-tech logistics truck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl-fDbT0YCeajs693i6ABy4tpi6DRwMudTgd4kk7PO60kDNC60YBj8uCxR5V7f7EJz9jo9tCDfhA0XeYOzft1TXpMjQcktAmvIttpV7fdRymVxddpep7z5NEHcZAQkJIFcWF8_2zSsZEdzksL_XOYuTBnB4TqsFrPS8cKzMW5zBgfN4Uw1BHcRmWoiVuLbTjEqgueyQMnDI0bbNLuZZToLjjl-MLmgbj-fUIMxTtY1JFIXuf1UeNCVRDkF5L1JztjnB_gF0w9O-4E" />
+                                    </div>
+                                    <div className="col-span-5 aspect-[4/6] overflow-hidden self-end mb-12">
+                                        <img className="w-full h-full object-cover grayscale brightness-75 hover:scale-110 transition-transform duration-1000" data-alt="Technical office interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx8BDL9Ue6VtSStHGKUjpscljbTnLPF2JkruntqlOewH8yBE96SEYwuhmvjEqomvlx8qXimSo75TE2bZUE74ObuUAEs6sndkuTBMKhUYvdNjAX0jjQUrLTXIeYUR8JxAWINgs05nMXWaWhob5qH_fHeTvhkIBxMGrnqXV9P4Hyh6lhrUplrdGv8Q9wAelPsJnT-K3NigyNXLreV-Y1OaaUJnWUaOiGOk6LDbs1kxD2twfHJShBeOfSLOKOK97v1rJqcg1wdy6HvGQ" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                {/* CTA Section */}
-                <section className="py-32 bg-surface text-center">
-                    <div className="container mx-auto px-10 max-w-4xl">
-                        <h2 className="text-5xl font-headline font-black text-primary mb-8 uppercase tracking-tighter">¿Listo para escalar su <br /> infraestructura?</h2>
-                        <p className="text-xl text-secondary mb-12 max-w-2xl mx-auto">Poseemos el equipamiento y el conocimiento para transformar grandes visiones en realidades operativas.</p>
-                        <button className="px-12 py-6 bg-primary-container text-on-primary-container font-headline font-black text-lg uppercase tracking-widest hover:bg-primary hover:text-surface transition-all duration-300">
-                            Solicitar Cotización de Obra
-                        </button>
+
+                {/* Final Institutional CTA */}
+                <section className="py-48 bg-primary-container technical-grid text-center overflow-hidden relative">
+                    <div className="container mx-auto px-8 max-w-5xl relative z-10">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 1 }}
+                        >
+                            <h2 className="text-5xl md:text-8xl font-headline font-black text-primary mb-12 uppercase tracking-tighter leading-[0.85]">
+                                INFRAESTRUCTURA <br /> PARA GRANDES <br /> VISIONES
+                            </h2>
+                            <p className="text-xl md:text-2xl text-primary/70 mb-16 max-w-3xl mx-auto font-body leading-relaxed">
+                                Poseemos el herramental y el expertise táctico para transformar desafíos técnicos en activos operativas de alto rendimiento.
+                            </p>
+                            <motion.button 
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-16 py-8 bg-primary text-white font-headline font-black text-xl uppercase tracking-[0.2em] shadow-2xl hover:bg-accent transition-all duration-300"
+                            >
+                                Solicitar Cotización
+                            </motion.button>
+                        </motion.div>
+                    </div>
+                    
+                    {/* Background Label */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
+                        <span className="text-[20vw] font-black uppercase font-headline">H2OBRAS</span>
                     </div>
                 </section>
             </main>
-            {/* Footer */}
         </>
     );
 }
