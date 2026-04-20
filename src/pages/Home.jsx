@@ -21,44 +21,44 @@ export default function Home() {
 
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
     const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
-    const scale = useTransform(scrollYProgress, [0, 1], [1.1, 1.3]);
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
     const gridRotate = useTransform(scrollYProgress, [0, 1], [0, 5]);
 
     return (
         <div className="bg-surface">
             {/* Hero Section */}
-            <section ref={heroRef} className="relative min-h-[90vh] flex items-center overflow-hidden bg-primary p-0">
+            <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-primary p-0">
                 <motion.div style={{ y, opacity, scale }} className="absolute inset-0 z-0">
-                    <img 
-                        className="w-full h-full object-cover mix-blend-overlay" 
-                        data-alt="dramatic wide shot of a massive industrial construction site with steel girders and heavy machinery under a moody deep teal and blue twilight sky" 
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvxPT5BWIeArnSq3xxz3i56DPTvmFixpiIQZwUGCtmstpmqrUHFhhLGWtBzZoyRziS3XYUhfMMP9nhekZmYuJKewaHPEWvYdVzEqLlTVWQGz8fJY1IooaJzxPXMicO5b28Y0sXG4hWp9gbnVffPwkYVBLFPGs-WHX9BBH6Ssr2rz_6jBymWNKral2_3anFKmmxwb84E9PlPXcIib861R1vJDjAOjfINb-BY2V5UN1eueE4FiY0cehDdu_PIo4ghcFSjRlt5eUDasw" 
+                    <img
+                        className="w-full h-full object-cover mix-blend-overlay"
+                        data-alt="dramatic wide shot of a massive industrial construction site with steel girders and heavy machinery under a moody deep teal and blue twilight sky"
+                        src="/h2obras-web-new/hero_original_hd.jpg"
                     />
                     <div className="absolute inset-0 bg-gradient-to-tr from-primary via-primary/60 to-transparent"></div>
                     <motion.div style={{ rotate: gridRotate }} className="absolute inset-0 technical-grid opacity-20"></motion.div>
                 </motion.div>
-                
+
                 <div className="relative z-10 w-full px-6 md:px-12 grid md:grid-cols-12 gap-8 items-end pb-24 pt-32">
-                    <motion.div 
-                        variants={staggerContainer} 
-                        initial="hidden" 
-                        animate="visible" 
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        animate="visible"
                         className="md:col-span-10 lg:col-span-9"
                     >
-                        <motion.div 
-                            variants={fadeUpVariant} 
+                        <motion.div
+                            variants={fadeUpVariant}
                             className="inline-block px-3 py-1 bg-accent/90 text-on-accent text-[10px] font-bold tracking-[0.3em] uppercase mb-8"
                         >
-                            Ingeniería Federal · Proyecto y Ejecución
+                            Proyecto y ejecución de instalaciones
                         </motion.div>
-                        <motion.h1 
-                            variants={fadeUpVariant} 
+                        <motion.h1
+                            variants={fadeUpVariant}
                             className="text-white text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black font-headline uppercase mb-8 leading-[0.9] tracking-tighter"
                         >
-                            Soberanía en <br /> <span className="text-accent">Infraestructura</span>
+                            Ingeniería de valor <br /> <span className="text-accent">a nivel federal</span>
                         </motion.h1>
-                        <motion.p 
-                            variants={fadeUpVariant} 
+                        <motion.p
+                            variants={fadeUpVariant}
                             className="text-on-primary-container text-lg md:text-xl max-w-2xl font-body leading-relaxed mb-12 opacity-90"
                         >
                             Especialistas en instalaciones hidromecánicas, gas e incendio para obras de escala nacional y alta complejidad técnica.
@@ -74,21 +74,18 @@ export default function Home() {
                                     <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
                                 </motion.button>
                             </Link>
-                            <button className="border border-white/20 text-white font-headline font-bold px-10 py-5 tracking-widest uppercase rounded-sm hover:bg-white/5 transition-all duration-300">
-                                Technical Portal
-                            </button>
                         </motion.div>
                     </motion.div>
-                    
-                    <motion.div 
-                        initial={{ opacity: 0, x: 20 }} 
-                        animate={{ opacity: 1, x: 0 }} 
-                        transition={{ delay: 0.5, duration: 1 }} 
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.5, duration: 1 }}
                         className="md:col-span-2 lg:col-span-3 hidden md:block text-right pb-4 border-r border-white/10 pr-6"
                     >
                         <span className="text-white/40 text-[10px] tracking-[0.4em] uppercase block mb-3 font-technical">Reg. S-Infrastructure</span>
                         <span className="text-white text-xs font-technical leading-loose opacity-60">
-                            COORD: 32.94°S 60.63°W <br /> 
+                            COORD: 32.94°S 60.63°W <br />
                             SCALE: NATIONAL <br />
                             OP: FEDERAL_SEC
                         </span>
@@ -97,13 +94,13 @@ export default function Home() {
             </section>
 
             {/* Key Metrics Band - Technical Readouts */}
-            <section className="bg-surface-container-low border-y border-outline-variant/10 py-16 px-6 md:px-12">
-                <motion.div 
-                    variants={staggerContainer} 
-                    initial="hidden" 
-                    whileInView="visible" 
-                    viewport={{ once: true, margin: "-100px" }} 
-                    className="grid grid-cols-2 lg:grid-cols-4 gap-12 max-w-[1920px] mx-auto"
+            <section className="bg-surface-container-low border-y border-outline-variant/10 py-16 px-12 md:px-24">
+                <motion.div
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="grid grid-cols-2 lg:grid-cols-4 gap-12 max-w-none w-full"
                 >
                     <motion.div variants={fadeUpVariant} className="flex flex-col gap-3 group">
                         <span className="text-primary text-5xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">+25A</span>
@@ -121,9 +118,9 @@ export default function Home() {
                         <span className="text-readout">Protección FM/UL</span>
                     </motion.div>
                     <motion.div variants={fadeUpVariant} className="flex flex-col gap-3 group">
-                        <span className="text-primary text-5xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">CORP</span>
+                        <span className="text-primary text-5xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">+50</span>
                         <div className="h-px bg-outline-variant/30 w-full group-hover:bg-accent/50 transition-all duration-500"></div>
-                        <span className="text-readout">Presencia Nacional</span>
+                        <span className="text-readout">Obras Ejecutadas</span>
                     </motion.div>
                 </motion.div>
             </section>
@@ -131,11 +128,11 @@ export default function Home() {
             {/* Services Section - Engineered Grid */}
             <section className="py-24 md:py-32 px-6 md:px-12 bg-surface overflow-hidden">
                 <div className="max-w-[1920px] mx-auto">
-                    <motion.div 
-                        variants={staggerContainer} 
-                        initial="hidden" 
-                        whileInView="visible" 
-                        viewport={{ once: true, margin: "-100px" }} 
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
                         className="mb-20"
                     >
                         <motion.div variants={fadeUpVariant} className="max-w-4xl">
@@ -151,8 +148,8 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
                         {/* Service 01: Sanitarias & Gas */}
-                        <motion.div 
-                            variants={fadeUpVariant} 
+                        <motion.div
+                            variants={fadeUpVariant}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
@@ -161,7 +158,7 @@ export default function Home() {
                             <div className="absolute top-0 right-0 p-8">
                                 <span className="text-primary/5 font-headline font-black text-[180px] leading-none select-none">01</span>
                             </div>
-                            
+
                             <div className="relative z-10">
                                 <h3 className="text-4xl md:text-5xl font-black text-primary font-headline uppercase tracking-tighter mb-8">Sanitarias <br /> &amp; Gas</h3>
                                 <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mb-12 font-body leading-relaxed opacity-90">
@@ -184,7 +181,7 @@ export default function Home() {
                         </motion.div>
 
                         {/* Service 02: Sustentabilidad */}
-                        <motion.div 
+                        <motion.div
                             variants={fadeUpVariant}
                             initial="hidden"
                             whileInView="visible"
@@ -193,7 +190,7 @@ export default function Home() {
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-container z-0 opacity-90"></div>
                             <div className="absolute inset-0 technical-grid opacity-10"></div>
-                            
+
                             <div className="relative z-10">
                                 <span className="text-white/10 font-headline font-black text-9xl leading-none block mb-8">02</span>
                                 <h3 className="text-4xl font-headline font-black uppercase mb-8 tracking-tighter leading-none">Termodinámica <br /> &amp; LEED</h3>
@@ -219,7 +216,7 @@ export default function Home() {
                         </motion.div>
 
                         {/* Service 03: Contra Incendio */}
-                        <motion.div 
+                        <motion.div
                             variants={fadeUpVariant}
                             initial="hidden"
                             whileInView="visible"
@@ -237,7 +234,7 @@ export default function Home() {
                                     Implementación de redes de extinción bajo normativa NFPA. Salas de bombas certificadas FM/UL para logística aeroportuaria e industrial.
                                 </p>
                             </div>
-                            
+
                             <div className="relative z-10 flex flex-col md:flex-row gap-8 w-full lg:w-auto">
                                 <div className="flex flex-col gap-2">
                                     <span className="text-primary font-headline font-black text-4xl leading-none">FM/UL</span>
@@ -300,7 +297,7 @@ export default function Home() {
                                 ref: "REG_2021_CORP"
                             }
                         ].map((proj, idx) => (
-                            <motion.div 
+                            <motion.div
                                 key={idx}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -309,10 +306,10 @@ export default function Home() {
                                 className="group cursor-pointer"
                             >
                                 <div className="aspect-[4/3] bg-surface-container-highest overflow-hidden mb-8 relative border border-outline-variant/10 shadow-sm">
-                                    <img 
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                                        src={proj.img} 
-                                        alt={proj.title} 
+                                    <img
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        src={proj.img}
+                                        alt={proj.title}
                                     />
                                     <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                                     <div className="absolute bottom-6 right-6">
@@ -339,10 +336,10 @@ export default function Home() {
             {/* Operational Muscle Section */}
             <section className="py-24 md:py-32 px-6 md:px-12 bg-primary relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <img 
-                        className="w-full h-full object-cover opacity-10 mix-blend-overlay grayscale" 
-                        data-alt="industrial heavy machinery including a bobcat and scissor lift in a warehouse setting with sharp dramatic lighting" 
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjNgAgLfrscGLo0vgmPWh_CXFQ7Yh3-SZj2fwqhqJvJc5FRLecV9O0ZXkI8xYI36YZbqbGMrFLgy_OEVqCdCdyTZZAs-4KZNR9jRfz4dW5u-KKmrG6Kfv2GjXrhyzbKnoOs51NJC5crywBfL5A5XMcyaZyqD6a8YK-KEJatvq6FSi_ONIbNTjsv5LXsrQBu6EugwTdAkoFp1VCBHZysreWEpP69VuvcbW7GJzv4eie7YLBdS-5aP8QB1g2LjFYAmDg8KB3ILlkogc" 
+                    <img
+                        className="w-full h-full object-cover opacity-10 mix-blend-overlay grayscale"
+                        data-alt="industrial heavy machinery including a bobcat and scissor lift in a warehouse setting with sharp dramatic lighting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjNgAgLfrscGLo0vgmPWh_CXFQ7Yh3-SZj2fwqhqJvJc5FRLecV9O0ZXkI8xYI36YZbqbGMrFLgy_OEVqCdCdyTZZAs-4KZNR9jRfz4dW5u-KKmrG6Kfv2GjXrhyzbKnoOs51NJC5crywBfL5A5XMcyaZyqD6a8YK-KEJatvq6FSi_ONIbNTjsv5LXsrQBu6EugwTdAkoFp1VCBHZysreWEpP69VuvcbW7GJzv4eie7YLBdS-5aP8QB1g2LjFYAmDg8KB3ILlkogc"
                     />
                     <div className="absolute inset-0 technical-grid opacity-10"></div>
                 </div>
@@ -356,7 +353,7 @@ export default function Home() {
                         <p className="text-on-primary-container text-xl md:text-2xl font-body leading-relaxed mb-12 opacity-80 max-w-2xl">
                             Infraestructura técnica sin dependencia de terceros. Flota pesada Bobcat, plataformas Mantall y tecnología Hilti para una ejecución sin interrupciones.
                         </p>
-                        
+
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                             <div className="flex gap-5 items-start">
                                 <div className="w-12 h-12 bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
