@@ -7,13 +7,13 @@ export default function Equipment() {
                 {/* Hero Section */}
                 <section className="relative min-h-[500px] md:h-[700px] flex items-center overflow-hidden py-28 md:py-0 border-b border-outline-variant/10">
                     <div className="absolute inset-0 z-0">
-                        <motion.img 
+                        <motion.img
                             initial={{ scale: 1.1, opacity: 0 }}
                             animate={{ scale: 1, opacity: 0.3 }}
                             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                            className="w-full h-full object-cover grayscale" 
-                            data-alt="Close-up of a massive industrial excavator at a high-end construction site with cold blue atmospheric lighting and technical details" 
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuEJIyi0KlXHGt7DY0cZJVgJFBYGaxz6t38fueyfnmhRvylXyvyOBlcMGK-9KUGu4dsJ8A2wlHSfXn3-Jrqc0J_XK_nS3zLi2ds0rE9h9VGRU2KCeMczOSAgTGfuCU254aeg44GhEiCslxUgoxxjiSP-Pa5XGhT8cf-t83plKxAgvFq0W3WXQZqlZs2peEelzcaqhWTfqZGXZJFjZ1fehhCXWoOfynLId1t9K4s7JCcxvkuuiF-WQM4ErJjUBJK4vQJ7n_MxVxBT4" 
+                            className="w-full h-full object-cover grayscale"
+                            data-alt="Close-up of a massive industrial excavator at a high-end construction site with cold blue atmospheric lighting and technical details"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuEJIyi0KlXHGt7DY0cZJVgJFBYGaxz6t38fueyfnmhRvylXyvyOBlcMGK-9KUGu4dsJ8A2wlHSfXn3-Jrqc0J_XK_nS3zLi2ds0rE9h9VGRU2KCeMczOSAgTGfuCU254aeg44GhEiCslxUgoxxjiSP-Pa5XGhT8cf-t83plKxAgvFq0W3WXQZqlZs2peEelzcaqhWTfqZGXZJFjZ1fehhCXWoOfynLId1t9K4s7JCcxvkuuiF-WQM4ErJjUBJK4vQJ7n_MxVxBT4"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
                         <div className="absolute inset-0 technical-grid opacity-10"></div>
@@ -27,7 +27,7 @@ export default function Equipment() {
                             >
                                 <div className="flex items-center gap-6 mb-8">
                                     <div className="w-16 h-1 bg-accent"></div>
-                                    <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">INFRA_ASSETS_V2</span>
+                                    <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">Bienes de Uso</span>
                                 </div>
                                 <h1 className="text-5xl md:text-8xl lg:text-9xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase">
                                     CAPACIDAD <br /> OPERATIVA <br /> <span className="text-white/40">PROPIA</span>
@@ -40,10 +40,10 @@ export default function Equipment() {
                             </motion.div>
                         </div>
                     </div>
-                    
+
                     {/* Floating Tech Label */}
                     <div className="absolute bottom-12 right-24 hidden lg:block text-right">
-                        <span className="text-white/20 text-[10px] font-technical uppercase tracking-[0.5em] block mb-2">AUTH_SYSTEM_SPEC</span>
+                        <span className="text-white/20 text-[10px] font-technical uppercase tracking-[0.5em] block mb-2">Ficha Técnica de Activos</span>
                         <div className="w-32 h-px bg-white/10 ml-auto"></div>
                     </div>
                 </section>
@@ -58,8 +58,8 @@ export default function Equipment() {
                             </div>
                             <div className="flex items-center gap-6">
                                 <div className="text-right">
-                                    <p className="text-[10px] font-technical text-primary/60 uppercase tracking-widest mb-1">STATUS_LOG</p>
-                                    <p className="text-2xl font-headline font-black text-primary uppercase">OPERATIVO_100%</p>
+                                    <p className="text-[10px] font-technical text-primary/60 uppercase tracking-widest mb-1">Estado de Flota</p>
+                                    <p className="text-2xl font-headline font-black text-primary uppercase">OPERATIVO AL 100%</p>
                                 </div>
                                 <div className="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center">
                                     <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
@@ -69,14 +69,14 @@ export default function Equipment() {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* Card 1: Heavy Machinery */}
-                            <motion.div 
+                            <motion.div
                                 whileHover={{ y: -10 }}
                                 className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
                             >
                                 <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent transition-colors">
                                     <span className="material-symbols-outlined text-white text-3xl">precision_manufacturing</span>
                                 </div>
-                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Movimiento <br/> de Suelos</h3>
+                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Movimiento <br /> de Suelos</h3>
                                 <ul className="space-y-6 mb-12">
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">01</span>
@@ -92,20 +92,20 @@ export default function Equipment() {
                                     </li>
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
-                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">ASSET_CLASS: HEAVY_MOBILE</span>
+                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Maquinaria Pesada</span>
                                     <span className="material-symbols-outlined text-outline-variant/40 group-hover:text-primary">arrow_forward</span>
                                 </div>
                             </motion.div>
 
                             {/* Card 2: Height Works */}
-                            <motion.div 
+                            <motion.div
                                 whileHover={{ y: -10 }}
                                 className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
                             >
                                 <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent transition-colors">
                                     <span className="material-symbols-outlined text-white text-3xl">height</span>
                                 </div>
-                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Trabajos <br/> en Altura</h3>
+                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Trabajos <br /> en Altura</h3>
                                 <ul className="space-y-6 mb-12">
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">01</span>
@@ -121,20 +121,20 @@ export default function Equipment() {
                                     </li>
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
-                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">ASSET_CLASS: ELEVATION_SYS</span>
+                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Sistemas de Elevación</span>
                                     <span className="material-symbols-outlined text-outline-variant/40 group-hover:text-primary">arrow_forward</span>
                                 </div>
                             </motion.div>
 
                             {/* Card 3: Precise Drilling */}
-                            <motion.div 
+                            <motion.div
                                 whileHover={{ y: -10 }}
                                 className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
                             >
                                 <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent transition-colors">
                                     <span className="material-symbols-outlined text-white text-3xl">architecture</span>
                                 </div>
-                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Perforación <br/> Estratégica</h3>
+                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Perforación <br /> Estratégica</h3>
                                 <ul className="space-y-6 mb-12">
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">01</span>
@@ -150,7 +150,7 @@ export default function Equipment() {
                                     </li>
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
-                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">ASSET_CLASS: STRUCTURAL_PREC</span>
+                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Precisión Estructural</span>
                                     <span className="material-symbols-outlined text-outline-variant/40 group-hover:text-primary">arrow_forward</span>
                                 </div>
                             </motion.div>
@@ -165,8 +165,8 @@ export default function Equipment() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-32">
                             <div>
                                 <h2 className="text-5xl md:text-7xl font-headline font-black uppercase tracking-tighter leading-none mb-10">INGENIERÍA <br /> DE MONTAJE</h2>
-                                <p className="text-on-primary-container text-xl font-body leading-relaxed max-w-xl opacity-80">
-                                    Operamos con estándares internacionales de integridad. Nuestra tecnología de soldadura y termofusión garantiza un rendimiento crítico en sistemas hidráulicos de alta presión.
+                                <p className="text-white text-xl font-body leading-relaxed max-w-xl">
+                                    Operamos con altos estándares de integridad técnica. Nuestra tecnología de soldadura y termofusión garantiza un rendimiento crítico en sistemas hidráulicos de alta presión.
                                 </p>
                             </div>
                             <div className="relative">
@@ -175,7 +175,7 @@ export default function Equipment() {
                                     <div className="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
                                 </div>
                                 <div className="absolute -bottom-8 -left-8 bg-accent p-8 hidden md:block">
-                                    <p className="text-on-accent text-3xl font-headline font-black font-technical tracking-tighter">MAX_INT_STD</p>
+                                    <p className="text-on-accent text-3xl font-headline font-black font-technical tracking-tighter">Estándar de Integridad</p>
                                 </div>
                             </div>
                         </div>
@@ -185,25 +185,25 @@ export default function Equipment() {
                                 {
                                     id: "01",
                                     label: "Instalación Crítica",
-                                    items: ["2 Ranuradoras Victaulic", "Stainless Steel Cutter Ø 8”", "Bimetallic Cup Drills", "Threaders Bench & Manual"],
+                                    items: ["2 Ranuradoras Victaulic", "Cortadora para acero inoxidable Ø 8”", "Copas bimetálicas", "Roscadoras de banco y manuales"],
                                     icon: "settings_input_component"
                                 },
                                 {
                                     id: "02",
                                     label: "Fusión y Soldadura",
-                                    items: ["5 TIG Inverter Units", "2 Electrofusion (Ø 600 mm)", "Pavement Cutter Dynapack", "Vibratory Rammers"],
+                                    items: ["5 Unidades soldadoras TIG", "2 Electrofusión (Ø 600 mm)", "Cortadora de pavimento Dynapack", "Vibro-apisonadores"],
                                     icon: "heat_pump"
                                 },
                                 {
                                     id: "03",
                                     label: "Soporte de Obra",
-                                    items: ["Work Containers x2", "Acanaladora 9\" w/ Aspirators", "Andamios Metaltech (USA)", "Optical & Laser Levels"],
+                                    items: ["2 Contenedores de obra", "Acanaladora 9\" con aspiradora", "Andamios Metaltech (EEUU)", "Niveles ópticos y láser"],
                                     icon: "construction"
                                 }
                             ].map((module, i) => (
                                 <div key={i} className={`p-12 ${i !== 2 ? 'border-r border-white/10' : ''} hover:bg-white/5 transition-colors group`}>
                                     <div className="flex justify-between items-start mb-12">
-                                        <span className="text-accent font-technical text-xs tracking-[0.4em]">MOD_{module.id}</span>
+                                        <span className="text-accent font-technical text-xs tracking-[0.4em]">Módulo {module.id}</span>
                                         <span className="material-symbols-outlined text-accent/40 group-hover:text-accent transition-colors">{module.icon}</span>
                                     </div>
                                     <h4 className="text-2xl font-headline font-black uppercase mb-8 tracking-tighter">{module.label}</h4>
@@ -233,7 +233,7 @@ export default function Equipment() {
                                     <div>
                                         <div className="flex items-center gap-4 mb-6">
                                             <span className="material-symbols-outlined text-primary">local_shipping</span>
-                                            <p className="text-sm font-black text-primary uppercase tracking-widest">LOGISTICA_PESADA</p>
+                                            <p className="text-sm font-black text-primary uppercase tracking-widest">Logística Pesada</p>
                                         </div>
                                         <div className="grid grid-cols-1 gap-4">
                                             {[
@@ -242,7 +242,7 @@ export default function Equipment() {
                                                 "UTILITARIO FOTON GRATOUR (2019)"
                                             ].map((truck, i) => (
                                                 <div key={i} className="flex justify-between items-center py-4 border-b border-outline-variant/10 group">
-                                                    <span className="text-[10px] font-technical text-primary/60">UNIT_{i+1}</span>
+                                                    <span className="text-[10px] font-technical text-primary/60">Unidad {i + 1}</span>
                                                     <span className="text-xs font-bold text-primary/80 uppercase tracking-tight group-hover:text-primary transition-colors">{truck}</span>
                                                 </div>
                                             ))}
@@ -251,19 +251,18 @@ export default function Equipment() {
                                     <div>
                                         <div className="flex items-center gap-4 mb-6">
                                             <span className="material-symbols-outlined text-primary">monitoring</span>
-                                            <p className="text-sm font-black text-primary uppercase tracking-widest">OFICINA_TECNICA</p>
+                                            <p className="text-sm font-black text-primary uppercase tracking-widest">Oficina Técnica</p>
                                         </div>
                                         <div className="grid grid-cols-1 gap-4">
-                                            {[
-                                                "PLOTTER HIGH-SPEED / 4 x I7 CAD STATIONS",
-                                                "ENTERPRISE MOBILE FLEET CLARO (12 UNITS)",
-                                                "BIM/REVIT INTEGRATION WORKFLOW"
-                                            ].map((office, i) => (
-                                                <div key={i} className="flex justify-between items-center py-4 border-b border-outline-variant/10 group">
-                                                    <span className="text-[10px] font-technical text-primary/60">TECH_{i+1}</span>
-                                                    <span className="text-xs font-bold text-primary/80 uppercase tracking-tight group-hover:text-primary transition-colors">{office}</span>
-                                                </div>
-                                            ))}
+                                            {[0, 1, 2].map((i) => {
+                                                const techLabels = ["Plotter de alta velocidad / 4 Estaciones CAD i7", "Flota móvil de comunicación (12 unidades)", "Flujo de trabajo e integración BIM/REVIT"];
+                                                return (
+                                                    <div key={i} className="flex justify-between items-center py-4 border-b border-outline-variant/10 group">
+                                                        <span className="text-[10px] font-technical text-primary/60">Tecnología {i + 1}</span>
+                                                        <span className="text-xs font-bold text-primary/80 uppercase tracking-tight group-hover:text-primary transition-colors">{techLabels[i]}</span>
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                 </div>
@@ -296,7 +295,7 @@ export default function Equipment() {
                             <p className="text-xl md:text-2xl text-primary/70 mb-16 max-w-3xl mx-auto font-body leading-relaxed">
                                 Poseemos el herramental y el expertise táctico para transformar desafíos técnicos en activos operativas de alto rendimiento.
                             </p>
-                            <motion.button 
+                            <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-16 py-8 bg-primary text-white font-headline font-black text-xl uppercase tracking-[0.2em] shadow-2xl hover:bg-accent transition-all duration-300"
@@ -305,7 +304,7 @@ export default function Equipment() {
                             </motion.button>
                         </motion.div>
                     </div>
-                    
+
                     {/* Background Label */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
                         <span className="text-[20vw] font-black uppercase font-headline">H2OBRAS</span>

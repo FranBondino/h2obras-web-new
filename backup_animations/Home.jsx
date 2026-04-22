@@ -37,7 +37,7 @@ export default function Home() {
                             Infraestructura Soberana de Alta Capacidad
                         </motion.div>
                         <motion.h1 variants={fadeUp} className="text-primary text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-federal uppercase mb-8 leading-tight">
-                            Ingeniería Hidromecánica <br /> <span className="text-gradient-primary">de Alta Complejidad</span>
+                            Proyecto y Ejecución de Instalaciones <br /> <span className="text-gradient-primary">de Alta Complejidad</span>
                         </motion.h1>
                         <motion.p variants={fadeUp} className="text-secondary text-lg md:text-2xl max-w-2xl font-light leading-relaxed mb-12">
                             Instalaciones sanitarias, gas, e incendio bajo normativas internacionales para obras a escala federal.

@@ -33,7 +33,7 @@ export default function Header() {
                             src="/h2obras-web-new/logoh2o_new.png"
                             alt="H2O Obras"
                             className="h-[350px] md:h-[400px] w-auto max-w-none object-contain absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 md:-translate-x-8 dark:brightness-0 dark:invert transition-all duration-500 group-hover:scale-105"
-                            style={{ 
+                            style={{
                                 imageRendering: 'crisp-edges',
                                 objectPosition: '0% 50%'
                             }}
@@ -56,7 +56,7 @@ export default function Header() {
                         <NavLink to="/portfolio" className={navLinkClass}>
                             {({ isActive }) => (
                                 <>
-                                    Portfolio
+                                    Portafolio
                                     {isActive && <motion.div layoutId="nav-active" className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary" />}
                                 </>
                             )}

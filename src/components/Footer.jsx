@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="bg-surface-container-low border-t border-outline-variant/10 w-full relative overflow-hidden">
             {/* Background Branding */}
             <div className="absolute inset-0 technical-grid opacity-[0.03] pointer-events-none"></div>
-            
+
             {/* Main grid */}
             <div className="container mx-auto px-8 md:px-24 py-20 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-16 lg:gap-24">
@@ -16,7 +16,7 @@ export default function Footer() {
                                 src="/h2obras-web-new/logoh2o_new.png"
                                 alt="H2O Obras"
                                 className="h-[350px] md:h-[400px] w-auto max-w-none object-contain absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 md:-translate-x-8 dark:brightness-0 dark:invert transition-all duration-500 group-hover:scale-105"
-                                style={{ 
+                                style={{
                                     imageRendering: 'crisp-edges',
                                     objectPosition: '0% 50%'
                                 }}
@@ -24,24 +24,24 @@ export default function Footer() {
                         </div>
                         <div className="border-l-2 border-accent pl-6 pt-4">
                             <p className="text-secondary/70 text-sm font-body leading-relaxed uppercase tracking-tighter">
-                                Ingeniería hidráulica <br /> y civil de alta precisión <br /> <span className="text-xs font-technical opacity-40">EST. 2009</span>
+                                Proyecto y Ejecución de Instalaciones <br /> de alta precisión <br /> <span className="text-xs font-technical opacity-60">EST. 2009</span>
                             </p>
                         </div>
                     </div>
 
                     {/* Navigation */}
                     <div className="space-y-8">
-                        <h5 className="text-[10px] font-technical font-black uppercase tracking-[0.4em] text-primary/40">DIR_SYSTEM</h5>
+                        <h5 className="text-[11px] font-technical font-black uppercase tracking-[0.4em] text-primary/70">Estructura Operativa</h5>
                         <div className="flex flex-col gap-4">
                             {[
                                 { label: 'EMPRESA', to: '/' },
-                                { label: 'PORTFOLIO', to: '/portfolio' },
+                                { label: 'PORTAFOLIO', to: '/portfolio' },
                                 { label: 'EQUIPAMIENTO', to: '/equipment' },
                                 { label: 'CONTACTO', to: '/contact' },
                             ].map(link => (
-                                <Link 
-                                    key={link.to} 
-                                    to={link.to} 
+                                <Link
+                                    key={link.to}
+                                    to={link.to}
                                     className="text-primary font-headline font-black text-lg hover:text-accent transition-all duration-300 tracking-tighter uppercase"
                                 >
                                     {link.label}
@@ -52,13 +52,13 @@ export default function Footer() {
 
                     {/* Specialized Logistics */}
                     <div className="space-y-8">
-                        <h5 className="text-[10px] font-technical font-black uppercase tracking-[0.4em] text-primary/40">CORE_CAPACITY</h5>
+                        <h5 className="text-[11px] font-technical font-black uppercase tracking-[0.4em] text-primary/70">Activos Técnicos</h5>
                         <div className="flex flex-col gap-4">
                             {[
                                 'SANITARIAS & GAS',
                                 'SISTEMAS INCENDIO',
                                 'INFRAESTRUCTURA',
-                                'LEED_PLATINUM'
+                                'SUSTENTABILIDAD'
                             ].map(item => (
                                 <span key={item} className="text-secondary/60 text-sm font-headline font-bold tracking-tight italic opacity-70 uppercase">
                                     {item}
@@ -69,18 +69,34 @@ export default function Footer() {
 
                     {/* Institutional Hubs */}
                     <div className="space-y-10">
-                        <h5 className="text-[10px] font-technical font-black uppercase tracking-[0.4em] text-primary/40">NODE_LOCATIONS</h5>
+                        <h5 className="text-[11px] font-technical font-black uppercase tracking-[0.4em] text-primary/70">Sedes y Centros</h5>
                         <div className="space-y-6">
                             <div className="group border-l border-outline-variant/20 pl-4">
-                                <p className="text-[9px] font-technical uppercase tracking-widest text-accent mb-2">HUB_ROSARIO</p>
+                                <p className="text-[9px] font-technical uppercase tracking-widest text-accent mb-2">SEDE ROSARIO</p>
                                 <p className="text-sm text-primary font-headline font-bold tracking-tighter uppercase leading-tight">Av. Pellegrini 1260 <br /> Santa Fe, AR</p>
                             </div>
                             <div className="group border-l border-outline-variant/20 pl-4">
-                                <p className="text-[9px] font-technical uppercase tracking-widest text-secondary/40 mb-2">NODE_CABA</p>
+                                <p className="text-[9px] font-technical uppercase tracking-widest text-secondary/40 mb-2">SEDE CABA</p>
                                 <p className="text-sm text-primary font-headline font-bold tracking-tighter uppercase leading-tight">Austria 1951 <br /> Buenos Aires, AR</p>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div className="flex flex-wrap gap-8 items-center pt-12 border-t border-outline-variant/10 mt-20">
+                    <div className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                        <span className="text-[11px] font-technical text-secondary/70 uppercase tracking-widest">Normas NFPA</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-secondary/20"></div>
+                        <span className="text-[11px] font-technical text-secondary/70 uppercase tracking-widest">Sello FM/UL</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-secondary/20"></div>
+                        <span className="text-[11px] font-technical text-secondary/70 uppercase tracking-widest">Calidad Certificada</span>
+                    </div>
+                    <p className="ml-auto text-[11px] font-technical text-secondary/60 uppercase tracking-[0.4em]">INGENIERÍA POR FUNN DIGITAL</p>
                 </div>
             </div>
 
@@ -88,8 +104,8 @@ export default function Footer() {
             <div className="border-t border-outline-variant/10 bg-surface/50 backdrop-blur-sm relative z-10">
                 <div className="container mx-auto px-8 md:px-24 py-10 flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="flex items-center gap-8">
-                        <p className="text-secondary/40 text-[10px] font-technical uppercase tracking-[0.4em]">
-                            © 2026 H2O_OBRAS_V2
+                        <p className="text-secondary/60 text-[11px] font-technical uppercase tracking-[0.4em]">
+                            © 2026 H2OBRAS
                         </p>
                         <div className="hidden md:flex gap-4">
                             <div className="w-1 h-1 bg-accent"></div>
@@ -97,15 +113,15 @@ export default function Footer() {
                             <div className="w-1 h-1 bg-accent/20"></div>
                         </div>
                     </div>
-                    
-                    <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-secondary/40 text-[9px] font-technical uppercase tracking-widest">
-                        <span>NFPA_CERTIFIED</span>
-                        <span>FM_UL_COMPLIANT</span>
-                        <span>ISO_9001_READY</span>
+
+                    <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-secondary/70 text-[10px] font-technical uppercase tracking-widest">
+                        <span>NORMATIVA NFPA</span>
+                        <span>CERTIFICACIÓN FM/UL</span>
+                        <span>GESTIÓN ISO 9001</span>
                     </div>
 
-                    <p className="text-secondary/40 text-[10px] font-technical uppercase tracking-widest">
-                        ENGINEERING BY <a href="https://funnagency.com" target="_blank" rel="noopener noreferrer" className="text-primary font-black hover:text-accent transition-colors">FUNN_AGENCY</a>
+                    <p className="text-secondary/60 text-[11px] font-technical uppercase tracking-widest">
+                        DISEÑO POR <a href="https://funnagency.com" target="_blank" rel="noopener noreferrer" className="text-primary font-black hover:text-accent transition-colors">FUNN_AGENCY</a>
                     </p>
                 </div>
             </div>

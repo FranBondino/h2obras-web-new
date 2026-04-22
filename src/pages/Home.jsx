@@ -59,9 +59,9 @@ export default function Home() {
                         </motion.h1>
                         <motion.p
                             variants={fadeUpVariant}
-                            className="text-on-primary-container text-lg md:text-xl max-w-2xl font-body leading-relaxed mb-12 opacity-90"
+                            className="text-on-primary-container text-lg md:text-xl max-w-2xl font-body leading-relaxed mb-12"
                         >
-                            Especialistas en instalaciones hidromecánicas, gas e incendio para obras de escala nacional y alta complejidad técnica.
+                            Especialistas en proyecto y ejecución de obras e instalaciones, gas e incendio para obras de escala nacional y alta complejidad técnica.
                         </motion.p>
                         <motion.div variants={fadeUpVariant} className="flex flex-wrap gap-4">
                             <Link to="/portfolio">
@@ -162,15 +162,15 @@ export default function Home() {
                             <div className="relative z-10">
                                 <h3 className="text-4xl md:text-5xl font-black text-primary font-headline uppercase tracking-tighter mb-8">Sanitarias <br /> &amp; Gas</h3>
                                 <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mb-12 font-body leading-relaxed opacity-90">
-                                    Instalaciones de gran envergadura, saneamiento federal y plantas de tratamiento de alta complejidad para entornos hospitalarios e industriales.
+                                    Instalaciones de gran envergadura y saneamiento federal de alta complejidad para entornos hospitalarios e industriales.
                                 </p>
                             </div>
 
                             <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 border border-outline-variant/10">
                                 <div className="p-8 bg-white dark:bg-primary-container flex flex-col gap-2">
-                                    <span className="material-symbols-outlined text-primary mb-2">water_drop</span>
-                                    <span className="text-primary font-headline font-bold text-xl uppercase tracking-tight">Plantas de Tratamiento</span>
-                                    <span className="text-technical text-[9px] opacity-60">Sistemas de Efluentes</span>
+                                    <span className="material-symbols-outlined text-primary mb-2">engineering</span>
+                                    <span className="text-primary font-headline font-bold text-xl uppercase tracking-tight">Saneamiento Integral</span>
+                                    <span className="text-technical text-[9px] opacity-60">Infraestructura Federal</span>
                                 </div>
                                 <div className="p-8 bg-white dark:bg-primary-container flex flex-col gap-2">
                                     <span className="material-symbols-outlined text-primary mb-2">grid_view</span>
@@ -194,9 +194,7 @@ export default function Home() {
                             <div className="relative z-10">
                                 <span className="text-white/10 font-headline font-black text-9xl leading-none block mb-8">02</span>
                                 <h3 className="text-4xl font-headline font-black uppercase mb-8 tracking-tighter leading-none">Termodinámica <br /> &amp; LEED</h3>
-                                <p className="text-on-primary-container text-lg font-body mb-12 leading-relaxed opacity-80">
-                                    Ecoeficiencia hídrica y procesos térmicos diseñados para estándares internacionales de certificación sustentable.
-                                </p>
+                                Ecoeficiencia hídrica y procesos térmicos diseñados bajo rigurosas normativas de certificación sustentable.
                             </div>
 
                             <div className="relative z-10 space-y-4">
@@ -323,7 +321,7 @@ export default function Home() {
                                     </div>
                                     <h3 className="text-2xl font-headline font-bold uppercase text-primary mb-6 transition-colors group-hover:text-accent duration-300">{proj.title}</h3>
                                     <div className="flex justify-between items-center py-4 border-t border-outline-variant/10">
-                                        <span className="text-[10px] font-technical uppercase opacity-60">Escala Técnica</span>
+                                        <span className="text-[10px] font-technical uppercase text-primary/40 tracking-[0.4em]">VER FICHA TÉCNICA</span>
                                         <span className="text-xs font-headline font-extrabold text-primary uppercase">{proj.size}</span>
                                     </div>
                                 </div>
@@ -350,7 +348,7 @@ export default function Home() {
                         <h2 className="text-5xl md:text-7xl font-black text-white font-headline uppercase tracking-tighter mb-10 leading-[0.9]">
                             Potencia <br /> <span className="text-accent">Operativa Propia</span>
                         </h2>
-                        <p className="text-on-primary-container text-xl md:text-2xl font-body leading-relaxed mb-12 opacity-80 max-w-2xl">
+                        <p className="text-on-primary-container text-xl md:text-2xl font-body leading-relaxed mb-12 max-w-2xl">
                             Infraestructura técnica sin dependencia de terceros. Flota pesada Bobcat, plataformas Mantall y tecnología Hilti para una ejecución sin interrupciones.
                         </p>
 
@@ -361,7 +359,7 @@ export default function Home() {
                                 </div>
                                 <div className="flex flex-col gap-1">
                                     <span className="text-white font-headline font-bold uppercase tracking-widest text-xs">M+50 Unidades</span>
-                                    <span className="text-on-primary-container text-[10px] uppercase tracking-widest opacity-80">Logística de Despliegue</span>
+                                    <span className="text-on-primary-container text-[11px] uppercase tracking-widest">Logística de Despliegue</span>
                                 </div>
                             </div>
                             <div className="flex gap-5 items-start">
@@ -370,7 +368,7 @@ export default function Home() {
                                 </div>
                                 <div className="flex flex-col gap-1">
                                     <span className="text-white font-headline font-bold uppercase tracking-widest text-xs">100% Autonomía</span>
-                                    <span className="text-on-primary-container text-[10px] uppercase tracking-widest opacity-80">Control de Calidad Final</span>
+                                    <span className="text-on-primary-container text-[11px] uppercase tracking-widest">Control de Calidad Final</span>
                                 </div>
                             </div>
                         </div>

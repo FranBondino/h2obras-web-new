@@ -19,7 +19,7 @@ export default function Contact() {
                             >
                                 <div className="flex items-center gap-6 mb-8">
                                     <div className="w-16 h-1 bg-accent"></div>
-                                    <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">LINK_INFRA_V2</span>
+                                    <span className="text-accent text-[10px] font-technical tracking-[0.4em] uppercase">Formulario de Ingeniería</span>
                                 </div>
                                 <h1 className="text-5xl md:text-8xl lg:text-9xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase">
                                     CONSULTAS Y <br /> <span className="text-white/40">PRESUPUESTOS</span>
@@ -50,7 +50,7 @@ export default function Contact() {
                                             <div className="absolute top-0 -left-1 w-2 h-2 bg-accent"></div>
                                             <div className="flex justify-between items-start mb-4">
                                                 <h3 className="text-2xl font-headline font-black text-primary tracking-tighter uppercase">ROSARIO</h3>
-                                                <span className="text-[10px] font-technical text-accent uppercase tracking-widest bg-accent/5 px-2 py-1">MAIN_HUB</span>
+                                                <span className="text-[10px] font-technical text-accent uppercase tracking-widest bg-accent/5 px-2 py-1">SEDE CENTRAL</span>
                                             </div>
                                             <p className="text-secondary/70 font-body leading-relaxed text-lg italic">Av. Pellegrini 1260 Piso 13 Dto. B<br />(2000) Rosario, Santa Fe.</p>
                                         </div>
@@ -58,7 +58,7 @@ export default function Contact() {
                                             <div className="absolute top-0 -left-1 w-2 h-2 bg-primary"></div>
                                             <div className="flex justify-between items-start mb-4">
                                                 <h3 className="text-2xl font-headline font-black text-primary tracking-tighter uppercase">CABA</h3>
-                                                <span className="text-[10px] font-technical text-secondary/40 uppercase tracking-widest">NODE_02</span>
+                                                <span className="text-[10px] font-technical text-secondary/40 uppercase tracking-widest">SEDE CABA</span>
                                             </div>
                                             <p className="text-secondary/70 font-body leading-relaxed text-lg italic">Austria 1951 Piso 6º C<br />Ciudad Autónoma de Buenos Aires.</p>
                                         </div>
@@ -76,7 +76,7 @@ export default function Contact() {
                                                 <span className="material-symbols-outlined text-primary group-hover:text-white">call</span>
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-technical text-secondary/40 uppercase tracking-widest mb-1">CENTRAL_SPEC</p>
+                                                <p className="text-[10px] font-technical text-secondary/40 uppercase tracking-widest mb-1">Estado de Red</p>
                                                 <p className="text-2xl font-headline font-black text-primary group-hover:text-accent transition-colors">0341- 4480566</p>
                                             </div>
                                         </a>
@@ -85,7 +85,7 @@ export default function Contact() {
                                                 <span className="material-symbols-outlined text-primary group-hover:text-white">mail</span>
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-technical text-secondary/40 uppercase tracking-widest mb-1">CORREO_OFFICIAL</p>
+                                                <p className="text-[10px] font-technical text-secondary/40 uppercase tracking-widest mb-1">Correo Oficial</p>
                                                 <p className="text-2xl font-headline font-black text-primary group-hover:text-accent transition-colors">info@h2obras.com</p>
                                             </div>
                                         </a>
@@ -104,24 +104,31 @@ export default function Contact() {
                                         </h2>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                             <div className="bg-surface p-10 border-t-8 border-primary shadow-sm hover:-translate-y-2 transition-transform duration-500">
-                                                <p className="text-[10px] font-technical text-accent uppercase tracking-widest mb-6">DEPOT_ALPHA</p>
+                                                <p className="text-[10px] font-technical text-accent uppercase tracking-widest mb-6">Depósito 01</p>
                                                 <h3 className="text-2xl font-headline font-black text-primary mb-4 tracking-tighter uppercase whitespace-pre-line leading-tight">ESPAÑA{"\n"}5281</h3>
                                                 <p className="text-secondary/60 text-sm font-body leading-relaxed group-hover:text-secondary transition-colors italic">Esq. Regimiento 11<br />(2000) Rosario</p>
                                             </div>
                                             <div className="bg-surface p-10 border-t-8 border-primary shadow-sm hover:-translate-y-2 transition-transform duration-500">
-                                                <p className="text-[10px] font-technical text-accent uppercase tracking-widest mb-6">DEPOT_BETA</p>
+                                                <p className="text-[10px] font-technical text-accent uppercase tracking-widest mb-6">Depósito 02</p>
                                                 <h3 className="text-2xl font-headline font-black text-primary mb-4 tracking-tighter uppercase whitespace-pre-line leading-tight">GÜEMES{"\n"}2798</h3>
                                                 <p className="text-secondary/60 text-sm font-body leading-relaxed group-hover:text-secondary transition-colors italic">Esq. Ovidio Lagos<br />(2000) Rosario</p>
                                             </div>
                                         </div>
-                                        
+
                                         <div className="mt-20 pt-12 border-t border-outline-variant/10">
                                             <div className="flex items-center justify-between">
-                                                <span className="text-[10px] font-technical text-secondary/40 tracking-[0.4em] uppercase">SYSTEM_READY</span>
+                                                <p className="text-[10px] font-technical text-primary uppercase tracking-widest mb-1">Prioridad de Proyecto</p>
                                                 <div className="flex gap-2">
-                                                    <div className="w-1 h-1 bg-accent"></div>
-                                                    <div className="w-1 h-1 bg-accent/40"></div>
-                                                    <div className="w-1 h-1 bg-accent/20"></div>
+                                                    {["Bajo", "Medio", "Crítico"].map((prio) => (
+                                                        <button
+                                                            key={prio}
+                                                            type="button"
+                                                            onClick={() => setPriority(prio)}
+                                                            className={`px-4 py-2 text-[10px] font-black uppercase tracking-widest transition-all ${priority === prio ? 'bg-primary text-white' : 'bg-surface-container-high text-primary/40 hover:bg-primary/5'}`}
+                                                        >
+                                                            {prio}
+                                                        </button>
+                                                    ))}
                                                 </div>
                                             </div>
                                         </div>
@@ -149,22 +156,22 @@ export default function Contact() {
                                     <div className="space-y-6">
                                         <div className="flex items-center gap-4 text-white/40">
                                             <span className="material-symbols-outlined text-sm">check_circle</span>
-                                            <span className="text-xs font-technical uppercase tracking-widest">VALIDACIÓN_REMITENTE</span>
+                                            <span className="text-white/20 text-[10px] font-technical uppercase tracking-[0.5em] block mb-2">Canal de Consultas</span>
                                         </div>
                                         <div className="flex items-center gap-4 text-white/40">
                                             <span className="material-symbols-outlined text-sm">check_circle</span>
-                                            <span className="text-xs font-technical uppercase tracking-widest">ANÁLISIS_LOGÍSTICO</span>
+                                            <span className="text-xs font-technical uppercase tracking-widest">ANÁLISIS LOGÍSTICO</span>
                                         </div>
                                         <div className="flex items-center gap-4 text-white/40">
                                             <span className="material-symbols-outlined text-sm">check_circle</span>
-                                            <span className="text-xs font-technical uppercase tracking-widest">ASIGNACIÓN_INGENIERO</span>
+                                            <span className="text-xs font-technical uppercase tracking-widest">ASIGNACIÓN DE INGENIERO</span>
                                         </div>
                                     </div>
                                 </motion.div>
                             </div>
 
                             <div className="lg:col-span-8">
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, y: 50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     className="bg-white/[0.03] backdrop-blur-3xl border border-white/10 p-12 md:p-20 shadow-2xl machined-glass"
@@ -172,15 +179,15 @@ export default function Contact() {
                                     <form className="space-y-12">
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                             <div className="space-y-3">
-                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">ID_LEGAL / RAZÓN SOCIAL</label>
+                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">RAZÓN SOCIAL</label>
                                                 <input className="w-full bg-black/5 border border-primary/10 h-16 px-6 text-primary font-headline text-lg focus:outline-none focus:border-primary transition-colors placeholder:text-primary/30" placeholder="ENTIDAD" type="text" />
                                             </div>
                                             <div className="space-y-3">
-                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">COMMS_LINK / CORREO</label>
+                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">CORREO ELECTRÓNICO</label>
                                                 <input className="w-full bg-black/5 border border-primary/10 h-16 px-6 text-primary font-headline text-lg focus:outline-none focus:border-primary transition-colors placeholder:text-primary/30" placeholder="EMAIL@SYSTEM" type="email" />
                                             </div>
                                             <div className="space-y-3">
-                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">PROJECT_TYPE / CATEGORÍA</label>
+                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">TIPO DE PROYECTO</label>
                                                 <select className="w-full bg-black/5 border border-primary/10 h-16 px-6 text-primary font-headline text-lg focus:outline-none focus:border-primary appearance-none transition-colors">
                                                     <option className="bg-surface text-primary">INST_SANITARIAS</option>
                                                     <option className="bg-surface text-primary">INST_GAS</option>
@@ -190,16 +197,16 @@ export default function Contact() {
                                                 </select>
                                             </div>
                                             <div className="space-y-3">
-                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">LOC_GEO / UBICACIÓN</label>
+                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">UBICACIÓN</label>
                                                 <input className="w-full bg-black/5 border border-primary/10 h-16 px-6 text-primary font-headline text-lg focus:outline-none focus:border-primary transition-colors placeholder:text-primary/30" placeholder="CIUDAD / PROVINCIA" type="text" />
                                             </div>
                                         </div>
                                         <div className="space-y-3">
-                                            <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">TECH_SPEC / ALCANCE DEL PROYECTO</label>
+                                            <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">ALCANCE DEL PROYECTO</label>
                                             <textarea className="w-full bg-black/5 border border-primary/10 p-8 text-primary font-headline text-lg focus:outline-none focus:border-primary transition-colors min-h-[200px] placeholder:text-primary/30" placeholder="DESCRIBA LOS PARÁMETROS TÉCNICOS..."></textarea>
                                         </div>
-                                        
-                                        <motion.button 
+
+                                        <motion.button
                                             whileHover={{ scale: 1.02 }}
                                             whileTap={{ scale: 0.98 }}
                                             className="w-full py-8 bg-accent text-on-accent font-headline font-black text-xl uppercase tracking-[0.3em] flex items-center justify-center gap-6 shadow-2xl"

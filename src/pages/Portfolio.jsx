@@ -14,14 +14,10 @@ const categoryHeroData = {
     },
     Salud: {
         title: "Ingeniería <br /> Sanitaria",
-        subtitle: "Sistemas críticos para entornos hospitalarios de alta complejidad. Gases medicinales, redes de fluidos y climatización con estándares internacionales de bioseguridad.",
+        subtitle: "Sistemas críticos para entornos hospitalarios de alta complejidad. Gases medicinales, redes de fluidos y climatización con normativas técnicas de bioseguridad.",
         tag: "Especialidad: Salud"
     },
-    "Centros Judiciales": {
-        title: "Centros de <br /> Justicia",
-        subtitle: "Sistemas integrales para edificios institucionales de máxima seguridad. Ingeniería hidráulica y civil para el soporte de la operatividad judicial.",
-        tag: "Infraestructura Institucional"
-    },
+
     Aeropuertos: {
         title: "Logística <br /> Aeroportuaria",
         subtitle: "Instalaciones especializadas para terminales aéreas bajo normas NFPA. Redes contra incendio, bombeo de alta presión y sistemas de soporte logístico.",
@@ -34,12 +30,12 @@ const categoryHeroData = {
     },
     Industrial: {
         title: "Procesos <br /> Industriales",
-        subtitle: "Soluciones de ingeniería para plantas de producción y procesamiento. Piping industrial, tratamiento de efluentes y sistemas de presión para alta exigencia.",
+        subtitle: "Soluciones de ingeniería para plantas de producción y procesamiento. Piping industrial y sistemas de presión para alta exigencia.",
         tag: "Potencia Industrial"
     },
     "Sustentable (LEED)": {
         title: "Eficiencia <br /> Sustentable",
-        subtitle: "Liderazgo en certificaciones internacionales. Sistemas solares térmicos, recuperación pluvial y optimización de recursos para el futuro sostenible.",
+        subtitle: "Liderazgo en certificaciones. Sistemas solares térmicos, recuperación pluvial y optimización de recursos para el futuro sostenible.",
         tag: "Certificación LEED"
     }
 };
@@ -152,7 +148,7 @@ const allProjectsData = [
     {
         id: 'a10',
         title: 'Centro Justicia Penal',
-        category: 'Centros Judiciales',
+        category: 'Institucional',
         location: 'Rosario',
         specs: 'Judicial Federal',
         status: 'Entregado',
@@ -244,8 +240,8 @@ const allProjectsData = [
     { id: 'h10', title: 'Hospital de Emergencias (HECA)', category: 'Salud', location: 'Rosario', specs: 'Emergencias Hidrosanitarias', status: 'Historico' },
     { id: 'h11', title: 'Quilmes Cervecería', category: 'Industrial', location: 'Zárate', specs: 'Procesos de Frio', status: 'Historico' },
     { id: 'h12', title: 'Polo Tecnológico Zona Sur', category: 'Institucional', location: 'Rosario', specs: 'Red de Enfriamiento', status: 'Historico' },
-    { id: 'h13', title: 'Juzgados Federales', category: 'Centros Judiciales', location: 'San Lorenzo', specs: 'Sistema Integral', status: 'Historico' },
-    { id: 'h14', title: 'Torre Aqualina', category: 'Residencial de Alta Gama', location: 'Rosario', specs: 'Calderas Centrales', status: 'Historico' },
+    { id: 'h13', title: 'Juzgados Federales', category: 'Institucional', location: 'San Lorenzo', specs: 'Sistema Integral', status: 'Historico' },
+
     { id: 'h15', title: 'Centro Comercial Alto Rosario', category: 'Comercial', location: 'Rosario', specs: 'Red Contra Incendios', status: 'Historico' },
     { id: 'h16', title: 'Aeropuerto de Córdoba', category: 'Aeropuertos', location: 'Córdoba', specs: 'Motobombas NFPA', status: 'Historico' },
     { id: 'h17', title: 'Planta de Biogas', category: 'Sustentable (LEED)', location: 'Venado Tuerto', specs: 'Saneamiento Total', status: 'Historico' },
@@ -254,7 +250,7 @@ const allProjectsData = [
     { id: 'h20', title: 'Planta General Motors', category: 'Industrial', location: 'Alvear', specs: 'Líneas de Presión', status: 'Historico' },
     { id: 'h21', title: 'Edificio Aduana', category: 'Institucional', location: 'Rosario', specs: 'Restauración Sanitaria', status: 'Historico' },
     { id: 'h22', title: 'Planta Cargill', category: 'Industrial', location: 'Puerto San Martín', specs: 'Sistemas Antiexplosión', status: 'Historico' },
-    { id: 'h23', title: 'Ciudad Judicial', category: 'Centros Judiciales', location: 'Santa Fe', specs: 'Ingeniería Sanitaria Compleja', status: 'Historico' },
+    { id: 'h23', title: 'Ciudad Judicial', category: 'Institucional', location: 'Santa Fe', specs: 'Ingeniería Sanitaria Compleja', status: 'Historico' },
     { id: 'h24', title: 'Terminal Puerto Rosario', category: 'Industrial', location: 'Rosario', specs: 'Redes Hídricas Acero', status: 'Historico' },
     { id: 'h25', title: 'Hospital Iturraspe', category: 'Salud', location: 'Santa Fe', specs: 'Arquitectura Hospitalaria', status: 'Historico' }
 ];
@@ -263,7 +259,7 @@ const categories = [
     { id: 'all', label: 'Todos los Proyectos', icon: 'apps' },
     { id: 'Obras en Ejecución', label: 'Obras en Ejecución', icon: 'engineering' },
     { id: 'Salud', label: 'Salud', icon: 'medical_services' },
-    { id: 'Centros Judiciales', label: 'Centros Judiciales', icon: 'gavel' },
+
     { id: 'Aeropuertos', label: 'Aeropuertos', icon: 'flight_takeoff' },
     { id: 'Residencial de Alta Gama', label: 'Residencial de Alta Gama', icon: 'domain' },
     { id: 'Industrial', label: 'Industrial', icon: 'factory' },
@@ -297,8 +293,8 @@ function ProjectCard({ project, onClick }) {
                     {label || project.status}
                 </div>
                 <div className="absolute bottom-4 left-4">
-                    <span className="bg-primary/90 backdrop-blur-md text-white text-[8px] font-technical px-2 py-1 uppercase tracking-widest border border-white/10">
-                        OP_REF: {project.id.toUpperCase()}
+                    <span className="bg-primary backdrop-blur-md text-white text-[10px] font-technical px-2 py-1 uppercase tracking-widest border border-white/10">
+                        Ref. Operativa: {project.id.toUpperCase()}
                     </span>
                 </div>
             </div>
@@ -315,7 +311,7 @@ function ProjectCard({ project, onClick }) {
                 <div className="space-y-4 border-t border-outline-variant/10 pt-6">
                     <div className="flex justify-between items-center text-[10px] font-technical uppercase tracking-widest opacity-60">
                         <span>Estado del Sistema</span>
-                        <span>{progress ? `${progress}%` : "Integrit"}</span>
+                        <span>{progress ? `${progress}%` : "Integridad"}</span>
                     </div>
                     <div className="w-full bg-surface-container h-1 overflow-hidden">
                         <motion.div
@@ -375,14 +371,14 @@ function ProjectDetailModal({ project, onClose }) {
                     />
                     <div className="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
                     <div className="absolute inset-0 technical-grid opacity-20"></div>
-                    
+
                     {/* Perspective Label */}
                     <div className="absolute bottom-8 left-8 flex flex-col gap-2">
                         <span className="bg-accent text-on-accent text-[10px] font-black px-4 py-1 uppercase tracking-[0.4em] shadow-lg">
                             Vista Operativa
                         </span>
                         <span className="text-white/60 font-technical text-[9px] uppercase tracking-widest pl-1">
-                            Ref_System: {project.id.toUpperCase()}_VOL_01
+                            Ref. de Sistema: {project.id.toUpperCase()}_VOL_01
                         </span>
                     </div>
                 </div>
@@ -390,13 +386,13 @@ function ProjectDetailModal({ project, onClose }) {
                 {/* Right Side: Engineering Datasheet */}
                 <div className="w-full lg:w-2/5 p-10 md:p-16 overflow-y-auto bg-surface technical-grid-bg relative">
                     <div className="absolute inset-0 bg-surface/90 z-0"></div>
-                    
+
                     <div className="relative z-10">
                         <div className="flex items-center gap-4 mb-8">
                             <div className="w-12 h-1 bg-accent"></div>
                             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary">Datasheet de Ingeniería</span>
                         </div>
-                        
+
                         <h2 className="text-4xl md:text-5xl font-headline font-black uppercase text-primary mb-12 leading-[0.9] tracking-tighter">
                             {project.title}
                         </h2>
@@ -411,7 +407,7 @@ function ProjectDetailModal({ project, onClose }) {
                                 <p className="text-sm font-headline font-extrabold text-primary uppercase">{project.category}</p>
                             </div>
                             <div className="border-l-2 border-outline-variant/20 pl-6">
-                                <p className="text-[10px] uppercase font-bold text-primary/60 tracking-[0.2em] mb-2">Consistence</p>
+                                <p className="text-[10px] uppercase font-bold text-primary/60 tracking-[0.2em] mb-2">Entidad / Cliente</p>
                                 <p className="text-sm font-headline font-extrabold text-primary uppercase">{project.client || "Consolidado Federal"}</p>
                             </div>
                         </div>
@@ -521,7 +517,7 @@ export default function Portfolio() {
                         })}
                     </nav>
                     <div className="mt-auto p-2 pt-12">
-                        <motion.button 
+                        <motion.button
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             className="w-full py-5 text-[10px] font-black text-white bg-primary uppercase tracking-[0.2em] shadow-xl hover:bg-accent hover:text-on-accent transition-all duration-300 flex items-center justify-center gap-3"
@@ -544,7 +540,7 @@ export default function Portfolio() {
                             <img alt="Industrial construction" className="w-full h-full object-cover scale-105" data-alt="dramatic wide angle shot of a large scale civil engineering project site with steel structures and heavy machinery at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVgnCcJOXJbS1CPKSLW2YY7rrCKvOGonDzDLZKh99l1PWKa8CULPPUz0axyy9_XHd6EHNiiqId32pHdTyCNpAZ9aQlIS1cq_BRPUdwlRr7n1cJVdIncH7WmfO_N5-pSB0cihPmC0xrcQaY-gTgwH2ONESYYyekuTUWFlZekTQiSmD9rr_KLnzeynpzQnLIPydQuw6fX4bFXJ3BO3so6vu9E9Er3rUE543iyaiG1FAO7GyR3zamgefvhxL8LQwR5KLwZMsolOr_TehX" />
                         </motion.div>
                         <div className="absolute inset-0 technical-grid opacity-20"></div>
-                        
+
                         <div className="relative z-10 max-w-5xl">
                             <AnimatePresence mode="wait">
                                 <motion.div
@@ -556,13 +552,13 @@ export default function Portfolio() {
                                 >
                                     <div className="flex items-center gap-6 mb-8">
                                         <div className="w-16 h-1 bg-accent"></div>
-                                        <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">{currentHero.tag}</span>
+                                        <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">Registro de Obras</span>
                                     </div>
                                     <h1
                                         className="text-white text-5xl md:text-8xl lg:text-9xl font-black font-headline tracking-tighter leading-[0.85] uppercase mb-10"
                                         dangerouslySetInnerHTML={{ __html: currentHero.title }}
                                     />
-                                    <p className="text-on-primary-container text-xl md:text-2xl max-w-3xl font-body leading-relaxed opacity-80">
+                                    <p className="text-white text-xl md:text-2xl max-w-3xl font-body leading-relaxed">
                                         {currentHero.subtitle}
                                     </p>
                                 </motion.div>
@@ -571,8 +567,8 @@ export default function Portfolio() {
 
                         {/* Aesthetic Module Label */}
                         <div className="absolute bottom-12 right-12 hidden lg:block text-right">
-                             <span className="text-white/20 text-[10px] font-technical uppercase tracking-[0.5em] block mb-2">INFRA_REGISTRY_V2.5</span>
-                             <div className="w-32 h-px bg-white/10 ml-auto"></div>
+                            <span className="text-white/60 text-[11px] font-technical uppercase tracking-[0.5em] block mb-2">Registro de Obras</span>
+                            <div className="w-32 h-px bg-white/10 ml-auto"></div>
                         </div>
                     </section>
                     {selectedCategory === 'all' && (
@@ -653,6 +649,7 @@ export default function Portfolio() {
                                         onClick={() => setActiveProject(allProjectsData.find(p => p.id === 'a5'))}
                                         className="bg-surface-container-high p-10 flex flex-col justify-between cursor-pointer group"
                                     >
+                                        <p className="text-[10px] font-technical text-primary/60 uppercase tracking-widest mb-1 group-hover:text-accent/60 transition-colors">Ref. de Sistema</p>
                                         <h4 className="text-xl font-headline font-black uppercase text-primary group-hover:text-cyan-700 transition-colors">Distrito Puerto Norte</h4>
                                         <div className="space-y-2">
                                             <p className="text-xs text-primary/70 uppercase font-bold tracking-widest">Estado: Activo</p>
@@ -700,6 +697,7 @@ export default function Portfolio() {
                                             <div className="space-y-2">
                                                 <div className="flex items-center gap-2 text-tertiary-fixed">
                                                     <span className="material-symbols-outlined">water_drop</span>
+                                                    <p className="text-[10px] font-technical text-white/40 uppercase tracking-widest mb-1">Ref. Operativa</p>
                                                     <span className="text-[10px] font-bold uppercase tracking-widest">Recuperación de Agua</span>
                                                 </div>
                                                 <p className="text-xs text-on-primary-container font-label">Eliminación avanzada de arsénico y recuperación pluvial.</p>
@@ -763,16 +761,7 @@ export default function Portfolio() {
                                         <p className="text-xs text-primary/70 mb-4">Sistemas de soporte vital (LSS), inyección de ozono y protocolos de O2.</p>
                                         <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">TECNOLOGÍA BIOLÓGICA</span>
                                     </motion.div>
-                                    {/* Tech Item 4 */}
-                                    <motion.div
-                                        variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}
-                                        whileHover={{ backgroundColor: "var(--color-surface-container-high)" }}
-                                        className="bg-surface p-6 border-l-2 border-primary transition-colors cursor-pointer"
-                                    >
-                                        <h5 className="font-headline font-bold uppercase text-primary mb-4 text-sm">Centro Justicia Penal</h5>
-                                        <p className="text-xs text-primary/70 mb-4">Infraestructura de agua a escala federal y sistemas institucionales de alta seguridad.</p>
-                                        <span className="text-[10px] font-black bg-surface-container-high px-2 py-1">JUDICIAL FEDERAL</span>
-                                    </motion.div>
+
                                 </motion.div>
                             </section >
                         </>
