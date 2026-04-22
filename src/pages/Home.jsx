@@ -153,7 +153,7 @@ export default function Home() {
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
-                            className="lg:col-span-8 bg-surface-container-low p-10 md:p-16 flex flex-col justify-between group relative overflow-hidden border border-outline-variant/10 shadow-sm"
+                            className="lg:col-span-8 bg-surface-container-low p-10 md:p-16 flex flex-col justify-between group relative overflow-hidden border border-outline-variant/10 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
                         >
                             <div className="absolute top-0 right-0 p-8">
                                 <span className="text-primary/5 font-headline font-black text-[180px] leading-none select-none">01</span>
@@ -167,15 +167,23 @@ export default function Home() {
                             </div>
 
                             <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 border border-outline-variant/10">
-                                <div className="p-8 bg-white dark:bg-primary-container flex flex-col gap-2">
-                                    <span className="material-symbols-outlined text-primary mb-2">engineering</span>
-                                    <span className="text-primary font-headline font-bold text-xl uppercase tracking-tight">Saneamiento Integral</span>
-                                    <span className="text-technical text-[9px] opacity-60">Infraestructura Federal</span>
+                                <div className="p-8 bg-white dark:bg-primary-container flex items-center gap-6 group/item hover:bg-accent/5 transition-colors">
+                                    <div className="w-12 h-12 border border-primary/10 flex items-center justify-center shrink-0 group-hover/item:border-accent group-hover/item:bg-accent transition-all duration-300">
+                                        <span className="material-symbols-outlined text-primary group-hover/item:text-on-accent text-2xl">engineering</span>
+                                    </div>
+                                    <div className="flex flex-col gap-1">
+                                        <span className="text-primary font-headline font-bold text-lg uppercase tracking-tight leading-none">Saneamiento Integral</span>
+                                        <span className="text-technical text-[9px] opacity-60">Infraestructura Federal</span>
+                                    </div>
                                 </div>
-                                <div className="p-8 bg-white dark:bg-primary-container flex flex-col gap-2">
-                                    <span className="material-symbols-outlined text-primary mb-2">grid_view</span>
-                                    <span className="text-primary font-headline font-bold text-xl uppercase tracking-tight">Redes de Alta Presión</span>
-                                    <span className="text-technical text-[9px] opacity-60">Distribución Primaria</span>
+                                <div className="p-8 bg-white dark:bg-primary-container flex items-center gap-6 group/item hover:bg-accent/5 transition-colors">
+                                    <div className="w-12 h-12 border border-primary/10 flex items-center justify-center shrink-0 group-hover/item:border-accent group-hover/item:bg-accent transition-all duration-300">
+                                        <span className="material-symbols-outlined text-primary group-hover/item:text-on-accent text-2xl">grid_view</span>
+                                    </div>
+                                    <div className="flex flex-col gap-1">
+                                        <span className="text-primary font-headline font-bold text-lg uppercase tracking-tight leading-none">Redes de Alta Presión</span>
+                                        <span className="text-technical text-[9px] opacity-60">Distribución Primaria</span>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
@@ -186,7 +194,7 @@ export default function Home() {
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
-                            className="lg:col-span-4 bg-primary p-10 md:p-14 flex flex-col justify-between text-white relative overflow-hidden group shadow-xl"
+                            className="lg:col-span-4 bg-primary p-10 md:p-14 flex flex-col justify-between text-white relative overflow-hidden group shadow-xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-1"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-container z-0 opacity-90"></div>
                             <div className="absolute inset-0 technical-grid opacity-10"></div>
@@ -219,8 +227,11 @@ export default function Home() {
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
-                            className="lg:col-span-12 bg-surface-container-lowest p-10 md:p-16 border border-outline-variant/10 flex flex-col lg:flex-row justify-between items-end group relative overflow-hidden shadow-sm"
+                            className="lg:col-span-12 bg-surface-container-lowest p-10 md:p-16 border border-outline-variant/10 flex flex-col lg:flex-row justify-between items-end group relative overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
                         >
+                            <div className="absolute top-0 right-0 p-8">
+                                <span className="text-primary/5 font-headline font-black text-[180px] leading-none select-none">03</span>
+                            </div>
                             <div className="relative z-10 max-w-3xl mb-12 lg:mb-0">
                                 <div className="flex items-center gap-6 mb-8 group">
                                     <div className="w-16 h-16 bg-primary flex items-center justify-center group-hover:bg-accent transition-colors duration-500">
@@ -233,15 +244,18 @@ export default function Home() {
                                 </p>
                             </div>
 
-                            <div className="relative z-10 flex flex-col md:flex-row gap-8 w-full lg:w-auto">
-                                <div className="flex flex-col gap-2">
-                                    <span className="text-primary font-headline font-black text-4xl leading-none">FM/UL</span>
-                                    <span className="text-technical text-[10px] opacity-60">Sello de Integridad</span>
+                            <div className="relative z-10 flex flex-wrap gap-6 w-full lg:w-auto">
+                                <div className="flex items-center gap-4 px-6 py-4 bg-surface-container-low border border-outline-variant/20 hover:border-primary/30 transition-all cursor-crosshair">
+                                    <div className="flex flex-col gap-1">
+                                        <span className="text-primary font-headline font-black text-2xl leading-none">FM/UL</span>
+                                        <span className="text-technical text-[9px] font-bold opacity-60 uppercase tracking-widest">Sello de Integridad</span>
+                                    </div>
                                 </div>
-                                <div className="hidden md:block w-px h-12 bg-outline-variant/30"></div>
-                                <div className="flex flex-col gap-2">
-                                    <span className="text-primary font-headline font-black text-4xl leading-none">NFPA</span>
-                                    <span className="text-technical text-[10px] opacity-60">Estándar Global</span>
+                                <div className="flex items-center gap-4 px-6 py-4 bg-surface-container-low border border-outline-variant/20 hover:border-primary/30 transition-all cursor-crosshair">
+                                    <div className="flex flex-col gap-1">
+                                        <span className="text-primary font-headline font-black text-2xl leading-none">NFPA</span>
+                                        <span className="text-technical text-[9px] font-bold opacity-60 uppercase tracking-widest">Estándar Global</span>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
@@ -254,7 +268,7 @@ export default function Home() {
                 <div className="max-w-[1920px] mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
                         <div className="max-w-2xl">
-                            <span className="text-technical text-xs mb-6 block opacity-60">Federal Infrastructure Portfolio</span>
+                            <span className="text-technical text-xs mb-6 block opacity-60">Portafolio de Infraestructura Federal</span>
                             <h2 className="text-5xl md:text-7xl font-black text-primary font-headline uppercase leading-none tracking-tighter mb-4">
                                 Proyectos de <br /> Escala Nacional
                             </h2>
@@ -349,40 +363,67 @@ export default function Home() {
                             Potencia <br /> <span className="text-accent">Operativa Propia</span>
                         </h2>
                         <p className="text-on-primary-container text-xl md:text-2xl font-body leading-relaxed mb-12 max-w-2xl">
-                            Infraestructura técnica sin dependencia de terceros. Flota pesada Bobcat, plataformas Mantall y tecnología Hilti para una ejecución sin interrupciones.
+                            Garantizamos el cumplimiento de plazos mediante una gestión de recursos 100% interna. Nuestra infraestructura técnica nos permite operar con total independencia, asegurando la excelencia en proyectos de alta complejidad.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                             <div className="flex gap-5 items-start">
                                 <div className="w-12 h-12 bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
-                                    <span className="material-symbols-outlined text-accent text-2xl">precision_manufacturing</span>
+                                    <span className="material-symbols-outlined text-accent text-2xl">local_shipping</span>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <span className="text-white font-headline font-bold uppercase tracking-widest text-xs">M+50 Unidades</span>
-                                    <span className="text-on-primary-container text-[11px] uppercase tracking-widest">Logística de Despliegue</span>
+                                    <span className="text-white font-headline font-bold uppercase tracking-widest text-xs">Logística Federal</span>
+                                    <span className="text-on-primary-container text-[11px] uppercase tracking-widest">Despliegue nacional propio</span>
                                 </div>
                             </div>
                             <div className="flex gap-5 items-start">
                                 <div className="w-12 h-12 bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
-                                    <span className="material-symbols-outlined text-accent text-2xl">construction</span>
+                                    <span className="material-symbols-outlined text-accent text-2xl">verified_user</span>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <span className="text-white font-headline font-bold uppercase tracking-widest text-xs">100% Autonomía</span>
-                                    <span className="text-on-primary-container text-[11px] uppercase tracking-widest">Control de Calidad Final</span>
+                                    <span className="text-white font-headline font-bold uppercase tracking-widest text-xs">Control Técnico</span>
+                                    <span className="text-on-primary-container text-[11px] uppercase tracking-widest">Garantía de ejecución</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-6">
-                        <div className="group bg-white/5 backdrop-blur-sm border border-white/10 p-10 md:p-14 hover:bg-white/10 transition-all duration-500">
-                            <span className="text-federal text-6xl md:text-8xl text-white block mb-6 transition-transform group-hover:scale-105 duration-500">100%</span>
-                            <span className="text-technical text-xs uppercase opacity-70 text-white">Ejecución <br /> Directa</span>
-                        </div>
-                        <div className="group bg-white/5 backdrop-blur-sm border border-white/10 p-10 md:p-14 hover:bg-white/10 transition-all duration-500 mt-12 md:mt-16">
-                            <span className="text-federal text-6xl md:text-8xl text-accent block mb-6 transition-transform group-hover:scale-105 duration-500">FED</span>
-                            <span className="text-technical text-xs uppercase opacity-70 text-white/80">Escala de <br /> Alcance</span>
-                        </div>
+                    <div className="grid grid-cols-1 gap-4">
+                        {[
+                            {
+                                title: "Movimiento de Suelo",
+                                desc: "Flota pesada Bobcat para logística, excavación y nivelación.",
+                                icon: "engineering",
+                                brand: "BOBCAT"
+                            },
+                            {
+                                title: "Soluciones de Altura",
+                                desc: "Plataformas Mantall para montajes e instalaciones elevadas.",
+                                icon: "vertical_align_top",
+                                brand: "MANTALL"
+                            },
+                            {
+                                title: "Precisión Técnica",
+                                desc: "Tecnología Hilti para perforación, anclaje y demolición.",
+                                icon: "precision_manufacturing",
+                                brand: "HILTI"
+                            }
+                        ].map((item, idx) => (
+                            <motion.div
+                                key={idx}
+                                whileHover={{ x: 10 }}
+                                className="group bg-white/5 backdrop-blur-sm border border-white/10 p-8 flex items-center gap-8 hover:bg-white/10 transition-all duration-300"
+                            >
+                                <div className="w-16 h-16 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent transition-colors">
+                                    <span className="material-symbols-outlined text-white text-3xl group-hover:text-accent">{item.icon}</span>
+                                </div>
+                                <div className="flex flex-col gap-1">
+                                    <span className="text-accent font-technical text-[10px] tracking-[0.3em] font-bold uppercase">{item.brand}</span>
+                                    <h3 className="text-white text-xl font-headline font-black uppercase tracking-tight">{item.title}</h3>
+                                    <p className="text-on-primary-container text-xs opacity-60 font-body leading-tight max-w-xs">{item.desc}</p>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
