@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function Contact() {
+    const [priority, setPriority] = useState('Bajo');
     return (
         <>
             <main className="pt-20 bg-surface">
@@ -26,7 +28,7 @@ export default function Contact() {
                                 </h1>
                                 <div className="max-w-2xl border-l-4 border-accent pl-10 py-2">
                                     <p className="text-xl md:text-2xl text-on-primary-container font-body leading-relaxed opacity-80">
-                                        Active nuestro protocolo de consultoría técnica para nuevos proyectos o licitaciones federales.
+                                        Solicite asesoramiento técnico o presupuesto para nuevos proyectos de escala nacional.
                                     </p>
                                 </div>
                             </motion.div>
@@ -76,8 +78,8 @@ export default function Contact() {
                                                 <span className="material-symbols-outlined text-primary group-hover:text-white">call</span>
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-technical text-secondary/40 uppercase tracking-widest mb-1">Estado de Red</p>
-                                                <p className="text-2xl font-headline font-black text-primary group-hover:text-accent transition-colors">0341- 4480566</p>
+                                                <p className="text-[10px] font-technical text-secondary/40 uppercase tracking-widest mb-1">Línea Directa</p>
+                                                <p className="text-2xl font-headline font-black text-primary group-hover:text-primary/70 transition-colors">0341- 4480566</p>
                                             </div>
                                         </a>
                                         <a href="mailto:ricardobondino@gmail.com" className="flex items-center gap-8 group">
@@ -86,7 +88,7 @@ export default function Contact() {
                                             </div>
                                             <div>
                                                 <p className="text-[10px] font-technical text-secondary/40 uppercase tracking-widest mb-1">Correo Oficial</p>
-                                                <p className="text-2xl font-headline font-black text-primary group-hover:text-accent transition-colors">info@h2obras.com</p>
+                                                <p className="text-2xl font-headline font-black text-primary group-hover:text-primary/70 transition-colors">info@h2obras.com</p>
                                             </div>
                                         </a>
                                     </div>
@@ -151,7 +153,7 @@ export default function Contact() {
                                 >
                                     <h2 className="text-5xl md:text-7xl font-headline font-black text-white mb-10 tracking-tighter leading-none uppercase">SOLICITUD <br /> DE OBRA</h2>
                                     <p className="text-on-primary-container text-xl font-body leading-relaxed mb-12 opacity-80">
-                                        Nuestro equipo de ingeniería evaluará su solicitud en un plazo federal de 48 hs.
+                                        Nuestro equipo de ingeniería evaluará su solicitud en un plazo estimado de 48 hs.
                                     </p>
                                     <div className="space-y-6">
                                         <div className="flex items-center gap-4 text-white/40">

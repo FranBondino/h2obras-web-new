@@ -9,11 +9,11 @@ export default function Equipment() {
                     <div className="absolute inset-0 z-0">
                         <motion.img
                             initial={{ scale: 1.1, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 0.3 }}
+                            animate={{ scale: 1, opacity: 0.6 }}
                             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                            className="w-full h-full object-cover grayscale"
-                            data-alt="Close-up of a massive industrial excavator at a high-end construction site with cold blue atmospheric lighting and technical details"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuEJIyi0KlXHGt7DY0cZJVgJFBYGaxz6t38fueyfnmhRvylXyvyOBlcMGK-9KUGu4dsJ8A2wlHSfXn3-Jrqc0J_XK_nS3zLi2ds0rE9h9VGRU2KCeMczOSAgTGfuCU254aeg44GhEiCslxUgoxxjiSP-Pa5XGhT8cf-t83plKxAgvFq0W3WXQZqlZs2peEelzcaqhWTfqZGXZJFjZ1fehhCXWoOfynLId1t9K4s7JCcxvkuuiF-WQM4ErJjUBJK4vQJ7n_MxVxBT4"
+                            className="w-full h-full object-cover"
+                            style={{ filter: 'brightness(0.8) contrast(1.1) saturate(0.9)' }}
+                            src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecb?q=80&w=2070&auto=format&fit=crop"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
                         <div className="absolute inset-0 technical-grid opacity-10"></div>
@@ -34,7 +34,7 @@ export default function Equipment() {
                                 </h1>
                                 <div className="max-w-2xl border-l-4 border-accent pl-10 py-2">
                                     <p className="text-xl md:text-2xl text-on-primary-container font-body leading-relaxed opacity-80">
-                                        Infraestructura, logística y maquinaria pesada de última generación. Garantizamos autonomía federal y excelencia en la ejecución sin subcontratación.
+                                        Infraestructura, logística y maquinaria pesada de última generación. Garantizamos autonomía operativa y excelencia en la ejecución sin subcontratación.
                                     </p>
                                 </div>
                             </motion.div>
@@ -59,7 +59,7 @@ export default function Equipment() {
                             <div className="flex items-center gap-6">
                                 <div className="text-right">
                                     <p className="text-[10px] font-technical text-primary/60 uppercase tracking-widest mb-1">Estado de Flota</p>
-                                    <p className="text-2xl font-headline font-black text-primary uppercase">OPERATIVO AL 100%</p>
+                                    <p className="text-2xl font-headline font-black text-primary uppercase">UNIDADES ACTIVAS</p>
                                 </div>
                                 <div className="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center">
                                     <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
@@ -73,8 +73,8 @@ export default function Equipment() {
                                 whileHover={{ y: -10 }}
                                 className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
                             >
-                                <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent transition-colors">
-                                    <span className="material-symbols-outlined text-white text-3xl">precision_manufacturing</span>
+                                <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-on-accent transition-colors">
+                                    <span className="material-symbols-outlined text-white text-3xl group-hover:text-on-accent">precision_manufacturing</span>
                                 </div>
                                 <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Movimiento <br /> de Suelos</h3>
                                 <ul className="space-y-6 mb-12">
@@ -102,8 +102,8 @@ export default function Equipment() {
                                 whileHover={{ y: -10 }}
                                 className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
                             >
-                                <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent transition-colors">
-                                    <span className="material-symbols-outlined text-white text-3xl">height</span>
+                                <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-on-accent transition-colors">
+                                    <span className="material-symbols-outlined text-white text-3xl group-hover:text-on-accent">height</span>
                                 </div>
                                 <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Trabajos <br /> en Altura</h3>
                                 <ul className="space-y-6 mb-12">
@@ -131,8 +131,8 @@ export default function Equipment() {
                                 whileHover={{ y: -10 }}
                                 className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
                             >
-                                <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent transition-colors">
-                                    <span className="material-symbols-outlined text-white text-3xl">architecture</span>
+                                <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-on-accent transition-colors">
+                                    <span className="material-symbols-outlined text-white text-3xl group-hover:text-on-accent">architecture</span>
                                 </div>
                                 <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Perforación <br /> Estratégica</h3>
                                 <ul className="space-y-6 mb-12">
@@ -289,16 +289,16 @@ export default function Equipment() {
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 1 }}
                         >
-                            <h2 className="text-5xl md:text-8xl font-headline font-black text-primary mb-12 uppercase tracking-tighter leading-[0.85]">
+                            <h2 className="text-5xl md:text-8xl font-headline font-black text-white mb-12 uppercase tracking-tighter leading-[0.85]">
                                 INFRAESTRUCTURA <br /> PARA GRANDES <br /> VISIONES
                             </h2>
-                            <p className="text-xl md:text-2xl text-primary/70 mb-16 max-w-3xl mx-auto font-body leading-relaxed">
+                            <p className="text-xl md:text-2xl text-on-primary-container mb-16 max-w-3xl mx-auto font-body leading-relaxed">
                                 Poseemos el herramental y el expertise táctico para transformar desafíos técnicos en activos operativas de alto rendimiento.
                             </p>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="px-16 py-8 bg-primary text-white font-headline font-black text-xl uppercase tracking-[0.2em] shadow-2xl hover:bg-accent transition-all duration-300"
+                                className="px-16 py-8 bg-primary text-white font-headline font-black text-xl uppercase tracking-[0.2em] shadow-2xl hover:bg-accent hover:text-on-accent transition-all duration-300"
                             >
                                 Solicitar Cotización
                             </motion.button>

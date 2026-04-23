@@ -30,15 +30,16 @@ export default function Home() {
             <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-primary p-0">
                 <motion.div style={{ y, opacity, scale }} className="absolute inset-0 z-0">
                     <img
-                        className="w-full h-full object-cover mix-blend-overlay"
-                        data-alt="dramatic wide shot of a massive industrial construction site with steel girders and heavy machinery under a moody deep teal and blue twilight sky"
-                        src="/h2obras-web-new/hero_original_hd.jpg"
+                        className="w-full h-full object-cover"
+                        style={{ filter: 'brightness(0.85) contrast(1.15) saturate(1.05)' }}
+                        data-alt="Aeropuerto Internacional Rosario - obra en ejecución"
+                        src="/h2obras-web-new/aerop.png"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-tr from-primary via-primary/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-primary/60 via-primary/10 to-transparent"></div>
                     <motion.div style={{ rotate: gridRotate }} className="absolute inset-0 technical-grid opacity-20"></motion.div>
                 </motion.div>
 
-                <div className="relative z-10 w-full px-6 md:px-12 grid md:grid-cols-12 gap-8 items-end pb-24 pt-32">
+                <div className="relative z-10 container mx-auto px-8 md:px-24 grid md:grid-cols-12 gap-8 items-end pb-24 pt-32">
                     <motion.div
                         variants={staggerContainer}
                         initial="hidden"
@@ -83,11 +84,11 @@ export default function Home() {
                         transition={{ delay: 0.5, duration: 1 }}
                         className="md:col-span-2 lg:col-span-3 hidden md:block text-right pb-4 border-r border-white/10 pr-6"
                     >
-                        <span className="text-white/40 text-[10px] tracking-[0.4em] uppercase block mb-3 font-technical">Reg. S-Infrastructure</span>
+
                         <span className="text-white text-xs font-technical leading-loose opacity-60">
-                            COORD: 32.94°S 60.63°W <br />
-                            SCALE: NATIONAL <br />
-                            OP: FEDERAL_SEC
+                            Sede Rosario <br />
+                            Sede CABA <br />
+                            Alcance Nacional
                         </span>
                     </motion.div>
                 </div>
@@ -118,7 +119,7 @@ export default function Home() {
                         <span className="text-readout">Protección FM/UL</span>
                     </motion.div>
                     <motion.div variants={fadeUpVariant} className="flex flex-col gap-3 group">
-                        <span className="text-primary text-5xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">+50</span>
+                        <span className="text-primary text-5xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">+30</span>
                         <div className="h-px bg-outline-variant/30 w-full group-hover:bg-accent/50 transition-all duration-500"></div>
                         <span className="text-readout">Obras Ejecutadas</span>
                     </motion.div>
@@ -137,8 +138,8 @@ export default function Home() {
                     >
                         <motion.div variants={fadeUpVariant} className="max-w-4xl">
                             <div className="w-24 h-2 bg-primary mb-12"></div>
-                            <h2 className="text-6xl md:text-8xl font-black text-primary font-headline uppercase tracking-tighter mb-8 leading-[0.85]">
-                                Matriz de <br /> <span className="opacity-40">Especialidades</span>
+                            <h2 className="text-6xl md:text-8xl font-black text-primary font-headline uppercase tracking-tighter mb-8 leading-[0.85] group-hover:text-secondary transition-colors duration-300">
+                                Matriz de <br /> <span className="opacity-40 font-outline">Especialidades</span>
                             </h2>
                             <p className="text-secondary text-xl md:text-2xl font-body leading-relaxed max-w-2xl opacity-80">
                                 Un enfoque integral que abarca desde el diseño ejecutivo hasta la puesta en marcha de sistemas críticos.
@@ -156,13 +157,13 @@ export default function Home() {
                             className="lg:col-span-8 bg-surface-container-low p-10 md:p-16 flex flex-col justify-between group relative overflow-hidden border border-outline-variant/10 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
                         >
                             <div className="absolute top-0 right-0 p-8">
-                                <span className="text-primary/5 font-headline font-black text-[180px] leading-none select-none">01</span>
+                                <span className="text-primary/30 font-headline font-black text-[180px] leading-none select-none">01</span>
                             </div>
 
                             <div className="relative z-10">
                                 <h3 className="text-4xl md:text-5xl font-black text-primary font-headline uppercase tracking-tighter mb-8">Sanitarias <br /> &amp; Gas</h3>
                                 <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mb-12 font-body leading-relaxed opacity-90">
-                                    Instalaciones de gran envergadura y saneamiento federal de alta complejidad para entornos hospitalarios e industriales.
+                                    Instalaciones de gran envergadura y saneamiento de alta complejidad para entornos hospitalarios e industriales.
                                 </p>
                             </div>
 
@@ -173,7 +174,7 @@ export default function Home() {
                                     </div>
                                     <div className="flex flex-col gap-1">
                                         <span className="text-primary font-headline font-bold text-lg uppercase tracking-tight leading-none">Saneamiento Integral</span>
-                                        <span className="text-technical text-[9px] opacity-60">Infraestructura Federal</span>
+                                        <span className="text-technical text-[9px] opacity-60">Infraestructura Nacional</span>
                                     </div>
                                 </div>
                                 <div className="p-8 bg-white dark:bg-primary-container flex items-center gap-6 group/item hover:bg-accent/5 transition-colors">
@@ -230,7 +231,7 @@ export default function Home() {
                             className="lg:col-span-12 bg-surface-container-lowest p-10 md:p-16 border border-outline-variant/10 flex flex-col lg:flex-row justify-between items-end group relative overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
                         >
                             <div className="absolute top-0 right-0 p-8">
-                                <span className="text-primary/5 font-headline font-black text-[180px] leading-none select-none">03</span>
+                                <span className="text-primary/30 font-headline font-black text-[180px] leading-none select-none">03</span>
                             </div>
                             <div className="relative z-10 max-w-3xl mb-12 lg:mb-0">
                                 <div className="flex items-center gap-6 mb-8 group">
@@ -268,7 +269,7 @@ export default function Home() {
                 <div className="max-w-[1920px] mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
                         <div className="max-w-2xl">
-                            <span className="text-technical text-xs mb-6 block opacity-60">Portafolio de Infraestructura Federal</span>
+                            <span className="text-technical text-xs mb-6 block opacity-60">Portafolio de Obras e Infraestructura</span>
                             <h2 className="text-5xl md:text-7xl font-black text-primary font-headline uppercase leading-none tracking-tighter mb-4">
                                 Proyectos de <br /> Escala Nacional
                             </h2>
@@ -333,7 +334,7 @@ export default function Home() {
                                         <span className="text-secondary font-headline font-bold text-[10px] uppercase tracking-widest opacity-60">{proj.meta}</span>
                                         <div className="w-12 h-px bg-outline-variant/30"></div>
                                     </div>
-                                    <h3 className="text-2xl font-headline font-bold uppercase text-primary mb-6 transition-colors group-hover:text-accent duration-300">{proj.title}</h3>
+                                    <h3 className="text-2xl font-headline font-bold uppercase text-primary mb-6 transition-colors group-hover:text-secondary duration-300">{proj.title}</h3>
                                     <div className="flex justify-between items-center py-4 border-t border-outline-variant/10">
                                         <span className="text-[10px] font-technical uppercase text-primary/40 tracking-[0.4em]">VER FICHA TÉCNICA</span>
                                         <span className="text-xs font-headline font-extrabold text-primary uppercase">{proj.size}</span>

@@ -224,35 +224,116 @@ const allProjectsData = [
         client: "RIVA S.A.",
         contact: "Año 1999"
     },
-    {
-        id: 'h7',
-        title: 'Estación Elevadora Aguadas',
-        category: 'Infraestructura',
-        location: 'Funes, Santa Fe',
-        specs: 'Bombas Grundfos',
-        status: 'Historico',
-        fullSpecs: ["Obra completa de Estación Elevadora", "Electromecánica y Cañería de impulsión", "Instalación de Bombas Grundfos", "Sistema de Izaje y Reja Mecánica"],
-        client: "ASSA S.A.",
-        contact: "Ing. Oscar Benvenuto"
-    },
-    { id: 'h8', title: 'Torres Dolfines Guaraní', category: 'Residencial de Alta Gama', location: 'Rosario', specs: 'Presurización 40 Pisos', status: 'Historico' },
-    { id: 'h9', title: 'Edificio Corporativo Sancor', category: 'Sustentable (LEED)', location: 'Sunchales', specs: 'Reutilización Pluvial', status: 'Historico' },
-    { id: 'h10', title: 'Hospital de Emergencias (HECA)', category: 'Salud', location: 'Rosario', specs: 'Emergencias Hidrosanitarias', status: 'Historico' },
-    { id: 'h11', title: 'Quilmes Cervecería', category: 'Industrial', location: 'Zárate', specs: 'Procesos de Frio', status: 'Historico' },
-    { id: 'h12', title: 'Polo Tecnológico Zona Sur', category: 'Institucional', location: 'Rosario', specs: 'Red de Enfriamiento', status: 'Historico' },
-    { id: 'h13', title: 'Juzgados Federales', category: 'Institucional', location: 'San Lorenzo', specs: 'Sistema Integral', status: 'Historico' },
-
-    { id: 'h15', title: 'Centro Comercial Alto Rosario', category: 'Comercial', location: 'Rosario', specs: 'Red Contra Incendios', status: 'Historico' },
-    { id: 'h16', title: 'Aeropuerto de Córdoba', category: 'Aeropuertos', location: 'Córdoba', specs: 'Motobombas NFPA', status: 'Historico' },
+    { id: 'h7', title: 'Estación Elevadora Aguadas', category: 'Infraestructura', location: 'Funes, Santa Fe', specs: 'Bombas Grundfos', status: 'Historico', fullSpecs: ["Obra completa de Estación Elevadora", "Electromecánica y Cañería de impulsión", "Instalación de Bombas Grundfos", "Sistema de Izaje y Reja Mecánica"], client: "ASSA S.A.", contact: "Ing. Oscar Benvenuto" },
     { id: 'h17', title: 'Planta de Biogas', category: 'Sustentable (LEED)', location: 'Venado Tuerto', specs: 'Saneamiento Total', status: 'Historico' },
-    { id: 'h18', title: 'Sanatorio de Niños', category: 'Salud', location: 'Rosario', specs: 'Neonatología Gases', status: 'Historico' },
-    { id: 'h19', title: 'Complejo Fórum Puerto Norte', category: 'Residencial de Alta Gama', location: 'Rosario', specs: 'Redes Termomecánicas', status: 'Historico' },
-    { id: 'h20', title: 'Planta General Motors', category: 'Industrial', location: 'Alvear', specs: 'Líneas de Presión', status: 'Historico' },
-    { id: 'h21', title: 'Edificio Aduana', category: 'Institucional', location: 'Rosario', specs: 'Restauración Sanitaria', status: 'Historico' },
-    { id: 'h22', title: 'Planta Cargill', category: 'Industrial', location: 'Puerto San Martín', specs: 'Sistemas Antiexplosión', status: 'Historico' },
-    { id: 'h23', title: 'Ciudad Judicial', category: 'Institucional', location: 'Santa Fe', specs: 'Ingeniería Sanitaria Compleja', status: 'Historico' },
-    { id: 'h24', title: 'Terminal Puerto Rosario', category: 'Industrial', location: 'Rosario', specs: 'Redes Hídricas Acero', status: 'Historico' },
-    { id: 'h25', title: 'Hospital Iturraspe', category: 'Salud', location: 'Santa Fe', specs: 'Arquitectura Hospitalaria', status: 'Historico' }
+    { id: 'h25', title: 'Hospital Iturraspe', category: 'Salud', location: 'Santa Fe', specs: 'Arquitectura Hospitalaria', status: 'Historico' },
+    {
+        id: 'h26',
+        title: 'PROYECTO FACA (FOSTER + PARTNERS)',
+        category: 'Industrial',
+        location: 'Rosario',
+        specs: 'Masterplan Maqueta',
+        status: 'Historico',
+        fullSpecs: ["MASTERPLAN MAQUETA - Barrancas del río Paraná", "3D PIPING SALA DE MAQUINAS MANZANAS C-D", "Proyecto de Instalación Sanitaria, Gas, Incendio, Riego y Piscinas"],
+        client: "TGLT"
+    },
+    {
+        id: 'h27',
+        title: 'Recoleta’s House',
+        category: 'Residencial de Alta Gama',
+        location: 'CABA',
+        specs: 'Dirección de Obra',
+        status: 'Historico',
+        fullSpecs: ["Ayacucho y Pacheco de Melo - Capital Federal", "Proyecto ejecutivo y Dirección de obra", "Instalaciones sanitarias, gas e incendio"],
+        client: "ESTUDIO SANCHEZ ELIA & ASOCIADOS"
+    },
+    {
+        id: 'h28',
+        title: 'Teatro Argentino de La Plata',
+        category: 'Institucional',
+        location: 'La Plata',
+        specs: 'Superficie 60.000 m2',
+        status: 'Historico',
+        fullSpecs: ["Calle 51 y 10 La Plata", "Gerenciamiento de Proyecto y Dirección de obra", "Instalaciones sanitarias y de incendio", "Año 1999"]
+    },
+    {
+        id: 'h29',
+        title: 'Hospital Blas Dubarry',
+        category: 'Salud',
+        location: 'Mercedes, BS.AS.',
+        specs: 'Sanidad Institucional',
+        status: 'Historico',
+        fullSpecs: ["Mercedes - Provincia de Buenos Aires", "Proyecto de Instalaciones Sanitarias, Gas e Incendio"],
+        client: "ELEPRINT S.A."
+    },
+    {
+        id: 'h30',
+        title: 'Distrito Sur / Noroeste',
+        category: 'Institucional',
+        location: 'Rosario',
+        specs: 'Centros Municipales',
+        status: 'Historico',
+        fullSpecs: ["Centro Municipal Distrito Sur y Distrito Noroeste", "Reproyecto de instalaciones sanitarias, gas e incendio", "Cloacas, pluviales y red de agua"],
+        client: "PECAM S.A. / ESTUDIO BECHIS"
+    },
+    {
+        id: 'h31',
+        title: 'Condominios del Alto',
+        category: 'Residencial de Alta Gama',
+        location: 'Rosario',
+        specs: 'Etapas I, II y III',
+        status: 'Historico',
+        fullSpecs: ["Asesoramiento para proyecto ejecutivo", "Instalaciones Sanitarias, Incendio, Riego y Piscina", "Proyecto aprobado de Regulación Pluvial"]
+    },
+    {
+        id: 'h32',
+        title: 'Hotel Esplendor Savoy',
+        category: 'Residencial de Alta Gama',
+        location: 'Rosario',
+        specs: 'Ampliación 2da Etapa',
+        status: 'Historico',
+        fullSpecs: ["San Lorenzo esq. San Martín - Rosario", "Instalación sanitaria y servicios contra incendio", "Ventilaciones ambientales y Gas", "Instalación de equipamiento gastronómico", "Sistema de filtrado e hidroterapia en piscina"]
+    },
+    {
+        id: 'h33',
+        title: 'Estadio N.O.B. Independencia',
+        category: 'Institucional',
+        location: 'Rosario',
+        specs: 'Redes de Alta Presión',
+        status: 'Historico',
+        fullSpecs: ["Estadio Parque Independencia - Newell's Old Boys", "Red Cloacal y Desagües pluviales", "Instalaciones Sanitarias, Gas e Incendio"],
+        client: "CLUB ATLÉTICO NEWELL´S OLD BOYS"
+    },
+    {
+        id: 'h34',
+        title: 'Complejo Bella Vista (NOB)',
+        category: 'Institucional',
+        location: 'Rosario',
+        specs: 'Riego Presurizado',
+        status: 'Historico',
+        fullSpecs: ["Proyecto y Dirección", "Instalación sanitaria y gas en vestuarios", "Sistema de riego presurizado automático en canchas de entrenamiento"],
+        client: "CLUB ATLÉTICO NEWELL´S OLD BOYS"
+    },
+    {
+        id: 'h35',
+        title: 'La Gallega Supermercados',
+        category: 'Comercial',
+        location: 'Rosario',
+        specs: 'Sistemas Hidroneumáticos',
+        status: 'Historico',
+        fullSpecs: ["Sucursales: Mitre y Pellegrini, Balcarce 240, Mendoza 7000", "Instalación sanitaria, gas e incendio", "Provisión y montaje de equipos hidroneumáticos"],
+        client: "LA GALLEGA S.A."
+    },
+    {
+        id: 'h36',
+        title: 'Hipermercado Libertad',
+        category: 'Comercial',
+        location: 'Rosario',
+        specs: 'Nave de 20.000 m2',
+        status: 'Historico',
+        fullSpecs: ["Oroño 5960 - Rosario", "Instalación Sanitaria y Gas", "Proyecto de desagües pluviales exteriores y red de impulsión cloacal", "Año 2000"],
+        client: "LIBERTAD S.A."
+    }
 ];
 
 const categories = [
@@ -305,7 +386,7 @@ function ProjectCard({ project, onClick }) {
                         {location}
                     </span>
                 </div>
-                <h3 className="text-2xl font-headline font-black uppercase text-primary mb-6 leading-tight group-hover:text-accent transition-colors duration-300">
+                <h3 className="text-2xl font-headline font-black uppercase text-primary mb-6 leading-tight group-hover:text-secondary transition-colors duration-300">
                     {title}
                 </h3>
                 <div className="space-y-4 border-t border-outline-variant/10 pt-6">
@@ -408,7 +489,7 @@ function ProjectDetailModal({ project, onClose }) {
                             </div>
                             <div className="border-l-2 border-outline-variant/20 pl-6">
                                 <p className="text-[10px] uppercase font-bold text-primary/60 tracking-[0.2em] mb-2">Entidad / Cliente</p>
-                                <p className="text-sm font-headline font-extrabold text-primary uppercase">{project.client || "Consolidado Federal"}</p>
+                                <p className="text-sm font-headline font-extrabold text-primary uppercase">{project.client || "Consolidado Nacional"}</p>
                             </div>
                         </div>
 
@@ -489,7 +570,7 @@ export default function Portfolio() {
                     <div className="px-2 mb-10">
                         <div className="w-8 h-1 bg-accent mb-6"></div>
                         <h3 className="text-xl font-headline font-black text-primary uppercase tracking-tighter">Matriz de Obras</h3>
-                        <p className="text-[10px] text-primary/60 tracking-[0.3em] uppercase font-technical mt-1">Estrategia Federal de Infraestructura</p>
+                        <p className="text-[10px] text-primary/60 tracking-[0.3em] uppercase font-technical mt-1">Estrategia de Infraestructura Nacional</p>
                     </div>
                     <nav className="flex flex-col space-y-1 relative">
                         {categories.map(cat => {
@@ -530,18 +611,23 @@ export default function Portfolio() {
                 {/* Main Content Area */}
                 <main ref={mainContentRef} className="flex-1 max-w-full overflow-hidden bg-surface">
                     {/* Hero Banner */}
-                    <section className="relative min-h-[450px] md:h-[600px] bg-primary flex items-center px-8 md:px-24 py-24 md:py-0 overflow-hidden">
+                    <section className="relative min-h-[450px] md:h-[600px] bg-primary flex items-center py-24 md:py-0 overflow-hidden">
                         <motion.div
                             initial={{ scale: 1.1, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 0.3 }}
+                            animate={{ scale: 1, opacity: 0.7 }}
                             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                            className="absolute inset-0 mix-blend-overlay"
+                            className="absolute inset-0"
                         >
-                            <img alt="Industrial construction" className="w-full h-full object-cover scale-105" data-alt="dramatic wide angle shot of a large scale civil engineering project site with steel structures and heavy machinery at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVgnCcJOXJbS1CPKSLW2YY7rrCKvOGonDzDLZKh99l1PWKa8CULPPUz0axyy9_XHd6EHNiiqId32pHdTyCNpAZ9aQlIS1cq_BRPUdwlRr7n1cJVdIncH7WmfO_N5-pSB0cihPmC0xrcQaY-gTgwH2ONESYYyekuTUWFlZekTQiSmD9rr_KLnzeynpzQnLIPydQuw6fX4bFXJ3BO3so6vu9E9Er3rUE543iyaiG1FAO7GyR3zamgefvhxL8LQwR5KLwZMsolOr_TehX" />
+                            <img
+                                alt="Industrial construction"
+                                className="w-full h-full object-cover scale-105"
+                                style={{ filter: 'brightness(0.7) contrast(1.1) saturate(0.8)' }}
+                                src="https://images.unsplash.com/photo-1541888941259-7b9d9218d0bc?q=80&w=2070&auto=format&fit=crop"
+                            />
                         </motion.div>
                         <div className="absolute inset-0 technical-grid opacity-20"></div>
 
-                        <div className="relative z-10 max-w-5xl">
+                        <div className="container mx-auto px-8 md:px-24 relative z-10">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={selectedCategory}
@@ -581,7 +667,7 @@ export default function Portfolio() {
                                         <p className="text-primary/70 font-label uppercase tracking-widest text-xs mt-2">Estado de Ejecución Activa: Octubre 2025</p>
                                     </div>
                                     <div className="text-right hidden md:block">
-                                        <span className="text-6xl font-headline font-black text-primary-container/10">01</span>
+                                        <span className="text-6xl font-headline font-black text-primary-container/40">01</span>
                                     </div>
                                 </div>
                                 <motion.div

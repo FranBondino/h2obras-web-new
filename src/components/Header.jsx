@@ -25,14 +25,14 @@ export default function Header() {
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
             className="fixed top-0 w-full z-50 machined-glass"
         >
-            <div className="flex justify-between items-center px-6 md:px-12 h-28 max-w-[1920px] mx-auto">
+            <div className="container mx-auto px-8 md:px-24 h-28 flex justify-between items-center">
                 {/* Logo Section */}
                 <Link to="/" className="flex items-center">
-                    <div className="h-16 md:h-20 w-[300px] md:w-[500px] flex items-center justify-start overflow-hidden relative group">
+                    <div className="h-16 md:h-20 w-[220px] md:w-[320px] flex items-center justify-start overflow-hidden relative group">
                         <img
                             src="/h2obras-web-new/logoh2o_new.png"
                             alt="H2O Obras"
-                            className="h-[350px] md:h-[400px] w-auto max-w-none object-contain absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 md:-translate-x-8 dark:brightness-0 dark:invert transition-all duration-500 group-hover:scale-105"
+                            className="h-[350px] md:h-[400px] w-auto max-w-none object-contain absolute left-[-8px] md:left-[-12px] top-1/2 -translate-y-1/2 dark:brightness-0 dark:invert transition-all duration-500 group-hover:scale-105"
                             style={{
                                 imageRendering: 'crisp-edges',
                                 objectPosition: '0% 50%'
