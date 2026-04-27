@@ -54,25 +54,28 @@ export default function Home() {
                         </motion.div>
                         <motion.h1
                             variants={fadeUpVariant}
-                            className="text-white text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black font-headline uppercase mb-8 leading-[0.9] tracking-tighter"
+                            className="text-5xl md:text-7xl lg:text-8xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase"
                         >
-                            Ingeniería de valor <br /> <span className="text-accent">a nivel federal</span>
+                            Ingeniería de <br /> valor <br /> <span className="text-white/40">a nivel federal</span>
                         </motion.h1>
                         <motion.p
                             variants={fadeUpVariant}
-                            className="text-on-primary-container text-lg md:text-xl max-w-2xl font-body leading-relaxed mb-12"
+                            className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed font-body mb-12 font-medium"
                         >
                             Especialistas en proyecto y ejecución de obras e instalaciones, gas e incendio para obras de escala nacional y alta complejidad técnica.
                         </motion.p>
                         <motion.div variants={fadeUpVariant} className="flex flex-wrap gap-4">
-                            <Link to="/portfolio">
+                            <Link to="/portfolio" className="shimmer-container shimmer-trigger group">
                                 <motion.button
                                     whileHover={{ y: -2, backgroundColor: "var(--color-accent)", color: "var(--color-on-accent)" }}
                                     whileTap={{ scale: 0.98 }}
-                                    className="bg-white text-primary font-headline font-bold px-10 py-5 tracking-widest uppercase rounded-sm flex items-center gap-4 transition-all duration-300 group"
+                                    className="relative bg-white text-primary font-headline font-bold px-10 py-5 tracking-widest uppercase rounded-sm flex items-center gap-4 transition-all duration-300 overflow-hidden"
                                 >
-                                    Catálogo de Obras
-                                    <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    <span className="relative z-10 flex items-center gap-4">
+                                        Catálogo de Obras
+                                        <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </span>
+                                    <div className="shimmer-element"></div>
                                 </motion.button>
                             </Link>
                         </motion.div>
@@ -95,13 +98,13 @@ export default function Home() {
             </section>
 
             {/* Key Metrics Band - Technical Readouts */}
-            <section className="bg-surface-container-low border-y border-outline-variant/10 py-16 px-12 md:px-24">
+            <section className="py-20 md:py-24 bg-surface-container-low border-y border-outline-variant/10">
                 <motion.div
                     variants={staggerContainer}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-2 lg:grid-cols-4 gap-12 max-w-none w-full"
+                    className="grid grid-cols-2 lg:grid-cols-4 gap-12 max-w-none w-full px-12 md:px-24"
                 >
                     <motion.div variants={fadeUpVariant} className="flex flex-col gap-3 group">
                         <span className="text-primary text-5xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">+25A</span>
@@ -151,24 +154,23 @@ export default function Home() {
                         {/* Service 01: Sanitarias & Gas */}
                         <motion.div
                             variants={fadeUpVariant}
-                            initial="hidden"
-                            whileInView="visible"
+                            whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
                             viewport={{ once: true }}
-                            className="lg:col-span-8 bg-surface-container-low p-10 md:p-16 flex flex-col justify-between group relative overflow-hidden border border-outline-variant/10 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
+                            className="lg:col-span-8 bg-surface-container-low p-10 md:p-16 flex flex-col justify-between group relative overflow-hidden border border-outline-variant/10 shadow-sm transition-all duration-500"
                         >
                             <div className="absolute top-0 right-0 p-8">
-                                <span className="text-primary/30 font-headline font-black text-[180px] leading-none select-none">01</span>
+                                <span className="text-primary/10 font-headline font-black text-[180px] leading-none select-none group-hover:text-primary/20 transition-colors duration-500">01</span>
                             </div>
 
                             <div className="relative z-10">
-                                <h3 className="text-4xl md:text-5xl font-black text-primary font-headline uppercase tracking-tighter mb-8">Sanitarias <br /> &amp; Gas</h3>
+                                <h3 className="text-4xl md:text-5xl font-black text-primary font-headline uppercase tracking-tighter mb-8 group-hover:text-accent transition-colors duration-300">Sanitarias <br /> &amp; Gas</h3>
                                 <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mb-12 font-body leading-relaxed opacity-90">
                                     Instalaciones de gran envergadura y saneamiento de alta complejidad para entornos hospitalarios e industriales.
                                 </p>
                             </div>
 
                             <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 border border-outline-variant/10">
-                                <div className="p-8 bg-white dark:bg-primary-container flex items-center gap-6 group/item hover:bg-accent/5 transition-colors">
+                                <div className="p-8 bg-white flex items-center gap-6 group/item hover:bg-accent/5 transition-colors">
                                     <div className="w-12 h-12 border border-primary/10 flex items-center justify-center shrink-0 group-hover/item:border-accent group-hover/item:bg-accent transition-all duration-300">
                                         <span className="material-symbols-outlined text-primary group-hover/item:text-on-accent text-2xl">engineering</span>
                                     </div>
@@ -177,7 +179,7 @@ export default function Home() {
                                         <span className="text-technical text-[9px] opacity-60">Infraestructura Nacional</span>
                                     </div>
                                 </div>
-                                <div className="p-8 bg-white dark:bg-primary-container flex items-center gap-6 group/item hover:bg-accent/5 transition-colors">
+                                <div className="p-8 bg-white flex items-center gap-6 group/item hover:bg-accent/5 transition-colors">
                                     <div className="w-12 h-12 border border-primary/10 flex items-center justify-center shrink-0 group-hover/item:border-accent group-hover/item:bg-accent transition-all duration-300">
                                         <span className="material-symbols-outlined text-primary group-hover/item:text-on-accent text-2xl">grid_view</span>
                                     </div>
@@ -192,18 +194,17 @@ export default function Home() {
                         {/* Service 02: Sustentabilidad */}
                         <motion.div
                             variants={fadeUpVariant}
-                            initial="hidden"
-                            whileInView="visible"
+                            whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,22,42,0.3)" }}
                             viewport={{ once: true }}
-                            className="lg:col-span-4 bg-primary p-10 md:p-14 flex flex-col justify-between text-white relative overflow-hidden group shadow-xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-1"
+                            className="lg:col-span-4 bg-primary p-10 md:p-14 flex flex-col justify-between text-white relative overflow-hidden group transition-all duration-500"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-container z-0 opacity-90"></div>
                             <div className="absolute inset-0 technical-grid opacity-10"></div>
 
                             <div className="relative z-10">
-                                <span className="text-white/10 font-headline font-black text-9xl leading-none block mb-8">02</span>
-                                <h3 className="text-4xl font-headline font-black uppercase mb-8 tracking-tighter leading-none">Termodinámica <br /> &amp; LEED</h3>
-                                Ecoeficiencia hídrica y procesos térmicos diseñados bajo rigurosas normativas de certificación sustentable.
+                                <span className="text-white/10 font-headline font-black text-9xl leading-none block mb-8 group-hover:text-white/20 transition-colors duration-500">02</span>
+                                <h3 className="text-4xl font-headline font-black uppercase mb-8 tracking-tighter leading-none group-hover:text-accent transition-colors duration-300">Termodinámica <br /> &amp; LEED</h3>
+                                <p className="opacity-80 group-hover:opacity-100 transition-opacity">Ecoeficiencia hídrica y procesos térmicos diseñados bajo rigurosas normativas de certificación sustentable.</p>
                             </div>
 
                             <div className="relative z-10 space-y-4">
@@ -225,20 +226,19 @@ export default function Home() {
                         {/* Service 03: Contra Incendio */}
                         <motion.div
                             variants={fadeUpVariant}
-                            initial="hidden"
-                            whileInView="visible"
+                            whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
                             viewport={{ once: true }}
-                            className="lg:col-span-12 bg-surface-container-lowest p-10 md:p-16 border border-outline-variant/10 flex flex-col lg:flex-row justify-between items-end group relative overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
+                            className="lg:col-span-12 bg-surface-container-lowest p-10 md:p-16 border border-outline-variant/10 flex flex-col lg:flex-row justify-between items-end group relative overflow-hidden transition-all duration-500"
                         >
                             <div className="absolute top-0 right-0 p-8">
-                                <span className="text-primary/30 font-headline font-black text-[180px] leading-none select-none">03</span>
+                                <span className="text-primary/10 font-headline font-black text-[180px] leading-none select-none group-hover:text-primary/20 transition-colors duration-500">03</span>
                             </div>
                             <div className="relative z-10 max-w-3xl mb-12 lg:mb-0">
-                                <div className="flex items-center gap-6 mb-8 group">
+                                <div className="flex items-center gap-6 mb-8 group/title">
                                     <div className="w-16 h-16 bg-primary flex items-center justify-center group-hover:bg-accent transition-colors duration-500">
                                         <span className="material-symbols-outlined text-white group-hover:text-on-accent text-3xl">local_fire_department</span>
                                     </div>
-                                    <h3 className="text-5xl md:text-6xl font-black font-headline text-primary uppercase tracking-tighter leading-none">Sistemas <br /> Contra Incendio</h3>
+                                    <h3 className="text-5xl md:text-6xl font-black font-headline text-primary uppercase tracking-tighter leading-none group-hover/title:text-accent transition-colors duration-300">Sistemas <br /> Contra Incendio</h3>
                                 </div>
                                 <p className="text-on-surface-variant text-xl font-body leading-relaxed max-w-2xl opacity-80">
                                     Implementación de redes de extinción bajo normativa NFPA. Salas de bombas certificadas FM/UL para logística aeroportuaria e industrial.
@@ -246,15 +246,15 @@ export default function Home() {
                             </div>
 
                             <div className="relative z-10 flex flex-wrap gap-6 w-full lg:w-auto">
-                                <div className="flex items-center gap-4 px-6 py-4 bg-surface-container-low border border-outline-variant/20 hover:border-primary/30 transition-all cursor-crosshair">
+                                <div className="flex items-center gap-4 px-6 py-4 bg-surface-container-low border border-outline-variant/20 hover:border-primary/30 transition-all cursor-crosshair group/seal">
                                     <div className="flex flex-col gap-1">
-                                        <span className="text-primary font-headline font-black text-2xl leading-none">FM/UL</span>
+                                        <span className="text-primary font-headline font-black text-2xl leading-none group-hover/seal:text-accent transition-colors">FM/UL</span>
                                         <span className="text-technical text-[9px] font-bold opacity-60 uppercase tracking-widest">Sello de Integridad</span>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-4 px-6 py-4 bg-surface-container-low border border-outline-variant/20 hover:border-primary/30 transition-all cursor-crosshair">
+                                <div className="flex items-center gap-4 px-6 py-4 bg-surface-container-low border border-outline-variant/20 hover:border-primary/30 transition-all cursor-crosshair group/seal">
                                     <div className="flex flex-col gap-1">
-                                        <span className="text-primary font-headline font-black text-2xl leading-none">NFPA</span>
+                                        <span className="text-primary font-headline font-black text-2xl leading-none group-hover/seal:text-accent transition-colors">NFPA</span>
                                         <span className="text-technical text-[9px] font-bold opacity-60 uppercase tracking-widest">Estándar Global</span>
                                     </div>
                                 </div>
@@ -347,7 +347,7 @@ export default function Home() {
             </section>
 
             {/* Operational Muscle Section */}
-            <section className="py-24 md:py-32 px-6 md:px-12 bg-primary relative overflow-hidden">
+            <section className="py-20 md:py-24 bg-primary relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         className="w-full h-full object-cover opacity-10 mix-blend-overlay grayscale"

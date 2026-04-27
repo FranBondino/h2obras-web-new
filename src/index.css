@@ -38,7 +38,7 @@
 
 @layer utilities {
   .machined-glass {
-    @apply bg-surface-container-lowest/80 backdrop-blur-xl border border-outline-variant;
+    @apply bg-surface-container-lowest/60 backdrop-blur-2xl border border-outline-variant/30 shadow-[0_8px_32px_rgba(0,0,0,0.08)];
   }
 
   .technical-grid {
@@ -74,11 +74,29 @@
   .glass-panel {
     background: linear-gradient(
       135deg, 
-      rgba(255, 255, 255, 0.05) 0%, 
-      rgba(255, 255, 255, 0) 100%
+      rgba(255, 255, 255, 0.08) 0%, 
+      rgba(255, 255, 255, 0.02) 100%
     );
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .shimmer-container {
+    @apply relative overflow-hidden;
+  }
+
+  .shimmer-trigger:hover .shimmer-element {
+    animation: shimmer 1.5s infinite;
+  }
+
+  .shimmer-element {
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full;
+    pointer-events: none;
   }
 }

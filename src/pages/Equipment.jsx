@@ -29,7 +29,7 @@ export default function Equipment() {
                                     <div className="w-16 h-1 bg-accent"></div>
                                     <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">Bienes de Uso</span>
                                 </div>
-                                <h1 className="text-5xl md:text-8xl lg:text-9xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase">
+                                <h1 className="text-4xl md:text-7xl lg:text-8xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase">
                                     CAPACIDAD <br /> OPERATIVA <br /> <span className="text-white/40">PROPIA</span>
                                 </h1>
                                 <div className="max-w-2xl border-l-4 border-accent pl-10 py-2">
@@ -70,8 +70,12 @@ export default function Equipment() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* Card 1: Heavy Machinery */}
                             <motion.div
-                                whileHover={{ y: -10 }}
-                                className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6 }}
+                                whileHover={{ y: -12, scale: 1.02 }}
+                                className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500 shadow-sm hover:shadow-2xl rounded-sm"
                             >
                                 <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-on-accent transition-colors">
                                     <span className="material-symbols-outlined text-white text-3xl group-hover:text-on-accent">precision_manufacturing</span>
@@ -99,8 +103,12 @@ export default function Equipment() {
 
                             {/* Card 2: Height Works */}
                             <motion.div
-                                whileHover={{ y: -10 }}
-                                className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6 }}
+                                whileHover={{ y: -12, scale: 1.02 }}
+                                className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500 shadow-sm hover:shadow-2xl rounded-sm"
                             >
                                 <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-on-accent transition-colors">
                                     <span className="material-symbols-outlined text-white text-3xl group-hover:text-on-accent">height</span>
@@ -128,8 +136,12 @@ export default function Equipment() {
 
                             {/* Card 3: Precise Drilling */}
                             <motion.div
-                                whileHover={{ y: -10 }}
-                                className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6 }}
+                                whileHover={{ y: -12, scale: 1.02 }}
+                                className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500 shadow-sm hover:shadow-2xl rounded-sm"
                             >
                                 <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-on-accent transition-colors">
                                     <span className="material-symbols-outlined text-white text-3xl group-hover:text-on-accent">architecture</span>
@@ -159,12 +171,12 @@ export default function Equipment() {
                 </section>
 
                 {/* Specialized Tech Modules */}
-                <section className="py-32 bg-primary text-white relative overflow-hidden">
+                <section className="py-20 md:py-24 bg-primary text-white relative overflow-hidden">
                     <div className="absolute inset-0 technical-grid opacity-10"></div>
                     <div className="container mx-auto px-8 md:px-24 relative z-10">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-32">
                             <div>
-                                <h2 className="text-5xl md:text-7xl font-headline font-black uppercase tracking-tighter leading-none mb-10">INGENIERÍA <br /> DE MONTAJE</h2>
+                                <h2 className="text-4xl md:text-6xl font-headline font-black uppercase tracking-tighter leading-none mb-10">INGENIERÍA <br /> DE MONTAJE</h2>
                                 <p className="text-white text-xl font-body leading-relaxed max-w-xl">
                                     Operamos con altos estándares de integridad técnica. Nuestra tecnología de soldadura y termofusión garantiza un rendimiento crítico en sistemas hidráulicos de alta presión.
                                 </p>
@@ -221,7 +233,7 @@ export default function Equipment() {
                 </section>
 
                 {/* Tactical Logistics */}
-                <section className="py-32 bg-surface">
+                <section className="py-20 md:py-24 px-6 md:px-12 bg-surface">
                     <div className="container mx-auto px-8 md:px-24">
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
                             <div className="lg:col-span-5 order-2 lg:order-1">

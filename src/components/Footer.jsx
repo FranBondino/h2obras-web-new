@@ -15,7 +15,7 @@ export default function Footer() {
                             <img
                                 src="/h2obras-web-new/logoh2o_new.png"
                                 alt="H2O Obras"
-                                className="h-32 md:h-44 w-auto object-contain dark:brightness-0 dark:invert transition-all duration-500 group-hover:scale-105"
+                                className="h-32 md:h-44 w-auto object-contain transition-all duration-500 group-hover:scale-105"
                                 style={{
                                     imageRendering: 'crisp-edges'
                                 }}
