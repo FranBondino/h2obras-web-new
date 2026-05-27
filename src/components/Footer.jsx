@@ -13,9 +13,9 @@ export default function Footer() {
                     <div className="md:col-span-1 space-y-10">
                         <div className="flex items-center justify-start transition-opacity hover:opacity-100 group">
                             <img
-                                src="/h2obras-web-new/logoh2o_clean.png"
+                                src="/h2obras-web-new/logoh2o_new.png"
                                 alt="H2O Obras"
-                                className="h-16 md:h-20 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+                                className="h-32 md:h-44 w-auto object-contain transition-all duration-500 group-hover:scale-105"
                                 style={{
                                     imageRendering: 'crisp-edges'
                                 }}

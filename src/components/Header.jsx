@@ -26,15 +26,18 @@ export default function Header() {
         >
             <div className="container mx-auto px-8 md:px-24 h-28 flex justify-between items-center">
                 {/* Logo Section */}
-                <Link to="/" className="flex items-center group">
-                    <img
-                        src="/h2obras-web-new/logoh2o_clean.png"
-                        alt="H2O Obras"
-                        className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105"
-                        style={{
-                            imageRendering: 'crisp-edges'
-                        }}
-                    />
+                <Link to="/" className="flex items-center">
+                    <div className="h-16 md:h-20 w-[240px] md:w-[320px] flex items-center justify-start overflow-hidden relative group">
+                        <img
+                            src="/h2obras-web-new/logoh2o_new.png"
+                            alt="H2O Obras"
+                            className="h-[300px] md:h-[400px] w-auto max-w-none object-contain absolute left-0 md:left-[-12px] top-1/2 -translate-y-1/2 transition-all duration-500 group-hover:scale-105"
+                            style={{
+                                imageRendering: 'crisp-edges',
+                                objectPosition: '0% 50%'
+                            }}
+                        />
+                    </div>
                 </Link>
 
                 {/* Right Container */}
