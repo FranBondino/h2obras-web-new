@@ -151,7 +151,7 @@ export default function Home() {
                         {/* Service 01: Sanitarias & Gas */}
                         <motion.div
                             variants={fadeUpVariant}
-                            whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
+                            whileHover={{ y: -4, boxShadow: "0 12px 30px rgba(0,0,0,0.06)", borderColor: "var(--color-accent)" }}
                             viewport={{ once: true }}
                             className="lg:col-span-8 bg-surface-container-low p-10 md:p-16 flex flex-col justify-between group relative overflow-hidden border border-outline-variant/10 shadow-sm transition-all duration-500"
                         >
@@ -191,9 +191,9 @@ export default function Home() {
                         {/* Service 02: Sustentabilidad */}
                         <motion.div
                             variants={fadeUpVariant}
-                            whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,22,42,0.3)" }}
+                            whileHover={{ y: -4, boxShadow: "0 12px 30px rgba(0,22,42,0.2)", borderColor: "var(--color-accent)" }}
                             viewport={{ once: true }}
-                            className="lg:col-span-4 bg-primary p-10 md:p-14 flex flex-col justify-between text-white relative overflow-hidden group transition-all duration-500"
+                            className="lg:col-span-4 bg-primary p-10 md:p-14 flex flex-col justify-between text-white relative overflow-hidden group border border-transparent transition-all duration-500"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-container z-0 opacity-90"></div>
                             <div className="absolute inset-0 technical-grid opacity-10"></div>
@@ -223,7 +223,7 @@ export default function Home() {
                         {/* Service 03: Contra Incendio */}
                         <motion.div
                             variants={fadeUpVariant}
-                            whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+                            whileHover={{ y: -4, boxShadow: "0 12px 30px rgba(0,0,0,0.05)", borderColor: "var(--color-accent)" }}
                             viewport={{ once: true }}
                             className="lg:col-span-12 bg-surface-container-lowest p-10 md:p-16 border border-outline-variant/10 flex flex-col lg:flex-row justify-between items-end group relative overflow-hidden transition-all duration-500"
                         >
@@ -314,13 +314,13 @@ export default function Home() {
                                 transition={{ delay: idx * 0.1 }}
                                 className="group cursor-pointer"
                             >
-                                <div className="aspect-[4/3] bg-surface-container-highest overflow-hidden mb-8 relative border border-outline-variant/10 shadow-sm">
+                                <div className="aspect-[4/3] bg-surface-container-highest overflow-hidden mb-8 relative border border-outline-variant/10 group-hover:border-accent transition-all duration-700 shadow-sm">
                                     <img
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        className="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
                                         src={proj.img}
                                         alt={proj.title}
                                     />
-                                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                                    <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                                 </div>
                                 <div className="px-2">
                                     <div className="flex justify-between items-center mb-3">

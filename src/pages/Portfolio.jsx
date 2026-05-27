@@ -203,8 +203,7 @@ const allProjectsData = [
         status: 'Historico',
         fullSpecs: ["HILTON GARDEN INN (Dique 2) y VIVIENDAS EN TORRE", "Proyecto de Instalaciones Sanitarias, Incendio, Riego y Piscinas", "Criterios sustentables y estándar de marca Hilton"],
         client: "DINALE S.A.",
-        contact: "Estudio Costa Valenzuela",
-        image: "/h2obras-web-new/portfolio/maui.png"
+        contact: "Estudio Costa Valenzuela"
     },
     {
         id: 'h5',
@@ -227,11 +226,9 @@ const allProjectsData = [
         status: 'Historico',
         fullSpecs: ["Gerenciamiento y Dirección de obra", "Instalaciones Sanitarias, Gas e Incendio", "Riego y Fuentes ornamentales", "Instalaciones especiales en Acero Inoxidable AISI304 con soldaduras TIG"],
         client: "RIVA S.A.",
-        contact: "Año 1999",
-        image: "/h2obras-web-new/portfolio/acuario.png"
+        contact: "Año 1999"
     },
     { id: 'h7', title: 'Estación Elevadora Aguadas', category: 'Sanitarias', location: 'Funes, Santa Fe', specs: 'Bombas Grundfos', status: 'Historico', fullSpecs: ["Obra completa de Estación Elevadora", "Electromecánica y Cañería de impulsión", "Instalación de Bombas Grundfos", "Sistema de Izaje y Reja Mecánica"], client: "ASSA S.A.", contact: "Ing. Oscar Benvenuto" },
-    { id: 'h17', title: 'Planta de Biogas', category: 'Especiales', location: 'Venado Tuerto', specs: 'Saneamiento Total', status: 'Historico' },
     { id: 'h25', title: 'Hospital Iturraspe', category: 'Sanitarias', location: 'Santa Fe', specs: 'Arquitectura Hospitalaria', status: 'Historico', image: "/h2obras-web-new/portfolio/itarruspe.png" },
     {
         id: 'h26',
@@ -567,7 +564,7 @@ export default function Portfolio() {
                                     onClick={() => setSelectedCategory(cat.id)}
                                     className={`relative flex items-center gap-4 py-3 px-4 w-full text-left transition-all duration-300 z-10 group ${isActive
                                         ? 'text-white'
-                                        : 'text-primary/60 hover:text-primary hover:pl-6'
+                                        : 'text-primary/60 hover:text-primary hover:pl-5'
                                         }`}
                                 >
                                     {isActive && (
@@ -812,7 +809,6 @@ export default function Portfolio() {
                                             <div className="space-y-2">
                                                 <div className="flex items-center gap-2 text-tertiary-fixed">
                                                     <span className="material-symbols-outlined">water_drop</span>
-                                                    <p className="text-[10px] font-technical text-white/40 uppercase tracking-widest mb-1">Ref. Operativa</p>
                                                     <span className="text-[10px] font-bold uppercase tracking-widest">Recuperación de Agua</span>
                                                 </div>
                                                 <p className="text-xs text-on-primary-container font-label">Eliminación avanzada de arsénico y recuperación pluvial.</p>
@@ -980,18 +976,18 @@ export default function Portfolio() {
                                         })
                                         .map(p => (
                                             <tr
-                                                key={p.id}
-                                                onClick={() => setActiveProject(p)}
-                                                className="border-b border-outline-variant/30 hover:bg-surface-container transition-colors cursor-pointer group"
-                                            >
-                                                <td className="py-4 font-bold text-primary group-hover:text-cyan-700">{p.title}</td>
-                                                <td className="py-4 text-primary/70">{p.category}</td>
-                                                <td className="py-4 text-primary/70">{p.location}</td>
-                                                <td className="py-4 md:flex items-center justify-between">
-                                                    <span className="text-[10px] font-black text-primary uppercase">{p.specs}</span>
-                                                    <span className="material-symbols-outlined text-xs text-outline opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
-                                                </td>
-                                            </tr>
+                                                 key={p.id}
+                                                 onClick={() => setActiveProject(p)}
+                                                 className="border-b border-outline-variant/20 hover:bg-surface-container-low/50 transition-colors cursor-pointer group"
+                                             >
+                                                 <td className="py-4 font-bold text-primary group-hover:text-cyan-700 transition-colors duration-300">{p.title}</td>
+                                                 <td className="py-4 text-primary/70">{p.category}</td>
+                                                 <td className="py-4 text-primary/70">{p.location}</td>
+                                                 <td className="py-4 md:flex items-center justify-between">
+                                                     <span className="text-[10px] font-technical font-bold text-primary/60 uppercase tracking-wider group-hover:text-primary transition-colors duration-300">{p.specs}</span>
+                                                     <span className="material-symbols-outlined text-xs text-outline opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                                                 </td>
+                                             </tr>
                                         ))
                                     }
                                 </tbody>

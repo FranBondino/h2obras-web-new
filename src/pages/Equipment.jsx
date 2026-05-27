@@ -27,7 +27,7 @@ export default function Equipment() {
                             >
                                 <div className="flex items-center gap-6 mb-8">
                                     <div className="w-16 h-1 bg-accent"></div>
-                                    <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">Bienes de Uso</span>
+                                    <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">Activos Técnicos</span>
                                 </div>
                                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase">
                                     CAPACIDAD <br /> OPERATIVA <br /> <span className="text-white/40">PROPIA</span>
@@ -83,15 +83,15 @@ export default function Equipment() {
                                 <ul className="space-y-6 mb-12">
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">01</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MINIRETRO BOBCAT E-26 <span className="block text-[10px] text-primary/60">S-SERIES V.2015</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MINIRETRO BOBCAT E-26 <span className="block text-[10px] text-primary/60">Serie S (2015)</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">02</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MINIPALA BOBCAT S450 <span className="block text-[10px] text-primary/60">ACCESSORIES Z.2017</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MINIPALA BOBCAT S450 <span className="block text-[10px] text-primary/60">Accesorios Especiales (2017)</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">03</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">VIBROAPISONADOR LISO <span className="block text-[10px] text-primary/60">SYSTEM P-CABRA 2020</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">VIBROAPISONADOR LISO <span className="block text-[10px] text-primary/60">Sistema Pata de Cabra (2020)</span></p>
                                     </li>
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
@@ -114,15 +114,15 @@ export default function Equipment() {
                                 <ul className="space-y-6 mb-12">
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">01</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">PLATAFORMA MANTALL <span className="block text-[10px] text-primary/60">MAX_REACH_16_MTS</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">PLATAFORMA MANTALL <span className="block text-[10px] text-primary/60">Alcance Máx: 16m</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">02</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">SISTEMA AUTOPROPULSADA <span className="block text-[10px] text-primary/60">V.SERIES 2018</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">SISTEMA AUTOPROPULSADA <span className="block text-[10px] text-primary/60">Serie V (2018)</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">03</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MONTAJES VERTICALES <span className="block text-[10px] text-primary/60">PRECISION_STABILIZED</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MONTAJES VERTICALES <span className="block text-[10px] text-primary/60">Estabilización de Precisión</span></p>
                                     </li>
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
@@ -145,15 +145,15 @@ export default function Equipment() {
                                 <ul className="space-y-6 mb-12">
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">01</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">HILTI D250 DIAMANTE <span className="block text-[10px] text-primary/60">REINFORCED_CONCRETE_SYS</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">HILTI D250 DIAMANTE <span className="block text-[10px] text-primary/60">Corte de Hormigón Armado</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">02</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">HILTI D160 PRECISION <span className="block text-[10px] text-primary/60">UP_TO_200MM_DIAM</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">HILTI D160 PRECISION <span className="block text-[10px] text-primary/60">Perforación hasta Ø 200mm</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">03</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">DEMOLICION Y ANCLAJES <span className="block text-[10px] text-primary/60">CHEMICAL_FASTENING_SYS</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">DEMOLICION Y ANCLAJES <span className="block text-[10px] text-primary/60">Anclajes Químicos de Alta Resistencia</span></p>
                                     </li>
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">

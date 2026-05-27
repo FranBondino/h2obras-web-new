@@ -6,9 +6,9 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const navLinkClass = ({ isActive }) =>
-        `font-headline font-bold uppercase tracking-tight text-sm transition-all duration-300 relative group px-2 ${isActive
+        `font-headline font-bold uppercase tracking-tight text-sm transition-all duration-300 relative group px-2 py-1 ${isActive
             ? 'text-primary'
-            : 'text-primary/60 hover:text-primary'
+            : 'text-primary/60 hover:text-primary after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-primary/30 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center'
         }`;
 
     const mobileNavLinkClass = ({ isActive }) =>
