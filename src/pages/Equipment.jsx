@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 export default function Equipment() {
     return (
         <>
-            <main className="pt-20 bg-surface">
+            <main className="bg-surface">
                 {/* Hero Section */}
-                <section className="relative min-h-[500px] md:h-[700px] flex items-center overflow-hidden py-28 md:py-0 border-b border-outline-variant/10">
+                <section className="relative min-h-[500px] md:h-[700px] flex items-center overflow-hidden pt-28 pb-20 md:pt-32 md:pb-0 border-b border-outline-variant/10">
                     <div className="absolute inset-0 z-0">
                         <motion.img
                             initial={{ scale: 1.1, opacity: 0 }}
@@ -13,7 +13,7 @@ export default function Equipment() {
                             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
                             className="w-full h-full object-cover"
                             style={{ filter: 'brightness(0.8) contrast(1.1) saturate(0.9)' }}
-                            src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecb?q=80&w=2070&auto=format&fit=crop"
+                            src="/h2obras-web-new/hero_original_hd.jpg"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
                         <div className="absolute inset-0 technical-grid opacity-10"></div>
@@ -29,11 +29,11 @@ export default function Equipment() {
                                     <div className="w-16 h-1 bg-accent"></div>
                                     <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">Bienes de Uso</span>
                                 </div>
-                                <h1 className="text-4xl md:text-7xl lg:text-8xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase">
+                                <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase">
                                     CAPACIDAD <br /> OPERATIVA <br /> <span className="text-white/40">PROPIA</span>
                                 </h1>
                                 <div className="max-w-2xl border-l-4 border-accent pl-10 py-2">
-                                    <p className="text-xl md:text-2xl text-on-primary-container font-body leading-relaxed opacity-80">
+                                    <p className="text-lg md:text-xl text-on-primary-container font-body leading-relaxed opacity-80">
                                         Infraestructura, logística y maquinaria pesada de última generación. Garantizamos autonomía operativa y excelencia en la ejecución sin subcontratación.
                                     </p>
                                 </div>
@@ -49,12 +49,12 @@ export default function Equipment() {
                 </section>
 
                 {/* Main Fleet Registry */}
-                <section className="bg-surface py-32 relative overflow-hidden">
+                <section className="bg-surface py-20 relative overflow-hidden">
                     <div className="container mx-auto px-8 md:px-24 relative z-10">
                         <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
                             <div className="max-w-2xl">
-                                <h2 className="text-4xl md:text-6xl font-headline font-black text-primary tracking-tighter uppercase mb-6 leading-none">Matriz de Activos</h2>
-                                <p className="text-primary/70 font-technical uppercase tracking-[0.3em] text-xs">Unidades de Movimiento y Herramental Específico</p>
+                                <h2 className="text-4xl md:text-5xl font-headline font-black text-primary tracking-tighter uppercase mb-6 leading-none">Matriz de Activos</h2>
+                                <p className="text-primary/70 font-technical uppercase tracking-[0.3em] text-[10px]">Unidades de Movimiento y Herramental Específico</p>
                             </div>
                             <div className="flex items-center gap-6">
                                 <div className="text-right">
@@ -74,13 +74,12 @@ export default function Equipment() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
-                                whileHover={{ y: -12, scale: 1.02 }}
                                 className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500 shadow-sm hover:shadow-2xl rounded-sm"
                             >
                                 <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-on-accent transition-colors">
                                     <span className="material-symbols-outlined text-white text-3xl group-hover:text-on-accent">precision_manufacturing</span>
                                 </div>
-                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Movimiento <br /> de Suelos</h3>
+                                <h3 className="text-2xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Movimiento <br /> de Suelos</h3>
                                 <ul className="space-y-6 mb-12">
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">01</span>
@@ -97,7 +96,6 @@ export default function Equipment() {
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
                                     <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Maquinaria Pesada</span>
-                                    <span className="material-symbols-outlined text-outline-variant/40 group-hover:text-primary">arrow_forward</span>
                                 </div>
                             </motion.div>
 
@@ -107,7 +105,6 @@ export default function Equipment() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
-                                whileHover={{ y: -12, scale: 1.02 }}
                                 className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500 shadow-sm hover:shadow-2xl rounded-sm"
                             >
                                 <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-on-accent transition-colors">
@@ -130,7 +127,6 @@ export default function Equipment() {
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
                                     <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Sistemas de Elevación</span>
-                                    <span className="material-symbols-outlined text-outline-variant/40 group-hover:text-primary">arrow_forward</span>
                                 </div>
                             </motion.div>
 
@@ -140,7 +136,6 @@ export default function Equipment() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
-                                whileHover={{ y: -12, scale: 1.02 }}
                                 className="bg-surface-container-low border border-outline-variant/10 p-10 group transition-all duration-500 shadow-sm hover:shadow-2xl rounded-sm"
                             >
                                 <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-on-accent transition-colors">
@@ -163,7 +158,6 @@ export default function Equipment() {
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
                                     <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Precisión Estructural</span>
-                                    <span className="material-symbols-outlined text-outline-variant/40 group-hover:text-primary">arrow_forward</span>
                                 </div>
                             </motion.div>
                         </div>
@@ -171,23 +165,23 @@ export default function Equipment() {
                 </section>
 
                 {/* Specialized Tech Modules */}
-                <section className="py-20 md:py-24 bg-primary text-white relative overflow-hidden">
+                <section className="py-20 bg-primary text-white relative overflow-hidden">
                     <div className="absolute inset-0 technical-grid opacity-10"></div>
                     <div className="container mx-auto px-8 md:px-24 relative z-10">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-32">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
                             <div>
-                                <h2 className="text-4xl md:text-6xl font-headline font-black uppercase tracking-tighter leading-none mb-10">INGENIERÍA <br /> DE MONTAJE</h2>
-                                <p className="text-white text-xl font-body leading-relaxed max-w-xl">
+                                <h2 className="text-3xl md:text-5xl font-headline font-black uppercase tracking-tighter leading-none mb-8">INGENIERÍA <br /> DE MONTAJE</h2>
+                                <p className="text-white text-lg font-body leading-relaxed max-w-xl opacity-80">
                                     Operamos con altos estándares de integridad técnica. Nuestra tecnología de soldadura y termofusión garantiza un rendimiento crítico en sistemas hidráulicos de alta presión.
                                 </p>
                             </div>
                             <div className="relative">
                                 <div className="aspect-video bg-white/5 border border-white/10 overflow-hidden group">
-                                    <img className="w-full h-full object-cover grayscale opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Technical blueprint and engineering lines overlapping industrial components" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGaxTOMdLB4L9gvFdLSKSDLOn1660Irq_TFWrkGAdAkXLiBwLPf_OJ2O6Xrg-RwKN9k5liWzw7BQXXdgMjA0UHK7dXB8eKq0YFL6N-4kz3I1iHdffvQo3hfmNXEHxT9UWjlPp_-yyiKwLxmfj6qF6IjGvkib9AL32DayVdLqRApPbJ7QKho3Y7b83HtXrDnHw672pfGb6jk4NXKx9AK_J6GJRnj6CroAtYPtmHzD6j-yahJMMp4ctoWYcN9E_EB4F1MN0ub4tmhPo" />
+                                    <img className="w-full h-full object-cover grayscale opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Technical blueprint and engineering lines overlapping industrial components" src="/h2obras-web-new/hero_industrial_v2.png" />
                                     <div className="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
                                 </div>
-                                <div className="absolute -bottom-8 -left-8 bg-accent p-8 hidden md:block">
-                                    <p className="text-on-accent text-3xl font-headline font-black font-technical tracking-tighter">Estándar de Integridad</p>
+                                <div className="absolute -bottom-6 -left-6 bg-accent p-6 hidden md:block">
+                                    <p className="text-on-accent text-2xl font-headline font-black font-technical tracking-tighter">Estándar de Integridad</p>
                                 </div>
                             </div>
                         </div>
@@ -213,15 +207,15 @@ export default function Equipment() {
                                     icon: "construction"
                                 }
                             ].map((module, i) => (
-                                <div key={i} className={`p-12 ${i !== 2 ? 'border-r border-white/10' : ''} hover:bg-white/5 transition-colors group`}>
-                                    <div className="flex justify-between items-start mb-12">
-                                        <span className="text-accent font-technical text-xs tracking-[0.4em]">Módulo {module.id}</span>
+                                <div key={i} className={`p-8 ${i !== 2 ? 'border-r border-white/10' : ''} hover:bg-white/5 transition-colors group`}>
+                                    <div className="flex justify-between items-start mb-8">
+                                        <span className="text-accent font-technical text-[10px] tracking-[0.3em]">Módulo {module.id}</span>
                                         <span className="material-symbols-outlined text-accent/40 group-hover:text-accent transition-colors">{module.icon}</span>
                                     </div>
-                                    <h4 className="text-2xl font-headline font-black uppercase mb-8 tracking-tighter">{module.label}</h4>
-                                    <ul className="space-y-4">
+                                    <h4 className="text-xl font-headline font-black uppercase mb-6 tracking-tighter">{module.label}</h4>
+                                    <ul className="space-y-3">
                                         {module.items.map((item, j) => (
-                                            <li key={j} className="text-sm font-body text-on-primary-container opacity-60 flex gap-3">
+                                            <li key={j} className="text-xs font-body text-on-primary-container opacity-60 flex gap-3">
                                                 <span className="text-accent">•</span> {item}
                                             </li>
                                         ))}
@@ -233,19 +227,19 @@ export default function Equipment() {
                 </section>
 
                 {/* Tactical Logistics */}
-                <section className="py-20 md:py-24 px-6 md:px-12 bg-surface">
+                <section className="py-20 px-6 md:px-12 bg-surface">
                     <div className="container mx-auto px-8 md:px-24">
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                             <div className="lg:col-span-5 order-2 lg:order-1">
-                                <div className="flex items-center gap-6 mb-12">
+                                <div className="flex items-center gap-6 mb-10">
                                     <div className="w-16 h-1 bg-primary"></div>
-                                    <h3 className="text-4xl md:text-5xl font-headline font-black text-primary uppercase tracking-tighter">Poder Logístico <br /> / Office</h3>
+                                    <h3 className="text-3xl md:text-5xl font-headline font-black text-primary uppercase tracking-tighter">Poder Logístico <br /> / Office</h3>
                                 </div>
-                                <div className="space-y-12">
+                                <div className="space-y-10">
                                     <div>
                                         <div className="flex items-center gap-4 mb-6">
                                             <span className="material-symbols-outlined text-primary">local_shipping</span>
-                                            <p className="text-sm font-black text-primary uppercase tracking-widest">Logística Pesada</p>
+                                            <p className="text-[10px] font-black text-primary uppercase tracking-widest">Logística Pesada</p>
                                         </div>
                                         <div className="grid grid-cols-1 gap-4">
                                             {[
@@ -282,10 +276,10 @@ export default function Equipment() {
                             <div className="lg:col-span-7 order-1 lg:order-2">
                                 <div className="grid grid-cols-12 gap-8">
                                     <div className="col-span-7 aspect-[4/5] overflow-hidden">
-                                        <img className="w-full h-full object-cover grayscale brightness-75 hover:scale-110 transition-transform duration-1000" data-alt="Modern high-tech logistics truck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl-fDbT0YCeajs693i6ABy4tpi6DRwMudTgd4kk7PO60kDNC60YBj8uCxR5V7f7EJz9jo9tCDfhA0XeYOzft1TXpMjQcktAmvIttpV7fdRymVxddpep7z5NEHcZAQkJIFcWF8_2zSsZEdzksL_XOYuTBnB4TqsFrPS8cKzMW5zBgfN4Uw1BHcRmWoiVuLbTjEqgueyQMnDI0bbNLuZZToLjjl-MLmgbj-fUIMxTtY1JFIXuf1UeNCVRDkF5L1JztjnB_gF0w9O-4E" />
+                                        <img className="w-full h-full object-cover grayscale brightness-75 hover:scale-110 transition-transform duration-1000" data-alt="Modern high-tech logistics truck" src="/h2obras-web-new/hosp.png" />
                                     </div>
                                     <div className="col-span-5 aspect-[4/6] overflow-hidden self-end mb-12">
-                                        <img className="w-full h-full object-cover grayscale brightness-75 hover:scale-110 transition-transform duration-1000" data-alt="Technical office interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx8BDL9Ue6VtSStHGKUjpscljbTnLPF2JkruntqlOewH8yBE96SEYwuhmvjEqomvlx8qXimSo75TE2bZUE74ObuUAEs6sndkuTBMKhUYvdNjAX0jjQUrLTXIeYUR8JxAWINgs05nMXWaWhob5qH_fHeTvhkIBxMGrnqXV9P4Hyh6lhrUplrdGv8Q9wAelPsJnT-K3NigyNXLreV-Y1OaaUJnWUaOiGOk6LDbs1kxD2twfHJShBeOfSLOKOK97v1rJqcg1wdy6HvGQ" />
+                                        <img className="w-full h-full object-cover grayscale brightness-75 hover:scale-110 transition-transform duration-1000" data-alt="Technical office interior" src="/h2obras-web-new/portfolio_hosp.png" />
                                     </div>
                                 </div>
                             </div>
@@ -294,14 +288,14 @@ export default function Equipment() {
                 </section>
 
                 {/* Final Institutional CTA */}
-                <section className="py-48 bg-primary-container technical-grid text-center overflow-hidden relative">
+                <section className="py-32 bg-primary-container technical-grid text-center overflow-hidden relative">
                     <div className="container mx-auto px-8 max-w-5xl relative z-10">
                         <motion.div
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 1 }}
                         >
-                            <h2 className="text-5xl md:text-8xl font-headline font-black text-white mb-12 uppercase tracking-tighter leading-[0.85]">
+                            <h2 className="text-5xl md:text-7xl font-headline font-black text-white mb-12 uppercase tracking-tighter leading-[0.85]">
                                 INFRAESTRUCTURA <br /> PARA GRANDES <br /> VISIONES
                             </h2>
                             <p className="text-xl md:text-2xl text-on-primary-container mb-16 max-w-3xl mx-auto font-body leading-relaxed">

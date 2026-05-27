@@ -12,7 +12,7 @@ export default function Layout() {
             <div className="grain-overlay"></div>
 
             <Header />
-            <main className="flex-1 pt-20 overflow-x-hidden">
+            <main className="flex-1 pt-0 overflow-x-hidden">
                 <AnimatePresence mode="popLayout" initial={false}>
                     <motion.div
                         key={location.pathname}

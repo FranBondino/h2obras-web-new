@@ -2,12 +2,11 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function Contact() {
-    const [priority, setPriority] = useState('Bajo');
     return (
         <>
-            <main className="pt-20 bg-surface">
+            <main className="pt-28 bg-surface">
                 {/* Hero Section */}
-                <section className="relative min-h-[500px] flex items-center bg-primary overflow-hidden py-28 md:py-0">
+                <section className="relative h-[300px] md:h-[400px] flex items-center bg-primary overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <div className="absolute inset-0 technical-grid opacity-10"></div>
                         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
@@ -23,11 +22,11 @@ export default function Contact() {
                                     <div className="w-16 h-1 bg-accent"></div>
                                     <span className="text-accent text-[10px] font-technical tracking-[0.4em] uppercase">Formulario de Ingeniería</span>
                                 </div>
-                                <h1 className="text-5xl md:text-8xl lg:text-9xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase">
-                                    CONSULTAS Y <br /> <span className="text-white/40">PRESUPUESTOS</span>
+                                <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-8 uppercase">
+                                    Contacto y <br /> <span className="text-accent">Presupuestos</span>
                                 </h1>
                                 <div className="max-w-2xl border-l-4 border-accent pl-10 py-2">
-                                    <p className="text-xl md:text-2xl text-on-primary-container font-body leading-relaxed opacity-80">
+                                    <p className="text-lg md:text-xl text-on-primary-container font-body leading-relaxed opacity-80">
                                         Solicite asesoramiento técnico o presupuesto para nuevos proyectos de escala nacional.
                                     </p>
                                 </div>
@@ -37,7 +36,7 @@ export default function Contact() {
                 </section>
 
                 {/* Infrastructure Network */}
-                <section className="py-32 bg-surface relative overflow-hidden">
+                <section className="py-20 bg-surface relative overflow-hidden">
                     <div className="container mx-auto px-8 md:px-24">
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
                             {/* Left: Global Hubs */}
@@ -45,7 +44,7 @@ export default function Contact() {
                                 <div>
                                     <div className="flex items-center gap-6 mb-16">
                                         <div className="w-12 h-1 bg-primary"></div>
-                                        <h2 className="text-3xl font-headline font-black text-primary uppercase tracking-tighter">CENTROS OPERATIVOS</h2>
+                                        <h2 className="text-3xl font-headline font-black text-primary uppercase tracking-tighter">OFICINAS</h2>
                                     </div>
                                     <div className="space-y-16">
                                         <div className="relative pl-8 border-l border-outline-variant/20 group">
@@ -102,7 +101,7 @@ export default function Contact() {
                                     <div className="relative z-10">
                                         <h2 className="text-3xl font-headline font-black text-primary mb-16 uppercase tracking-tighter flex items-center gap-4">
                                             <span className="material-symbols-outlined">warehouse</span>
-                                            MATRIZ LOGÍSTICA
+                                            DEPÓSITOS
                                         </h2>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                             <div className="bg-surface p-10 border-t-8 border-primary shadow-sm hover:-translate-y-2 transition-transform duration-500">
@@ -117,23 +116,6 @@ export default function Contact() {
                                             </div>
                                         </div>
 
-                                        <div className="mt-20 pt-12 border-t border-outline-variant/10">
-                                            <div className="flex items-center justify-between">
-                                                <p className="text-[10px] font-technical text-primary uppercase tracking-widest mb-1">Prioridad de Proyecto</p>
-                                                <div className="flex gap-2">
-                                                    {["Bajo", "Medio", "Crítico"].map((prio) => (
-                                                        <button
-                                                            key={prio}
-                                                            type="button"
-                                                            onClick={() => setPriority(prio)}
-                                                            className={`px-4 py-2 text-[10px] font-black uppercase tracking-widest transition-all ${priority === prio ? 'bg-primary text-white' : 'bg-surface-container-high text-primary/40 hover:bg-primary/5'}`}
-                                                        >
-                                                            {prio}
-                                                        </button>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +124,7 @@ export default function Contact() {
                 </section>
 
                 {/* Technical Consultation Form */}
-                <section className="py-48 bg-primary relative overflow-hidden" id="technical-form">
+                <section className="py-24 bg-surface relative overflow-hidden" id="technical-form">
                     <div className="absolute inset-0 technical-grid opacity-10"></div>
                     <div className="container mx-auto px-8 md:px-24 relative z-10">
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
@@ -151,24 +133,10 @@ export default function Contact() {
                                     initial={{ opacity: 0, x: -30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                 >
-                                    <h2 className="text-5xl md:text-7xl font-headline font-black text-white mb-10 tracking-tighter leading-none uppercase">SOLICITUD <br /> DE OBRA</h2>
-                                    <p className="text-on-primary-container text-xl font-body leading-relaxed mb-12 opacity-80">
-                                        Nuestro equipo de ingeniería evaluará su solicitud en un plazo estimado de 48 hs.
+                                    <h2 className="text-3xl md:text-5xl font-headline font-black text-primary mb-10 tracking-tighter leading-none uppercase">FORMULARIO <br /> DE CONTACTO</h2>
+                                    <p className="text-secondary/70 text-lg font-body leading-relaxed mb-12">
+                                        Complete sus datos para que nuestro equipo pueda contactarlo a la brevedad.
                                     </p>
-                                    <div className="space-y-6">
-                                        <div className="flex items-center gap-4 text-white/40">
-                                            <span className="material-symbols-outlined text-sm">check_circle</span>
-                                            <span className="text-white/20 text-[10px] font-technical uppercase tracking-[0.5em] block mb-2">Canal de Consultas</span>
-                                        </div>
-                                        <div className="flex items-center gap-4 text-white/40">
-                                            <span className="material-symbols-outlined text-sm">check_circle</span>
-                                            <span className="text-xs font-technical uppercase tracking-widest">ANÁLISIS LOGÍSTICO</span>
-                                        </div>
-                                        <div className="flex items-center gap-4 text-white/40">
-                                            <span className="material-symbols-outlined text-sm">check_circle</span>
-                                            <span className="text-xs font-technical uppercase tracking-widest">ASIGNACIÓN DE INGENIERO</span>
-                                        </div>
-                                    </div>
                                 </motion.div>
                             </div>
 
@@ -176,45 +144,45 @@ export default function Contact() {
                                 <motion.div
                                     initial={{ opacity: 0, y: 50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    className="bg-white/[0.03] backdrop-blur-3xl border border-white/10 p-12 md:p-20 shadow-2xl machined-glass"
+                                    className="bg-white border border-outline-variant/20 p-12 md:p-16 shadow-xl rounded-sm"
                                 >
                                     <form className="space-y-12">
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                             <div className="space-y-3">
-                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">RAZÓN SOCIAL</label>
-                                                <input className="w-full bg-black/5 border border-primary/10 h-16 px-6 text-primary font-headline text-lg focus:outline-none focus:border-primary transition-colors placeholder:text-primary/30" placeholder="ENTIDAD" type="text" />
+                                                <label className="text-xs font-technical text-primary uppercase tracking-widest block font-black">RAZÓN SOCIAL</label>
+                                                <input className="w-full bg-surface border border-outline-variant/50 h-14 px-6 text-primary font-body text-sm focus:outline-none focus:border-accent transition-colors placeholder:text-primary/40" placeholder="NOMBRE DE LA EMPRESA O ENTIDAD" type="text" />
                                             </div>
                                             <div className="space-y-3">
-                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">CORREO ELECTRÓNICO</label>
-                                                <input className="w-full bg-black/5 border border-primary/10 h-16 px-6 text-primary font-headline text-lg focus:outline-none focus:border-primary transition-colors placeholder:text-primary/30" placeholder="EMAIL@SYSTEM" type="email" />
+                                                <label className="text-xs font-technical text-primary uppercase tracking-widest block font-black">CORREO ELECTRÓNICO</label>
+                                                <input className="w-full bg-surface border border-outline-variant/50 h-14 px-6 text-primary font-body text-sm focus:outline-none focus:border-accent transition-colors placeholder:text-primary/40" placeholder="EMAIL@SYSTEM.COM" type="email" />
                                             </div>
                                             <div className="space-y-3">
-                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">TIPO DE PROYECTO</label>
-                                                <select className="w-full bg-black/5 border border-primary/10 h-16 px-6 text-primary font-headline text-lg focus:outline-none focus:border-primary appearance-none transition-colors">
-                                                    <option className="bg-surface text-primary">INST_SANITARIAS</option>
-                                                    <option className="bg-surface text-primary">INST_GAS</option>
-                                                    <option className="bg-surface text-primary">SISTEMA_INCENDIO</option>
-                                                    <option className="bg-surface text-primary">OBRAS_INFRAESTRUCTURA</option>
-                                                    <option className="bg-surface text-primary">OTRO_CRÍTICO</option>
+                                                <label className="text-xs font-technical text-primary uppercase tracking-widest block font-black">TIPO DE PROYECTO</label>
+                                                <select className="w-full bg-surface border border-outline-variant/50 h-14 px-6 text-primary font-body text-sm focus:outline-none focus:border-accent appearance-none transition-colors">
+                                                    <option className="bg-surface text-primary">INSTALACIONES SANITARIAS</option>
+                                                    <option className="bg-surface text-primary">REDES DE GAS</option>
+                                                    <option className="bg-surface text-primary">SISTEMAS CONTRA INCENDIO</option>
+                                                    <option className="bg-surface text-primary">OBRAS DE INFRAESTRUCTURA</option>
+                                                    <option className="bg-surface text-primary">CLIMATIZACIÓN Y CALEFACCIÓN</option>
                                                 </select>
                                             </div>
                                             <div className="space-y-3">
-                                                <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">UBICACIÓN</label>
-                                                <input className="w-full bg-black/5 border border-primary/10 h-16 px-6 text-primary font-headline text-lg focus:outline-none focus:border-primary transition-colors placeholder:text-primary/30" placeholder="CIUDAD / PROVINCIA" type="text" />
+                                                <label className="text-xs font-technical text-primary uppercase tracking-widest block font-black">UBICACIÓN</label>
+                                                <input className="w-full bg-surface border border-outline-variant/50 h-14 px-6 text-primary font-body text-sm focus:outline-none focus:border-accent transition-colors placeholder:text-primary/40" placeholder="CIUDAD / PROVINCIA" type="text" />
                                             </div>
                                         </div>
                                         <div className="space-y-3">
-                                            <label className="text-[10px] font-technical text-primary/60 uppercase tracking-[0.4em] block">ALCANCE DEL PROYECTO</label>
-                                            <textarea className="w-full bg-black/5 border border-primary/10 p-8 text-primary font-headline text-lg focus:outline-none focus:border-primary transition-colors min-h-[200px] placeholder:text-primary/30" placeholder="DESCRIBA LOS PARÁMETROS TÉCNICOS..."></textarea>
+                                            <label className="text-xs font-technical text-primary uppercase tracking-widest block font-black">ALCANCE DEL PROYECTO</label>
+                                            <textarea className="w-full bg-surface border border-outline-variant/50 p-8 text-primary font-body text-sm focus:outline-none focus:border-accent transition-colors min-h-[150px] placeholder:text-primary/40" placeholder="DESCRIBA LOS PARÁMETROS TÉCNICOS..."></textarea>
                                         </div>
 
                                         <motion.button
-                                            whileHover={{ scale: 1.02 }}
-                                            whileTap={{ scale: 0.98 }}
-                                            className="w-full py-8 bg-accent text-on-accent font-headline font-black text-xl uppercase tracking-[0.3em] flex items-center justify-center gap-6 shadow-2xl"
+                                            whileHover={{ scale: 1.01 }}
+                                            whileTap={{ scale: 0.99 }}
+                                            className="w-full py-6 bg-primary text-white font-headline font-black text-lg uppercase tracking-[0.3em] flex items-center justify-center gap-6 shadow-xl hover:bg-accent transition-colors duration-300 group"
                                         >
-                                            TRANSMITIR SOLICITUD
-                                            <span className="material-symbols-outlined">send</span>
+                                            ENVIAR
+                                            <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">send</span>
                                         </motion.button>
                                     </form>
                                 </motion.div>

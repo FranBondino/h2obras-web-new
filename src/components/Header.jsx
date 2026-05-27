@@ -26,18 +26,15 @@ export default function Header() {
         >
             <div className="container mx-auto px-8 md:px-24 h-28 flex justify-between items-center">
                 {/* Logo Section */}
-                <Link to="/" className="flex items-center">
-                    <div className="h-16 md:h-20 w-[240px] md:w-[320px] flex items-center justify-start overflow-hidden relative group">
-                        <img
-                            src="/h2obras-web-new/logoh2o_new.png"
-                            alt="H2O Obras"
-                            className="h-[300px] md:h-[400px] w-auto max-w-none object-contain absolute left-0 md:left-[-12px] top-1/2 -translate-y-1/2 transition-all duration-500 group-hover:scale-105"
-                            style={{
-                                imageRendering: 'crisp-edges',
-                                objectPosition: '0% 50%'
-                            }}
-                        />
-                    </div>
+                <Link to="/" className="flex items-center group">
+                    <img
+                        src="/h2obras-web-new/logoh2o_clean.png"
+                        alt="H2O Obras"
+                        className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+                        style={{
+                            imageRendering: 'crisp-edges'
+                        }}
+                    />
                 </Link>
 
                 {/* Right Container */}
@@ -47,7 +44,7 @@ export default function Header() {
                         <NavLink to="/" end className={navLinkClass}>
                             {({ isActive }) => (
                                 <>
-                                    Empresa
+                                    Home
                                     {isActive && <motion.div layoutId="nav-active" className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary" />}
                                 </>
                             )}
@@ -84,7 +81,7 @@ export default function Header() {
                             to="/contact"
                             className="shimmer-container shimmer-trigger bg-primary text-on-primary px-5 py-2 font-headline font-bold text-[10px] uppercase tracking-[0.2em] rounded-sm hover:brightness-120 transition-all active:scale-95 group relative overflow-hidden"
                         >
-                            <span className="relative z-10">Solicitar Portal</span>
+                            <span className="relative z-10">Contacto</span>
                             <div className="shimmer-element"></div>
                         </Link>
                     </div>
@@ -106,7 +103,7 @@ export default function Header() {
 
             {/* Mobile Menu Dropdown */}
             <div className={`xl:hidden machined-glass overflow-hidden transition-all duration-500 ease-in-out ${menuOpen ? 'max-h-screen' : 'max-h-0'}`}>
-                <NavLink to="/" end className={mobileNavLinkClass} onClick={() => setMenuOpen(false)}>Empresa</NavLink>
+                <NavLink to="/" end className={mobileNavLinkClass} onClick={() => setMenuOpen(false)}>Home</NavLink>
                 <NavLink to="/portfolio" className={mobileNavLinkClass} onClick={() => setMenuOpen(false)}>Portfolio</NavLink>
                 <NavLink to="/equipment" className={mobileNavLinkClass} onClick={() => setMenuOpen(false)}>Equipamiento</NavLink>
                 <NavLink to="/contact" className={mobileNavLinkClass} onClick={() => setMenuOpen(false)}>Contacto</NavLink>

@@ -28,15 +28,14 @@ export default function Home() {
         <div className="bg-surface">
             {/* Hero Section */}
             <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-primary p-0">
-                <motion.div style={{ y, opacity, scale }} className="absolute inset-0 z-0">
+                <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
                     <img
                         className="w-full h-full object-cover"
-                        style={{ filter: 'brightness(0.85) contrast(1.15) saturate(1.05)' }}
-                        data-alt="Aeropuerto Internacional Rosario - obra en ejecución"
-                        src="/h2obras-web-new/aerop.png"
+                        style={{ filter: 'brightness(0.7) contrast(1.1) saturate(0.8)' }}
+                        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-tr from-primary/60 via-primary/10 to-transparent"></div>
-                    <motion.div style={{ rotate: gridRotate }} className="absolute inset-0 technical-grid opacity-20"></motion.div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-primary/60 to-primary"></div>
+                    <motion.div style={{ rotate: gridRotate }} className="absolute inset-0 technical-grid opacity-15"></motion.div>
                 </motion.div>
 
                 <div className="relative z-10 container mx-auto px-8 md:px-24 grid md:grid-cols-12 gap-8 items-end pb-24 pt-32">
@@ -54,15 +53,15 @@ export default function Home() {
                         </motion.div>
                         <motion.h1
                             variants={fadeUpVariant}
-                            className="text-5xl md:text-7xl lg:text-8xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase"
+                            className="text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase"
                         >
-                            Ingeniería de <br /> valor <br /> <span className="text-white/40">a nivel federal</span>
+                            Ingeniería y <br /> Ejecución
                         </motion.h1>
                         <motion.p
                             variants={fadeUpVariant}
                             className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed font-body mb-12 font-medium"
                         >
-                            Especialistas en proyecto y ejecución de obras e instalaciones, gas e incendio para obras de escala nacional y alta complejidad técnica.
+                            Especialistas en proyecto y ejecución de obras e instalaciones de gas y sistemas de incendio para obras de escala nacional y alta complejidad técnica.
                         </motion.p>
                         <motion.div variants={fadeUpVariant} className="flex flex-wrap gap-4">
                             <Link to="/portfolio" className="shimmer-container shimmer-trigger group">
@@ -85,10 +84,9 @@ export default function Home() {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5, duration: 1 }}
-                        className="md:col-span-2 lg:col-span-3 hidden md:block text-right pb-4 border-r border-white/10 pr-6"
+                        className="md:col-span-3 lg:col-span-3 hidden md:block text-right pb-6 border-r-2 border-accent pr-10"
                     >
-
-                        <span className="text-white text-xs font-technical leading-loose opacity-60">
+                        <span className="text-white text-xs md:text-sm font-technical leading-loose font-bold opacity-80">
                             Sede Rosario <br />
                             Sede CABA <br />
                             Alcance Nacional
@@ -104,10 +102,10 @@ export default function Home() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-2 lg:grid-cols-4 gap-12 max-w-none w-full px-12 md:px-24"
+                    className="container mx-auto px-8 md:px-24 grid grid-cols-2 lg:grid-cols-4 gap-12"
                 >
                     <motion.div variants={fadeUpVariant} className="flex flex-col gap-3 group">
-                        <span className="text-primary text-5xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">+25A</span>
+                        <span className="text-primary text-4xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">+25A</span>
                         <div className="h-px bg-outline-variant/30 w-full group-hover:bg-accent/50 transition-all duration-500"></div>
                         <span className="text-readout">Trayectoria Federal</span>
                     </motion.div>
@@ -129,9 +127,8 @@ export default function Home() {
                 </motion.div>
             </section>
 
-            {/* Services Section - Engineered Grid */}
-            <section className="py-24 md:py-32 px-6 md:px-12 bg-surface overflow-hidden">
-                <div className="max-w-[1920px] mx-auto">
+            <section className="py-24 md:py-32 bg-surface overflow-hidden">
+                <div className="container mx-auto px-8 md:px-24">
                     <motion.div
                         variants={staggerContainer}
                         initial="hidden"
@@ -141,11 +138,11 @@ export default function Home() {
                     >
                         <motion.div variants={fadeUpVariant} className="max-w-4xl">
                             <div className="w-24 h-2 bg-primary mb-12"></div>
-                            <h2 className="text-6xl md:text-8xl font-black text-primary font-headline uppercase tracking-tighter mb-8 leading-[0.85] group-hover:text-secondary transition-colors duration-300">
-                                Matriz de <br /> <span className="opacity-40 font-outline">Especialidades</span>
+                            <h2 className="text-5xl md:text-7xl font-black text-primary font-headline uppercase tracking-tighter mb-8 leading-[0.85] group-hover:text-secondary transition-colors duration-300">
+                                Nuestras <br /> <span className="opacity-40 font-outline">Especialidades</span>
                             </h2>
                             <p className="text-secondary text-xl md:text-2xl font-body leading-relaxed max-w-2xl opacity-80">
-                                Un enfoque integral que abarca desde el diseño ejecutivo hasta la puesta en marcha de sistemas críticos.
+                                Soluciones integrales desde el diseño ejecutivo hasta el montaje y puesta en marcha de sistemas críticos.
                             </p>
                         </motion.div>
                     </motion.div>
@@ -159,13 +156,13 @@ export default function Home() {
                             className="lg:col-span-8 bg-surface-container-low p-10 md:p-16 flex flex-col justify-between group relative overflow-hidden border border-outline-variant/10 shadow-sm transition-all duration-500"
                         >
                             <div className="absolute top-0 right-0 p-8">
-                                <span className="text-primary/10 font-headline font-black text-[180px] leading-none select-none group-hover:text-primary/20 transition-colors duration-500">01</span>
+                                <span className="text-primary/10 font-headline font-black text-[120px] leading-none select-none group-hover:text-primary/20 transition-colors duration-500">01</span>
                             </div>
 
                             <div className="relative z-10">
                                 <h3 className="text-4xl md:text-5xl font-black text-primary font-headline uppercase tracking-tighter mb-8 group-hover:text-accent transition-colors duration-300">Sanitarias <br /> &amp; Gas</h3>
                                 <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mb-12 font-body leading-relaxed opacity-90">
-                                    Instalaciones de gran envergadura y saneamiento de alta complejidad para entornos hospitalarios e industriales.
+                                    Instalaciones de gran envergadura y saneamiento de alta complejidad para todo tipo de entornos.
                                 </p>
                             </div>
 
@@ -203,8 +200,8 @@ export default function Home() {
 
                             <div className="relative z-10">
                                 <span className="text-white/10 font-headline font-black text-9xl leading-none block mb-8 group-hover:text-white/20 transition-colors duration-500">02</span>
-                                <h3 className="text-4xl font-headline font-black uppercase mb-8 tracking-tighter leading-none group-hover:text-accent transition-colors duration-300">Termodinámica <br /> &amp; LEED</h3>
-                                <p className="opacity-80 group-hover:opacity-100 transition-opacity">Ecoeficiencia hídrica y procesos térmicos diseñados bajo rigurosas normativas de certificación sustentable.</p>
+                                <h3 className="text-4xl font-headline font-black uppercase mb-8 tracking-tighter leading-none group-hover:text-accent transition-colors duration-300">Eficiencia <br /> Energética</h3>
+                                <p className="opacity-80 group-hover:opacity-100 transition-opacity">Instalaciones diseñadas bajo normativas LEED para optimizar el consumo de recursos y el rendimiento térmico.</p>
                             </div>
 
                             <div className="relative z-10 space-y-4">
@@ -231,7 +228,7 @@ export default function Home() {
                             className="lg:col-span-12 bg-surface-container-lowest p-10 md:p-16 border border-outline-variant/10 flex flex-col lg:flex-row justify-between items-end group relative overflow-hidden transition-all duration-500"
                         >
                             <div className="absolute top-0 right-0 p-8">
-                                <span className="text-primary/10 font-headline font-black text-[180px] leading-none select-none group-hover:text-primary/20 transition-colors duration-500">03</span>
+                                <span className="text-primary/10 font-headline font-black text-[120px] leading-none select-none group-hover:text-primary/20 transition-colors duration-500">03</span>
                             </div>
                             <div className="relative z-10 max-w-3xl mb-12 lg:mb-0">
                                 <div className="flex items-center gap-6 mb-8 group/title">
@@ -249,7 +246,7 @@ export default function Home() {
                                 <div className="flex items-center gap-4 px-6 py-4 bg-surface-container-low border border-outline-variant/20 hover:border-primary/30 transition-all cursor-crosshair group/seal">
                                     <div className="flex flex-col gap-1">
                                         <span className="text-primary font-headline font-black text-2xl leading-none group-hover/seal:text-accent transition-colors">FM/UL</span>
-                                        <span className="text-technical text-[9px] font-bold opacity-60 uppercase tracking-widest">Sello de Integridad</span>
+                                        <span className="text-technical text-[9px] font-bold opacity-60 uppercase tracking-widest">Aprobación de Calidad</span>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4 px-6 py-4 bg-surface-container-low border border-outline-variant/20 hover:border-primary/30 transition-all cursor-crosshair group/seal">
@@ -264,13 +261,12 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Featured Portfolio - Asymmetric Layout */}
-            <section className="py-24 md:py-32 px-6 md:px-12 bg-surface-container-low overflow-hidden">
-                <div className="max-w-[1920px] mx-auto">
+            <section className="py-24 md:py-32 bg-surface-container-low overflow-hidden">
+                <div className="container mx-auto px-8 md:px-24">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
                         <div className="max-w-2xl">
                             <span className="text-technical text-xs mb-6 block opacity-60">Portafolio de Obras e Infraestructura</span>
-                            <h2 className="text-5xl md:text-7xl font-black text-primary font-headline uppercase leading-none tracking-tighter mb-4">
+                            <h2 className="text-4xl md:text-6xl font-black text-primary font-headline uppercase leading-none tracking-tighter mb-4">
                                 Proyectos de <br /> Escala Nacional
                             </h2>
                         </div>
@@ -296,14 +292,14 @@ export default function Home() {
                                 ref: "REG_2022_OP"
                             },
                             {
-                                img: "/h2obras-web-new/aerop.png",
+                                img: "/h2obras-web-new/portfolio/aerop.png",
                                 title: "Aeropuerto Int. Rosario",
                                 meta: "Transporte/NFPA · Santa Fe",
                                 size: "Alta Complejidad",
                                 ref: "REG_2023_INFRA"
                             },
                             {
-                                img: "/h2obras-web-new/laseg.png",
+                                img: "/h2obras-web-new/portfolio/laseg.png",
                                 title: "Edificio La Segunda",
                                 meta: "Corporativo/LEED · Rosario",
                                 size: "Platinum Std",
@@ -325,9 +321,6 @@ export default function Home() {
                                         alt={proj.title}
                                     />
                                     <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                                    <div className="absolute bottom-6 right-6">
-                                        <span className="bg-white px-3 py-1 font-technical text-[9px] uppercase tracking-widest text-primary shadow-lg">{proj.ref}</span>
-                                    </div>
                                 </div>
                                 <div className="px-2">
                                     <div className="flex justify-between items-center mb-3">
@@ -336,7 +329,7 @@ export default function Home() {
                                     </div>
                                     <h3 className="text-2xl font-headline font-bold uppercase text-primary mb-6 transition-colors group-hover:text-secondary duration-300">{proj.title}</h3>
                                     <div className="flex justify-between items-center py-4 border-t border-outline-variant/10">
-                                        <span className="text-[10px] font-technical uppercase text-primary/40 tracking-[0.4em]">VER FICHA TÉCNICA</span>
+                                        <span className="text-[10px] font-technical uppercase text-primary/40 tracking-[0.4em]">Detalle de Obra</span>
                                         <span className="text-xs font-headline font-extrabold text-primary uppercase">{proj.size}</span>
                                     </div>
                                 </div>
@@ -347,21 +340,20 @@ export default function Home() {
             </section>
 
             {/* Operational Muscle Section */}
-            <section className="py-20 md:py-24 bg-primary relative overflow-hidden">
+            <section className="py-24 bg-primary relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         className="w-full h-full object-cover opacity-10 mix-blend-overlay grayscale"
-                        data-alt="industrial heavy machinery including a bobcat and scissor lift in a warehouse setting with sharp dramatic lighting"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjNgAgLfrscGLo0vgmPWh_CXFQ7Yh3-SZj2fwqhqJvJc5FRLecV9O0ZXkI8xYI36YZbqbGMrFLgy_OEVqCdCdyTZZAs-4KZNR9jRfz4dW5u-KKmrG6Kfv2GjXrhyzbKnoOs51NJC5crywBfL5A5XMcyaZyqD6a8YK-KEJatvq6FSi_ONIbNTjsv5LXsrQBu6EugwTdAkoFp1VCBHZysreWEpP69VuvcbW7GJzv4eie7YLBdS-5aP8QB1g2LjFYAmDg8KB3ILlkogc"
+                        src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
                     />
                     <div className="absolute inset-0 technical-grid opacity-10"></div>
                 </div>
 
-                <div className="relative z-10 max-w-[1920px] mx-auto grid lg:grid-cols-2 gap-24 items-center">
+                <div className="relative z-10 container mx-auto px-8 md:px-24 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                     <div>
                         <div className="w-16 h-1 bg-accent mb-12"></div>
-                        <h2 className="text-5xl md:text-7xl font-black text-white font-headline uppercase tracking-tighter mb-10 leading-[0.9]">
-                            Potencia <br /> <span className="text-accent">Operativa Propia</span>
+                        <h2 className="text-4xl md:text-6xl font-black text-white font-headline uppercase tracking-tighter mb-10 leading-[0.9]">
+                            Equipamiento y <br /> <span className="text-accent">Logística Propia</span>
                         </h2>
                         <p className="text-on-primary-container text-xl md:text-2xl font-body leading-relaxed mb-12 max-w-2xl">
                             Garantizamos el cumplimiento de plazos mediante una gestión de recursos 100% interna. Nuestra infraestructura técnica nos permite operar con total independencia, asegurando la excelencia en proyectos de alta complejidad.
@@ -410,20 +402,18 @@ export default function Home() {
                                 brand: "HILTI"
                             }
                         ].map((item, idx) => (
-                            <motion.div
+                            <div
                                 key={idx}
-                                whileHover={{ x: 10 }}
                                 className="group bg-white/5 backdrop-blur-sm border border-white/10 p-8 flex items-center gap-8 hover:bg-white/10 transition-all duration-300"
                             >
                                 <div className="w-16 h-16 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent transition-colors">
                                     <span className="material-symbols-outlined text-white text-3xl group-hover:text-accent">{item.icon}</span>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <span className="text-accent font-technical text-[10px] tracking-[0.3em] font-bold uppercase">{item.brand}</span>
                                     <h3 className="text-white text-xl font-headline font-black uppercase tracking-tight">{item.title}</h3>
                                     <p className="text-on-primary-container text-xs opacity-60 font-body leading-tight max-w-xs">{item.desc}</p>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>

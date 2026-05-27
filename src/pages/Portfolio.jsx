@@ -3,40 +3,34 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const categoryHeroData = {
     all: {
-        title: "Portfolio de <br /> Ingeniería",
-        subtitle: "Un registro consolidado de obras hidráulicas y civiles de alta complejidad. Compromiso con la rigurosidad técnica y la excelencia en la ejecución.",
+        title: "Historial de <br /> Proyectos",
+        subtitle: "Un registro consolidado del proyecto y la ejecución de obras e instalaciones de alta complejidad, fundamentado en un compromiso firme con la rigurosidad técnica y la excelencia operativa.",
         tag: "Obras y Proyectos"
     },
-    "Obras en Ejecución": {
-        title: "Obras en <br /> Ejecución",
-        subtitle: "Monitoreo técnico de obras activas. Garantía de continuidad operativa y precisión en cada etapa del desarrollo.",
-        tag: "Estado de Obra Activo"
+    Sanitarias: {
+        title: "Instalaciones <br /> Sanitarias",
+        subtitle: "Sistemas de distribución de agua, desagües cloacales y pluviales de gran escala. Montajes en acero inoxidable y termofusión de alta performance.",
+        tag: "Especialidad: Sanitarias"
     },
-    Salud: {
-        title: "Ingeniería <br /> Sanitaria",
-        subtitle: "Sistemas críticos para entornos hospitalarios de alta complejidad. Gases medicinales, redes de fluidos y climatización con normativas técnicas de bioseguridad.",
-        tag: "Especialidad: Salud"
+    Gas: {
+        title: "Redes de <br /> Gas Natural",
+        subtitle: "Instalaciones industriales y comerciales de alta presión. Proyecto y ejecución bajo normas de seguridad vigentes y máxima eficiencia.",
+        tag: "Especialidad: Gas"
     },
-
-    Aeropuertos: {
-        title: "Logística <br /> Aeroportuaria",
-        subtitle: "Instalaciones especializadas para terminales aéreas bajo normas NFPA. Redes contra incendio, bombeo de alta presión y sistemas de soporte logístico.",
-        tag: "Estándares Aeronáuticos"
+    Incendio: {
+        title: "Sistemas <br /> Contra Incendio",
+        subtitle: "Redes de protección bajo normas NFPA. Salas de máquinas, motobombas FM/UL y sistemas de rociadores para grandes superficies.",
+        tag: "Protección Crítica"
     },
-    "Residencial de Alta Gama": {
-        title: "Hábitat <br /> de Alta Gama",
-        subtitle: "Desarrollo de infraestructura vertical premium. Ingeniería térmica, sanitaria y hidráulica para los proyectos arquitectónicos más ambiciosos del país.",
-        tag: "Arquitectura Vertical"
+    Termomecánica: {
+        title: "Climatización <br /> y Calefacción",
+        subtitle: "Sistemas VRV, climatización central y calefacción de alta eficiencia para proyectos de alta gama y complejos industriales.",
+        tag: "Climatización"
     },
-    Industrial: {
-        title: "Procesos <br /> Industriales",
-        subtitle: "Soluciones de ingeniería para plantas de producción y procesamiento. Piping industrial y sistemas de presión para alta exigencia.",
-        tag: "Potencia Industrial"
-    },
-    "Sustentable (LEED)": {
-        title: "Eficiencia <br /> Sustentable",
-        subtitle: "Liderazgo en certificaciones. Sistemas solares térmicos, recuperación pluvial y optimización de recursos para el futuro sostenible.",
-        tag: "Certificación LEED"
+    Especiales: {
+        title: "Obras <br /> Especiales",
+        subtitle: "Desarrollos de ingeniería a medida: Saneamiento sustentable, plantas de tratamiento, sistemas biológicos y piping industrial.",
+        tag: "Ingeniería Especial"
     }
 };
 const allProjectsData = [
@@ -45,22 +39,22 @@ const allProjectsData = [
     {
         id: 'a1',
         title: 'Hospital Regional Oscar Orias',
-        category: 'Salud',
+        category: 'Sanitarias',
         location: 'Ledesma, Jujuy',
         specs: 'Progreso Técnico 92%',
-        status: 'En Ejecución',
+        status: 'Entregado',
         fullSpecs: ["Hospital Regional de 25.000 m2", "Proyecto ejecutivo integral (Mayo-Julio 2022)", "Instalaciones sanitarias, gas, riego e incendio", "Certificación técnica al 92%"],
         client: "RIVA-ERG UT",
         contact: "Ing. Gustavo Cavolo",
-        image: "/h2obras-web-new/portfolio_hosp.png"
+        image: "/h2obras-web-new/hosp.png"
     },
     {
         id: 'a2',
         title: 'Fisherton Park',
-        category: 'Residencial de Alta Gama',
+        category: 'Sanitarias',
         location: 'Rosario',
         specs: 'Estado Mecánico 94%',
-        status: 'En Ejecución',
+        status: 'Entregado',
         fullSpecs: ["Condominio de categoría (45 unidades)", "Proyecto Arq. Carlos Ott", "Instalaciones sanitarias, gas, incendio y riego", "Piscina y termomecánica (Equipos Samsung Multisplit)", "Obra llave en mano"],
         client: "DIX DESARROLLADORA",
         contact: "Gabriel Pérez",
@@ -69,10 +63,10 @@ const allProjectsData = [
     {
         id: 'a3',
         title: 'Aeropuerto Int. Rosario',
-        category: 'Aeropuertos',
+        category: 'Incendio',
         location: 'Rosario',
         specs: 'Integridad 90%',
-        status: 'En Ejecución',
+        status: 'Entregado',
         fullSpecs: ["Proyecto ejecutivo de instalaciones sanitarias", "Red de agua con presurización para tanques de reserva", "Sala de máquinas con equipos Grundfos", "Sistemas de motobombas con sello FM/UL (Normas NFPA - Ruhrpumpen)"],
         client: "UT EDECA-DINALE-PECAM",
         contact: "Ing. Carlos Pellegrini",
@@ -81,10 +75,10 @@ const allProjectsData = [
     {
         id: 'a4',
         title: 'Edificio Ewain I',
-        category: 'Residencial de Alta Gama',
+        category: 'Termomecánica',
         location: 'Rosario',
-        specs: 'Progreso 15%',
-        status: 'En Ejecución',
+        specs: 'Proyecto Ejecutivo',
+        status: 'Entregado',
         fullSpecs: ["Proyecto ejecutivo de calefacción y agua caliente central", "Edificio de 75 unidades funcionales", "Sistema central de calderas Santero", "Control por termostatos wifi y cabezales termoeléctricos"],
         client: "CIMBRA S.R.L. / CLIMA CONFORT",
         contact: "Arq. Sebastián Dinatale",
@@ -93,10 +87,10 @@ const allProjectsData = [
     {
         id: 'a5',
         title: 'Distrito Puerto Norte',
-        category: 'Residencial de Alta Gama',
+        category: 'Sanitarias',
         location: 'Rosario',
         specs: '3 Torres Activas',
-        status: 'En Ejecución',
+        status: 'Entregado',
         fullSpecs: ["Instalación sanitaria, gas, incendio, piscinas y riego", "Tres torres de 21 plantas", "Sistemas de ionización en piscinas", "Riego por aspersión y goteo automatizado", "Presurización con variadores de velocidad"],
         client: "GRUPO TRANSATLANTICA S.A.",
         contact: "Sebastián Rubino",
@@ -105,7 +99,7 @@ const allProjectsData = [
     {
         id: 'a6',
         title: 'Edificio La Segunda Seguros',
-        category: 'Sustentable (LEED)',
+        category: 'Especiales',
         location: 'Rosario',
         specs: 'LEED Platinum',
         status: 'Entregado',
@@ -117,18 +111,19 @@ const allProjectsData = [
     {
         id: 'a7',
         title: 'Nuevo Hospital Nodal Venado Tuerto',
-        category: 'Salud',
+        category: 'Sanitarias',
         location: 'Venado Tuerto',
         specs: 'Sanitario Elite',
         status: 'Entregado',
         fullSpecs: ["Instalaciones de agua y servicios contra incendio", "Colectores y montantes ACS en Acero Inoxidable AISI 304", "Soldaduras TIG y sistemas Victaulic", "Montaje de sistemas presurizados y bombas de incendio"],
         client: "DINALE – EDECA U.T.E.",
-        contact: "Ing. Pedro Del Gerbo"
+        contact: "Ing. Pedro Del Gerbo",
+        image: "/h2obras-web-new/portfolio/itarruspe.png"
     },
     {
         id: 'a8',
         title: 'CEMAFE / Iturraspe',
-        category: 'Salud',
+        category: 'Sanitarias',
         location: 'Santa Fe',
         specs: 'Logística Hospitalaria',
         status: 'Entregado',
@@ -152,7 +147,7 @@ const allProjectsData = [
     {
         id: 'a10',
         title: 'Centro Justicia Penal',
-        category: 'Institucional',
+        category: 'Sanitarias',
         location: 'Rosario',
         specs: 'Judicial Federal',
         status: 'Entregado',
@@ -166,7 +161,7 @@ const allProjectsData = [
     {
         id: 'h1',
         title: 'Torre Metra (Puerto Norte)',
-        category: 'Residencial de Alta Gama',
+        category: 'Sanitarias',
         location: 'Rosario',
         specs: 'Entregado 2023',
         status: 'Historico',
@@ -178,7 +173,7 @@ const allProjectsData = [
     {
         id: 'h2',
         title: 'Campus UNRN Bariloche',
-        category: 'Institucional',
+        category: 'Incendio',
         location: 'Bariloche, Río Negro',
         specs: 'Equipos Grundfos',
         status: 'Historico',
@@ -190,7 +185,7 @@ const allProjectsData = [
     {
         id: 'h3',
         title: 'Fideicomiso Maui Puerto Norte',
-        category: 'Residencial de Alta Gama',
+        category: 'Termomecánica',
         location: 'Rosario',
         specs: 'ACS en AISI304',
         status: 'Historico',
@@ -202,43 +197,46 @@ const allProjectsData = [
     {
         id: 'h4',
         title: 'Hilton Garden Inn',
-        category: 'Residencial de Alta Gama',
+        category: 'Sanitarias',
         location: 'Santa Fe',
         specs: 'Legajo Completo',
         status: 'Historico',
         fullSpecs: ["HILTON GARDEN INN (Dique 2) y VIVIENDAS EN TORRE", "Proyecto de Instalaciones Sanitarias, Incendio, Riego y Piscinas", "Criterios sustentables y estándar de marca Hilton"],
         client: "DINALE S.A.",
-        contact: "Estudio Costa Valenzuela"
+        contact: "Estudio Costa Valenzuela",
+        image: "/h2obras-web-new/portfolio/maui.png"
     },
     {
         id: 'h5',
         title: 'Casino Rosario',
-        category: 'Institucional',
+        category: 'Sanitarias',
         location: 'Rosario',
         specs: 'Alta Complejidad',
         status: 'Historico',
         fullSpecs: ["Hotel y Centro de Convenciones Casino Rosario", "Gerenciamiento de Proyecto de Instalaciones Sanitarias", "Instalaciones de alta complejidad en Battle y Ordoñez"],
         client: "RIVA S.A.",
-        contact: "Ing. Raúl Olguín"
+        contact: "Ing. Raúl Olguín",
+        image: "/h2obras-web-new/portfolio/centro just rosario.png"
     },
     {
         id: 'h6',
         title: 'Centro Islámico King Fhad',
-        category: 'Institucional',
+        category: 'Especiales',
         location: 'CABA',
         specs: 'Soldadura TIG AISI304',
         status: 'Historico',
         fullSpecs: ["Gerenciamiento y Dirección de obra", "Instalaciones Sanitarias, Gas e Incendio", "Riego y Fuentes ornamentales", "Instalaciones especiales en Acero Inoxidable AISI304 con soldaduras TIG"],
         client: "RIVA S.A.",
-        contact: "Año 1999"
+        contact: "Año 1999",
+        image: "/h2obras-web-new/portfolio/acuario.png"
     },
-    { id: 'h7', title: 'Estación Elevadora Aguadas', category: 'Infraestructura', location: 'Funes, Santa Fe', specs: 'Bombas Grundfos', status: 'Historico', fullSpecs: ["Obra completa de Estación Elevadora", "Electromecánica y Cañería de impulsión", "Instalación de Bombas Grundfos", "Sistema de Izaje y Reja Mecánica"], client: "ASSA S.A.", contact: "Ing. Oscar Benvenuto" },
-    { id: 'h17', title: 'Planta de Biogas', category: 'Sustentable (LEED)', location: 'Venado Tuerto', specs: 'Saneamiento Total', status: 'Historico' },
-    { id: 'h25', title: 'Hospital Iturraspe', category: 'Salud', location: 'Santa Fe', specs: 'Arquitectura Hospitalaria', status: 'Historico', image: "/h2obras-web-new/portfolio/itarruspe.png" },
+    { id: 'h7', title: 'Estación Elevadora Aguadas', category: 'Sanitarias', location: 'Funes, Santa Fe', specs: 'Bombas Grundfos', status: 'Historico', fullSpecs: ["Obra completa de Estación Elevadora", "Electromecánica y Cañería de impulsión", "Instalación de Bombas Grundfos", "Sistema de Izaje y Reja Mecánica"], client: "ASSA S.A.", contact: "Ing. Oscar Benvenuto" },
+    { id: 'h17', title: 'Planta de Biogas', category: 'Especiales', location: 'Venado Tuerto', specs: 'Saneamiento Total', status: 'Historico' },
+    { id: 'h25', title: 'Hospital Iturraspe', category: 'Sanitarias', location: 'Santa Fe', specs: 'Arquitectura Hospitalaria', status: 'Historico', image: "/h2obras-web-new/portfolio/itarruspe.png" },
     {
         id: 'h26',
         title: 'PROYECTO FACA (FOSTER + PARTNERS)',
-        category: 'Industrial',
+        category: 'Gas',
         location: 'Rosario',
         specs: 'Masterplan Maqueta',
         status: 'Historico',
@@ -248,7 +246,7 @@ const allProjectsData = [
     {
         id: 'h27',
         title: 'Recoleta’s House',
-        category: 'Residencial de Alta Gama',
+        category: 'Sanitarias',
         location: 'CABA',
         specs: 'Dirección de Obra',
         status: 'Historico',
@@ -258,7 +256,7 @@ const allProjectsData = [
     {
         id: 'h28',
         title: 'Teatro Argentino de La Plata',
-        category: 'Institucional',
+        category: 'Incendio',
         location: 'La Plata',
         specs: 'Superficie 60.000 m2',
         status: 'Historico',
@@ -267,7 +265,7 @@ const allProjectsData = [
     {
         id: 'h29',
         title: 'Hospital Blas Dubarry',
-        category: 'Salud',
+        category: 'Sanitarias',
         location: 'Mercedes, BS.AS.',
         specs: 'Sanidad Institucional',
         status: 'Historico',
@@ -277,7 +275,7 @@ const allProjectsData = [
     {
         id: 'h30',
         title: 'Distrito Sur / Noroeste',
-        category: 'Institucional',
+        category: 'Sanitarias',
         location: 'Rosario',
         specs: 'Centros Municipales',
         status: 'Historico',
@@ -287,7 +285,7 @@ const allProjectsData = [
     {
         id: 'h31',
         title: 'Condominios del Alto',
-        category: 'Residencial de Alta Gama',
+        category: 'Sanitarias',
         location: 'Rosario',
         specs: 'Etapas I, II y III',
         status: 'Historico',
@@ -296,7 +294,7 @@ const allProjectsData = [
     {
         id: 'h32',
         title: 'Hotel Esplendor Savoy',
-        category: 'Residencial de Alta Gama',
+        category: 'Termomecánica',
         location: 'Rosario',
         specs: 'Ampliación 2da Etapa',
         status: 'Historico',
@@ -305,7 +303,7 @@ const allProjectsData = [
     {
         id: 'h33',
         title: 'Estadio N.O.B. Independencia',
-        category: 'Institucional',
+        category: 'Sanitarias',
         location: 'Rosario',
         specs: 'Redes de Alta Presión',
         status: 'Historico',
@@ -315,7 +313,7 @@ const allProjectsData = [
     {
         id: 'h34',
         title: 'Complejo Bella Vista (NOB)',
-        category: 'Institucional',
+        category: 'Sanitarias',
         location: 'Rosario',
         specs: 'Riego Presurizado',
         status: 'Historico',
@@ -325,7 +323,7 @@ const allProjectsData = [
     {
         id: 'h35',
         title: 'La Gallega Supermercados',
-        category: 'Comercial',
+        category: 'Sanitarias',
         location: 'Rosario',
         specs: 'Sistemas Hidroneumáticos',
         status: 'Historico',
@@ -335,7 +333,7 @@ const allProjectsData = [
     {
         id: 'h36',
         title: 'Hipermercado Libertad',
-        category: 'Comercial',
+        category: 'Sanitarias',
         location: 'Rosario',
         specs: 'Nave de 20.000 m2',
         status: 'Historico',
@@ -346,13 +344,11 @@ const allProjectsData = [
 
 const categories = [
     { id: 'all', label: 'Todos los Proyectos', icon: 'apps' },
-    { id: 'Obras en Ejecución', label: 'Obras en Ejecución', icon: 'engineering' },
-    { id: 'Salud', label: 'Salud', icon: 'medical_services' },
-
-    { id: 'Aeropuertos', label: 'Aeropuertos', icon: 'flight_takeoff' },
-    { id: 'Residencial de Alta Gama', label: 'Residencial de Alta Gama', icon: 'domain' },
-    { id: 'Industrial', label: 'Industrial', icon: 'factory' },
-    { id: 'Sustentable (LEED)', label: 'Sustentable (LEED)', icon: 'potted_plant' }
+    { id: 'Sanitarias', label: 'Sanitarias', icon: 'water_drop' },
+    { id: 'Gas', label: 'Redes de Gas', icon: 'mode_fan' },
+    { id: 'Incendio', label: 'Contra Incendio', icon: 'fire_extinguisher' },
+    { id: 'Termomecánica', label: 'Climatización y Calefacción', icon: 'thermostat' },
+    { id: 'Especiales', label: 'Obras Especiales', icon: 'settings_suggest' }
 ];
 
 function ProjectCard({ project, onClick }) {
@@ -380,14 +376,6 @@ function ProjectCard({ project, onClick }) {
                 <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-20 transition-opacity duration-700"></div>
                 <div className="shimmer-element opacity-20"></div>
 
-                <div className="absolute top-4 right-4 bg-accent text-on-accent text-[9px] font-bold px-3 py-1 uppercase tracking-[0.2em] z-10 shadow-lg">
-                    {label || project.status}
-                </div>
-                <div className="absolute bottom-4 left-4">
-                    <span className="bg-primary/80 backdrop-blur-md text-white text-[10px] font-technical px-2 py-1 uppercase tracking-widest border border-white/10 group-hover:bg-accent group-hover:text-on-accent transition-colors duration-500">
-                        Ref. Operativa: {project.id.toUpperCase()}
-                    </span>
-                </div>
             </div>
             <div className="p-6 md:p-8 relative">
                 <div className="flex items-center gap-3 mb-4">
@@ -396,30 +384,15 @@ function ProjectCard({ project, onClick }) {
                         {location}
                     </span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-headline font-black uppercase text-primary mb-6 leading-tight group-hover:text-accent transition-colors duration-500">
+                <h3 className="text-lg md:text-xl font-headline font-black uppercase text-primary mb-6 leading-tight group-hover:text-accent transition-colors duration-500">
                     {title}
                 </h3>
-                <div className="space-y-4 border-t border-outline-variant/10 pt-6">
-                    <div className="flex justify-between items-center text-[10px] font-technical uppercase tracking-widest opacity-60">
-                        <span>Estado del Sistema</span>
-                        <span>{progress ? `${progress}%` : "Integridad"}</span>
-                    </div>
-                    <div className="w-full bg-surface-container h-1 overflow-hidden rounded-full">
-                        <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: progress ? `${progress}%` : '100%' }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                            className="bg-accent h-full shadow-[0_0_8px_rgba(255,152,0,0.5)]"
-                        ></motion.div>
-                    </div>
-                    <div className="flex flex-wrap gap-2 pt-2">
-                        {(tags || (fullSpecs ? fullSpecs.slice(0, 2) : [])).map(tag => (
-                            <span key={tag} className="bg-surface-container-high text-[9px] font-technical font-bold px-2 py-1 text-primary uppercase tracking-tight group-hover:bg-primary group-hover:text-white transition-colors duration-500">
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
+                <div className="flex flex-wrap gap-2 border-t border-outline-variant/10 pt-6">
+                    {(tags || (fullSpecs ? fullSpecs.slice(0, 2) : [])).map(tag => (
+                        <span key={tag} className="bg-surface-container-high text-[9px] font-technical font-bold px-2 py-1 text-primary uppercase tracking-tight group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                            {tag}
+                        </span>
+                    ))}
                 </div>
             </div>
         </motion.div>
@@ -466,10 +439,7 @@ function ProjectDetailModal({ project, onClose }) {
                     {/* Perspective Label */}
                     <div className="absolute bottom-8 left-8 flex flex-col gap-2">
                         <span className="bg-accent text-on-accent text-[10px] font-black px-4 py-1 uppercase tracking-[0.4em] shadow-lg">
-                            Vista Operativa
-                        </span>
-                        <span className="text-white/60 font-technical text-[9px] uppercase tracking-widest pl-1">
-                            Ref. de Sistema: {project.id.toUpperCase()}_VOL_01
+                            Vista de Obra
                         </span>
                     </div>
                 </div>
@@ -481,10 +451,10 @@ function ProjectDetailModal({ project, onClose }) {
                     <div className="relative z-10">
                         <div className="flex items-center gap-4 mb-8">
                             <div className="w-12 h-1 bg-accent"></div>
-                            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary">Datasheet de Ingeniería</span>
+                            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary">Información Técnica</span>
                         </div>
 
-                        <h2 className="text-3xl md:text-5xl font-headline font-black uppercase text-primary mb-12 leading-[0.9] tracking-tighter">
+                        <h2 className="text-3xl md:text-4xl font-headline font-black uppercase text-primary mb-12 leading-[0.9] tracking-tighter">
                             {project.title}
                         </h2>
 
@@ -501,6 +471,14 @@ function ProjectDetailModal({ project, onClose }) {
                                 <p className="text-[10px] uppercase font-bold text-primary/60 tracking-[0.2em] mb-2">Entidad / Cliente</p>
                                 <p className="text-sm font-headline font-extrabold text-primary uppercase">{project.client || "Consolidado Nacional"}</p>
                             </div>
+                            {(project.progress || project.status) && (
+                                <div className="border-l-2 border-outline-variant/20 pl-6">
+                                    <p className="text-[10px] uppercase font-bold text-primary/60 tracking-[0.2em] mb-2">Estado / Avance</p>
+                                    <p className="text-sm font-headline font-extrabold text-primary uppercase">
+                                        {project.status} {project.progress ? `(${project.progress}%)` : ''}
+                                    </p>
+                                </div>
+                            )}
                         </div>
 
                         <div className="mb-12">
@@ -563,7 +541,6 @@ export default function Portfolio() {
 
     const filteredAll = allProjectsData.filter(p =>
         selectedCategory === 'all' ||
-        (selectedCategory === 'Obras en Ejecución' && p.status === 'En Ejecución') ||
         p.category === selectedCategory
     );
 
@@ -573,14 +550,13 @@ export default function Portfolio() {
 
     return (
         <>
-            <div className="bg-gradient-to-r from-transparent via-[#5b5f61]/10 to-transparent h-[1px]"></div>
             <div className="flex min-h-screen">
                 {/* Sidebar Navigation */}
-                <aside className="hidden lg:flex flex-col h-screen w-80 left-0 sticky top-[88px] bg-surface-container-low border-r border-outline-variant/10 py-12 px-6 space-y-4">
-                    <div className="px-2 mb-10">
-                        <div className="w-8 h-1 bg-accent mb-6"></div>
-                        <h3 className="text-xl font-headline font-black text-primary uppercase tracking-tighter">Matriz de Obras</h3>
-                        <p className="text-[10px] text-primary/60 tracking-[0.3em] uppercase font-technical mt-1">Estrategia de Infraestructura Nacional</p>
+                <aside className="hidden lg:flex flex-col h-screen w-72 left-0 sticky top-0 bg-surface-container-low border-r border-outline-variant/10 pt-28 pb-6 px-6 space-y-4">
+                    <div className="px-2 mt-6 mb-4">
+                        <div className="w-8 h-1 bg-accent mb-3"></div>
+                        <h3 className="text-lg font-headline font-black text-primary uppercase tracking-tighter">Matriz de Obras</h3>
+                        <p className="text-[9px] text-primary/60 tracking-[0.3em] uppercase font-technical mt-1">Estrategia de Infraestructura Nacional</p>
                     </div>
                     <nav className="flex flex-col space-y-1 relative">
                         {categories.map(cat => {
@@ -601,8 +577,8 @@ export default function Portfolio() {
                                             transition={{ type: "spring", bounce: 0, duration: 0.5 }}
                                         />
                                     )}
-                                    <span className={`material-symbols-outlined text-lg ${isActive ? 'text-accent' : 'opacity-40 group-hover:opacity-100 group-hover:text-primary'}`} style={{ fontVariationSettings: isActive ? "'FILL' 1" : "'FILL' 0" }}>{cat.icon}</span>
-                                    <span className="font-headline font-bold text-xs tracking-widest uppercase">{cat.label}</span>
+                                    <span className={`material-symbols-outlined text-base ${isActive ? 'text-accent' : 'opacity-40 group-hover:opacity-100 group-hover:text-primary'}`} style={{ fontVariationSettings: isActive ? "'FILL' 1" : "'FILL' 0" }}>{cat.icon}</span>
+                                    <span className="font-headline font-bold text-[10px] tracking-widest uppercase">{cat.label}</span>
                                 </button>
                             );
                         })}
@@ -611,31 +587,33 @@ export default function Portfolio() {
                         <motion.button
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="w-full py-5 text-[10px] font-black text-white bg-primary uppercase tracking-[0.2em] shadow-xl hover:bg-accent hover:text-on-accent transition-all duration-300 flex items-center justify-center gap-3"
+                            className="w-full py-4 text-[9px] font-black text-white bg-primary uppercase tracking-[0.2em] shadow-xl hover:bg-accent hover:text-on-accent transition-all duration-300 flex items-center justify-center gap-3"
                         >
-                            <span className="material-symbols-outlined text-sm">download_2</span>
+                            <span className="material-symbols-outlined text-xs">download_2</span>
                             Exportar Registro PDF
                         </motion.button>
                     </div>
                 </aside>
                 {/* Main Content Area */}
-                <main ref={mainContentRef} className="flex-1 max-w-full overflow-hidden bg-surface">
+                <main ref={mainContentRef} className="flex-1 max-w-full overflow-hidden bg-surface pt-28">
                     {/* Hero Banner */}
-                    <section className="relative min-h-[450px] md:h-[600px] bg-primary flex items-center py-24 md:py-0 overflow-hidden">
+                    <section className="relative min-h-[400px] md:h-[500px] bg-primary flex items-center pt-16 pb-16 md:pt-12 md:pb-0 overflow-hidden">
                         <motion.div
-                            initial={{ scale: 1.1, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 0.7 }}
-                            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 0.15 }}
+                            transition={{ duration: 2, ease: "easeOut" }}
                             className="absolute inset-0"
                         >
                             <img
-                                alt="Industrial construction"
-                                className="w-full h-full object-cover scale-105"
-                                style={{ filter: 'brightness(0.7) contrast(1.1) saturate(0.8)' }}
-                                src="https://images.unsplash.com/photo-1541888941259-7b9d9218d0bc?q=80&w=2070&auto=format&fit=crop"
+                                alt="Technical background"
+                                className="w-full h-full object-cover blur-3xl scale-110"
+                                style={{ filter: 'grayscale(1) brightness(0.5)' }}
+                                src="/h2obras-web-new/hero_industrial.png"
                             />
                         </motion.div>
-                        <div className="absolute inset-0 technical-grid opacity-20"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/80 to-primary"></div>
+                        <div className="absolute inset-0 technical-grid opacity-30"></div>
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
 
                         <div className="container mx-auto px-8 md:px-24 relative z-10">
                             <AnimatePresence mode="wait">
@@ -646,15 +624,15 @@ export default function Portfolio() {
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                                 >
-                                    <div className="flex items-center gap-6 mb-8">
+                                    <div className="flex items-center gap-6 mb-6">
                                         <div className="w-16 h-1 bg-accent"></div>
-                                        <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">Registro de Obras</span>
+                                        <span className="text-accent text-[10px] font-black tracking-[0.4em] uppercase">Registro de Obras</span>
                                     </div>
                                     <h1
-                                        className="text-white text-5xl md:text-8xl lg:text-9xl font-black font-headline tracking-tighter leading-[0.85] uppercase mb-10"
+                                        className="text-white text-4xl md:text-6xl lg:text-7xl font-black font-headline tracking-tighter leading-[0.85] uppercase mb-8"
                                         dangerouslySetInnerHTML={{ __html: currentHero.title }}
                                     />
-                                    <p className="text-white text-xl md:text-2xl max-w-3xl font-body leading-relaxed">
+                                    <p className="text-white text-lg md:text-xl max-w-3xl font-body leading-relaxed">
                                         {currentHero.subtitle}
                                     </p>
                                 </motion.div>
@@ -667,13 +645,38 @@ export default function Portfolio() {
                             <div className="w-32 h-px bg-white/10 ml-auto"></div>
                         </div>
                     </section>
+
+                    {/* Mobile Category Filter Bar */}
+                    <div className="lg:hidden sticky top-20 z-30 bg-surface/95 backdrop-blur-md border-b border-outline-variant/10 shadow-sm">
+                        <div className="flex overflow-x-auto scrollbar-hide gap-2 px-4 py-3">
+                            {categories.map(cat => {
+                                const isActive = selectedCategory === cat.id;
+                                return (
+                                    <button
+                                        key={cat.id}
+                                        onClick={() => setSelectedCategory(cat.id)}
+                                        className={`flex items-center gap-2 px-4 py-2 text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition-all duration-300 shrink-0 ${
+                                            isActive
+                                                ? 'bg-primary text-white shadow-md'
+                                                : 'bg-surface-container text-primary/60 hover:text-primary hover:bg-surface-container-high'
+                                        }`}
+                                    >
+                                        <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: isActive ? "'FILL' 1" : "'FILL' 0" }}>{cat.icon}</span>
+                                        {cat.label}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+
                     {selectedCategory === 'all' && (
                         <>
                             {/* Execution Status Tracker */}
-                            <section className="py-20 px-8 md:px-20 bg-surface">
+                            <section className="py-20 bg-surface">
+                              <div className="container mx-auto px-8 md:px-24">
                                 <div className="flex justify-between items-end mb-16 border-l-4 border-primary pl-6">
                                     <div>
-                                        <h2 className="text-4xl font-headline font-black uppercase text-primary tracking-tighter">Antecedentes de Obras</h2>
+                                        <h2 className="text-3xl md:text-4xl font-headline font-black uppercase text-primary tracking-tighter">Antecedentes de Obras</h2>
                                         <p className="text-primary/70 font-label uppercase tracking-widest text-xs mt-2">Estado de Ejecución Activa: Octubre 2025</p>
                                     </div>
                                     <div className="text-right hidden md:block">
@@ -731,21 +734,12 @@ export default function Portfolio() {
                                             <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
                                         </div>
                                         <div className="p-10 relative z-10 text-white">
-                                            <span className="text-tertiary-fixed text-[10px] tracking-[0.3em] font-bold uppercase mb-4 block">Verticalidad Residencial</span>
-                                            <h4 className="text-3xl font-headline font-black uppercase mb-4 group-hover:text-tertiary-fixed transition-colors">Edificio Ewain I</h4>
+                                            <h4 className="text-2xl md:text-3xl font-headline font-black uppercase mb-4 group-hover:text-tertiary-fixed transition-colors">Edificio Ewain I</h4>
                                             <p className="text-on-primary-container text-sm leading-relaxed mb-8 max-w-md">Montantes de acero inoxidable, bombas presurizadas y colectores de alto rendimiento.</p>
                                         </div>
-                                        <div className="p-10 relative z-10 flex items-center gap-6">
-                                            <div className="text-4xl text-white font-headline font-black">15%</div>
-                                            <div className="flex-1 bg-white/10 h-2">
-                                                <motion.div
-                                                    initial={{ width: 0 }}
-                                                    whileInView={{ width: '15%' }}
-                                                    viewport={{ once: true }}
-                                                    transition={{ duration: 1.2, ease: "easeOut" }}
-                                                    className="bg-tertiary-fixed h-full"
-                                                ></motion.div>
-                                            </div>
+                                        <div className="p-10 relative z-10 flex items-center justify-between">
+                                            <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Calefacción y Agua Caliente Central</span>
+                                            <span className="material-symbols-outlined text-white/20 group-hover:text-accent transition-colors">arrow_forward</span>
                                         </div>
                                     </motion.div>
                                     <motion.div
@@ -761,7 +755,6 @@ export default function Portfolio() {
                                             />
                                         </div>
                                         <div className="p-8">
-                                            <p className="text-[10px] font-technical text-primary/60 uppercase tracking-widest mb-1 group-hover:text-accent/60 transition-colors">Ref. de Sistema</p>
                                             <h4 className="text-xl font-headline font-black uppercase text-primary group-hover:text-cyan-700 transition-colors">Distrito Puerto Norte</h4>
                                             <div className="space-y-2 mt-4">
                                                 <p className="text-xs text-primary/70 uppercase font-bold tracking-widest">Estado: Activo</p>
@@ -791,22 +784,22 @@ export default function Portfolio() {
                                             </div>
                                         </div>
                                         <div className="px-8 pb-8 flex items-end justify-between">
-                                            <span className="text-[10px] font-black uppercase tracking-tighter text-primary/40">Ciclo de Vida Completo</span>
                                             <span className="material-symbols-outlined text-primary/20 group-hover:text-accent transition-colors">arrow_forward</span>
                                         </div>
                                     </motion.div>
                                 </motion.div >
+                              </div>
                             </section >
                             {/* Sustainability / LEED Section */}
-                            < section className="py-24 px-8 md:px-20 bg-[#00162a] text-white overflow-hidden relative" >
+                            < section className="py-24 bg-[#00162a] text-white overflow-hidden relative" >
                                 <div className="absolute right-0 top-0 w-1/3 h-full bg-surface-container-highest/5 mask-gradient hidden lg:block"></div>
-                                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                                <div className="container mx-auto px-8 md:px-24 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                                     <div>
                                         <div className="flex items-center gap-4 mb-8">
                                             <div className="h-[2px] w-12 bg-tertiary-fixed"></div>
                                             <span className="text-tertiary-fixed text-sm font-bold tracking-[0.3em] uppercase">Liderazgo Sustentable</span>
                                         </div>
-                                        <h2 className="text-5xl font-headline font-black uppercase tracking-tighter mb-8 leading-none">Edificio La Segunda Seguros <br /><span className="text-tertiary-fixed">LEED Platinum</span></h2>
+                                        <h2 className="text-4xl md:text-5xl font-headline font-black uppercase tracking-tighter mb-8 leading-none">Edificio La Segunda Seguros <br /><span className="text-tertiary-fixed">LEED Platinum</span></h2>
                                         <p className="text-on-primary-container text-lg mb-12 font-light leading-relaxed max-w-xl">La cima de la ingeniería corporativa sustentable en Rosario. Este proyecto con certificación LEED PLATINUM integra sistemas de alta eficiencia para el liderazgo ambiental.</p>
                                         <div className="grid grid-cols-2 gap-8">
                                             <div className="space-y-2">
@@ -839,7 +832,8 @@ export default function Portfolio() {
                                 </div>
                             </section >
                             {/* Institutional High-Tech Modules */}
-                            < section className="py-20 px-8 md:px-20 bg-surface-container-low" >
+                            < section className="py-20 bg-surface-container-low" >
+                              <div className="container mx-auto px-8 md:px-24">
                                 <div className="mb-16">
                                     <h2 className="text-3xl font-headline font-black uppercase text-primary tracking-tighter">Infraestructura Especializada</h2>
                                     <p className="text-primary/70 font-label uppercase tracking-widest text-[10px] mt-2">Gestión de Fluidos de Precisión y Seguridad contra Incendios</p>
@@ -905,13 +899,15 @@ export default function Portfolio() {
                                     </motion.div>
 
                                 </motion.div>
+                              </div>
                             </section >
                         </>
                     )}
 
                     {
                         selectedCategory !== 'all' && (
-                            <section className="py-20 px-8 md:px-20 bg-surface">
+                            <section className="py-20 bg-surface">
+                              <div className="container mx-auto px-8 md:px-24">
                                 <div className="mb-12">
                                     <motion.h2
                                         initial={{ opacity: 0, x: -20 }}
@@ -947,12 +943,14 @@ export default function Portfolio() {
                                         ))}
                                     </AnimatePresence>
                                 </motion.div>
+                              </div>
                             </section>
                         )
                     }
 
                     {/* Massive Institutional Registry (The Grid) */}
-                    <section className="py-20 px-8 md:px-20 bg-surface">
+                    <section className="py-20 bg-surface">
+                      <div className="container mx-auto px-8 md:px-24">
                         <div className="flex justify-between items-center mb-12">
                             <h2 className="text-2xl font-headline font-black uppercase text-primary">Registro Integral de Proyectos</h2>
                             <div className="flex gap-4">
@@ -978,7 +976,7 @@ export default function Portfolio() {
                                                 return p.status !== 'Historico' || showAllHistory;
                                             }
                                             // Show everything in the specific category
-                                            return p.category === selectedCategory || (selectedCategory === 'Obras en Ejecución' && p.status === 'En Ejecución');
+                                            return p.category === selectedCategory;
                                         })
                                         .map(p => (
                                             <tr
@@ -1015,6 +1013,7 @@ export default function Portfolio() {
                                 </span>
                             </div>
                         )}
+                      </div>
                     </section>
                 </main>
             </div>
