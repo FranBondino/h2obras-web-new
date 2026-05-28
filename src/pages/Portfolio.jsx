@@ -733,14 +733,21 @@ export default function Portfolio() {
                         })}
                     </nav>
                     <div className="mt-auto p-2 pt-12">
-                        <motion.button
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="w-full py-4 text-[9px] font-black text-white bg-primary uppercase tracking-[0.2em] shadow-xl hover:bg-accent hover:text-on-accent transition-all duration-300 flex items-center justify-center gap-3"
+                        <a
+                            href="/h2obras-web-new/registro-obras-h2obras.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block w-full"
                         >
-                            <span className="material-symbols-outlined text-xs">download_2</span>
-                            Descargar Ficha Técnica
-                        </motion.button>
+                            <motion.button
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="w-full py-4 text-[9px] font-black text-white bg-primary uppercase tracking-[0.2em] shadow-xl hover:bg-accent hover:text-on-accent transition-all duration-300 flex items-center justify-center gap-3"
+                            >
+                                <span className="material-symbols-outlined text-xs">download_2</span>
+                                Descargar Ficha Técnica
+                            </motion.button>
+                        </a>
                     </div>
                 </aside>
                 {/* Main Content Area */}

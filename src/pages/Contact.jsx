@@ -72,16 +72,7 @@ export default function Contact() {
                                         <h2 className="text-3xl font-headline font-black text-primary uppercase tracking-tighter">COMUNICACIÓN DIRECTA</h2>
                                     </div>
                                     <div className="space-y-10">
-                                        <a href="tel:03414480566" className="flex items-center gap-8 group">
-                                            <div className="w-16 h-16 bg-surface-container-low border border-outline-variant/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
-                                                <span className="material-symbols-outlined text-primary group-hover:text-white">call</span>
-                                            </div>
-                                            <div>
-                                                <p className="text-[10px] font-technical text-secondary/40 uppercase tracking-widest mb-1">Línea Directa</p>
-                                                <p className="text-2xl font-headline font-black text-primary group-hover:text-primary/70 transition-colors">0341- 4480566</p>
-                                            </div>
-                                        </a>
-                                        <a href="mailto:ricardobondino@gmail.com" className="flex items-center gap-8 group">
+                                        <a href="mailto:info@h2obras.com" className="flex items-center gap-8 group">
                                             <div className="w-16 h-16 bg-surface-container-low border border-outline-variant/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
                                                 <span className="material-symbols-outlined text-primary group-hover:text-white">mail</span>
                                             </div>
@@ -92,6 +83,7 @@ export default function Contact() {
                                         </a>
                                     </div>
                                 </div>
+
                             </div>
 
                             {/* Right: Technical Logistics Map/Depots */}
@@ -158,13 +150,18 @@ export default function Contact() {
                                             </div>
                                             <div className="space-y-3">
                                                 <label className="text-xs font-technical text-primary uppercase tracking-widest block font-black">TIPO DE PROYECTO</label>
-                                                <select className="w-full bg-surface border border-outline-variant/50 h-14 px-6 text-primary font-body text-sm focus:outline-none focus:border-accent appearance-none transition-colors">
-                                                    <option className="bg-surface text-primary">INSTALACIONES SANITARIAS</option>
-                                                    <option className="bg-surface text-primary">REDES DE GAS</option>
-                                                    <option className="bg-surface text-primary">SISTEMAS CONTRA INCENDIO</option>
-                                                    <option className="bg-surface text-primary">OBRAS DE INFRAESTRUCTURA</option>
-                                                    <option className="bg-surface text-primary">CLIMATIZACIÓN Y CALEFACCIÓN</option>
-                                                </select>
+                                                <div className="relative w-full">
+                                                    <select className="w-full bg-surface border border-outline-variant/50 h-14 px-6 pr-12 text-primary font-body text-sm focus:outline-none focus:border-accent appearance-none transition-colors">
+                                                        <option className="bg-surface text-primary">INSTALACIONES SANITARIAS</option>
+                                                        <option className="bg-surface text-primary">REDES DE GAS</option>
+                                                        <option className="bg-surface text-primary">SISTEMAS CONTRA INCENDIO</option>
+                                                        <option className="bg-surface text-primary">OBRAS DE INFRAESTRUCTURA</option>
+                                                        <option className="bg-surface text-primary">CLIMATIZACIÓN Y CALEFACCIÓN</option>
+                                                    </select>
+                                                    <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary/40 pointer-events-none">
+                                                        expand_more
+                                                    </span>
+                                                </div>
                                             </div>
                                             <div className="space-y-3">
                                                 <label className="text-xs font-technical text-primary uppercase tracking-widest block font-black">UBICACIÓN</label>
