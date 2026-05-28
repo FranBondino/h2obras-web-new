@@ -3,47 +3,51 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const categoryHeroData = {
     all: {
-        title: "Historial de <br /> Proyectos",
-        subtitle: "Un registro consolidado del proyecto y la ejecución de obras e instalaciones de alta complejidad, fundamentado en un compromiso firme con la rigurosidad técnica y la excelencia operativa.",
+        title: "Registro de <br /> Obras",
+        subtitle: "Registro de proyectos, dirección y ejecución de instalaciones de alta complejidad, con plazos garantizados y rigurosidad técnica.",
         tag: "Obras y Proyectos"
     },
     Sanitarias: {
         title: "Instalaciones <br /> Sanitarias",
-        subtitle: "Sistemas de distribución de agua, desagües cloacales y pluviales de gran escala. Montajes en acero inoxidable y termofusión de alta performance.",
-        tag: "Especialidad: Sanitarias"
+        subtitle: "Sistemas de distribución de agua potable, desagües cloacales y pluviales. Montajes de colectores en acero inoxidable y termofusión de alta presión.",
+        tag: "Instalaciones Sanitarias"
     },
     Gas: {
         title: "Redes de <br /> Gas Natural",
-        subtitle: "Instalaciones industriales y comerciales de alta presión. Proyecto y ejecución bajo normas de seguridad vigentes y máxima eficiencia.",
-        tag: "Especialidad: Gas"
+        subtitle: "Instalaciones comerciales e industriales de media y alta presión. Habilitaciones y proyectos ejecutivos bajo normativas vigentes.",
+        tag: "Redes de Gas"
     },
     Incendio: {
         title: "Sistemas <br /> Contra Incendio",
-        subtitle: "Redes de protección bajo normas NFPA. Salas de máquinas, motobombas FM/UL y sistemas de rociadores para grandes superficies.",
-        tag: "Protección Crítica"
+        subtitle: "Redes de protección hidráulica bajo normas NFPA. Salas de bombas con sellos de calidad FM/UL, motobombas y sistemas de rociadores.",
+        tag: "Protección Hidráulica"
     },
     Termomecánica: {
         title: "Climatización <br /> y Calefacción",
-        subtitle: "Sistemas VRV, climatización central y calefacción de alta eficiencia para proyectos de alta gama y complejos industriales.",
-        tag: "Climatización"
+        subtitle: "Sistemas de climatización centralizada, VRV y calefacción por piso radiante o radiadores mediante calderas individuales o centrales.",
+        tag: "Termomecánica"
     },
     Especiales: {
         title: "Obras <br /> Especiales",
-        subtitle: "Desarrollos de ingeniería a medida: Saneamiento sustentable, plantas de tratamiento, sistemas biológicos y piping industrial.",
-        tag: "Ingeniería Especial"
+        subtitle: "Instalaciones industriales de piping, estaciones elevadoras de fluidos, plantas de tratamiento y sistemas de soporte de vida (LSS) para acuarios.",
+        tag: "Instalaciones Especiales"
     }
 };
 const allProjectsData = [
-    // Activos
     // Activos
     {
         id: 'a1',
         title: 'Hospital Regional Oscar Orias',
         category: 'Sanitarias',
         location: 'Ledesma, Jujuy',
-        specs: 'Progreso Técnico 92%',
+        specs: 'Trabajos certificados al 92%',
         status: 'Entregado',
-        fullSpecs: ["Hospital Regional de 25.000 m2", "Proyecto ejecutivo integral (Mayo-Julio 2022)", "Instalaciones sanitarias, gas, riego e incendio", "Certificación técnica al 92%"],
+        fullSpecs: [
+            "Hospital Regional de 25.000 m2",
+            "Proyecto ejecutivo realizado entre Mayo y Julio de 2022",
+            "Instalaciones sanitarias, de gas, riego e incendio",
+            "Trabajos certificados al 92% en Octubre de 2025"
+        ],
         client: "RIVA-ERG UT",
         contact: "Ing. Gustavo Cavolo",
         image: "/h2obras-web-new/hosp.png"
@@ -53,9 +57,15 @@ const allProjectsData = [
         title: 'Fisherton Park',
         category: 'Sanitarias',
         location: 'Rosario',
-        specs: 'Estado Mecánico 94%',
+        specs: 'Trabajos certificados al 94%',
         status: 'Entregado',
-        fullSpecs: ["Condominio de categoría (45 unidades)", "Proyecto Arq. Carlos Ott", "Instalaciones sanitarias, gas, incendio y riego", "Piscina y termomecánica (Equipos Samsung Multisplit)", "Obra llave en mano"],
+        fullSpecs: [
+            "Condominio de categoría de 45 unidades funcionales",
+            "Proyecto de arquitectura: Arq. Carlos Ott",
+            "Proyecto y ejecución de instalaciones sanitarias, gas, incendio, riego, piscina y termomecánica con equipos Samsung multisplit bajo silueta",
+            "Obra llave en mano",
+            "Trabajos certificados al 94% en Octubre de 2025"
+        ],
         client: "DIX DESARROLLADORA",
         contact: "Gabriel Pérez",
         image: "/h2obras-web-new/portfolio_fish_premium.png"
@@ -65,9 +75,15 @@ const allProjectsData = [
         title: 'Aeropuerto Int. Rosario',
         category: 'Incendio',
         location: 'Rosario',
-        specs: 'Integridad 90%',
+        specs: 'Trabajos certificados al 90%',
         status: 'Entregado',
-        fullSpecs: ["Proyecto ejecutivo de instalaciones sanitarias", "Red de agua con presurización para tanques de reserva", "Sala de máquinas con equipos Grundfos", "Sistemas de motobombas con sello FM/UL (Normas NFPA - Ruhrpumpen)"],
+        fullSpecs: [
+            "Proyecto ejecutivo de instalaciones sanitarias",
+            "Ejecución de Instalaciones de agua e incendio (proyecto de incendio de Miguel D'Adario)",
+            "Red de agua con presurización para alimentación de tanques de reserva sanitaria y de incendio",
+            "Sala de máquinas con provisión y montajes de equipos de presurización sanitaria (Grundfos) y sistema de bombas y motobomba con sello FM/UL y bajo requerimiento NFPA (Ruhrpumpen)",
+            "Trabajos certificados al 90% en Octubre de 2025"
+        ],
         client: "UT EDECA-DINALE-PECAM",
         contact: "Ing. Carlos Pellegrini",
         image: "/h2obras-web-new/portfolio/aerop.png"
@@ -77,9 +93,15 @@ const allProjectsData = [
         title: 'Edificio Ewain I',
         category: 'Termomecánica',
         location: 'Rosario',
-        specs: 'Proyecto Ejecutivo',
+        specs: 'Ejecución al 15%',
         status: 'Entregado',
-        fullSpecs: ["Proyecto ejecutivo de calefacción y agua caliente central", "Edificio de 75 unidades funcionales", "Sistema central de calderas Santero", "Control por termostatos wifi y cabezales termoeléctricos"],
+        fullSpecs: [
+            "Proyecto ejecutivo de instalación de calefacción y agua caliente central (en asociación con CLIMA CONFORT 24 S.A.)",
+            "Edificio de 75 unidades funcionales con sistema central de calderas Santero para generación de calefacción y agua caliente sanitaria centrales",
+            "12 unidades funcionales por piso con distribución centralizada",
+            "Mando y retorno de calefacción en acero inoxidable, control de temperatura por termostatos wifi con señal a cabezales termoeléctricos",
+            "Ejecución al 15% en Octubre de 2025"
+        ],
         client: "CIMBRA S.R.L. / CLIMA CONFORT",
         contact: "Arq. Sebastián Dinatale",
         image: "/h2obras-web-new/portfolio/ewain I.png"
@@ -89,9 +111,14 @@ const allProjectsData = [
         title: 'Distrito Puerto Norte',
         category: 'Sanitarias',
         location: 'Rosario',
-        specs: '3 Torres Activas',
+        specs: 'Instalaciones de servicios',
         status: 'Entregado',
-        fullSpecs: ["Instalación sanitaria, gas, incendio, piscinas y riego", "Tres torres de 21 plantas", "Sistemas de ionización en piscinas", "Riego por aspersión y goteo automatizado", "Presurización con variadores de velocidad"],
+        fullSpecs: [
+            "Proyecto de instalación sanitaria, de gas, incendio, piscinas y riego",
+            "Tres torres de 21 plantas con amenities y piscinas interiores y exteriores",
+            "Ejecución de sistemas de riego, climatización e ionización en piscinas, riego por aspersión y goteo",
+            "Sistemas de presurización sanitaria y de incendio con variadores de velocidad y tableros inteligentes"
+        ],
         client: "GRUPO TRANSATLANTICA S.A.",
         contact: "Sebastián Rubino",
         image: "/h2obras-web-new/portfolio/distrito puerto norte.png"
@@ -101,9 +128,16 @@ const allProjectsData = [
         title: 'Edificio La Segunda Seguros',
         category: 'Especiales',
         location: 'Rosario',
-        specs: 'LEED Platinum',
+        specs: 'Certificación LEED Platinum',
         status: 'Entregado',
-        fullSpecs: ["Certificación LEED PLATINUM", "Energía Solar Termodinámica y colectores Heat Pipe", "Sistema de recupero de aguas pluviales y grises", "Planta de tratamiento de efluentes con oxidación total", "Remoción de arsénico y terrazas verdes (700 m2)"],
+        fullSpecs: [
+            "Proyecto ejecutivo de instalaciones sanitarias, gas, e incendio y especiales en Edificio corporativo LA SEGUNDA. Certificación LEED PLATINUM",
+            "Energía Solar Termodinámica – colectores Heat Pipe",
+            "Sistema de recupero y tratamiento de agua de lluvia y aguas grises para alimentación de descargas y riego",
+            "Planta de tratamiento de efluentes cloacales compacta con proceso de barros activados y oxidación total",
+            "Tratamiento de agua para remoción de arsénico",
+            "Riego por goteo en terrazas verdes (700 m2)"
+        ],
         client: "LA SEGUNDA Coop. Seg. Ltda.",
         contact: "Arq. Marcelo Ponzellini",
         image: "/h2obras-web-new/portfolio/laseg.png"
@@ -113,9 +147,15 @@ const allProjectsData = [
         title: 'Nuevo Hospital Nodal Venado Tuerto',
         category: 'Sanitarias',
         location: 'Venado Tuerto',
-        specs: 'Sanitario Elite',
+        specs: 'ACS en Acero Inoxidable',
         status: 'Entregado',
-        fullSpecs: ["Instalaciones de agua y servicios contra incendio", "Colectores y montantes ACS en Acero Inoxidable AISI 304", "Soldaduras TIG y sistemas Victaulic", "Montaje de sistemas presurizados y bombas de incendio"],
+        fullSpecs: [
+            "Ejecución de Instalaciones de agua y servicios contra incendio en Obra NUEVO HOSPITAL REGIONAL VENADO TUERTO",
+            "Colectores de distribución y montantes de ACS en cañería de Acero Inoxidable AISI 304 con soldadura TIG",
+            "Redes de agua fría y caliente en termofusión",
+            "Montajes de colectores principales en sala de máquinas",
+            "Montaje de equipos presurizadores sanitarios y bombas de incendio"
+        ],
         client: "DINALE – EDECA U.T.E.",
         contact: "Ing. Pedro Del Gerbo",
         image: "/h2obras-web-new/portfolio/itarruspe.png"
@@ -125,9 +165,14 @@ const allProjectsData = [
         title: 'CEMAFE / Iturraspe',
         category: 'Sanitarias',
         location: 'Santa Fe',
-        specs: 'Logística Hospitalaria',
+        specs: 'Proyecto de Instalación',
         status: 'Entregado',
-        fullSpecs: ["Proyecto ejecutivo de instalaciones sanitarias e incendio", "Montantes de incendio y ACS en Acero Inoxidable", "Colectores de sala de máquinas y tanques en AISI 304", "Electrobombas sanitarias de alta performance"],
+        fullSpecs: [
+            "Proyecto ejecutivo de instalaciones sanitarias e incendio en Obra CEMAFE Santa Fe",
+            "Montantes de incendio y de ACS en cañería de Acero Inoxidable AISI 304",
+            "Colectores de sala de máquinas y tanques en AISI 304 con soldadura TIG",
+            "Montaje de electrobombas sanitarias y red de incendio"
+        ],
         client: "DINALE - PECAM – MUNDO UTE",
         contact: "Ing. Pedro Del Gerbo",
         image: "/h2obras-web-new/portfolio/cemafe.png"
@@ -135,11 +180,18 @@ const allProjectsData = [
     {
         id: 'a9',
         title: 'Acuario Río Paraná',
-        category: 'Institucional',
+        category: 'Especiales',
         location: 'Rosario',
-        specs: 'Tecnología Biológica',
+        specs: 'Sistemas de Vida (LSS)',
         status: 'Entregado',
-        fullSpecs: ["Ejecución de Sistema de Vida (LSS)", "Sistemas de filtrado, caudalímetros, sondas y niveles", "Redes de Aire Comprimido y Actuadores Neumáticos", "Instalación de Ozono y Oxígeno de Emergencia", "Montajes íntegros en AISI 304L"],
+        fullSpecs: [
+            "Ejecución de Sistema de Vida (LSS) - Acuario Río Paraná (en UTE con DINALE S.A.)",
+            'Instalación de cañerías en diámetros desde 1/2" a 16" en PVC y PEAD con soldadura a tope, electrofusión y socket',
+            'Montaje de equipos de filtrado, bombas especiales, sopladores, caudalímetros, sondas de medición de calidad de agua, válvulas y actuadores neumáticos',
+            "Instalación de redes de aire comprimido en cañería de PEAD y galvanizada",
+            "Instalación de equipos de Ozono y Oxígeno de emergencia",
+            "Soportes y estructuras de fijación en acero inoxidable AISI 316 con soldadura TIG"
+        ],
         client: "DINALE S.A.",
         contact: "Arq. Carolina Francione",
         image: "/h2obras-web-new/portfolio/acuario.png"
@@ -149,9 +201,14 @@ const allProjectsData = [
         title: 'Centro Justicia Penal',
         category: 'Sanitarias',
         location: 'Rosario',
-        specs: 'Judicial Federal',
+        specs: 'Instalaciones Sanitarias y Gas',
         status: 'Entregado',
-        fullSpecs: ["Instalaciones Sanitarias y de Gas integrales", "Infraestructura para edificio institucional de alta seguridad", "Finalización de obra técnica: Agosto 2017"],
+        fullSpecs: [
+            "Instalación Sanitaria y de Gas en la obra CENTRO DE JUSTICIA PENAL ROSARIO – Mitre y Virasoro",
+            "Ejecución de redes cloacales, pluviales, agua fría y caliente",
+            "Red de gas en cañería de acero con protección epoxi y soldaduras homologadas",
+            "Finalización de obra en Agosto de 2017"
+        ],
         client: "RIVA S.A.",
         contact: "Ing. Raúl Olguín",
         image: "/h2obras-web-new/portfolio/centro just rosario.png"
@@ -163,9 +220,14 @@ const allProjectsData = [
         title: 'Torre Metra (Puerto Norte)',
         category: 'Sanitarias',
         location: 'Rosario',
-        specs: 'Entregado 2023',
+        specs: 'Instalación de gas e incendio',
         status: 'Historico',
-        fullSpecs: ["Torre de 22 Pisos con 156 unidades funcionales", "Instalaciones sanitarias, de gas e incendio", "Proyecto y ejecución integral", "Obra Entregada en Abril del 2023"],
+        fullSpecs: [
+            "Torre de 22 Pisos (156 unidades funcionales) - Torre Metra (Puerto Norte)",
+            "Proyecto de instalación de desagües cloacales, pluviales, red de agua fría y caliente, e incendio",
+            "Red de gas en acero con protección epoxi",
+            "Obra entregada en Abril del 2023"
+        ],
         client: "RIVA S.A.",
         contact: "Ing. Raúl Olguín",
         image: "/h2obras-web-new/portfolio/metra.png"
@@ -175,9 +237,13 @@ const allProjectsData = [
         title: 'Campus UNRN Bariloche',
         category: 'Incendio',
         location: 'Bariloche, Río Negro',
-        specs: 'Equipos Grundfos',
+        specs: 'Instalación de sala de máquinas',
         status: 'Historico',
-        fullSpecs: ["Proyecto de instalaciones sanitarias y de incendio", "Ejecución de Sala de máquinas completa", "Equipos de presurización Grundfos", "Generación de ACS con equipos Heat Pump"],
+        fullSpecs: [
+            "Proyecto de instalaciones sanitarias y de incendio del Campus UNRN - Bariloche",
+            "Ejecución de Sala de máquinas completa con equipos de presurización Grundfos e intercambiadores de calor",
+            "Generación de ACS mediante bombas de calor (Heat Pump)"
+        ],
         client: "UT DINALE-PECAM",
         contact: "Ing. Sebastián Balbi",
         image: "/h2obras-web-new/portfolio/campus unrn.png"
@@ -187,9 +253,13 @@ const allProjectsData = [
         title: 'Fideicomiso Maui Puerto Norte',
         category: 'Termomecánica',
         location: 'Rosario',
-        specs: 'ACS en AISI304',
+        specs: 'Acumuladores y Piping ACS',
         status: 'Historico',
-        fullSpecs: ["Ejecución de Piping de calderas e intercambiadores de calor", "Circuitos secundarios de acumuladores de ACS en AISI304", "Provisión y montaje de bombas y tableros contra incendio"],
+        fullSpecs: [
+            "Ejecución de Piping de calderas e intercambiadores de calor",
+            "Circuitos secundarios de acumuladores de ACS en cañería de Acero Inoxidable AISI 304 con soldadura TIG",
+            "Provisión y montaje de equipos de presurización sanitaria y de bombas contra incendio"
+        ],
         client: "FIDEICOMISO MAUI",
         contact: "Ing. Diego Bermudez",
         image: "/h2obras-web-new/portfolio/maui.png"
@@ -199,9 +269,13 @@ const allProjectsData = [
         title: 'Hilton Garden Inn',
         category: 'Sanitarias',
         location: 'Santa Fe',
-        specs: 'Legajo Completo',
+        specs: 'Proyecto de Instalaciones',
         status: 'Historico',
-        fullSpecs: ["HILTON GARDEN INN (Dique 2) y VIVIENDAS EN TORRE", "Proyecto de Instalaciones Sanitarias, Incendio, Riego y Piscinas", "Criterios sustentables y estándar de marca Hilton"],
+        fullSpecs: [
+            "Proyecto de Instalaciones Sanitarias, Incendio, Riego y Piscinas",
+            "HILTON GARDEN INN (Dique 2 - Santa Fe) y VIVIENDAS EN TORRE",
+            "Criterios de sustentabilidad para certificación LEED y estándares técnicos de la marca Hilton"
+        ],
         client: "DINALE S.A.",
         contact: "Estudio Costa Valenzuela"
     },
@@ -210,9 +284,13 @@ const allProjectsData = [
         title: 'Casino Rosario',
         category: 'Sanitarias',
         location: 'Rosario',
-        specs: 'Alta Complejidad',
+        specs: 'Gerenciamiento de Proyecto',
         status: 'Historico',
-        fullSpecs: ["Hotel y Centro de Convenciones Casino Rosario", "Gerenciamiento de Proyecto de Instalaciones Sanitarias", "Instalaciones de alta complejidad en Battle y Ordoñez"],
+        fullSpecs: [
+            "Gerenciamiento de Proyecto de Instalaciones Sanitarias en la obra CASINO ROSARIO",
+            "Hotel, Casino y Centro de Convenciones de alta complejidad",
+            "Contacto: Ing. Raúl Olguín – Cel. 0341- 155075667"
+        ],
         client: "RIVA S.A.",
         contact: "Ing. Raúl Olguín",
         image: "/h2obras-web-new/portfolio/centro just rosario.png"
@@ -222,22 +300,59 @@ const allProjectsData = [
         title: 'Centro Islámico King Fhad',
         category: 'Especiales',
         location: 'CABA',
-        specs: 'Soldadura TIG AISI304',
+        specs: 'Gerenciamiento de Obra',
         status: 'Historico',
-        fullSpecs: ["Gerenciamiento y Dirección de obra", "Instalaciones Sanitarias, Gas e Incendio", "Riego y Fuentes ornamentales", "Instalaciones especiales en Acero Inoxidable AISI304 con soldaduras TIG"],
+        fullSpecs: [
+            "Gerenciamiento y Dirección de obra de Instalaciones Sanitarias, Gas e Incendio",
+            "Sistemas de riego por aspersión y fuentes ornamentales",
+            "Instalaciones especiales en Acero Inoxidable AISI 304 con soldadura TIG",
+            "Año de ejecución: 1999"
+        ],
         client: "RIVA S.A.",
         contact: "Año 1999"
     },
-    { id: 'h7', title: 'Estación Elevadora Aguadas', category: 'Sanitarias', location: 'Funes, Santa Fe', specs: 'Bombas Grundfos', status: 'Historico', fullSpecs: ["Obra completa de Estación Elevadora", "Electromecánica y Cañería de impulsión", "Instalación de Bombas Grundfos", "Sistema de Izaje y Reja Mecánica"], client: "ASSA S.A.", contact: "Ing. Oscar Benvenuto" },
-    { id: 'h25', title: 'Hospital Iturraspe', category: 'Sanitarias', location: 'Santa Fe', specs: 'Arquitectura Hospitalaria', status: 'Historico', image: "/h2obras-web-new/portfolio/itarruspe.png" },
+    {
+        id: 'h7',
+        title: 'Estación Elevadora Aguadas',
+        category: 'Sanitarias',
+        location: 'Funes, Santa Fe',
+        specs: 'Electromecánica e Impulsión',
+        status: 'Historico',
+        fullSpecs: [
+            "Obra electromecánica de Estación Elevadora de agua potable en Las Aguadas (Funes)",
+            "Montaje de cañerías de impulsión y succión en acero al carbono con recubrimiento epoxi",
+            "Montaje de bombas elevadoras Grundfos",
+            "Instalación de rejas mecánicas de limpieza y sistemas de izaje"
+        ],
+        client: "ASSA S.A.",
+        contact: "Ing. Oscar Benvenuto"
+    },
+    {
+        id: 'h25',
+        title: 'Hospital Iturraspe',
+        category: 'Sanitarias',
+        location: 'Santa Fe',
+        specs: 'Instalaciones Sanitarias',
+        status: 'Historico',
+        fullSpecs: [
+            "Instalación Sanitaria e Incendio en la obra NUEVO HOSPITAL ITURRASPE – Santa Fe",
+            "Montaje de colectores principales y salas de bombas",
+            "Redes de distribución y montantes de agua y desagües pluviales"
+        ],
+        image: "/h2obras-web-new/portfolio/itarruspe.png"
+    },
     {
         id: 'h26',
         title: 'PROYECTO FACA (FOSTER + PARTNERS)',
         category: 'Gas',
         location: 'Rosario',
-        specs: 'Masterplan Maqueta',
+        specs: 'Modelado y Diseño 3D',
         status: 'Historico',
-        fullSpecs: ["MASTERPLAN MAQUETA - Barrancas del río Paraná", "3D PIPING SALA DE MAQUINAS MANZANAS C-D", "Proyecto de Instalación Sanitaria, Gas, Incendio, Riego y Piscinas"],
+        fullSpecs: [
+            "PROYECTO FACA (FOSTER + PARTNERS) en coordinación con ESTUDIO FAURE, MALAMUD y ASOC.",
+            "Diseño tridimensional (3D Piping) de salas de máquinas y colectores para manzanas C y D",
+            "Proyecto ejecutivo de instalaciones sanitarias, gas, incendio, riego y piscinas del masterplan"
+        ],
         client: "TGLT"
     },
     {
@@ -245,9 +360,13 @@ const allProjectsData = [
         title: 'Recoleta’s House',
         category: 'Sanitarias',
         location: 'CABA',
-        specs: 'Dirección de Obra',
+        specs: 'Dirección e Instalaciones',
         status: 'Historico',
-        fullSpecs: ["Ayacucho y Pacheco de Melo - Capital Federal", "Proyecto ejecutivo y Dirección de obra", "Instalaciones sanitarias, gas e incendio"],
+        fullSpecs: [
+            "Proyecto ejecutivo y Dirección de obra de instalaciones sanitarias, gas e incendio",
+            "Edificio de departamentos de alta categoría Recoleta's House (Ayacucho y Pacheco de Melo, CABA)",
+            "Pliego de especificaciones técnicas y detalles constructivos"
+        ],
         client: "ESTUDIO SANCHEZ ELIA & ASOCIADOS"
     },
     {
@@ -255,18 +374,26 @@ const allProjectsData = [
         title: 'Teatro Argentino de La Plata',
         category: 'Incendio',
         location: 'La Plata',
-        specs: 'Superficie 60.000 m2',
+        specs: 'Dirección Técnica',
         status: 'Historico',
-        fullSpecs: ["Calle 51 y 10 La Plata", "Gerenciamiento de Proyecto y Dirección de obra", "Instalaciones sanitarias y de incendio", "Año 1999"]
+        fullSpecs: [
+            "Gerenciamiento de Proyecto y Dirección de obra de instalaciones sanitarias y de incendio",
+            "Edificio monumental Teatro Argentino de La Plata (Sup. 60.000 m2)",
+            "Montaje de salas de bombas e infraestructura de extinción en subsuelos",
+            "Año de ejecución: 1999"
+        ]
     },
     {
         id: 'h29',
         title: 'Hospital Blas Dubarry',
         category: 'Sanitarias',
         location: 'Mercedes, BS.AS.',
-        specs: 'Sanidad Institucional',
+        specs: 'Proyecto de Instalaciones',
         status: 'Historico',
-        fullSpecs: ["Mercedes - Provincia de Buenos Aires", "Proyecto de Instalaciones Sanitarias, Gas e Incendio"],
+        fullSpecs: [
+            "Proyecto de instalaciones sanitarias, gas e incendio en el Hospital Blas Dubarry (Mercedes, Prov. de Buenos Aires)",
+            "Pliego de bases técnicas y diseño de redes principales"
+        ],
         client: "ELEPRINT S.A."
     },
     {
@@ -274,9 +401,12 @@ const allProjectsData = [
         title: 'Distrito Sur / Noroeste',
         category: 'Sanitarias',
         location: 'Rosario',
-        specs: 'Centros Municipales',
+        specs: 'Reproyecto de Servicios',
         status: 'Historico',
-        fullSpecs: ["Centro Municipal Distrito Sur y Distrito Noroeste", "Reproyecto de instalaciones sanitarias, gas e incendio", "Cloacas, pluviales y red de agua"],
+        fullSpecs: [
+            "Reproyecto y ejecución de instalaciones sanitarias, gas e incendio en Centros Municipales de Distrito (Rosario)",
+            "Sistemas de desagües pluviales de gran superficie y redes presurizadas de agua potable"
+        ],
         client: "PECAM S.A. / ESTUDIO BECHIS"
     },
     {
@@ -284,27 +414,38 @@ const allProjectsData = [
         title: 'Condominios del Alto',
         category: 'Sanitarias',
         location: 'Rosario',
-        specs: 'Etapas I, II y III',
+        specs: 'Asesoramiento Técnico',
         status: 'Historico',
-        fullSpecs: ["Asesoramiento para proyecto ejecutivo", "Instalaciones Sanitarias, Incendio, Riego y Piscina", "Proyecto aprobado de Regulación Pluvial"]
+        fullSpecs: [
+            "Asesoramiento para proyecto ejecutivo de instalaciones sanitarias, de incendio, riego y piscina en Condominios del Alto (Etapas I, II y III)",
+            "Proyecto y aprobación de regulación pluvial ante el Departamento de Hidráulica de la Municipalidad de Rosario"
+        ]
     },
     {
         id: 'h32',
         title: 'Hotel Esplendor Savoy',
         category: 'Termomecánica',
         location: 'Rosario',
-        specs: 'Ampliación 2da Etapa',
+        specs: 'Sanitarias y Gastronómicas',
         status: 'Historico',
-        fullSpecs: ["San Lorenzo esq. San Martín - Rosario", "Instalación sanitaria y servicios contra incendio", "Ventilaciones ambientales y Gas", "Instalación de equipamiento gastronómico", "Sistema de filtrado e hidroterapia en piscina"]
+        fullSpecs: [
+            "Proyecto, dirección y ejecución de instalaciones en Hotel Esplendor Savoy (Rosario)",
+            "Instalaciones sanitarias, servicios contra incendio y redes de gas",
+            "Sistemas de ventilación ambiental y montaje de equipamiento gastronómico de alta gama",
+            "Ampliación ala norte (2da etapa): integración pluvial y de incendio con sistemas existentes"
+        ]
     },
     {
         id: 'h33',
         title: 'Estadio N.O.B. Independencia',
         category: 'Sanitarias',
         location: 'Rosario',
-        specs: 'Redes de Alta Presión',
+        specs: 'Instalaciones Sanitarias y Gas',
         status: 'Historico',
-        fullSpecs: ["Estadio Parque Independencia - Newell's Old Boys", "Red Cloacal y Desagües pluviales", "Instalaciones Sanitarias, Gas e Incendio"],
+        fullSpecs: [
+            "Proyecto y dirección de obra de instalaciones sanitarias, gas e incendio en el Estadio de Newell's Old Boys",
+            "Construcción de nuevas redes cloacales principales y desagües pluviales de tribunas"
+        ],
         client: "CLUB ATLÉTICO NEWELL´S OLD BOYS"
     },
     {
@@ -312,9 +453,13 @@ const allProjectsData = [
         title: 'Complejo Bella Vista (NOB)',
         category: 'Sanitarias',
         location: 'Rosario',
-        specs: 'Riego Presurizado',
+        specs: 'Riego Automatizado',
         status: 'Historico',
-        fullSpecs: ["Proyecto y Dirección", "Instalación sanitaria y gas en vestuarios", "Sistema de riego presurizado automático en canchas de entrenamiento"],
+        fullSpecs: [
+            "Proyecto y dirección de obra en el Complejo de Entrenamiento Bella Vista (N.O.B.)",
+            "Instalaciones sanitarias y de gas en vestuarios de jugadores",
+            "Sistema de riego presurizado automático para campos de juego"
+        ],
         client: "CLUB ATLÉTICO NEWELL´S OLD BOYS"
     },
     {
@@ -322,9 +467,12 @@ const allProjectsData = [
         title: 'La Gallega Supermercados',
         category: 'Sanitarias',
         location: 'Rosario',
-        specs: 'Sistemas Hidroneumáticos',
+        specs: 'Instalaciones Sanitarias',
         status: 'Historico',
-        fullSpecs: ["Sucursales: Mitre y Pellegrini, Balcarce 240, Mendoza 7000", "Instalación sanitaria, gas e incendio", "Provisión y montaje de equipos hidroneumáticos"],
+        fullSpecs: [
+            "Proyecto y dirección de obra en sucursales de Supermercados La Gallega",
+            "Instalaciones sanitarias, gas e incendio con sistemas hidroneumáticos de presurización"
+        ],
         client: "LA GALLEGA S.A."
     },
     {
@@ -332,9 +480,13 @@ const allProjectsData = [
         title: 'Hipermercado Libertad',
         category: 'Sanitarias',
         location: 'Rosario',
-        specs: 'Nave de 20.000 m2',
+        specs: 'Pluviales e Impulsión Cloacal',
         status: 'Historico',
-        fullSpecs: ["Oroño 5960 - Rosario", "Instalación Sanitaria y Gas", "Proyecto de desagües pluviales exteriores y red de impulsión cloacal", "Año 2000"],
+        fullSpecs: [
+            "Gerenciamiento de proyecto y Dirección de obra en Hipermercado Libertad (Rosario, Sup. 20.000 m2)",
+            "Instalaciones sanitarias y red de gas",
+            "Proyecto de desagües pluviales exteriores en predio de 8 hectáreas e impulsión cloacal urbana"
+        ],
         client: "LIBERTAD S.A."
     }
 ];
@@ -552,8 +704,8 @@ export default function Portfolio() {
                 <aside className="hidden lg:flex flex-col h-screen w-72 left-0 sticky top-0 bg-surface-container-low border-r border-outline-variant/10 pt-28 pb-6 px-6 space-y-4">
                     <div className="px-2 mt-6 mb-4">
                         <div className="w-8 h-1 bg-accent mb-3"></div>
-                        <h3 className="text-lg font-headline font-black text-primary uppercase tracking-tighter">Matriz de Obras</h3>
-                        <p className="text-[9px] text-primary/60 tracking-[0.3em] uppercase font-technical mt-1">Estrategia de Infraestructura Nacional</p>
+                        <h3 className="text-lg font-headline font-black text-primary uppercase tracking-tighter">Especialidades de Obra</h3>
+                        <p className="text-[9px] text-primary/60 tracking-[0.3em] uppercase font-technical mt-1">Instalaciones de gran envergadura y alcance federal</p>
                     </div>
                     <nav className="flex flex-col space-y-1 relative">
                         {categories.map(cat => {
@@ -587,7 +739,7 @@ export default function Portfolio() {
                             className="w-full py-4 text-[9px] font-black text-white bg-primary uppercase tracking-[0.2em] shadow-xl hover:bg-accent hover:text-on-accent transition-all duration-300 flex items-center justify-center gap-3"
                         >
                             <span className="material-symbols-outlined text-xs">download_2</span>
-                            Exportar Registro PDF
+                            Descargar Ficha Técnica
                         </motion.button>
                     </div>
                 </aside>

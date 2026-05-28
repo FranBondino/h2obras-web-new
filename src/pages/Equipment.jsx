@@ -27,14 +27,14 @@ export default function Equipment() {
                             >
                                 <div className="flex items-center gap-6 mb-8">
                                     <div className="w-16 h-1 bg-accent"></div>
-                                    <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">Activos Técnicos</span>
+                                    <span className="text-accent text-xs font-black tracking-[0.4em] uppercase">Equipamiento Propio</span>
                                 </div>
                                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase">
-                                    CAPACIDAD <br /> OPERATIVA <br /> <span className="text-white/40">PROPIA</span>
+                                    EQUIPAMIENTO <br /> Y FLOTA <br /> <span className="text-white/40">PROPIA</span>
                                 </h1>
                                 <div className="max-w-2xl border-l-4 border-accent pl-10 py-2">
                                     <p className="text-lg md:text-xl text-on-primary-container font-body leading-relaxed opacity-80">
-                                        Infraestructura, logística y maquinaria pesada de última generación. Garantizamos autonomía operativa y excelencia en la ejecución sin subcontratación.
+                                        Flota de transporte, maquinaria pesada y equipos específicos de alta gama. Contamos con todo lo necesario para iniciar y ejecutar las obras de manera autónoma.
                                     </p>
                                 </div>
                             </motion.div>
@@ -43,7 +43,7 @@ export default function Equipment() {
 
                     {/* Floating Tech Label */}
                     <div className="absolute bottom-12 right-24 hidden lg:block text-right">
-                        <span className="text-white/20 text-[10px] font-technical uppercase tracking-[0.5em] block mb-2">Ficha Técnica de Activos</span>
+                        <span className="text-white/20 text-[10px] font-technical uppercase tracking-[0.5em] block mb-2">Registro de Equipamiento</span>
                         <div className="w-32 h-px bg-white/10 ml-auto"></div>
                     </div>
                 </section>
@@ -53,13 +53,13 @@ export default function Equipment() {
                     <div className="container mx-auto px-8 md:px-24 relative z-10">
                         <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
                             <div className="max-w-2xl">
-                                <h2 className="text-4xl md:text-5xl font-headline font-black text-primary tracking-tighter uppercase mb-6 leading-none">Matriz de Activos</h2>
-                                <p className="text-primary/70 font-technical uppercase tracking-[0.3em] text-[10px]">Unidades de Movimiento y Herramental Específico</p>
+                                <h2 className="text-4xl md:text-5xl font-headline font-black text-primary tracking-tighter uppercase mb-6 leading-none">Listado de Equipos</h2>
+                                <p className="text-primary/70 font-technical uppercase tracking-[0.3em] text-[10px]">Maquinaria y Herramientas Específicas</p>
                             </div>
                             <div className="flex items-center gap-6">
                                 <div className="text-right">
-                                    <p className="text-[10px] font-technical text-primary/60 uppercase tracking-widest mb-1">Estado de Flota</p>
-                                    <p className="text-2xl font-headline font-black text-primary uppercase">UNIDADES ACTIVAS</p>
+                                    <p className="text-[10px] font-technical text-primary/60 uppercase tracking-widest mb-1">Disponibilidad</p>
+                                    <p className="text-2xl font-headline font-black text-primary uppercase">EQUIPOS EN SERVICIO</p>
                                 </div>
                                 <div className="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center">
                                     <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
@@ -83,19 +83,19 @@ export default function Equipment() {
                                 <ul className="space-y-6 mb-12">
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">01</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MINIRETRO BOBCAT E-26 <span className="block text-[10px] text-primary/60">Serie S (2015)</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">Miniexcavadora Bobcat E26 <span className="block text-[10px] text-primary/60">Serie S (2015)</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">02</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MINIPALA BOBCAT S450 <span className="block text-[10px] text-primary/60">Accesorios Especiales (2017)</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">Minipala Bobcat S450 <span className="block text-[10px] text-primary/60">Accesorios Especiales (2017)</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">03</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">VIBROAPISONADOR LISO <span className="block text-[10px] text-primary/60">Sistema Pata de Cabra (2020)</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">Vibroapisonador <span className="block text-[10px] text-primary/60">Compactador a percusión (2020)</span></p>
                                     </li>
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
-                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Maquinaria Pesada</span>
+                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Movimiento de Suelos</span>
                                 </div>
                             </motion.div>
 
@@ -114,19 +114,19 @@ export default function Equipment() {
                                 <ul className="space-y-6 mb-12">
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">01</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">PLATAFORMA MANTALL <span className="block text-[10px] text-primary/60">Alcance Máx: 16m</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">Plataforma elevadora Mantall <span className="block text-[10px] text-primary/60">Alcance Máx: 16m</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">02</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">SISTEMA AUTOPROPULSADA <span className="block text-[10px] text-primary/60">Serie V (2018)</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">Plataforma Tijera Autopropulsada <span className="block text-[10px] text-primary/60">Serie V (2018)</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">03</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">MONTAJES VERTICALES <span className="block text-[10px] text-primary/60">Estabilización de Precisión</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">Montaje de Cañerías Verticales <span className="block text-[10px] text-primary/60">Montaje en altura</span></p>
                                     </li>
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
-                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Sistemas de Elevación</span>
+                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Plataformas de Altura</span>
                                 </div>
                             </motion.div>
 
@@ -141,23 +141,23 @@ export default function Equipment() {
                                 <div className="w-16 h-16 bg-primary flex items-center justify-center mb-12 group-hover:bg-accent group-hover:text-on-accent transition-colors">
                                     <span className="material-symbols-outlined text-white text-3xl group-hover:text-on-accent">architecture</span>
                                 </div>
-                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Perforación <br /> Estratégica</h3>
+                                <h3 className="text-3xl font-headline font-black text-primary mb-8 uppercase leading-tight tracking-tighter">Perforación <br /> Diamantada</h3>
                                 <ul className="space-y-6 mb-12">
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">01</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">HILTI D250 DIAMANTE <span className="block text-[10px] text-primary/60">Corte de Hormigón Armado</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">Perforadora Diamantada Hilti DD 250 <span className="block text-[10px] text-primary/60">Corte de Hormigón Armado</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">02</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">HILTI D160 PRECISION <span className="block text-[10px] text-primary/60">Perforación hasta Ø 200mm</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">Perforadora Diamantada Hilti DD 160 <span className="block text-[10px] text-primary/60">Perforación hasta Ø 200mm</span></p>
                                     </li>
                                     <li className="flex gap-4 items-start">
                                         <span className="text-accent font-technical text-xs mt-1">03</span>
-                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">DEMOLICION Y ANCLAJES <span className="block text-[10px] text-primary/60">Anclajes Químicos de Alta Resistencia</span></p>
+                                        <p className="text-primary/80 font-body font-bold text-sm uppercase tracking-tight">Fijaciones y Anclajes Químicos <span className="block text-[10px] text-primary/60">Anclajes Químicos de Alta Resistencia</span></p>
                                     </li>
                                 </ul>
                                 <div className="pt-8 border-t border-outline-variant/10 flex justify-between items-center">
-                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Precisión Estructural</span>
+                                    <span className="text-[10px] font-technical uppercase text-primary/60 tracking-widest">Perforación de Hormigón</span>
                                 </div>
                             </motion.div>
                         </div>
@@ -170,18 +170,18 @@ export default function Equipment() {
                     <div className="container mx-auto px-8 md:px-24 relative z-10">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
                             <div>
-                                <h2 className="text-3xl md:text-5xl font-headline font-black uppercase tracking-tighter leading-none mb-8">INGENIERÍA <br /> DE MONTAJE</h2>
+                                <h2 className="text-3xl md:text-5xl font-headline font-black uppercase tracking-tighter leading-none mb-8">MONTAJE <br /> DE CAÑERÍAS</h2>
                                 <p className="text-white text-lg font-body leading-relaxed max-w-xl opacity-80">
-                                    Operamos con altos estándares de integridad técnica. Nuestra tecnología de soldadura y termofusión garantiza un rendimiento crítico en sistemas hidráulicos de alta presión.
+                                    Soldadura de cañerías de alta presión y termofusión. Personal calificado y equipos propios homologados para garantizar la estanqueidad y seguridad de los sistemas.
                                 </p>
                             </div>
                             <div className="relative">
                                 <div className="aspect-video bg-white/5 border border-white/10 overflow-hidden group">
-                                    <img className="w-full h-full object-cover grayscale opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Technical blueprint and engineering lines overlapping industrial components" src="/h2obras-web-new/hero_industrial_v2.png" />
+                                    <img className="w-full h-full object-cover grayscale opacity-50 group-hover:scale-105 transition-transform duration-700" alt="Esquema técnico e ingeniería" src="/h2obras-web-new/hero_industrial_v2.png" />
                                     <div className="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
                                 </div>
                                 <div className="absolute -bottom-6 -left-6 bg-accent p-6 hidden md:block">
-                                    <p className="text-on-accent text-2xl font-headline font-black font-technical tracking-tighter">Estándar de Integridad</p>
+                                    <p className="text-on-accent text-2xl font-headline font-black font-technical tracking-tighter">Instalación Garantizada</p>
                                 </div>
                             </div>
                         </div>
@@ -190,20 +190,20 @@ export default function Equipment() {
                             {[
                                 {
                                     id: "01",
-                                    label: "Instalación Crítica",
+                                    label: "Corte y Roscado",
                                     items: ["2 Ranuradoras Victaulic", "Cortadora para acero inoxidable Ø 8”", "Copas bimetálicas", "Roscadoras de banco y manuales"],
                                     icon: "settings_input_component"
                                 },
                                 {
                                     id: "02",
-                                    label: "Fusión y Soldadura",
-                                    items: ["5 Unidades soldadoras TIG", "2 Electrofusión (Ø 600 mm)", "Cortadora de pavimento Dynapack", "Vibro-apisonadores"],
+                                    label: "Soldadura y Termofusión",
+                                    items: ["5 Máquinas de soldadura TIG", "2 Máquinas de electrofusión para PEAD hasta Ø 600 mm", "Cortadora de pavimento Dynapack", "Vibro-apisonadores"],
                                     icon: "heat_pump"
                                 },
                                 {
                                     id: "03",
-                                    label: "Soporte de Obra",
-                                    items: ["2 Contenedores de obra", "Acanaladora 9\" con aspiradora", "Andamios Metaltech (EEUU)", "Niveles ópticos y láser"],
+                                    label: "Andamios y Soporte",
+                                    items: ["2 Contenedores de obra", "Acanaladora de muros con aspiración", "Andamios Metaltech (EEUU)", "Niveles ópticos y láser"],
                                     icon: "construction"
                                 }
                             ].map((module, i) => (
@@ -233,19 +233,19 @@ export default function Equipment() {
                             <div className="lg:col-span-5 order-2 lg:order-1">
                                 <div className="flex items-center gap-6 mb-10">
                                     <div className="w-16 h-1 bg-primary"></div>
-                                    <h3 className="text-3xl md:text-5xl font-headline font-black text-primary uppercase tracking-tighter">Poder Logístico <br /> / Office</h3>
+                                    <h3 className="text-3xl md:text-5xl font-headline font-black text-primary uppercase tracking-tighter">Logística y <br /> Oficina Técnica</h3>
                                 </div>
                                 <div className="space-y-10">
                                     <div>
                                         <div className="flex items-center gap-4 mb-6">
                                             <span className="material-symbols-outlined text-primary">local_shipping</span>
-                                            <p className="text-[10px] font-black text-primary uppercase tracking-widest">Logística Pesada</p>
+                                            <p className="text-[10px] font-black text-primary uppercase tracking-widest">Flota de Vehículos</p>
                                         </div>
                                         <div className="grid grid-cols-1 gap-4">
                                             {[
-                                                "CAMION DFM 2023 - 14 TN (6M BOX)",
-                                                "UTILITARIO LIFAN FOISON TRUCK (2017)",
-                                                "UTILITARIO FOTON GRATOUR (2019)"
+                                                "Camión DFM 14 toneladas con furgón",
+                                                "Utilitario Lifan Foison Truck",
+                                                "Utilitario Foton Gratour"
                                             ].map((truck, i) => (
                                                 <div key={i} className="flex justify-between items-center py-4 border-b border-outline-variant/10 group">
                                                     <span className="text-[10px] font-technical text-primary/60">Unidad {i + 1}</span>
@@ -261,7 +261,7 @@ export default function Equipment() {
                                         </div>
                                         <div className="grid grid-cols-1 gap-4">
                                             {[0, 1, 2].map((i) => {
-                                                const techLabels = ["Plotter de alta velocidad / 4 Estaciones CAD i7", "Flota móvil de comunicación (12 unidades)", "Flujo de trabajo e integración BIM/REVIT"];
+                                                const techLabels = ["Plotter de alta velocidad / 4 Estaciones CAD i7", "Flota móvil de comunicación (12 unidades)", "Diseño asistido por computadora y modelado BIM"];
                                                 return (
                                                     <div key={i} className="flex justify-between items-center py-4 border-b border-outline-variant/10 group">
                                                         <span className="text-[10px] font-technical text-primary/60">Tecnología {i + 1}</span>
@@ -276,10 +276,10 @@ export default function Equipment() {
                             <div className="lg:col-span-7 order-1 lg:order-2">
                                 <div className="grid grid-cols-12 gap-8">
                                     <div className="col-span-7 aspect-[4/5] overflow-hidden">
-                                        <img className="w-full h-full object-cover grayscale brightness-75 hover:scale-110 transition-transform duration-1000" data-alt="Modern high-tech logistics truck" src="/h2obras-web-new/hosp.png" />
+                                        <img className="w-full h-full object-cover grayscale brightness-75 hover:scale-110 transition-transform duration-1000" alt="Camión de transporte H2Obras" src="/h2obras-web-new/hosp.png" />
                                     </div>
                                     <div className="col-span-5 aspect-[4/6] overflow-hidden self-end mb-12">
-                                        <img className="w-full h-full object-cover grayscale brightness-75 hover:scale-110 transition-transform duration-1000" data-alt="Technical office interior" src="/h2obras-web-new/portfolio_hosp.png" />
+                                        <img className="w-full h-full object-cover grayscale brightness-75 hover:scale-110 transition-transform duration-1000" alt="Oficina técnica H2Obras" src="/h2obras-web-new/portfolio_hosp.png" />
                                     </div>
                                 </div>
                             </div>
@@ -296,17 +296,17 @@ export default function Equipment() {
                             transition={{ duration: 1 }}
                         >
                             <h2 className="text-5xl md:text-7xl font-headline font-black text-white mb-12 uppercase tracking-tighter leading-[0.85]">
-                                INFRAESTRUCTURA <br /> PARA GRANDES <br /> VISIONES
+                                CAPACIDAD OPERATIVA <br /> A GRAN ESCALA
                             </h2>
                             <p className="text-xl md:text-2xl text-on-primary-container mb-16 max-w-3xl mx-auto font-body leading-relaxed">
-                                Poseemos el herramental y el expertise táctico para transformar desafíos técnicos en activos operativas de alto rendimiento.
+                                Disponemos del herramental y la experiencia técnica para resolver proyectos complejos con eficiencia y plazos garantizados.
                             </p>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-16 py-8 bg-primary text-white font-headline font-black text-xl uppercase tracking-[0.2em] shadow-2xl hover:bg-accent hover:text-on-accent transition-all duration-300"
                             >
-                                Solicitar Cotización
+                                Contacto Técnico
                             </motion.button>
                         </motion.div>
                     </div>

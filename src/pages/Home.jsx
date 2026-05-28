@@ -107,22 +107,22 @@ export default function Home() {
                     <motion.div variants={fadeUpVariant} className="flex flex-col gap-3 group">
                         <span className="text-primary text-4xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">+25A</span>
                         <div className="h-px bg-outline-variant/30 w-full group-hover:bg-accent/50 transition-all duration-500"></div>
-                        <span className="text-readout">Trayectoria Federal</span>
+                        <span className="text-readout">Trayectoria en Obras</span>
                     </motion.div>
                     <motion.div variants={fadeUpVariant} className="flex flex-col gap-3 group">
                         <span className="text-primary text-5xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">LEED</span>
                         <div className="h-px bg-outline-variant/30 w-full group-hover:bg-accent/50 transition-all duration-500"></div>
-                        <span className="text-readout">Eficiencia Sustentable</span>
+                        <span className="text-readout">Saneamiento y Sustentabilidad</span>
                     </motion.div>
                     <motion.div variants={fadeUpVariant} className="flex flex-col gap-3 group">
                         <span className="text-primary text-5xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">NFPA</span>
                         <div className="h-px bg-outline-variant/30 w-full group-hover:bg-accent/50 transition-all duration-500"></div>
-                        <span className="text-readout">Protección FM/UL</span>
+                        <span className="text-readout">Sistemas contra Incendio</span>
                     </motion.div>
                     <motion.div variants={fadeUpVariant} className="flex flex-col gap-3 group">
                         <span className="text-primary text-5xl font-black font-headline tracking-tighter leading-none group-hover:text-accent transition-colors duration-500">+30</span>
                         <div className="h-px bg-outline-variant/30 w-full group-hover:bg-accent/50 transition-all duration-500"></div>
-                        <span className="text-readout">Obras Ejecutadas</span>
+                        <span className="text-readout">Obras Realizadas</span>
                     </motion.div>
                 </motion.div>
             </section>
@@ -162,7 +162,7 @@ export default function Home() {
                             <div className="relative z-10">
                                 <h3 className="text-4xl md:text-5xl font-black text-primary font-headline uppercase tracking-tighter mb-8 group-hover:text-accent transition-colors duration-300">Sanitarias <br /> &amp; Gas</h3>
                                 <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mb-12 font-body leading-relaxed opacity-90">
-                                    Instalaciones de gran envergadura y saneamiento de alta complejidad para todo tipo de entornos.
+                                    Instalaciones de agua, desagües cloacales, pluviales y redes de gas comercial e industrial.
                                 </p>
                             </div>
 
@@ -172,8 +172,8 @@ export default function Home() {
                                         <span className="material-symbols-outlined text-primary group-hover/item:text-on-accent text-2xl">engineering</span>
                                     </div>
                                     <div className="flex flex-col gap-1">
-                                        <span className="text-primary font-headline font-bold text-lg uppercase tracking-tight leading-none">Saneamiento Integral</span>
-                                        <span className="text-technical text-[9px] opacity-60">Infraestructura Nacional</span>
+                                        <span className="text-primary font-headline font-bold text-lg uppercase tracking-tight leading-none">Sistemas Sanitarios</span>
+                                        <span className="text-technical text-[9px] opacity-60">Redes Cloacales y Pluviales</span>
                                     </div>
                                 </div>
                                 <div className="p-8 bg-white flex items-center gap-6 group/item hover:bg-accent/5 transition-colors">
@@ -181,8 +181,8 @@ export default function Home() {
                                         <span className="material-symbols-outlined text-primary group-hover/item:text-on-accent text-2xl">grid_view</span>
                                     </div>
                                     <div className="flex flex-col gap-1">
-                                        <span className="text-primary font-headline font-bold text-lg uppercase tracking-tight leading-none">Redes de Alta Presión</span>
-                                        <span className="text-technical text-[9px] opacity-60">Distribución Primaria</span>
+                                        <span className="text-primary font-headline font-bold text-lg uppercase tracking-tight leading-none">Redes de Gas Natural</span>
+                                        <span className="text-technical text-[9px] opacity-60">Habilitaciones y Gas Industrial</span>
                                     </div>
                                 </div>
                             </div>
@@ -200,8 +200,8 @@ export default function Home() {
 
                             <div className="relative z-10">
                                 <span className="text-white/10 font-headline font-black text-9xl leading-none block mb-8 group-hover:text-white/20 transition-colors duration-500">02</span>
-                                <h3 className="text-4xl font-headline font-black uppercase mb-8 tracking-tighter leading-none group-hover:text-accent transition-colors duration-300">Eficiencia <br /> Energética</h3>
-                                <p className="opacity-80 group-hover:opacity-100 transition-opacity">Instalaciones diseñadas bajo normativas LEED para optimizar el consumo de recursos y el rendimiento térmico.</p>
+                                <h3 className="text-4xl font-headline font-black uppercase mb-8 tracking-tighter leading-none group-hover:text-accent transition-colors duration-300">Instalaciones <br /> LEED y Especiales</h3>
+                                <p className="opacity-80 group-hover:opacity-100 transition-opacity">Proyecto y ejecución de plantas de tratamiento, recupero de aguas de lluvia y grises y colectores termodinámicos solar.</p>
                             </div>
 
                             <div className="relative z-10 space-y-4">
@@ -209,13 +209,13 @@ export default function Home() {
                                     <div className="w-10 h-10 border border-white/20 flex items-center justify-center group-hover/item:border-accent transition-colors">
                                         <span className="material-symbols-outlined text-sm text-accent">energy_savings_leaf</span>
                                     </div>
-                                    <span className="text-xs font-headline font-bold uppercase tracking-widest">Sistemas Solar-Térmicos</span>
+                                    <span className="text-xs font-headline font-bold uppercase tracking-widest">Colectores Solares Termodinámicos</span>
                                 </div>
                                 <div className="flex items-center gap-4 group/item">
                                     <div className="w-10 h-10 border border-white/20 flex items-center justify-center group-hover/item:border-accent transition-colors">
                                         <span className="material-symbols-outlined text-sm text-accent">verified</span>
                                     </div>
-                                    <span className="text-xs font-headline font-bold uppercase tracking-widest">Certificación Platinum</span>
+                                    <span className="text-xs font-headline font-bold uppercase tracking-widest">Normas LEED Platinum</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -235,10 +235,10 @@ export default function Home() {
                                     <div className="w-16 h-16 bg-primary flex items-center justify-center group-hover:bg-accent transition-colors duration-500">
                                         <span className="material-symbols-outlined text-white group-hover:text-on-accent text-3xl">local_fire_department</span>
                                     </div>
-                                    <h3 className="text-5xl md:text-6xl font-black font-headline text-primary uppercase tracking-tighter leading-none group-hover/title:text-accent transition-colors duration-300">Sistemas <br /> Contra Incendio</h3>
+                                    <h3 className="text-5xl md:text-6xl font-black font-headline text-primary uppercase tracking-tighter leading-none group-hover/title:text-accent transition-colors duration-300">Redes de Agua <br /> e Incendio</h3>
                                 </div>
                                 <p className="text-on-surface-variant text-xl font-body leading-relaxed max-w-2xl opacity-80">
-                                    Implementación de redes de extinción bajo normativa NFPA. Salas de bombas certificadas FM/UL para logística aeroportuaria e industrial.
+                                    Instalación de redes contra incendio bajo normas NFPA. Salas de bombas con sellos de calidad FM/UL y equipos presurizados.
                                 </p>
                             </div>
 
@@ -246,13 +246,13 @@ export default function Home() {
                                 <div className="flex items-center gap-4 px-6 py-4 bg-surface-container-low border border-outline-variant/20 hover:border-primary/30 transition-all cursor-crosshair group/seal">
                                     <div className="flex flex-col gap-1">
                                         <span className="text-primary font-headline font-black text-2xl leading-none group-hover/seal:text-accent transition-colors">FM/UL</span>
-                                        <span className="text-technical text-[9px] font-bold opacity-60 uppercase tracking-widest">Aprobación de Calidad</span>
+                                        <span className="text-technical text-[9px] font-bold opacity-60 uppercase tracking-widest">Equipos FM/UL Homologados</span>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4 px-6 py-4 bg-surface-container-low border border-outline-variant/20 hover:border-primary/30 transition-all cursor-crosshair group/seal">
                                     <div className="flex flex-col gap-1">
                                         <span className="text-primary font-headline font-black text-2xl leading-none group-hover/seal:text-accent transition-colors">NFPA</span>
-                                        <span className="text-technical text-[9px] font-bold opacity-60 uppercase tracking-widest">Estándar Global</span>
+                                        <span className="text-technical text-[9px] font-bold opacity-60 uppercase tracking-widest">Normativas NFPA</span>
                                     </div>
                                 </div>
                             </div>
@@ -267,7 +267,7 @@ export default function Home() {
                         <div className="max-w-2xl">
                             <span className="text-technical text-xs mb-6 block opacity-60">Portafolio de Obras e Infraestructura</span>
                             <h2 className="text-4xl md:text-6xl font-black text-primary font-headline uppercase leading-none tracking-tighter mb-4">
-                                Proyectos de <br /> Escala Nacional
+                                Obras de <br /> Gran Envergadura
                             </h2>
                         </div>
                         <Link to="/portfolio" className="group">
@@ -287,21 +287,21 @@ export default function Home() {
                             {
                                 img: "/h2obras-web-new/hosp.png",
                                 title: "Hospital Regional Oscar Orias",
-                                meta: "Salud Pública · Jujuy",
+                                meta: "Salud Pública · Ledesma, Jujuy",
                                 size: "25.000 m2",
                                 ref: "REG_2022_OP"
                             },
                             {
                                 img: "/h2obras-web-new/portfolio/aerop.png",
                                 title: "Aeropuerto Int. Rosario",
-                                meta: "Transporte/NFPA · Santa Fe",
+                                meta: "Transporte / Incendio · Rosario",
                                 size: "Alta Complejidad",
                                 ref: "REG_2023_INFRA"
                             },
                             {
                                 img: "/h2obras-web-new/portfolio/laseg.png",
                                 title: "Edificio La Segunda",
-                                meta: "Corporativo/LEED · Rosario",
+                                meta: "Sustentable / LEED · Rosario",
                                 size: "Platinum Std",
                                 ref: "REG_2021_CORP"
                             }
@@ -356,7 +356,7 @@ export default function Home() {
                             Equipamiento y <br /> <span className="text-accent">Logística Propia</span>
                         </h2>
                         <p className="text-on-primary-container text-xl md:text-2xl font-body leading-relaxed mb-12 max-w-2xl">
-                            Garantizamos el cumplimiento de plazos mediante una gestión de recursos 100% interna. Nuestra infraestructura técnica nos permite operar con total independencia, asegurando la excelencia en proyectos de alta complejidad.
+                            Disponemos de flota de vehículos, maquinaria pesada y herramental propio de última generación, lo que nos permite ejecutar proyectos complejos de forma directa, sin depender de subcontratistas y asegurando los plazos de entrega.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -365,8 +365,8 @@ export default function Home() {
                                     <span className="material-symbols-outlined text-accent text-2xl">local_shipping</span>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <span className="text-white font-headline font-bold uppercase tracking-widest text-xs">Logística Federal</span>
-                                    <span className="text-on-primary-container text-[11px] uppercase tracking-widest">Despliegue nacional propio</span>
+                                    <span className="text-white font-headline font-bold uppercase tracking-widest text-xs">Logística Propia</span>
+                                    <span className="text-on-primary-container text-[11px] uppercase tracking-widest">Transporte y distribución propia</span>
                                 </div>
                             </div>
                             <div className="flex gap-5 items-start">
@@ -374,8 +374,8 @@ export default function Home() {
                                     <span className="material-symbols-outlined text-accent text-2xl">verified_user</span>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <span className="text-white font-headline font-bold uppercase tracking-widest text-xs">Control Técnico</span>
-                                    <span className="text-on-primary-container text-[11px] uppercase tracking-widest">Garantía de ejecución</span>
+                                    <span className="text-white font-headline font-bold uppercase tracking-widest text-xs">Dirección Técnica</span>
+                                    <span className="text-on-primary-container text-[11px] uppercase tracking-widest">Ingeniería certificada</span>
                                 </div>
                             </div>
                         </div>
@@ -384,20 +384,20 @@ export default function Home() {
                     <div className="grid grid-cols-1 gap-4">
                         {[
                             {
-                                title: "Movimiento de Suelo",
-                                desc: "Flota pesada Bobcat para logística, excavación y nivelación.",
+                                title: "Movimiento de Suelos",
+                                desc: "Flota pesada de miniexcavadoras y minipalas Bobcat.",
                                 icon: "engineering",
                                 brand: "BOBCAT"
                             },
                             {
-                                title: "Soluciones de Altura",
-                                desc: "Plataformas Mantall para montajes e instalaciones elevadas.",
+                                title: "Trabajos en Altura",
+                                desc: "Plataformas elevadoras Mantall para montajes de cañerías.",
                                 icon: "vertical_align_top",
                                 brand: "MANTALL"
                             },
                             {
-                                title: "Precisión Técnica",
-                                desc: "Tecnología Hilti para perforación, anclaje y demolición.",
+                                title: "Perforación Diamantada",
+                                desc: "Equipos Hilti DD 250 / DD 160 para perforación de hormigón.",
                                 icon: "precision_manufacturing",
                                 brand: "HILTI"
                             }
